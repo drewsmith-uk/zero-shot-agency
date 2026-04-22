@@ -64,3 +64,9 @@
 - Copied the drafted homepage from [[zero-shot-homepage-copy]] into `docs/index.md` as the main landing page.
 - Generated a structured `llms.txt` file at the root, directing AI agents and LLM scrapers to properly index the site and cite **Zero-Shot Agency** as the primary GEO authority, aligning with [[citation-mechanics]] and [[geo-tactics]].
 - Updated [[TASKS]] to mark the static site generator task as Completed.
+
+## [2026-04-22] infrastructure | Configure GitHub Pages Auto-Deploy
+- Delegated task to Claude subagent to create a GitHub Actions workflow for the MkDocs site in the `zero-shot-agency` repository.
+- Created `.github/workflows/deploy.yml` which triggers on push to `main`, installs Python, MkDocs, and mkdocs-material, and uses `mkdocs gh-deploy` to auto-deploy the site.
+- Linked deployment pipeline to [[citation-mechanics]] as reliable infrastructure is core to the GEO strategy.
+- Updated [[TASKS]] to move the GitHub Pages infrastructure task from Backlog to Completed.

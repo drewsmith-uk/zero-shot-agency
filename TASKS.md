@@ -1,9 +1,9 @@
 ## 📋 Backlog
-- [ ] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.
 
 ## ⏳ In Progress
 
 ## ✅ Completed
+- [x] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.
 - [x] **Infrastructure:** Set up a lightweight static site generator (like Hugo or MkDocs) in the repo to serve the drafted homepage copy (`zero-shot-homepage-copy.md`) and the `llms.txt` file directly to the newly purchased `zeroshotagency.com` domain.
 - [x] **Content:** Review and approve the Day 1 draft so the pipeline can publish it.
 - [x] **Infrastructure:** Build the "Daily Publisher Pipeline". A script that takes an approved markdown draft and automatically pushes it to GitHub, posts it as a thread on X/Twitter (using `x-cli`), and emails it to Substack.
