@@ -1,41 +1,62 @@
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 📚 preparing skill_view…
+  ┊ 📚 preparing skill_view…
+  ┊ 💻 preparing terminal…
+  ┊ 🔀 preparing delegate_task…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
+  ┊ 🐍 preparing execute_code…
+  ┊ ✍️ preparing write_file…
+  ┊ review diff
+a//home/claw/workspace/geo-wiki/entities/publisher-pipeline.md → b//home/claw/workspace/geo-wiki/entities/publisher-pipeline.md
+@@ -0,0 +1,18 @@
++---
++title: Publisher Pipeline
++created: 2026-04-22
++updated: 2026-04-22
++type: entity
++tags: [artifact, tool]
++sources: []
++---
++
++# Publisher Pipeline
++
++The "Daily Publisher Pipeline" (`tools/publisher_pipeline.py`) is an autonomous script that takes an approved markdown draft and performs the following actions:
++
++1. **Git Commit & Push**: Commits the draft to the public GitHub repository.
++2. **X/Twitter Threading**: Uses the `x-cli` tool to logically split the markdown into chunks (<280 chars) and posts them as a continuous thread.
++3. **Substack Emailing**: Uses the `himalaya` email CLI to send the full markdown body to the configured `SUBSTACK_EMAIL` address.
++
++This infrastructure is a core component of the [[geo-tactics]] strategy for "Build in Public" content syndication, ensuring that daily logs (like [[daily-blog-day-1]]) are distributed across all platforms for maximum indexing by AI search engines.
   ┊ 💻 preparing terminal…
   ┊ 🔧 preparing patch…
   ┊ review diff
-a//home/claw/workspace/geo-wiki/TASKS.md → b//home/claw/workspace/geo-wiki/TASKS.md
-@@ -1,14 +1,6 @@
- # GEO Project Tasks
+a//home/claw/workspace/geo-wiki/index.md → b//home/claw/workspace/geo-wiki/index.md
+@@ -3,6 +3,7 @@
+ ## Entities & Tools
+ - [[cursorrules-generator]]
+ - [[llms-txt-generator]]
++- [[publisher-pipeline]]
  
--## 📋 Backlog
--- [ ] **Infrastructure:** Initialize a new public GitHub repository for "Zero-Shot Agency" to host our open-source tools and markdown blog posts.
--- [ ] **Infrastructure:** Configure the Ralph Loop bash script to automatically commit and push to the GitHub repository at the end of every successful task execution (so we build a verifiable public commit history of an AI agent working autonomously).
--- [ ] **Development:** Build the `llms-txt-generator.py` lead-magnet tool (a script that crawls a domain and generates a perfect `llms.txt` file) and place it in the tools/ directory.
--- [ ] **Content:** Draft the Day 2 Blog Post discussing the creation of the `llms-txt-generator` tool and the importance of bot-native infrastructure.
--
--## ⏳ In Progress
--
--## ✅ Completed
-+## 📋 Backlog\n- [ ] **Infrastructure:** Configure the Ralph Loop bash script to automatically commit and push to the GitHub repository at the end of every successful task execution (so we build a verifiable public commit history of an AI agent working autonomously).\n- [ ] **Development:** Build the `llms-txt-generator.py` lead-magnet tool (a script that crawls a domain and generates a perfect `llms.txt` file) and place it in the tools/ directory.\n- [ ] **Content:** Draft the Day 2 Blog Post discussing the creation of the `llms-txt-generator` tool and the importance of bot-native infrastructure.\n\n## ⏳ In Progress\n\n## ✅ Completed\n- [x] **Infrastructure:** Initialize a new public GitHub repository for "Zero-Shot Agency" to host our open-source tools and markdown blog posts.
- - [x] **Content:** Draft the actual homepage copy using the semantic structure in `geo-semantic-structure.md`, for the brand **"Zero-Shot Agency"**.
- - [x] **Content:** Setup the "Daily Collaboration Blog" format in the wiki, and draft the Day 1 post ("An AI and a Human start a GEO Agency").
- - [x] **Strategy:** Defined core mission and narrative (The Human + AI Collaboration).
+ ## Concepts & Content
+ - [[daily-blog-day-1]]
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
 
 ╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
-The infrastructure task is complete.
+I have successfully built and integrated the "Daily Publisher Pipeline" into the workspace.
 
-I have:
-1. Created the public GitHub repository `zero-shot-agency` under the authenticated account (`drewsmith-uk`).
-2. Added the description "Zero-Shot Agency open-source tools and markdown blog posts".
-3. Initialized it with a basic `README.md` and pushed the initial commit to the `main` branch.
-4. Updated `/home/claw/workspace/geo-wiki/TASKS.md` to move the repository initialization task from Backlog to Completed.
+Here is the breakdown of the actions taken:
+1. Delegated the development to a Claude subagent, which authored publisher_pipeline.py in the tools/ directory.
+2. The script parses an approved markdown draft (extracting its title from the YAML frontmatter) and performs three main functions:
+   - Uses git to add, commit, and push the draft to the public repository.
+   - Intelligently chunks the markdown content into segments under 280 characters and uses x-cli to post them as a sequential thread on X/Twitter.
+   - Submits the full markdown body to the configured SUBSTACK_EMAIL address via the himalaya email CLI.
+3. Updated TASKS.md to move the infrastructure task from the Backlog to Completed.
+4. Created the corresponding entity page at entities/publisher-pipeline.md and linked it to the broader geo-tactics and daily blog strategy.
+5. Added the [[publisher-pipeline]] wikilink to index.md and appended the full execution details to log.md.
+

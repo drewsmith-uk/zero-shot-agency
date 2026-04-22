@@ -44,10 +44,10 @@ while [ $tasks_completed -lt $MAX_TASKS ]; do
     
     # 4.5 Auto-Commit to GitHub
     echo "📦 Committing progress to Git..."
-    cd $WIKI_DIR
+    cd "$WIKI_DIR" || exit
     git add .
     git commit -m "Ralph Auto-Commit: Completed $TASK_DESC" || true
-    # git push origin main  # Uncomment when remote is attached
+    git push origin main
     
     tasks_completed=$((tasks_completed + 1))
     
