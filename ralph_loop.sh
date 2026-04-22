@@ -1,0 +1,60 @@
+#!/bin/bash
+# The Ralph Loop for the GEO Wiki
+
+WIKI_DIR="$HOME/workspace/geo-wiki"
+TASKS_FILE="$WIKI_DIR/TASKS.md"
+STATE_FILE="$WIKI_DIR/run-state.txt"
+MAX_TASKS=5
+
+# Initialize state file
+if [ ! -f "$STATE_FILE" ]; then
+    echo "RUNNING" > "$STATE_FILE"
+fi
+
+echo "🚀 Starting GEO Wiki Ralph Loop..."
+echo "To pause, echo 'PAUSED' > $STATE_FILE"
+
+tasks_completed=0
+
+while [ $tasks_completed -lt $MAX_TASKS ]; do
+    # 1. Check Kill Switch
+    STATE=$(cat "$STATE_FILE" | xargs)
+    if [ "$STATE" != "RUNNING" ]; then
+        echo "🛑 Loop paused via state file ($STATE). Exiting."
+        break
+    fi
+
+    # 2. Parse next task
+    NEXT_TASK=$(grep -m 1 "^- \[ \]" "$TASKS_FILE")
+    
+    if [ -z "$NEXT_TASK" ]; then
+        echo "✅ No more tasks in the backlog. Ralph is going to sleep."
+        break
+    fi
+    
+    # Clean up the string to pass to the agent
+    TASK_DESC=$(echo "$NEXT_TASK" | sed 's/^- \[ \] //')
+    echo "🎯 Next objective: $TASK_DESC"
+    
+    # 3. Boot fresh agent instance
+    echo "🧠 Booting fresh agent context..."
+    hermes chat --yolo -Q -q "You are the GEO Wiki Orchestrator running inside a Ralph Loop. \nORIENT YOURSELF: Read $WIKI_DIR/strategy.md, $WIKI_DIR/SCHEMA.md, index.md, and log.md.\nYOUR TASK: $TASK_DESC\nRULES:\n1. If the task requires deep coding/development, use delegate_task with acp_command='claude' (DO NOT USE legacy 3.5 models).\n2. If the task is scraping, use your native web_search/web_extract tools and save to raw/.\n3. If it is synthesis, do it yourself and save to concepts/.\n4. Once completed, edit $TASKS_FILE to move the task from the Backlog to Completed.\n5. Update log.md and cross-reference with [[wikilinks]].\nExecute now." > "$WIKI_DIR/latest_agent.log" 2>&1
+
+    # 4. Agent exits. Increment and cool down.
+    
+    # 4.5 Auto-Commit to GitHub
+    echo "📦 Committing progress to Git..."
+    cd $WIKI_DIR
+    git add .
+    git commit -m "Ralph Auto-Commit: Completed $TASK_DESC" || true
+    # git push origin main  # Uncomment when remote is attached
+    
+    tasks_completed=$((tasks_completed + 1))
+    
+    if [ $tasks_completed -lt $MAX_TASKS ]; then
+        echo "⏳ Cooling down for 60 seconds before next iteration..."
+        sleep 60
+    fi
+done
+
+echo "🏁 Ralph Loop shift finished. Completed $tasks_completed tasks."
