@@ -3,6 +3,7 @@
 ## ⏳ In Progress
 
 ## ✅ Completed
+- [x] **Infrastructure:** Build the fallback Direct Deployment Script. Since mobile GitHub auth is failing, write a script that uses the Cloudflare Wrangler CLI in the terminal to directly deploy the `geo-wiki` static site to Cloudflare Pages, bypassing the mobile browser loop entirely.
 - [x] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.
 - [x] **Infrastructure:** Set up a lightweight static site generator (like Hugo or MkDocs) in the repo to serve the drafted homepage copy (`zero-shot-homepage-copy.md`) and the `llms.txt` file directly to the newly purchased `zeroshotagency.com` domain.
 - [x] **Content:** Review and approve the Day 1 draft so the pipeline can publish it.

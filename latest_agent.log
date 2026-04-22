@@ -1,37 +1,70 @@
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
-  ┊ 🔀 preparing delegate_task…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ ✍️ preparing write_file…
+  ┊ review diff
+a//home/claw/workspace/geo-wiki/deploy_cloudflare.sh → b//home/claw/workspace/geo-wiki/deploy_cloudflare.sh
+@@ -0,0 +1,23 @@
++#!/bin/bash
++# Fallback Direct Deployment Script for Cloudflare Pages
++# Bypasses GitHub auth and mobile browser loop by deploying directly via Wrangler CLI
++
++set -e
++
++echo "Deploying static site to Cloudflare Pages..."
++
++# Navigate to the mkdocs repository
++cd /home/claw/workspace/zero-shot-agency
++
++# Build the MkDocs site
++echo "Building site with MkDocs..."
++if [ -d "venv" ]; then
++    source venv/bin/activate
++fi
++mkdocs build
++
++# Deploy directly via Wrangler
++echo "Deploying to Cloudflare Pages via Wrangler..."
++npx wrangler pages deploy site/ --project-name=geo-wiki
++
++echo "✅ Direct deployment complete!"
   ┊ 💻 preparing terminal…
   ┊ 🔧 preparing patch…
   ┊ review diff
 a//home/claw/workspace/geo-wiki/TASKS.md → b//home/claw/workspace/geo-wiki/TASKS.md
 @@ -1,9 +1,9 @@
  ## 📋 Backlog
--- [ ] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.
+-- [ ] **Infrastructure:** Build the fallback Direct Deployment Script. Since mobile GitHub auth is failing, write a script that uses the Cloudflare Wrangler CLI in the terminal to directly deploy the `geo-wiki` static site to Cloudflare Pages, bypassing the mobile browser loop entirely.
  
  ## ⏳ In Progress
  
  ## ✅ Completed
-+- [x] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.
++- [x] **Infrastructure:** Build the fallback Direct Deployment Script. Since mobile GitHub auth is failing, write a script that uses the Cloudflare Wrangler CLI in the terminal to directly deploy the `geo-wiki` static site to Cloudflare Pages, bypassing the mobile browser loop entirely.
+ - [x] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.
  - [x] **Infrastructure:** Set up a lightweight static site generator (like Hugo or MkDocs) in the repo to serve the drafted homepage copy (`zero-shot-homepage-copy.md`) and the `llms.txt` file directly to the newly purchased `zeroshotagency.com` domain.
  - [x] **Content:** Review and approve the Day 1 draft so the pipeline can publish it.
- - [x] **Infrastructure:** Build the "Daily Publisher Pipeline". A script that takes an approved markdown draft and automatically pushes it to GitHub, posts it as a thread on X/Twitter (using `x-cli`), and emails it to Substack.
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
 
 ╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
-I have completed the requested infrastructure task following the execution rules.
+The Direct Deployment Script has been successfully created.
 
-1. **Development Delegation**: I delegated the CI/CD pipeline creation to a Claude subagent. It successfully generated `.github/workflows/deploy.yml` in the `zero-shot-agency` repository. The workflow uses `actions/checkout@v4`, installs Python, `mkdocs`, and `mkdocs-material`, and runs `mkdocs gh-deploy --force` to deploy the site to the `gh-pages` branch on every push to `main`.
-2. **Task Board**: I edited `/home/claw/workspace/geo-wiki/TASKS.md` and moved the GitHub Pages auto-deployment task from the Backlog to the Completed section. 
-3. **Telemetry & Logs**: I appended the execution details to `log.md`, cross-referencing `[[citation-mechanics]]` and `[[TASKS]]` to maintain the graph structure of the wiki.
+1. Script Location: /home/claw/workspace/geo-wiki/deploy_cloudflare.sh
+2. Behavior: Navigates to the zero-shot-agency repository, activates the virtual environment, builds the MkDocs site, and uses 'npx wrangler pages deploy site/ --project-name=geo-wiki' to push it to Cloudflare Pages.
+3. Tracking: Moved the task from Backlog to Completed in TASKS.md.
+4. Logging: Appended the operation to log.md and cross-referenced with [[zero-shot-homepage-copy]] and [[TASKS]].
 
-I have completed the requested infrastructure task following the execution rules.
+The Direct Deployment Script has been successfully created.
 
-1. **Development Delegation**: I delegated the CI/CD pipeline creation to a Claude subagent. It successfully generated `.github/workflows/deploy.yml` in the `zero-shot-agency` repository. The workflow uses `actions/checkout@v4`, installs Python, `mkdocs`, and `mkdocs-material`, and runs `mkdocs gh-deploy --force` to deploy the site to the `gh-pages` branch on every push to `main`.
-2. **Task Board**: I edited `/home/claw/workspace/geo-wiki/TASKS.md` and moved the GitHub Pages auto-deployment task from the Backlog to the Completed section. 
-3. **Telemetry & Logs**: I appended the execution details to `log.md`, cross-referencing `[[citation-mechanics]]` and `[[TASKS]]` to maintain the graph structure of the wiki.
+1. Script Location: /home/claw/workspace/geo-wiki/deploy_cloudflare.sh
+2. Behavior: Navigates to the zero-shot-agency repository, activates the virtual environment, builds the MkDocs site, and uses 'npx wrangler pages deploy site/ --project-name=geo-wiki' to push it to Cloudflare Pages.
+3. Tracking: Moved the task from Backlog to Completed in TASKS.md.
+4. Logging: Appended the operation to log.md and cross-referenced with [[zero-shot-homepage-copy]] and [[TASKS]].
 
-The MkDocs site is now fully configured to auto-deploy automatically via GitHub Actions.
+The fallback infrastructure is ready to use.
 
-session_id: 20260422_223440_f4050f
+session_id: 20260422_231859_7abb14

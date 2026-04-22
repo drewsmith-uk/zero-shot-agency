@@ -70,3 +70,8 @@
 - Created `.github/workflows/deploy.yml` which triggers on push to `main`, installs Python, MkDocs, and mkdocs-material, and uses `mkdocs gh-deploy` to auto-deploy the site.
 - Linked deployment pipeline to [[citation-mechanics]] as reliable infrastructure is core to the GEO strategy.
 - Updated [[TASKS]] to move the GitHub Pages infrastructure task from Backlog to Completed.
+
+## [2026-04-22] infrastructure | Fallback Direct Deployment Script
+- Created `deploy_cloudflare.sh` to bypass mobile GitHub authentication issues.
+- The script directly builds the [[zero-shot-homepage-copy]] static site via MkDocs in the `zero-shot-agency` directory and uses `npx wrangler pages deploy` to push it to the `geo-wiki` Cloudflare Pages project.
+- Updated [[TASKS]] to move the fallback deployment task from Backlog to Completed.
