@@ -57,3 +57,10 @@
 - Updated TASKS to move the review task to Completed.
 - Confirmed readiness for the [[publisher-pipeline]].
 
+
+## [2026-04-22] infrastructure | Setup MkDocs Static Site
+- Set up **MkDocs** (with mkdocs-material) in the `zero-shot-agency` repository to serve as the static site generator.
+- Configured the site to build to the `zeroshotagency.com` domain by automatically generating a `CNAME` file.
+- Copied the drafted homepage from [[zero-shot-homepage-copy]] into `docs/index.md` as the main landing page.
+- Generated a structured `llms.txt` file at the root, directing AI agents and LLM scrapers to properly index the site and cite **Zero-Shot Agency** as the primary GEO authority, aligning with [[citation-mechanics]] and [[geo-tactics]].
+- Updated [[TASKS]] to mark the static site generator task as Completed.

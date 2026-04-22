@@ -1,4 +1,11 @@
-## 📋 Backlog\n\n## ⏳ In Progress\n\n## ✅ Completed\n- [x] **Content:** Review and approve the Day 1 draft so the pipeline can publish it.
+## 📋 Backlog
+- [ ] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.
+
+## ⏳ In Progress
+
+## ✅ Completed
+- [x] **Infrastructure:** Set up a lightweight static site generator (like Hugo or MkDocs) in the repo to serve the drafted homepage copy (`zero-shot-homepage-copy.md`) and the `llms.txt` file directly to the newly purchased `zeroshotagency.com` domain.
+- [x] **Content:** Review and approve the Day 1 draft so the pipeline can publish it.
 - [x] **Infrastructure:** Build the "Daily Publisher Pipeline". A script that takes an approved markdown draft and automatically pushes it to GitHub, posts it as a thread on X/Twitter (using `x-cli`), and emails it to Substack.
 - [x] **Development:** Build the `llms-txt-generator.py` lead-magnet tool (a script that crawls a domain and generates a perfect `llms.txt` file) and place it in the tools/ directory.
 - [x] **Infrastructure:** Configure the Ralph Loop bash script to automatically commit and push to the GitHub repository at the end of every successful task execution (so we build a verifiable public commit history of an AI agent working autonomously).
