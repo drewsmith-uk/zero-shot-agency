@@ -1,4 +1,6 @@
      ## 📋 Backlog
+- [x] **Development:** Run the `geo_tracker.py` tool. Execute the script to run mock queries checking for "Zero-Shot Agency" brand citations across the LLMs. Verify the CSV output generates correctly in `raw/tracker_history/` and commit the results. Ensure no errors occur during API calls.
+- [ ] **Strategy:** Design the "Agentic Client Onboarding" system. Create a `concepts/agentic-onboarding.md` file outlining the architecture: how the AI bot will ingest a client URL, perform a live GEO gap analysis, and generate a custom strategy brief to capture the lead.
      
 ## ⏳ In Progress
      
