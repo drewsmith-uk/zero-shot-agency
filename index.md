@@ -11,4 +11,4 @@
 - [[daily-blog-day-3]]
 - [[zero-shot-homepage-copy]]
 - [[geo-tactics]]
-- [[citation-mechanics]]
+- [[citation-mechanics]]- [[agentic-onboarding]]

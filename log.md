@@ -131,3 +131,9 @@
 - Verified the CSV output was correctly generated in `raw/tracker_history/` and automatically committed to the repository, updating `citations.csv`.
 - Maintained strict schema tracking defined in [[SCHEMA]] and linked to [[citation-mechanics]].
 - Updated [[TASKS]] to move the mock queries execution task from Backlog to Completed.
+
+## [2026-04-23] strategy | Agentic Client Onboarding
+- Designed the "Agentic Client Onboarding" system architecture.
+- Created `concepts/agentic-onboarding.md` detailing how the AI bot will ingest a URL, perform live GEO gap analysis, and generate a strategy brief.
+- Added `[[agentic-onboarding]]` to `index.md`.
+- Updated `TASKS.md` to move the task to Completed.
