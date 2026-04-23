@@ -131,3 +131,11 @@
 - Verified the CSV output was correctly generated in `raw/tracker_history/` and automatically committed to the repository, updating `citations.csv`.
 - Maintained strict schema tracking defined in [[SCHEMA]] and linked to [[citation-mechanics]].
 - Updated [[TASKS]] to move the mock queries execution task from Backlog to Completed.
+
+## [2026-04-23] dev | Build Onboarding Agent
+- Delegated task to Claude subagent (`acp_command='claude'`) to build `onboarding_agent.py`.
+- The tool accepts a target domain URL, scrapes H1/H2 tags and the `llms.txt` file, and uses the OpenAI API to generate a custom 'Agentic Strategy Brief' in Markdown format.
+- Implemented `python-dotenv` for API key handling and included robust error handling for failed requests.
+- Maintained schema definitions, created `docs/entities/onboarding-agent.md`, and added `[[onboarding-agent]]` to `index.md`.
+- Updated [[TASKS]] to move the `Development` task from Backlog to Completed.
+- Checked out branch `drafts/onboarding-agent` and pushed changes via Pull Request using GitHub CLI, in alignment with the \"Drafts via Pull Request\" workflow.

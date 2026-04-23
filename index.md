@@ -4,6 +4,7 @@
 - [[cursorrules-generator]]
 - [[llms-txt-generator]]
 - [[publisher-pipeline]]
+- [[onboarding-agent]]
 
 ## Concepts & Content
 - [[daily-blog-day-1]]
