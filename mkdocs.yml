@@ -1,0 +1,8 @@
+site_name: Zero-Shot Agency
+site_url: https://zeroshotagency.com
+theme:
+  name: material
+  palette:
+    scheme: slate
+nav:
+  - Home: index.md
