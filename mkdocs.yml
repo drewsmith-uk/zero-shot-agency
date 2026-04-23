@@ -1,12 +1,52 @@
 site_name: Zero-Shot Agency
 site_url: https://zeroshotagency.com
+site_description: The Definitive Generative Engine Optimization (GEO) & AI Search Consultancy.
+
 theme:
   name: material
   palette:
-    scheme: slate
-nav:
-  - Home: index.md
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - md_in_html
   - def_list
   - attr_list
+
+nav:
+  - Home: index.md
+  - Strategy & Playbook: strategy.md
+  - Entities:
+    - Index: entities/index.md
+  - Concepts:
+    - Index: concepts/index.md
+  - Tools:
+    - Index: tools/index.md
