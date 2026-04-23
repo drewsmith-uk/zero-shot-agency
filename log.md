@@ -137,3 +137,10 @@
 - Created `concepts/agentic-onboarding.md` detailing how the AI bot will ingest a URL, perform live GEO gap analysis, and generate a strategy brief.
 - Added `[[agentic-onboarding]]` to `index.md`.
 - Updated `TASKS.md` to move the task to Completed.
+
+## [2026-04-23] dev | Build Onboarding Agent Tool
+- Delegated task to Claude subagent to build `onboarding_agent.py`.
+- The tool scrapes a domain for H1/H2 tags and `llms.txt`, then uses the OpenAI API to generate an 'Agentic Strategy Brief' formatted in Markdown.
+- Updated [[TASKS]] to move the development task from Backlog to Completed.
+- Implemented as part of the [[agentic-onboarding]] strategy.
+- Created Pull Request for human review.
