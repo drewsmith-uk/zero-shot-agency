@@ -6,3 +6,7 @@ theme:
     scheme: slate
 nav:
   - Home: index.md
+markdown_extensions:
+  - md_in_html
+  - def_list
+  - attr_list
