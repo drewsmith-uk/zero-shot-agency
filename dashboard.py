@@ -70,9 +70,10 @@ def generate_layout():
 
 if __name__ == "__main__":
     console.clear()
-    with Live(generate_layout(), refresh_per_second=2, screen=True):
+    with Live(generate_layout(), refresh_per_second=2, screen=True) as live:
         try:
             while True:
                 time.sleep(0.5)
+                live.update(generate_layout())
         except KeyboardInterrupt:
             pass
