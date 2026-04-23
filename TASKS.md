@@ -1,4 +1,6 @@
 ## 📋 Backlog
+- [ ] **Content:** Draft the "Daily Blog: Day 3" post. We successfully established a developer-grade "Drafts via Pull Request" publishing workflow. Explain how this architecture prevents "AI hallucination leaks" into production while maintaining full automation. Submit this as a Pull Request via GitHub CLI so Drew can review it before it merges.
+- [ ] **Development:** The `geo_tracker.py` tool needs an automated Cron testing suite. Create a shell script wrapper that runs the tracker every day at 8:00 AM, saves the CSV output to `raw/tracker_history/`, and automatically commits the results to the repo. This builds our open-source, empirical data trail.
 
 ## ⏳ In Progress
 
