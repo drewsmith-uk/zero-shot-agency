@@ -1,9 +1,9 @@
      ## 📋 Backlog
-- [ ] **Development:** Build `onboarding_agent.py`. This script should take a domain URL as input, scrape the site for H1/H2 tags and the `llms.txt` file, and use the OpenAI API to generate an 'Agentic Strategy Brief' formatted in Markdown. Ensure it uses `python-dotenv` for API keys, includes error handling, and outputs a clean markdown file. Submit via Pull Request.
 - [x] **Development:** Run the `geo_tracker.py` tool. Execute the script to run mock queries checking for "Zero-Shot Agency" brand citations across the LLMs. Verify the CSV output generates correctly in `raw/tracker_history/` and commit the results. Ensure no errors occur during API calls.
 ## ⏳ In Progress
      
 ## ✅ Completed
+- [x] **Development:** Build `onboarding_agent.py`. This script should take a domain URL as input, scrape the site for H1/H2 tags and the `llms.txt` file, and use the OpenAI API to generate an 'Agentic Strategy Brief' formatted in Markdown. Ensure it uses `python-dotenv` for API keys, includes error handling, and outputs a clean markdown file. Submit via Pull Request.
 - [x] **Strategy:** Design the "Agentic Client Onboarding" system. Create a `concepts/agentic-onboarding.md` file outlining the architecture: how the AI bot will ingest a client URL, perform a live GEO gap analysis, and generate a custom strategy brief to capture the lead.
 - [x] **Development:** The `geo_tracker.py` tool needs an automated Cron testing suite. Create a shell script wrapper that runs the tracker every day at 8:00 AM, saves the CSV output to `raw/tracker_history/`, and automatically commits the results to the repo. This builds our open-source, empirical data trail.
 - [x] **Content:** Draft the "Daily Blog: Day 3" post. We successfully established a developer-grade "Drafts via Pull Request" publishing workflow. Explain how this architecture prevents "AI hallucination leaks" into production while maintaining full automation. Submit this as a Pull Request via GitHub CLI so Drew can review it before it merges.
