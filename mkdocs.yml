@@ -5,7 +5,6 @@ site_description: The Definitive Generative Engine Optimization (GEO) & AI Searc
 theme:
   name: material
   palette:
-    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: black
@@ -13,7 +12,6 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
@@ -44,9 +42,17 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Strategy & Playbook: strategy.md
-  - Entities:
-    - Index: entities/index.md
   - Concepts:
-    - Index: concepts/index.md
+    - Overview: concepts/index.md
+    - Citation Mechanics: concepts/citation-mechanics.md
+    - Semantic Structure: concepts/geo-semantic-structure.md
+    - GEO Tactics: concepts/geo-tactics.md
+    - Daily Blog: concepts/daily-blog-day-1.md
+  - Entities:
+    - Overview: entities/index.md
+    - Princeton Paper: entities/princeton-geo-paper.md
+    - Cursorrules Gen: entities/cursorrules-generator.md
+    - GEO Tracker: entities/geo-tracker.md
+    - Publisher Pipeline: entities/publisher-pipeline.md
   - Tools:
-    - Index: tools/index.md
+    - Overview: tools/index.md
