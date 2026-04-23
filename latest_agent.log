@@ -3,44 +3,122 @@
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
   ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
+  ┊ ✍️ preparing write_file…
+  ┊ review diff
+a/docs/tools/index.md → b/docs/tools/index.md
+@@ -1,10 +1,74 @@
++---
++title: Internal Automation Tools
++created: 2026-04-23
++updated: 2026-04-23
++type: summary
++tags: [tool, artifact, architecture]
++---
++
+ # Internal Automation Tools
+ 
+-Zero-Shot Agency relies on custom Python scripts to track Prompt Share of Voice (SOV) and generate bot-native assets.
++Zero-Shot Agency relies on custom Python scripts to track Prompt Share of Voice (SOV) and generate bot-native assets. These tools automate the collection and publishing mechanics required for Generative Engine Optimization (GEO).
+ 
+-We are currently building and refining:
+-1. `geo_tracker.py` - Monitors LLM outputs for brand citations.
+-2. `llms-txt-generator.py` - Auto-generates standard `/llms.txt` files for websites.
+-3. `publisher_pipeline.py` - Automates the deployment of semantic content.
++## 1. GEO Tracker (`geo-tracker.py`)
+ 
+-*(Source code is maintained in the `tools/` directory of our repository).*
++A script to monitor major LLMs (OpenAI, Anthropic, Gemini) and track how frequently they mention or cite a specific target domain across a set of target queries. This gives us our "Share of Voice" metric.
++
++### Requirements
++```bash
++pip install openai anthropic google-generativeai
++```
++
++Set the required API keys in your environment:
++- `OPENAI_API_KEY` (for GPT-4o)
++- `ANTHROPIC_API_KEY` (for Claude 3.7 Sonnet)
++- `GEMINI_API_KEY` (for Gemini 1.5 Pro)
++
++*Note: If an API key is missing, the script will skip querying that specific model and print a warning.*
++
++### Usage
++```bash
++python geo-tracker.py --domain example.com --queries "query 1" "query 2" "query 3"
++```
++
++### Arguments
++- `--domain` (Required): The target domain to track (e.g., 'example.com').
++- `--queries` (Required): A space-separated list of queries to test.
++
++### Output
++The script performs synchronous queries (with a 1-second delay between queries to respect rate limits) against all configured LLM APIs. It then prints a Share of Voice report detailing the percentage of times the target domain was mentioned in the output for each engine.
++
++---
++
++## 2. LLMs.txt Generator (`llms-txt-generator.py`)
++
++A specialized web crawler that traverses a domain and builds a standardized `/llms.txt` and `llms-full.txt` file. This is crucial for formatting site content correctly for LLM and bot consumption.
++
++### Requirements
++```bash
++pip install requests beautifulsoup4 markdownify
++```
++
++### Usage
++```bash
++python docs/tools/llms-txt-generator.py https://example.com --max-pages 50 --output ./site
++```
++
++### Arguments
++- `url` (Required): Starting URL to crawl (e.g., `https://example.com`).
++- `--max-pages`: Maximum number of pages to crawl (Default: 50).
++- `--output`: Output directory for the generated files (Default: current directory).
++- `--delay`: Delay between requests in seconds to respect server loads (Default: 0.5).
++
++### Output
++- `llms.txt`: A markdown index file containing links to all crawled pages.
++- `llms-full.txt`: A concatenated markdown file containing the parsed and cleaned text of all main content across the crawled domain.
++
++---
++
++## 3. Publisher Pipeline (`publisher_pipeline.py`)
++
++*(Documentation pending - under development)* 
++Automates the deployment of semantic content.
+… omitted 2 diff line(s) across 1 additional file(s)/section(s)
   ┊ 💻 preparing terminal…
   ┊ 🔧 preparing patch…
   ┊ review diff
 a//home/claw/workspace/zero-shot-agency/TASKS.md → b//home/claw/workspace/zero-shot-agency/TASKS.md
-@@ -1,11 +1,11 @@
+@@ -1,10 +1,10 @@
  ## 📋 Backlog
--- [ ] **Content:** Draft the "Daily Blog: Day 2" post. Focus on our tech stack architecture and our strategic decisions today (MkDocs, Material theme, Cloudflare Pages, Semantic HTML, LLM-native assets). Do not focus on the minor deployment hiccups.
- - [ ] **Documentation:** Update the `docs/tools/index.md` file to include comprehensive documentation and usage instructions for the internal tools (currently `geo_tracker.py` and `llms-txt-generator.py`).
+-- [ ] **Documentation:** Update the `docs/tools/index.md` file to include comprehensive documentation and usage instructions for the internal tools (currently `geo_tracker.py` and `llms-txt-generator.py`).
  - [ ] **Development:** Enhance `geo_tracker.py`. Upgrade the script to hit the actual OpenAI and Anthropic APIs. It needs to run mock-queries to check for "Zero-Shot Agency" brand citations and output the results to a CSV file. (Note: Ralph is authorized to loop continuously on this task until the tool is fully robust and operational).
  
  ## ⏳ In Progress
  
  ## ✅ Completed
-+- [x] **Content:** Draft the "Daily Blog: Day 2" post. Focus on our tech stack architecture and our strategic decisions today (MkDocs, Material theme, Cloudflare Pages, Semantic HTML, LLM-native assets). Do not focus on the minor deployment hiccups.
++- [x] **Documentation:** Update the `docs/tools/index.md` file to include comprehensive documentation and usage instructions for the internal tools (currently `geo_tracker.py` and `llms-txt-generator.py`).
+ - [x] **Content:** Draft the "Daily Blog: Day 2" post. Focus on our tech stack architecture and our strategic decisions today (MkDocs, Material theme, Cloudflare Pages, Semantic HTML, LLM-native assets). Do not focus on the minor deployment hiccups.
  - [x] **Bugfix:** Fix the `[[wikilinks]]` across the site documentation. Update either the markdown files or the MkDocs configuration so that internal links render properly as hyperlinks instead of literal bracket text.
  - [x] **Infrastructure:** Build the fallback Direct Deployment Script. Since mobile GitHub auth is failing, write a script that uses the Cloudflare Wrangler CLI in the terminal to directly deploy the `zero-shot-agency` static site to Cloudflare Pages, bypassing the mobile browser loop entirely.
- - [x] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
 
 ╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
-I have completed the drafting of the Day 2 blog post. Here is a summary of the actions taken:
+TASK COMPLETED.
 
-1. **Drafted Content**: Created `docs/concepts/daily-blog-day-2.md` containing the Day 2 post, focusing on our bot-native tech stack (MkDocs, Material theme, Cloudflare Pages, Semantic HTML, and `llms.txt`).
-2. **Wiki Index Update**: Added `[[daily-blog-day-2]]` to the "Concepts & Content" list in `/home/claw/workspace/zero-shot-agency/index.md`.
-3. **Task Board Update**: Moved the "Daily Blog: Day 2" content drafting task from the Backlog to the Completed section in `/home/claw/workspace/zero-shot-agency/TASKS.md`.
-I have completed the drafting of the Day 2 blog post. Here is a summary of the actions taken:
+Execution Summary:
+1. Analyzed source code for `geo-tracker.py` and `llms-txt-generator.py` to identify module requirements, usage arguments, and program outputs.
+2. Synthesized this information and updated `docs/tools/index.md` with comprehensive documentation for both tools. Included frontmatter structure as defined in SCHEMA.
+3. Updated TASKS.md to migrate the "Documentation: Update the docs/tools/index.md..." task from the Backlog directly into Completed.
+4. Appended a new activity log entry to `log.md` including proper [[wikilinks]] references to [[TASKS]] and [[SCHEMA]] to maintain internal wiki routing logic. 
 
-1. **Drafted Content**: Created `docs/concepts/daily-blog-day-2.md` containing the Day 2 post, focusing on our bot-native tech stack (MkDocs, Material theme, Cloudflare Pages, Semantic HTML, and `llms.txt`).
-2. **Wiki Index Update**: Added `[[daily-blog-day-2]]` to the "Concepts & Content" list in `/home/claw/workspace/zero-shot-agency/index.md`.
-3. **Task Board Update**: Moved the "Daily Blog: Day 2" content drafting task from the Backlog to the Completed section in `/home/claw/workspace/zero-shot-agency/TASKS.md`.
-4. **Log Update**: Appended the task execution summary to `/home/claw/workspace/zero-shot-agency/log.md`, cross-referencing the new wikilink `[[daily-blog-day-2]]`.
-
-session_id: 20260423_130150_7a083b

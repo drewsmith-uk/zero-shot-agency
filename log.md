@@ -95,3 +95,10 @@
 - Saved the post as `docs/concepts/daily-blog-day-2.md`.
 - Appended `[[daily-blog-day-2]]` to `index.md` concepts list.
 - Updated `TASKS.md` to move the "Daily Blog: Day 2" drafting task from Backlog to Completed.
+
+## [2026-04-23] docs | Internal Tools Documentation
+- Read source codes of `geo-tracker.py` and `llms-txt-generator.py` to synthesize comprehensive documentation.
+- Rewrote `docs/tools/index.md` containing detailed usage instructions and parameters for the scripts.
+- Cross-referenced tools with concepts such as Generative Engine Optimization.
+- Updated [[TASKS]] to move the documentation task from Backlog to Completed.
+- Ensured compliance with the [[SCHEMA]] guidelines.
