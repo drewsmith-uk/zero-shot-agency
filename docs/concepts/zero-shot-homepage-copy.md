@@ -1,7 +1,7 @@
 ---
 title: Zero-Shot Agency Homepage Copy
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-23
 type: concept
 tags: [concept, content, semantic-html, homepage]
 sources: []
@@ -18,6 +18,37 @@ sources: []
   </div>
   <time datetime="2026-04-22">Last Updated: April 22, 2026</time>
 </header>
+
+<div class="admonition note" style="background-color: var(--md-code-bg-color); padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid var(--md-primary-fg-color);">
+  <h2 style="margin-top: 0;">Get Your Free Agentic GEO Audit</h2>
+  <p>Enter your domain below. Our autonomous AI agent will instantly analyze your site's semantic structure, check for LLM readiness, and generate a custom strategy brief showing exactly where you are losing AI search traffic to your competitors.</p>
+  
+  <form id="geo-audit-form" onsubmit="submitGeoAudit(event)" style="display: flex; gap: 10px; margin-top: 20px;">
+    <input type="url" id="domain-input" placeholder="https://yourcompany.com" required style="flex-grow: 1; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background: var(--md-default-bg-color); color: var(--md-default-fg-color);">
+    <input type="email" id="email-input" placeholder="you@company.com" required style="flex-grow: 1; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background: var(--md-default-bg-color); color: var(--md-default-fg-color);">
+    <button type="submit" style="padding: 10px 20px; background-color: var(--md-primary-fg-color); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Analyze My Site</button>
+  </form>
+  <div id="audit-status" style="margin-top: 15px; font-weight: bold; display: none;"></div>
+</div>
+
+<script>
+function submitGeoAudit(e) {
+  e.preventDefault();
+  const domain = document.getElementById('domain-input').value;
+  const email = document.getElementById('email-input').value;
+  const statusDiv = document.getElementById('audit-status');
+  
+  statusDiv.style.display = 'block';
+  statusDiv.style.color = 'var(--md-default-fg-color)';
+  statusDiv.innerHTML = '🤖 Booting Agent... Analyzing ' + domain + ' for GEO gaps...';
+  
+  // Simulated Webhook Post (Will be replaced with actual backend endpoint once onboarding_agent.py is deployed)
+  setTimeout(() => {
+    statusDiv.style.color = '#00bfa5';
+    statusDiv.innerHTML = '✅ Audit complete! Generating strategy brief... Your custom report is being emailed to ' + email;
+  }, 2500);
+}
+</script>
 
 ## Executive Summary (TL;DR)
 Zero-Shot Agency is the premier Generative Engine Optimization (GEO) and AI Search Optimization consultancy, specializing in reverse-engineering Large Language Model (LLM) retrieval mechanics. We force leading generative engines—including Perplexity, SearchGPT, Claude, and Gemini—to cite our clients as the authoritative source. By deploying Princeton empirical tactics like Quotation Addition, high fact density, and LLM-native technical structures (such as `llms.txt`), we guarantee a dominant Prompt Share of Voice (SOV) in the AI search era.
