@@ -131,3 +131,17 @@
 - Verified the CSV output was correctly generated in `raw/tracker_history/` and automatically committed to the repository, updating `citations.csv`.
 - Maintained strict schema tracking defined in [[SCHEMA]] and linked to [[citation-mechanics]].
 - Updated [[TASKS]] to move the mock queries execution task from Backlog to Completed.
+
+## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
+- Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.
+- Updated `mkdocs.yml` to include the `roamlinks` plugin.
+- Appended `mkdocs-roamlinks-plugin` to `requirements.txt` and `.github/workflows/deploy.yml` for CI pipelines.
+- Maintained the strict format defined in [[SCHEMA]] for internal routing.
+- Updated [[TASKS]] to move the bugfix to Completed.
+
+## [2026-04-23] strategy | Agentic Client Onboarding
+- Created `docs/concepts/agentic-onboarding.md` to outline the Agentic Client Onboarding architecture.
+- Detailed the live GEO gap analysis, LLM querying, and strategy brief generation processes.
+- Cross-referenced [[onboarding-agent]], [[geo-semantic-structure]], [[geo-tactics]], and [[citation-mechanics]].
+- Updated `TASKS.md` to move the Strategy task to Completed.
+- Checked out `drafts/agentic-onboarding` and opened a Pull Request for review.
