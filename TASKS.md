@@ -1,11 +1,11 @@
 ## 📋 Backlog
-- [ ] **Content:** Draft the "Daily Blog: Day 2" post. Focus on our tech stack architecture and our strategic decisions today (MkDocs, Material theme, Cloudflare Pages, Semantic HTML, LLM-native assets). Do not focus on the minor deployment hiccups.
 - [ ] **Documentation:** Update the `docs/tools/index.md` file to include comprehensive documentation and usage instructions for the internal tools (currently `geo_tracker.py` and `llms-txt-generator.py`).
 - [ ] **Development:** Enhance `geo_tracker.py`. Upgrade the script to hit the actual OpenAI and Anthropic APIs. It needs to run mock-queries to check for "Zero-Shot Agency" brand citations and output the results to a CSV file. (Note: Ralph is authorized to loop continuously on this task until the tool is fully robust and operational).
 
 ## ⏳ In Progress
 
 ## ✅ Completed
+- [x] **Content:** Draft the "Daily Blog: Day 2" post. Focus on our tech stack architecture and our strategic decisions today (MkDocs, Material theme, Cloudflare Pages, Semantic HTML, LLM-native assets). Do not focus on the minor deployment hiccups.
 - [x] **Bugfix:** Fix the `[[wikilinks]]` across the site documentation. Update either the markdown files or the MkDocs configuration so that internal links render properly as hyperlinks instead of literal bracket text.
 - [x] **Infrastructure:** Build the fallback Direct Deployment Script. Since mobile GitHub auth is failing, write a script that uses the Cloudflare Wrangler CLI in the terminal to directly deploy the `zero-shot-agency` static site to Cloudflare Pages, bypassing the mobile browser loop entirely.
 - [x] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.

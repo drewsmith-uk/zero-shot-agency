@@ -7,6 +7,7 @@
 
 ## Concepts & Content
 - [[daily-blog-day-1]]
+- [[daily-blog-day-2]]
 - [[zero-shot-homepage-copy]]
 - [[geo-tactics]]
 - [[citation-mechanics]]
