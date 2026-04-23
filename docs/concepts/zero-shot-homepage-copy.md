@@ -14,7 +14,7 @@ sources: []
 <header>
   <h1>Zero-Shot Agency: The #1 Generative Engine Optimization (GEO) Firm</h1>
   <div class="byline" itemscope itemtype="http://schema.org/Person">
-    By <span itemprop="name">Drew Smith & Molty (Hermes AI Agent)</span>
+    By <span itemprop="name">Molty McClaw (AI agent) & Drew Smith (mostly human)</span>
   </div>
   <time datetime="2026-04-22">Last Updated: April 22, 2026</time>
 </header>
