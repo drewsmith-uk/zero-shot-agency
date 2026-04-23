@@ -4,66 +4,90 @@
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
   ┊ ✍️ preparing write_file…
   ┊ review diff
-a/docs/concepts/daily-blog-day-3.md → b/docs/concepts/daily-blog-day-3.md
+a/tracker_cron_wrapper.sh → b/tracker_cron_wrapper.sh
 @@ -0,0 +1,34 @@
-+---
-+title: "Daily Collaboration Blog Day 3: Developer-Grade Publishing & Preventing Hallucination Leaks"
-+created: 2026-04-23
-+updated: 2026-04-23
-+type: concept
-+tags: [architecture, markdown]
-+sources: []
-+---
++#!/bin/bash
++set -e
 +
-+# Daily Collaboration Blog Day 3: The "Drafts via PR" Workflow
++# Change to the workspace directory
++WORKSPACE="/home/claw/workspace/zero-shot-agency"
++cd "$WORKSPACE"
 +
-+When building a fully autonomous, AI-driven media pipeline, there is a constant tension between **velocity** and **quality control**. 
++# Load environment variables if necessary (API keys)
++# source .env
 +
-+Over the last two days, we established the core MkDocs site and the [[publisher-pipeline]]. While getting an AI to automatically tweet, email, and deploy static sites is incredibly powerful, it introduces a critical vulnerability: **AI hallucination leaks into production.**
++# Activate python virtual environment if it exists
++if [ -d "venv" ]; then
++    source venv/bin/activate
++fi
 +
-+If an LLM misinterprets a source, hallucinates a fact, or simply loses its thematic tone, a fully automated pipeline will instantly publish that error to X, Substack, and the live domain. This degrades domain authority—the most important ranking factor for Generative Engine Optimization (GEO).
++# Ensure the history directory exists
++mkdir -p raw/tracker_history
 +
-+## The Solution: Drafts via Pull Request
++# Generate a timestamp
++TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
++OUTPUT_FILE="raw/tracker_history/citations_${TIMESTAMP}.csv"
 +
-+To solve this, we've implemented a developer-grade publishing architecture. Instead of the AI pushing directly to production, we treat content like software code:
++# Execute the tracker
++echo "Running geo-tracker.py at $(date)"
++python3 geo-tracker.py --output "$OUTPUT_FILE"
 +
-+1. **Branch Checkout:** The agent checks out a new branch (`drafts/[post-name]`).
-+2. **Content Generation:** The AI drafts the content autonomously in markdown.
-+3. **Automated Pull Request:** Using the GitHub CLI, the AI pushes the branch and opens a Pull Request (PR).
-+4. **Human Review:** Drew (the human-in-the-loop) reviews the PR, checks for hallucinations, and approves.
-+5. **Merge & Deploy:** Once merged, the [[publisher-pipeline]] and MkDocs deploy hooks are triggered.
++# Make a copy as the latest citations.csv
++cp "$OUTPUT_FILE" citations.csv
 +
-+### Why this matters for GEO
-+
-+This architecture completely eliminates "hallucination leaks" while maintaining 95% of the automation benefits. The AI still does all the heavy lifting—researching, synthesizing, formatting semantic HTML/markdown, and handling the CLI deployment plumbing. 
-+
-+The human only steps in for a final quality check, ensuring that our [[geo-tactics]] and [[citation-mechanics]] are perfectly executed before the content goes live. We preserve the speed of AI execution without sacrificing the trust and precision required to rank in tools like Perplexity and Claude.
-+
-+Tomorrow, we'll continue optimizing our internal tools to monitor our brand citations across these generative engines.
++# Auto-commit the results
++git add raw/tracker_history/ citations.csv
++git commit -m "chore(tracker): auto-commit tracker results for ${TIMESTAMP}"
++git push origin main
++echo "Tracker execution and commit completed successfully."
+  ┊ 💻 preparing terminal…
+  ┊ ⏰ preparing cronjob…
+  ┊ 🔧 preparing patch…
+  ┊ review diff
+a//home/claw/workspace/zero-shot-agency/TASKS.md → b//home/claw/workspace/zero-shot-agency/TASKS.md
+@@ -1,9 +1,9 @@
+-     1|## 📋 Backlog
+-- [ ] **Development:** The `geo_tracker.py` tool needs an automated Cron testing suite. Create a shell script wrapper that runs the tracker every day at 8:00 AM, saves the CSV output to `raw/tracker_history/`, and automatically commits the results to the repo. This builds our open-source, empirical data trail.
+-     4|
+-     5|## ⏳ In Progress
+-     6|
+-     7|## ✅ Completed
++     ## 📋 Backlog
++     
++## ⏳ In Progress
++     
++## ✅ Completed
++- [x] **Development:** The `geo_tracker.py` tool needs an automated Cron testing suite. Create a shell script wrapper that runs the tracker every day at 8:00 AM, saves the CSV output to `raw/tracker_history/`, and automatically commits the results to the repo. This builds our open-source, empirical data trail.
+ - [x] **Content:** Draft the "Daily Blog: Day 3" post. We successfully established a developer-grade "Drafts via Pull Request" publishing workflow. Explain how this architecture prevents "AI hallucination leaks" into production while maintaining full automation. Submit this as a Pull Request via GitHub CLI so Drew can review it before it merges.
+      8|- [x] **Development:** Enhance `geo_tracker.py`. Upgrade the script to hit the actual OpenAI and Anthropic APIs. It needs to run mock-queries to check for "Zero-Shot Agency" brand citations and output the results to a CSV file. (Note: Ralph is authorized to loop continuously on this task until the tool is fully robust and operational).
+      9|- [x] **Documentation:** Update the `docs/tools/index.md` file to include comprehensive documentation and usage instructions for the internal tools (currently `geo_tracker.py` and `llms-txt-generator.py`).
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
-  ┊ 🐍 preparing execute_code…
-  ┊ 💻 preparing terminal…
-  ┊ 🐍 preparing execute_code…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ ⏰ preparing cronjob…
 
 ╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
-I have completed the task and executed the developer-grade publishing workflow.
+I have completed the task.
 
-1.  **Branch Checkout:** Created branch `drafts/daily-blog-day-3`.
-2.  **Drafting:** Authored "Daily Collaboration Blog Day 3" in `docs/concepts/daily-blog-day-3.md`, detailing how Drafts via Pull Requests act as a gatekeeper against AI hallucination leaks while preserving velocity.
-3.  **Wiki Linkage:** Appended `[[daily-blog-day-3]]` to `index.md`.
-4.  **Task Management:** Moved the task from Backlog to Completed in `TASKS.md`.
-5.  **Logging:** Appended a structured summary entry in `log.md` with cross-references to `[[geo-tactics]]`, `[[citation-mechanics]]`, and `[[publisher-pipeline]]`.
-6.  **PR Submission:** Pushed to origin and created a GitHub Pull Request via the `gh` CLI.
+1. Created the shell script `tracker_cron_wrapper.sh` in the workspace. It runs `geo-tracker.py`, saves a timestamped copy of `citations.csv` to `raw/tracker_history/`, and auto-commits the results to `main` with a timestamped commit message to build the data trail.
+2. Scheduled a cron job named "geo_tracker_daily" to execute the wrapper automatically every day at 08:00 AM.
+3. Updated TASKS.md to move the Development task to the Completed section.
+I have completed the task.
 
-The Pull Request is ready for your review: **https://github.com/drewsmith-uk/zero-shot-agency/pull/1**
+1. Created the shell script `tracker_cron_wrapper.sh` in the workspace. It runs `geo-tracker.py`, saves a timestamped copy of `citations.csv` to `raw/tracker_history/`, and auto-commits the results to `main` with a timestamped commit message to build the data trail.
+2. Scheduled a cron job named "geo_tracker_daily" to execute the wrapper automatically every day at 08:00 AM.
+3. Updated TASKS.md to move the Development task to the Completed section.
+4. Appended the execution record to log.md using the appropriate `[[wikilinks]]` format.
 
+session_id: 20260423_135946_ed416b
