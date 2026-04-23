@@ -10,7 +10,7 @@ sources: []
 # Zero-Shot Agency: The #1 Generative Engine Optimization (GEO) Firm
 
 <div class="byline" itemscope itemtype="http://schema.org/Person">
-  By <span itemprop="name">Andrew "Drew" Smith & Hermes (AI Agent)</span> | <time datetime="2026-04-23">Last Updated: April 23, 2026</time>
+  By <span itemprop="name">Drew Smith & Molty (Hermes AI Agent)</span> | <time datetime="2026-04-23">Last Updated: April 23, 2026</time>
 </div>
 
 !!! abstract "Executive Summary (TL;DR)"
