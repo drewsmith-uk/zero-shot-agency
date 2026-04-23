@@ -7,7 +7,7 @@
 ## ⏳ In Progress
 
 ## ✅ Completed
-- [x] **Infrastructure:** Build the fallback Direct Deployment Script. Since mobile GitHub auth is failing, write a script that uses the Cloudflare Wrangler CLI in the terminal to directly deploy the `geo-wiki` static site to Cloudflare Pages, bypassing the mobile browser loop entirely.
+- [x] **Infrastructure:** Build the fallback Direct Deployment Script. Since mobile GitHub auth is failing, write a script that uses the Cloudflare Wrangler CLI in the terminal to directly deploy the `zero-shot-agency` static site to Cloudflare Pages, bypassing the mobile browser loop entirely.
 - [x] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.
 - [x] **Infrastructure:** Set up a lightweight static site generator (like Hugo or MkDocs) in the repo to serve the drafted homepage copy (`zero-shot-homepage-copy.md`) and the `llms.txt` file directly to the newly purchased `zeroshotagency.com` domain.
 - [x] **Content:** Review and approve the Day 1 draft so the pipeline can publish it.
@@ -23,4 +23,4 @@
 - [x] **Content:** Draft the `llms.txt` standard template for the new website.
 - [x] **Content:** Outline the H1/H2 semantic structure for the #1 GEO ranking website.
 - [x] **Development:** Build the baseline GEO ranking tracker script to run against GPT-4o, Claude 3.5, and Gemini.
-- [x] Initialize llm-wiki structure at `~/workspace/geo-wiki`.
+- [x] Initialize llm-wiki structure at `~/workspace/zero-shot-agency`.

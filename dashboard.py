@@ -9,7 +9,7 @@ from rich.panel import Panel
 from rich.text import Text
 from rich.console import Console
 
-WIKI_DIR = Path(os.path.expanduser("~/workspace/geo-wiki"))
+WIKI_DIR = Path(os.path.expanduser("~/workspace/zero-shot-agency"))
 CRON_JOB_ID = "a0c3cd15b660"
 CRON_OUT_DIR = Path(os.path.expanduser("~/.hermes/cron/output"))
 

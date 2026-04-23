@@ -18,6 +18,6 @@ mkdocs build
 
 # Deploy directly via Wrangler
 echo "Deploying to Cloudflare Pages via Wrangler..."
-npx wrangler pages deploy site/ --project-name=geo-wiki
+npx wrangler pages deploy site/ --project-name=zero-shot-agency
 
 echo "✅ Direct deployment complete!"

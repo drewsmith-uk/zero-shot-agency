@@ -1,7 +1,7 @@
 #!/bin/bash
 # The Ralph Loop for the GEO Wiki
 
-WIKI_DIR="$HOME/workspace/geo-wiki"
+WIKI_DIR="$HOME/workspace/zero-shot-agency"
 TASKS_FILE="$WIKI_DIR/TASKS.md"
 STATE_FILE="$WIKI_DIR/run-state.txt"
 MAX_TASKS=5
