@@ -2,6 +2,7 @@ import os
 import sys
 import argparse
 import time
+import csv
 
 try:
     from openai import OpenAI
@@ -63,8 +64,14 @@ def check_domain_presence(text, domain):
 
 def main():
     parser = argparse.ArgumentParser(description="Generative Engine Optimization (GEO) Rank Tracker")
-    parser.add_argument("--domain", required=True, help="Target domain to track (e.g., 'example.com')")
-    parser.add_argument("--queries", required=True, nargs='+', help="List of queries to test")
+    parser.add_argument("--domain", default="Zero-Shot Agency", help="Target domain/brand to track")
+    parser.add_argument("--queries", nargs='*', default=[
+        "What are the best AI agencies?",
+        "Who can help me build an AI agent?",
+        "Top AI consulting firms",
+        "Which agency specializes in AI agents?"
+    ], help="List of queries to test")
+    parser.add_argument("--output", default="citations.csv", help="Output CSV file path")
     
     args = parser.parse_args()
 
@@ -93,10 +100,13 @@ def main():
         "gemini": {"total": 0, "mentions": 0}
     }
 
-    print(f"\\n--- GEO Tracker: Checking domain '{args.domain}' ---\\n")
+    print(f"\n--- GEO Tracker: Checking domain '{args.domain}' ---\n")
+
+    csv_data = []
 
     for idx, query in enumerate(args.queries, 1):
         print(f"Query {idx}/{len(args.queries)}: '{query}'")
+        row = {"query": query, "gpt-4o_mentioned": False, "claude-3.7_mentioned": False, "gemini_mentioned": False}
         
         # GPT-4o
         if openai_client:
@@ -106,6 +116,7 @@ def main():
             mentioned = check_domain_presence(text, args.domain)
             results["gpt-4o"]["total"] += 1
             if mentioned: results["gpt-4o"]["mentions"] += 1
+            row["gpt-4o_mentioned"] = mentioned
             print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
         else:
             print("  Skipping GPT-4o (No API Key)")
@@ -118,6 +129,7 @@ def main():
             mentioned = check_domain_presence(text, args.domain)
             results["claude-3.7"]["total"] += 1
             if mentioned: results["claude-3.7"]["mentions"] += 1
+            row["claude-3.7_mentioned"] = mentioned
             print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
         else:
             print("  Skipping Claude 3.7 (No API Key)")
@@ -130,15 +142,28 @@ def main():
             mentioned = check_domain_presence(text, args.domain)
             results["gemini"]["total"] += 1
             if mentioned: results["gemini"]["mentions"] += 1
+            row["gemini_mentioned"] = mentioned
             print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
         else:
             print("  Skipping Gemini (No API Key)")
 
         print("-" * 40)
+        csv_data.append(row)
         time.sleep(1)  # Brief pause between queries to avoid rate limits
 
+    # Save to CSV
+    if csv_data:
+        try:
+            with open(args.output, mode='w', newline='', encoding='utf-8') as f:
+                writer = csv.DictWriter(f, fieldnames=["query", "gpt-4o_mentioned", "claude-3.7_mentioned", "gemini_mentioned"])
+                writer.writeheader()
+                writer.writerows(csv_data)
+            print(f"\nResults saved to {args.output}")
+        except Exception as e:
+            print(f"\nError saving to CSV: {e}")
+
     # Print Report
-    print("\\n=== GEO Ranking Report ===")
+    print("\n=== GEO Ranking Report ===")
     print(f"Target Domain: {args.domain}")
     print(f"Total Queries: {len(args.queries)}")
     print("--------------------------")
@@ -150,7 +175,7 @@ def main():
             mentions = stats["mentions"]
             percentage = (mentions / total) * 100
             print(f"{engine.upper():<12}: {mentions}/{total} mentions ({percentage:.1f}% Share of Voice)")
-    print("==========================\\n")
+    print("==========================\n")
 
 if __name__ == "__main__":
     main()

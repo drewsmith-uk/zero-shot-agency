@@ -102,3 +102,9 @@
 - Cross-referenced tools with concepts such as Generative Engine Optimization.
 - Updated [[TASKS]] to move the documentation task from Backlog to Completed.
 - Ensured compliance with the [[SCHEMA]] guidelines.
+
+## [2026-04-23] dev | Upgrade Geo Tracker
+- Delegated task to Claude subagent (`acp_command='claude'`) to upgrade `geo-tracker.py`.
+- The script now successfully hits the actual OpenAI and Anthropic APIs to run mock-queries checking for "Zero-Shot Agency" brand citations, logging results to `citations.csv`.
+- Handled dependency constraints by auto-installing missing `openai`, `anthropic`, and `google-generativeai` modules.
+- Maintained the strict format defined in [[SCHEMA]] and updated [[TASKS]] to move the `Development` task from Backlog to Completed.
