@@ -1,70 +1,121 @@
+  ┊ 📚 preparing skill_view…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 🔎 preparing search_files…
+  ┊ 📖 preparing read_file…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 📖 preparing read_file…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ ✍️ preparing write_file…
   ┊ review diff
-a//home/claw/workspace/geo-wiki/deploy_cloudflare.sh → b//home/claw/workspace/geo-wiki/deploy_cloudflare.sh
-@@ -0,0 +1,23 @@
-+#!/bin/bash
-+# Fallback Direct Deployment Script for Cloudflare Pages
-+# Bypasses GitHub auth and mobile browser loop by deploying directly via Wrangler CLI
+a/test_markdown.py → b/test_markdown.py
+@@ -0,0 +1,3 @@
++import markdown
++html = markdown.markdown("Hello [[World]]!", extensions=['wikilinks'])
++print(html)
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 🔧 preparing patch…
+  ┊ 🔧 preparing patch…
+  ┊ review diff
+a/mkdocs.yml → b/mkdocs.yml
+@@ -27,7 +27,7 @@
+     - search.highlight
+     - content.code.copy
+ 
+-markdown_extensions:
++plugins:\n  - search\n  - roamlinks\n\nmarkdown_extensions:
+   - admonition
+   - pymdownx.details
+   - pymdownx.superfences
+  ┊ 💻 preparing terminal…
+  ┊ 🔧 preparing patch…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ ✍️ preparing write_file…
+  ┊ review diff
+a/mkdocs.yml → b/mkdocs.yml
+@@ -27,7 +27,11 @@
+     - search.highlight
+     - content.code.copy
+ 
+-plugins:\n  - search\n  - roamlinks\n\nmarkdown_extensions:
++plugins:
++  - search
++  - roamlinks
 +
-+set -e
-+
-+echo "Deploying static site to Cloudflare Pages..."
-+
-+# Navigate to the mkdocs repository
-+cd /home/claw/workspace/zero-shot-agency
-+
-+# Build the MkDocs site
-+echo "Building site with MkDocs..."
-+if [ -d "venv" ]; then
-+    source venv/bin/activate
-+fi
-+mkdocs build
-+
-+# Deploy directly via Wrangler
-+echo "Deploying to Cloudflare Pages via Wrangler..."
-+npx wrangler pages deploy site/ --project-name=geo-wiki
-+
-+echo "✅ Direct deployment complete!"
++markdown_extensions:
+   - admonition
+   - pymdownx.details
+   - pymdownx.superfences
+  ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
   ┊ 🔧 preparing patch…
   ┊ review diff
-a//home/claw/workspace/geo-wiki/TASKS.md → b//home/claw/workspace/geo-wiki/TASKS.md
-@@ -1,9 +1,9 @@
- ## 📋 Backlog
--- [ ] **Infrastructure:** Build the fallback Direct Deployment Script. Since mobile GitHub auth is failing, write a script that uses the Cloudflare Wrangler CLI in the terminal to directly deploy the `geo-wiki` static site to Cloudflare Pages, bypassing the mobile browser loop entirely.
+a/.github/workflows/deploy.yml → b/.github/workflows/deploy.yml
+@@ -20,7 +20,7 @@
+           python-version: '3.x'
  
+       - name: Install dependencies
+-        run: pip install mkdocs mkdocs-material
++        run: pip install mkdocs mkdocs-material mkdocs-roamlinks-plugin
+ 
+       - name: Deploy
+         run: mkdocs gh-deploy --force
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 🔧 preparing patch…
+  ┊ review diff
+a//home/claw/workspace/zero-shot-agency/TASKS.md → b//home/claw/workspace/zero-shot-agency/TASKS.md
+@@ -1,5 +1,4 @@
+ ## 📋 Backlog
+-- [ ] **Bugfix:** Fix the `[[wikilinks]]` across the site documentation. Update either the markdown files or the MkDocs configuration so that internal links render properly as hyperlinks instead of literal bracket text.
+ - [ ] **Content:** Draft the "Daily Blog: Day 2" post. Focus on our tech stack architecture and our strategic decisions today (MkDocs, Material theme, Cloudflare Pages, Semantic HTML, LLM-native assets). Do not focus on the minor deployment hiccups.
+ - [ ] **Documentation:** Update the `docs/tools/index.md` file to include comprehensive documentation and usage instructions for the internal tools (currently `geo_tracker.py` and `llms-txt-generator.py`).
+ - [ ] **Development:** Enhance `geo_tracker.py`. Upgrade the script to hit the actual OpenAI and Anthropic APIs. It needs to run mock-queries to check for "Zero-Shot Agency" brand citations and output the results to a CSV file. (Note: Ralph is authorized to loop continuously on this task until the tool is fully robust and operational).
+@@ -7,6 +6,7 @@
  ## ⏳ In Progress
  
  ## ✅ Completed
-+- [x] **Infrastructure:** Build the fallback Direct Deployment Script. Since mobile GitHub auth is failing, write a script that uses the Cloudflare Wrangler CLI in the terminal to directly deploy the `geo-wiki` static site to Cloudflare Pages, bypassing the mobile browser loop entirely.
++- [x] **Bugfix:** Fix the `[[wikilinks]]` across the site documentation. Update either the markdown files or the MkDocs configuration so that internal links render properly as hyperlinks instead of literal bracket text.
+ - [x] **Infrastructure:** Build the fallback Direct Deployment Script. Since mobile GitHub auth is failing, write a script that uses the Cloudflare Wrangler CLI in the terminal to directly deploy the `zero-shot-agency` static site to Cloudflare Pages, bypassing the mobile browser loop entirely.
  - [x] **Infrastructure:** Configure GitHub Pages or Cloudflare Pages to auto-deploy the site from the GitHub repo.
  - [x] **Infrastructure:** Set up a lightweight static site generator (like Hugo or MkDocs) in the repo to serve the drafted homepage copy (`zero-shot-homepage-copy.md`) and the `llms.txt` file directly to the newly purchased `zeroshotagency.com` domain.
- - [x] **Content:** Review and approve the Day 1 draft so the pipeline can publish it.
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
+  ┊ ✍️ preparing write_file…
+  ┊ review diff
+a/append_log.py → b/append_log.py
+@@ -0,0 +1,7 @@
++with open('/home/claw/workspace/zero-shot-agency/log.md', 'a') as f:
++    f.write('\n## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs\n')
++    f.write('- Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.\n')
++    f.write('- Updated `mkdocs.yml` to include the `roamlinks` plugin.\n')
++    f.write('- Appended `mkdocs-roamlinks-plugin` to `requirements.txt` and `.github/workflows/deploy.yml` for CI pipelines.\n')
++    f.write('- Maintained the strict format defined in [[SCHEMA]] for internal routing.\n')
++    f.write('- Updated [[TASKS]] to move the bugfix to Completed.\n')
   ┊ 💻 preparing terminal…
 
 ╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
-The Direct Deployment Script has been successfully created.
+I have successfully fixed the `[[wikilinks]]` issue across the MkDocs site configuration. 
 
-1. Script Location: /home/claw/workspace/geo-wiki/deploy_cloudflare.sh
-2. Behavior: Navigates to the zero-shot-agency repository, activates the virtual environment, builds the MkDocs site, and uses 'npx wrangler pages deploy site/ --project-name=geo-wiki' to push it to Cloudflare Pages.
-3. Tracking: Moved the task from Backlog to Completed in TASKS.md.
-4. Logging: Appended the operation to log.md and cross-referenced with [[zero-shot-homepage-copy]] and [[TASKS]].
+Here are the actions executed:
 
-The Direct Deployment Script has been successfully created.
+1. **Installed Plugin:** Installed `mkdocs-roamlinks-plugin` within your virtual environment to natively parse Obsidian-style `[[wikilinks]]` into HTML hyperlinks.
+2. **Updated Config:** Modified `mkdocs.yml` to explicitly load the `roamlinks` plugin (alongside default search).
+3. **Verified Build:** Executed `mkdocs build` successfully. The build log confirms that `[[wikilinks]]` are now caught and compiled correctly (triggering `AutoLinksPlugin` routing as expected).
+4. **CI/CD Integration:** Updated `requirements.txt` and `.github/workflows/deploy.yml` to include the new plugin so that GitHub Pages / Cloudflare pipelines install it automatically before building.
+5. **Marked Task Completed:** Moved the Bugfix task from the "Backlog" to the "Completed" section in `TASKS.md`.
+6. **Updated Logs:** Appended the completion status into `log.md`, appropriately using the `[[SCHEMA]]` and `[[TASKS]]` cross-reference wikilinks as requested. 
 
-1. Script Location: /home/claw/workspace/geo-wiki/deploy_cloudflare.sh
-2. Behavior: Navigates to the zero-shot-agency repository, activates the virtual environment, builds the MkDocs site, and uses 'npx wrangler pages deploy site/ --project-name=geo-wiki' to push it to Cloudflare Pages.
-3. Tracking: Moved the task from Backlog to Completed in TASKS.md.
-4. Logging: Appended the operation to log.md and cross-referenced with [[zero-shot-homepage-copy]] and [[TASKS]].
-
-The fallback infrastructure is ready to use.
-
-session_id: 20260422_231859_7abb14

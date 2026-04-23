@@ -75,3 +75,17 @@
 - Created `deploy_cloudflare.sh` to bypass mobile GitHub authentication issues.
 - The script directly builds the [[zero-shot-homepage-copy]] static site via MkDocs in the `zero-shot-agency` directory and uses `npx wrangler pages deploy` to push it to the `geo-wiki` Cloudflare Pages project.
 - Updated [[TASKS]] to move the fallback deployment task from Backlog to Completed.
+
+## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
+- Installed  to fix the rendering of  across the site.
+- Updated  to include the  plugin.
+- Appended  to  and  for CI pipelines.
+- Maintained the strict format defined in [[SCHEMA]] for internal routing.
+- Updated [[TASKS]] to move the bugfix to Completed.
+
+## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
+- Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.
+- Updated `mkdocs.yml` to include the `roamlinks` plugin.
+- Appended `mkdocs-roamlinks-plugin` to `requirements.txt` and `.github/workflows/deploy.yml` for CI pipelines.
+- Maintained the strict format defined in [[SCHEMA]] for internal routing.
+- Updated [[TASKS]] to move the bugfix to Completed.
