@@ -4,7 +4,11 @@
 WIKI_DIR="$HOME/workspace/zero-shot-agency"
 TASKS_FILE="$WIKI_DIR/TASKS.md"
 STATE_FILE="$WIKI_DIR/run-state.txt"
+LOG_FILE="$WIKI_DIR/latest_agent.log"
 MAX_TASKS=5
+
+# Send all output of this script to the log file so the dashboard can read it
+exec >> "$LOG_FILE" 2>&1
 
 # Initialize state file
 if [ ! -f "$STATE_FILE" ]; then
@@ -38,7 +42,7 @@ while [ $tasks_completed -lt $MAX_TASKS ]; do
     
     # 3. Boot fresh agent instance
     echo "🧠 Booting fresh agent context..."
-    hermes chat --yolo -Q -q "You are the GEO Wiki Orchestrator running inside a Ralph Loop. \nORIENT YOURSELF: Read $WIKI_DIR/strategy.md, $WIKI_DIR/SCHEMA.md, index.md, and log.md.\nYOUR TASK: $TASK_DESC\nRULES:\n1. If the task requires deep coding/development, use delegate_task with acp_command='claude' (DO NOT USE legacy 3.5 models).\n2. Content Drafts: Checkout a new branch (e.g., drafts/[name]), write the file, update TASKS.md, and then use /home/linuxbrew/.linuxbrew/bin/gh pr create --fill to open a Pull Request.\n3. If the task is scraping, use your native web_search/web_extract tools and save to raw/.\n4. If it is synthesis, do it yourself and save to concepts/.\n5. Once completed, edit $TASKS_FILE to move the task from the Backlog to Completed.\n6. Update log.md and cross-reference with [[wikilinks]].\nExecute now." > "$WIKI_DIR/latest_agent.log" 2>&1
+    hermes chat --yolo -Q -q "You are the GEO Wiki Orchestrator running inside a Ralph Loop. \nORIENT YOURSELF: Read $WIKI_DIR/strategy.md, $WIKI_DIR/SCHEMA.md, index.md, and log.md.\nYOUR TASK: $TASK_DESC\nRULES:\n1. If the task requires deep coding/development, use delegate_task with acp_command='claude' (DO NOT USE legacy 3.5 models).\n2. Content Drafts: Checkout a new branch (e.g., drafts/[name]), write the file, update TASKS.md, and then use /home/linuxbrew/.linuxbrew/bin/gh pr create --fill to open a Pull Request.\n3. If the task is scraping, use your native web_search/web_extract tools and save to raw/.\n4. If it is synthesis, do it yourself and save to concepts/.\n5. Once completed, edit $TASKS_FILE to move the task from the Backlog to Completed.\n6. Update log.md and cross-reference with [[wikilinks]].\nExecute now."
 
     # 4. Agent exits. Increment and cool down.
     

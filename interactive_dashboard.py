@@ -11,6 +11,7 @@ from textual.reactive import reactive
 
 WIKI_DIR = Path(os.path.expanduser("~/workspace/zero-shot-agency"))
 STATE_FILE = WIKI_DIR / "run-state.txt"
+LOG_FILE = WIKI_DIR / "latest_agent.log"
 
 def read_state():
     if STATE_FILE.exists():
@@ -74,10 +75,13 @@ class RalphDashboard(App):
     Button {
         margin: 1 2;
     }
-    .started { background: green; }
-    .stopped { background: red; }
-    .active-proc { color: lime; text-style: bold; }
-    .dead-proc { color: red; text-style: bold; }
+    #status-indicator {
+        width: auto;
+        margin: 1 2;
+        content-align: center middle;
+        padding: 1 2;
+        border: solid white;
+    }
     """
 
     def compose(self) -> ComposeResult:
@@ -90,13 +94,12 @@ class RalphDashboard(App):
             yield Button("Set RUNNING", id="btn_start", variant="success")
             yield Button("Set PAUSED", id="btn_pause", variant="warning")
             yield Button("▶ LAUNCH SCRIPT", id="btn_launch", variant="primary")
-            yield Static("Status: UNKNOWN", id="status-indicator", classes="stopped")
-            yield Static("PROCESS: CHECKING", id="process-indicator", classes="dead-proc")
+            yield Static("Loading Status...", id="status-indicator")
         yield Footer()
 
     def on_mount(self) -> None:
         self.update_content()
-        self.set_interval(1.0, self.update_content)
+        self.set_interval(0.5, self.update_content)  # Fast refresh for responsiveness
 
     def update_content(self) -> None:
         # Update Tasks
@@ -107,9 +110,8 @@ class RalphDashboard(App):
         
         # Update Agent Output
         try:
-            log_file = WIKI_DIR / "latest_agent.log"
-            if log_file.exists() and log_file.stat().st_size > 0:
-                with open(log_file, 'r', encoding='utf-8', errors='ignore') as f:
+            if LOG_FILE.exists() and LOG_FILE.stat().st_size > 0:
+                with open(LOG_FILE, 'r', encoding='utf-8', errors='ignore') as f:
                     lines = f.readlines()
                     clean_text = clean_ansi("".join(lines[-20:]))
                     self.query_one("#agent-panel", Static).update(f"[bold yellow]⚡ Live Agent Output[/bold yellow]\n\n{clean_text}")
@@ -118,24 +120,31 @@ class RalphDashboard(App):
         except Exception as e:
             pass
 
-        # Update State Text File Indicator
+        # Update Combined Status Indicator
         state = read_state()
-        status_widget = self.query_one("#status-indicator", Static)
-        status_widget.update(f" State: {state} ")
-        if state == "RUNNING":
-            status_widget.classes = "started"
-        else:
-            status_widget.classes = "stopped"
-            
-        # Update Actual OS Process Indicator
         is_running = is_process_running()
-        proc_widget = self.query_one("#process-indicator", Static)
-        if is_running:
-            proc_widget.update(" | ⚙ PROCESS: ALIVE")
-            proc_widget.classes = "active-proc"
-        else:
-            proc_widget.update(" | 💀 PROCESS: DEAD")
-            proc_widget.classes = "dead-proc"
+        
+        state_fmt = f"[black on green] {state} [/]" if state == "RUNNING" else f"[white on red] {state} [/]"
+        
+        # Add intelligence to the process indicator
+        try:
+            log_content = ""
+            if LOG_FILE.exists():
+                with open(LOG_FILE, 'r') as f:
+                    log_content = f.read()
+                    
+            if is_running:
+                proc_fmt = "[bold lime]⚙ ACTIVE[/]"
+            elif "Ralph is going to sleep" in log_content[-200:]:
+                proc_fmt = "[bold yellow]💤 SLEEPING (NO TASKS)[/]"
+            elif "shift finished" in log_content[-200:]:
+                proc_fmt = "[bold cyan]🏁 FINISHED[/]"
+            else:
+                proc_fmt = "[bold red]💀 DEAD / CRASHED[/]"
+        except:
+             proc_fmt = "[bold red]💀 DEAD[/]" if not is_running else "[bold lime]⚙ ACTIVE[/]"
+        
+        self.query_one("#status-indicator", Static).update(f"File State: {state_fmt}  |  Loop: {proc_fmt}")
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "btn_start":
@@ -143,6 +152,10 @@ class RalphDashboard(App):
         elif event.button.id == "btn_pause":
             subprocess.run([f"{WIKI_DIR}/ralph-control.sh", "stop"])
         elif event.button.id == "btn_launch":
+            # Clear the log file so we can see the fresh run
+            with open(LOG_FILE, 'w') as f:
+                f.write("System: Launching Ralph Loop...\n")
+            
             # Launch the loop in the background, detached
             subprocess.Popen([f"{WIKI_DIR}/ralph_loop.sh"], cwd=WIKI_DIR, 
                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
