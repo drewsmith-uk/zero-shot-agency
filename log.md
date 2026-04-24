@@ -12,7 +12,11 @@
     12|- Linked post to [[geo-tactics]].
     13|- Added `[[daily-blog-day-1]]` to `index.md` concepts list.
     14|- Updated `TASKS.md` to move the blog setup task to Completed.
-    15|\n## [2026-04-22] content | Zero-Shot Agency Homepage Draft\n- Drafted the homepage copy for Zero-Shot Agency at `concepts/zero-shot-homepage-copy.md` using the semantic structure from [[geo-semantic-structure]].\n- Updated `TASKS.md` to move the homepage drafting task from Backlog to Completed.\n- Appended `[[zero-shot-homepage-copy]]` to `index.md`.
+    15|
+## [2026-04-22] content | Zero-Shot Agency Homepage Draft
+- Drafted the homepage copy for Zero-Shot Agency at `concepts/zero-shot-homepage-copy.md` using the semantic structure from [[geo-semantic-structure]].
+- Updated `TASKS.md` to move the homepage drafting task from Backlog to Completed.
+- Appended `[[zero-shot-homepage-copy]]` to `index.md`.
     16|
     17|## [2026-04-22] test | 60 Second Dummy Task
     18|- Executed `sleep 60` via the terminal tool to test dashboard rendering.
@@ -131,6 +135,20 @@
 - Verified the CSV output was correctly generated in `raw/tracker_history/` and automatically committed to the repository, updating `citations.csv`.
 - Maintained strict schema tracking defined in [[SCHEMA]] and linked to [[citation-mechanics]].
 - Updated [[TASKS]] to move the mock queries execution task from Backlog to Completed.
+
+## [2026-04-23] dev | Build Onboarding Agent
+- Delegated task to Claude subagent (`acp_command='claude'`) to build `onboarding_agent.py`.
+- The script accepts a target domain URL, scrapes H1/H2 tags and the `llms.txt` file, and uses the OpenAI API to generate a custom 'Agentic Strategy Brief' in Markdown format.
+- Implemented `python-dotenv` for API key handling and included robust error handling for failed requests.
+- Maintained schema definitions, created `docs/entities/onboarding-agent.md`, and added `[[onboarding-agent]]` to `index.md`.
+- Updated [[TASKS]] to move the `Development` task from Backlog to Completed.
+- Checked out branch `drafts/onboarding-agent` and submitted changes via Pull Request using GitHub CLI, in alignment with the "Drafts via Pull Request" workflow.
+
+## [2026-04-24] dev | Resolve Issue #10
+- Finalized `onboarding_agent.py` using Claude subagent.
+- Pushed to `drafts/onboarding-agent`.
+- Created PR #43 and closed Issue #10 via GitHub CLI.
+- Validated references to [[onboarding-agent]] and [[agentic-onboarding]].
 
 ## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
 - Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.

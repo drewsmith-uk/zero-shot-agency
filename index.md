@@ -1,6 +1,7 @@
 # Zero-Shot Agency Wiki Index
 
 ## Entities & Tools
+- [[onboarding-agent]]
 - [[cursorrules-generator]]
 - [[llms-txt-generator]]
 - [[publisher-pipeline]]
