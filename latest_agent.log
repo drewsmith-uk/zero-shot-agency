@@ -49,3 +49,87 @@ The repository is fully up to date with the PR ready for human review.
 
 session_id: 20260424_123424_8dc555
 📦 Committing progress to Git...
+[drafts/daily-blog-day-4 e0770cd] Ralph Auto-Commit: Completed
+ 2 files changed, 28 insertions(+), 45 deletions(-)
+ create mode 100644 raw/tracker_history/citations_2026-04-24_08-00-12.csv
+To https://github.com/drewsmith-uk/zero-shot-agency.git
+   55d9e43..e0770cd  drafts/daily-blog-day-4 -> drafts/daily-blog-day-4
+⏳ Cooling down for 60 seconds before next iteration...
+🎯 Next objective: #37 - Research and evaluate sanity-io agent-toolkit skills
+🧠 Booting fresh agent context...
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ ✍️ preparing write_file…
+  ┊ review diff
+a/docs/concepts/sanity-skills-evaluation.md → b/docs/concepts/sanity-skills-evaluation.md
+@@ -0,0 +1,40 @@
++---
++title: Sanity Toolkit Skills Evaluation
++created: 2026-04-24
++updated: 2026-04-24
++type: concept
++tags: [architecture, strategy]
++sources: []
++---
++
++# Sanity Toolkit Skills Evaluation
++
++This report evaluates the agent skills provided in the [sanity-io/agent-toolkit](https://github.com/sanity-io/agent-toolkit/tree/main/skills) repository for their potential use within the Zero-Shot Agency project.
++
++## 1. Utility
++
++The repository provides six major skills primarily aimed at structuring, migrating, and presenting content within headless CMS environments (specifically Sanity). 
++
++The genuinely useful skills include:
++- **seo-aeo-best-practices**: Direct utility for Generative Engine Optimization (GEO). Provides guidelines on AI-answer engine readiness, EEAT principles, and crawler management.
++- **content-modeling-best-practices**: Highly useful for building out robust schema designs and separating content from presentation. As we are curating content for LLM ingestion, strict structural content modeling is crucial.
++- **content-experimentation-best-practices**: Useful for establishing A/B testing frameworks and understanding statistical significance for content variants, which can be applied to test GEO tactics across different LLM targets.
++
++The remaining skills (`portable-text-conversion`, `portable-text-serialization`, `sanity-best-practices`) are highly specific to the Sanity ecosystem and Portable Text specification, offering little utility to our current MkDocs + Markdown stack unless a migration is planned.
++
++## 2. Evidence
++
++The `sanity-io` toolkit skills are rigorously documented and heavily backed by proven workflows rather than guesswork:
++- **content-experimentation-best-practices** references concrete statistical foundations (p-values, Bayesian methods) and common pitfalls.
++- **portable-text-conversion & serialization** are supported by explicit Sanity libraries (`@portabletext/markdown`, `@portabletext/block-tools`) with concrete component mapping patterns across various modern frameworks (React, Astro, Svelte).
++- **seo-aeo-best-practices** is deeply grounded in Google's established EEAT framework and JSON-LD schema guidelines, and provides structured checklists for technical SEO.
++
++## 3. Application to Zero-Shot Agency
++
++For the current Zero-Shot Agency project, we should directly apply the principles from the following skills:
++
++1. **AEO & EEAT Implementation**: We must integrate the guidelines from `seo-aeo-best-practices` into our [[geo-tactics]]. Ensuring our content adheres to AI Overview constraints, structured data (JSON-LD), and crawler management is vital to being cited by Perplexity, ChatGPT, Claude, and Gemini.
++2. **Content Architecture**: We should adopt principles from `content-modeling-best-practices` to refine our [[SCHEMA]] and `llms.txt` definitions. Treating "content as data, not pages" aligns perfectly with creating LLM-native assets and maintaining a "single source of truth".
++3. **Experimentation Framework**: We can adapt the hypothesis framework from `content-experimentation-best-practices` to measure the citation success rates of various structural formats (e.g., Markdown vs. Semantic HTML) within our [[geo-tracker]] tool.
++
++Unless we intend to migrate Zero-Shot Agency from MkDocs to Sanity, we should skip the implementation of `sanity-best-practices` and Portable Text skills.
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+Task completed successfully. I have executed the following actions to resolve GitHub Issue #37:
+
+1. **Information Retrieval:** Fetched and analyzed the six skills from the `sanity-io/agent-toolkit` repository. 
+2. **Synthesis & Content Creation:** Wrote a comprehensive markdown evaluation report addressing utility, evidence, and direct applications to our project, specifically highlighting the value of AEO, content modeling, and experimentation skills.
+3. **Repository Updates:** 
+   - Checked out the new branch `drafts/sanity-skills-evaluation`.
+   - Saved the synthesized evaluation to `docs/concepts/sanity-skills-evaluation.md`.
+   - Appended the `[[sanity-skills-evaluation]]` wikilink to `index.md`.
+4. **Logging:** Appended the action securely to `log.md` with appropriate `[[wikilinks]]` cross-referencing `[[geo-tactics]]`, `[[geo-tracker]]`, and `[[SCHEMA]]`.
+5. **Issue & PR:** 
+   - Closed GitHub Issue #37 (`gh issue close 37`).
+📦 Committing progress to Git...
