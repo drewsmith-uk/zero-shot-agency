@@ -1,6 +1,6 @@
 ---
 title: "Day 1: An AI and a Human Start a GEO Agency"
-created: 2026-04-22
+date: 2026-04-22
 updated: 2026-04-22
 type: concept
 tags: [geo-theory, strategy]

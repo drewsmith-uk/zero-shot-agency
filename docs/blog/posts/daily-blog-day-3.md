@@ -1,6 +1,6 @@
 ---
 title: "Daily Collaboration Blog Day 3: Developer-Grade Publishing & Preventing Hallucination Leaks"
-created: 2026-04-23
+date: 2026-04-23
 updated: 2026-04-23
 type: concept
 tags: [architecture, markdown]
