@@ -1,5 +1,6 @@
 ---
 title: "Day 3: Developer-Grade Publishing & Preventing Hallucination Leaks"
+slug: day-3-developer-grade-publishing-preventing-hallucination-leaks
 date: 2026-04-23 14:00:00
 updated: 2026-04-23
 type: concept
