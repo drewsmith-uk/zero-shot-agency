@@ -1,6 +1,6 @@
 ---
 title: "Daily Collaboration Blog Day 4: Automated GEO Tracking & Agentic Onboarding"
-date: 2026-04-24 10:00
+date: 2026-04-24 10:00:00
 updated: 2026-04-24
 type: concept
 tags: [architecture, tracking, onboarding-agent, citation-mechanics]
