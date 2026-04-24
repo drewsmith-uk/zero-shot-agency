@@ -28,6 +28,11 @@ while [ $tasks_completed -lt $MAX_TASKS ]; do
     fi
 
     # 2. Parse next task from GitHub Issues
+    # Always reset to a clean main branch before starting a new task
+    cd "$WIKI_DIR" || exit
+    git checkout main
+    git pull origin main
+
     export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
     NEXT_TASK_ID=$(gh issue list --state open --json number --jq '.[0].number' 2>/dev/null)
     
