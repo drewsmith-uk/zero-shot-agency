@@ -28,11 +28,16 @@ def is_process_running():
 
 def get_tasks():
     try:
-        content = (WIKI_DIR / "TASKS.md").read_text()
-        lines = [line for line in content.split('\n') if line.strip().startswith('- [')]
-        return "\n".join(lines)
-    except:
-        return "No tasks found."
+        import subprocess
+        result = subprocess.run(
+            ["gh", "issue", "list", "--state", "open", "--limit", "10"],
+            cwd=str(WIKI_DIR), capture_output=True, text=True, check=True
+        )
+        if not result.stdout.strip():
+            return "No open issues found."
+        return result.stdout.strip()
+    except Exception as e:
+        return f"Error loading issues: {e}"
 
 def get_logs():
     try:
@@ -135,10 +140,8 @@ class RalphDashboard(App):
                     
             if is_running:
                 proc_fmt = "[bold lime]⚙ ACTIVE[/]"
-            elif "Ralph is going to sleep" in log_content[-200:]:
-                proc_fmt = "[bold yellow]💤 SLEEPING (NO TASKS)[/]"
-            elif "shift finished" in log_content[-200:]:
-                proc_fmt = "[bold cyan]🏁 FINISHED[/]"
+            elif "Ralph is going to sleep" in log_content[-200:] or "shift finished" in log_content[-200:]:
+                proc_fmt = "[bold cyan]⏹ STOPPED (READY TO LAUNCH)[/]"
             else:
                 proc_fmt = "[bold red]💀 DEAD / CRASHED[/]"
         except:
