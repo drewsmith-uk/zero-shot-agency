@@ -53,7 +53,8 @@ nav:
     - GEO Tactics: concepts/geo-tactics.md
     - Daily Blog: concepts/daily-blog-day-1.md
     - Daily Blog Day 2: concepts/daily-blog-day-2.md
-  - Entities:
+    - Daily Blog Day 3: concepts/daily-blog-day-3.md
+    - Daily Blog Day 4: concepts/daily-blog-day-4.md
     - Overview: entities/index.md
     - Princeton Paper: entities/princeton-geo-paper.md
     - Cursorrules Gen: entities/cursorrules-generator.md
