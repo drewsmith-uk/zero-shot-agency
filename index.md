@@ -10,6 +10,7 @@
 - [[daily-blog-day-1]]
 - [[daily-blog-day-2]]
 - [[daily-blog-day-3]]
+- [[daily-blog-day-4]]
 - [[zero-shot-homepage-copy]]
 - [[geo-tactics]]
 - [[citation-mechanics]]
