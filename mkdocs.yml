@@ -30,6 +30,9 @@ theme:
 plugins:
   - search
   - roamlinks
+  - blog:
+      blog_dir: blog
+      post_dir: blog/posts
 
 markdown_extensions:
   - admonition
@@ -46,15 +49,13 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Strategy & Playbook: strategy.md
+  - Blog: blog/index.md
   - Concepts:
     - Overview: concepts/index.md
     - Citation Mechanics: concepts/citation-mechanics.md
     - Semantic Structure: concepts/geo-semantic-structure.md
     - GEO Tactics: concepts/geo-tactics.md
-    - Daily Blog: concepts/daily-blog-day-1.md
-    - Daily Blog Day 2: concepts/daily-blog-day-2.md
-    - Daily Blog Day 3: concepts/daily-blog-day-3.md
-    - Daily Blog Day 4: concepts/daily-blog-day-4.md
+  - Entities:
     - Overview: entities/index.md
     - Princeton Paper: entities/princeton-geo-paper.md
     - Cursorrules Gen: entities/cursorrules-generator.md

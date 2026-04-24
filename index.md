@@ -1,6 +1,7 @@
 # Zero-Shot Agency Wiki Index
 
 ## Entities & Tools
+- [[onboarding-agent]]
 - [[cursorrules-generator]]
 - [[llms-txt-generator]]
 - [[publisher-pipeline]]
@@ -13,4 +14,4 @@
 - [[zero-shot-homepage-copy]]
 - [[geo-tactics]]
 - [[citation-mechanics]]
-- [[agentic-onboarding]]
+- [[agentic-onboarding]]- [[sanity-skills-evaluation]]

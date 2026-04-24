@@ -24,10 +24,38 @@ def get_content_from_md(md_path):
     except:
         return ""
 
+import re
+
+def get_title_from_md_content(content):
+    match = re.search(r'^title:\s*["\']?(.*?)["\']?$', content, flags=re.MULTILINE)
+    if match: return match.group(1)
+    match = re.search(r'^#\s+(.*)$', content, flags=re.MULTILINE)
+    if match: return match.group(1)
+    return ""
+
+def build_md_title_map():
+    mapping = {}
+    for root, _, files in os.walk("docs"):
+        for file in files:
+            if file.endswith(".md"):
+                path = Path(root) / file
+                try:
+                    with open(path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                        title = get_title_from_md_content(content)
+                        if title:
+                            norm = re.sub(r'[^a-zA-Z0-9]', '', title).lower()
+                            mapping[norm] = path
+                except:
+                    pass
+    return mapping
+
 def main():
     if not SITE_DIR.exists():
         print("Error: site/ directory not found. Run 'mkdocs build' first.")
         return
+
+    title_map = build_md_title_map()
 
     pages = []
     for root, _, files in os.walk(SITE_DIR):
@@ -52,6 +80,10 @@ def main():
                     md_path = Path("docs") / str(rel_path).replace('/index.html', '.md')
                 if not md_path.exists():
                     md_path = Path("docs") / str(rel_path).replace('index.html', 'index.md')
+                if not md_path.exists():
+                    norm_title = re.sub(r'[^a-zA-Z0-9]', '', title).lower()
+                    if norm_title in title_map:
+                        md_path = title_map[norm_title]
                     
                 content = get_content_from_md(md_path) if md_path.exists() else ""
                 
