@@ -7,7 +7,7 @@ cd "$WORKSPACE"
 
 # Load environment variables if necessary (API keys)
 if [ -f ".env" ]; then
-    source .env
+    export $(grep -v '^#' .env | xargs)
 fi
 
 # Activate python virtual environment if it exists
