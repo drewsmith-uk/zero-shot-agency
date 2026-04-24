@@ -39,6 +39,9 @@ plugins:
 hooks:
   - docs/tools/blog_hook.py
 
+extra_css:
+  - stylesheets/custom.css
+
 markdown_extensions:
   - admonition
   - pymdownx.details

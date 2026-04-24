@@ -1,0 +1,4 @@
+/* Bring the site title closer to the logo without altering the logo's symmetrical hit area */
+header.md-header nav.md-header__inner .md-header__title {
+    margin-left: 0.25rem; 
+}
