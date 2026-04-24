@@ -163,3 +163,12 @@
 - Cross-referenced [[onboarding-agent]], [[geo-semantic-structure]], [[geo-tactics]], and [[citation-mechanics]].
 - Updated `TASKS.md` to move the Strategy task to Completed.
 - Checked out `drafts/agentic-onboarding` and opened a Pull Request for review.
+
+## [2026-04-24] research | Evaluate Sanity Toolkit Skills
+- Synthesized and evaluated the sanity-io agent-toolkit skills to resolve Issue #37.
+- Drafted a detailed report analyzing utility, evidence, and application at `docs/concepts/sanity-skills-evaluation.md`.
+- Concluded that `seo-aeo-best-practices`, `content-modeling-best-practices`, and `content-experimentation-best-practices` hold high value for Zero-Shot Agency's GEO and AIO strategy, while Portable Text skills are less relevant without a CMS migration.
+- Appended `[[sanity-skills-evaluation]]` to `index.md` concepts list.
+- Cross-referenced [[geo-tactics]], [[geo-tracker]], and [[SCHEMA]].
+- Closed issue #37 and opened a Pull Request for review.
+>>>>>>> 255fb9f (Draft: Sanity toolkit skills evaluation)
