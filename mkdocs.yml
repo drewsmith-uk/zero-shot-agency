@@ -34,6 +34,9 @@ plugins:
       blog_dir: blog
       post_dir: blog/posts
 
+hooks:
+  - docs/tools/blog_hook.py
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -49,7 +52,8 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Strategy & Playbook: strategy.md
-  - Blog: blog/index.md
+  - Blog:
+    - blog/index.md
   - Concepts:
     - Overview: concepts/index.md
     - Citation Mechanics: concepts/citation-mechanics.md
