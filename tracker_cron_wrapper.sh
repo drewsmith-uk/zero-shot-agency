@@ -2,11 +2,13 @@
 set -e
 
 # Change to the workspace directory
-WORKSPACE="/home/claw/workspace/zero-shot-agency"
+WORKSPACE="/home/claw/workspace/zero-shot-cron"
 cd "$WORKSPACE"
 
 # Load environment variables if necessary (API keys)
-# source .env
+if [ -f ".env" ]; then
+    source .env
+fi
 
 # Activate python virtual environment if it exists
 if [ -d "venv" ]; then

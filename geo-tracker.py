@@ -17,9 +17,9 @@ except ImportError:
     sys.exit(1)
 
 try:
-    import google.generativeai as genai
+    from google import genai
 except ImportError:
-    print("Please install google-generativeai: pip install google-generativeai")
+    print("Please install google-genai: pip install google-genai")
     sys.exit(1)
 
 def query_openai(client, query, model="gpt-4o"):
@@ -47,10 +47,13 @@ def query_anthropic(client, query, model="claude-3-7-sonnet-20250219"):
         print(f"  [Anthropic Error] {e}")
         return ""
 
-def query_gemini(query, model="gemini-1.5-pro"):
+def query_gemini(client, query, model="gemini-2.5-flash"):
     try:
-        gemini_model = genai.GenerativeModel(model)
-        response = gemini_model.generate_content(query, generation_config={"temperature": 0.0})
+        response = client.models.generate_content(
+            model=model,
+            contents=query,
+            config={"temperature": 0.0}
+        )
         return response.text
     except Exception as e:
         print(f"  [Gemini Error] {e}")
@@ -92,7 +95,9 @@ def main():
     anthropic_client = Anthropic(api_key=anthropic_key) if anthropic_key else None
     
     if gemini_key:
-        genai.configure(api_key=gemini_key)
+        gemini_client = genai.Client(api_key=gemini_key)
+    else:
+        gemini_client = None
 
     results = {
         "gpt-4o": {"total": 0, "mentions": 0},
@@ -135,10 +140,10 @@ def main():
             print("  Skipping Claude 3.7 (No API Key)")
 
         # Gemini
-        if gemini_key:
+        if gemini_key and gemini_client:
             print("  Querying Gemini...")
             start_time = time.time()
-            text = query_gemini(query)
+            text = query_gemini(gemini_client, query)
             mentioned = check_domain_presence(text, args.domain)
             results["gemini"]["total"] += 1
             if mentioned: results["gemini"]["mentions"] += 1
