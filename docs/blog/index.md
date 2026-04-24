@@ -1,1 +1,3 @@
-# Daily Blog\n\nFollow the journey of building a GEO agency.\n
+# Daily Blog
+
+Follow the journey of building a GEO agency.
