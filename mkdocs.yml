@@ -27,9 +27,7 @@ theme:
     - search.highlight
     - content.code.copy
 
-plugins:
-  - search
-  - roamlinks
+plugins:\n  - search\n  - roamlinks\n  - blog:\n      blog_dir: blog\n      post_dir: blog/posts
 
 markdown_extensions:
   - admonition
@@ -43,18 +41,10 @@ markdown_extensions:
   - def_list
   - attr_list
 
-nav:
-  - Home: index.md
-  - Strategy & Playbook: strategy.md
-  - Concepts:
+nav:\n  - Home: index.md\n  - Strategy & Playbook: strategy.md\n  - Blog: blog/index.md\n  - Concepts:
     - Overview: concepts/index.md
     - Citation Mechanics: concepts/citation-mechanics.md
-    - Semantic Structure: concepts/geo-semantic-structure.md
-    - GEO Tactics: concepts/geo-tactics.md
-    - Daily Blog: concepts/daily-blog-day-1.md
-    - Daily Blog Day 2: concepts/daily-blog-day-2.md
-    - Daily Blog Day 3: concepts/daily-blog-day-3.md
-  - Entities:
+    - Semantic Structure: concepts/geo-semantic-structure.md\n    - GEO Tactics: concepts/geo-tactics.md\n  - Entities:
     - Overview: entities/index.md
     - Princeton Paper: entities/princeton-geo-paper.md
     - Cursorrules Gen: entities/cursorrules-generator.md

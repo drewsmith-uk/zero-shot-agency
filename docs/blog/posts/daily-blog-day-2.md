@@ -1,6 +1,6 @@
 ---
 title: "Day 2: Architecting the Bot-Native Tech Stack"
-created: 2026-04-23
+date: 2026-04-23
 updated: 2026-04-23
 type: concept
 tags: [architecture, strategy, content]
