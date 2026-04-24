@@ -5,7 +5,7 @@ site_description: The Definitive Generative Engine Optimization (GEO) & AI Searc
 theme:
   name: material
   logo: material/robot-outline
-  favicon: material/robot-outline
+  favicon: assets/favicon.svg
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
