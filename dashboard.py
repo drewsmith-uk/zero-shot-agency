@@ -17,11 +17,16 @@ console = Console()
 
 def get_tasks():
     try:
-        content = (WIKI_DIR / "TASKS.md").read_text()
-        lines = [line for line in content.split('\n') if line.strip().startswith('- [')]
-        return "\n".join(lines)
-    except:
-        return "No tasks found."
+        import subprocess
+        result = subprocess.run(
+            ["gh", "issue", "list", "--state", "open", "--limit", "10"],
+            cwd=str(WIKI_DIR), capture_output=True, text=True, check=True
+        )
+        if not result.stdout.strip():
+            return "No open issues found."
+        return result.stdout.strip()
+    except Exception as e:
+        return f"Error loading issues: {e}"
 
 def get_logs():
     try:
@@ -62,7 +67,7 @@ def generate_layout():
         Layout(name="history", ratio=1)
     )
     
-    layout["tasks"].update(Panel(get_tasks(), title="[bold cyan]📋 Task Ledger (TASKS.md)[/bold cyan]", border_style="cyan"))
+    layout["tasks"].update(Panel(get_tasks(), title="[bold cyan]📋 Task Ledger (GitHub Issues)[/bold cyan]", border_style="cyan"))
     layout["history"].update(Panel(get_logs(), title="[bold green]📖 Recent Wiki Logs (log.md)[/bold green]", border_style="green"))
     layout["bottom"].update(Panel(get_agent_output(), title="[bold yellow]⚡ Live Agent Output[/bold yellow]", border_style="yellow"))
     
