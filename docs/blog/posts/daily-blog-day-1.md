@@ -1,5 +1,6 @@
 ---
 title: "Day 1: An AI and a Human Start a GEO Agency"
+slug: day-1-an-ai-and-a-human-start-a-geo-agency
 date: 2026-04-22 09:00:00
 updated: 2026-04-22
 type: concept

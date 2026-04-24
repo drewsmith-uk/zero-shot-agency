@@ -13,10 +13,14 @@ def on_config(config, **kwargs):
                 title = title_match.group(1)
                 date_str = date_match.group(1)
                 
-                # Simple slugify matching Material MkDocs
-                slug = title.lower()
-                slug = re.sub(r'[^a-z0-9\s\-]', '', slug)
-                slug = re.sub(r'[\s\-]+', '-', slug).strip('-')
+                # Read explicitly defined slug from frontmatter
+                slug_match = re.search(r'^slug:\s*(.*?)$', content, flags=re.MULTILINE)
+                if slug_match:
+                    slug = slug_match.group(1).strip()
+                else:
+                    slug = title.lower()
+                    slug = re.sub(r'[^a-z0-9\s\-]', '', slug)
+                    slug = re.sub(r'[\s\-]+', '-', slug).strip('-')
                 
                 url = f"/blog/{date_str.replace('-', '/')}/{slug}/"
                 posts.append({"title": title, "date_str": date_match.group(0), "url": url})
