@@ -7,6 +7,7 @@
 - [[publisher-pipeline]]
 
 ## Concepts & Content
+- [[strategy]]
 - [[daily-blog-day-1]]
 - [[daily-blog-day-2]]
 - [[daily-blog-day-3]]
@@ -14,4 +15,5 @@
 - [[zero-shot-homepage-copy]]
 - [[geo-tactics]]
 - [[citation-mechanics]]
-- [[agentic-onboarding]]- [[sanity-skills-evaluation]]
+- [[agentic-onboarding]]
+- [[sanity-skills-evaluation]]

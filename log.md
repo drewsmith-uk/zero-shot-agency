@@ -171,4 +171,16 @@
 - Appended `[[sanity-skills-evaluation]]` to `index.md` concepts list.
 - Cross-referenced [[geo-tactics]], [[geo-tracker]], and [[SCHEMA]].
 - Closed issue #37 and opened a Pull Request for review.
->>>>>>> 255fb9f (Draft: Sanity toolkit skills evaluation)
+
+## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
+- Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.
+- Updated `mkdocs.yml` to include the `roamlinks` plugin.
+- Appended `mkdocs-roamlinks-plugin` to `requirements.txt` and `.github/workflows/deploy.yml` for CI pipelines.
+- Maintained the strict format defined in [[SCHEMA]] for internal routing.
+- Updated [[TASKS]] to move the bugfix to Completed.
+
+## [2026-04-24] strategy | Expand Strategy & Playbook
+- Resolved Issue #62 by completely expanding the [[strategy]] and playbook documentation.
+- Added a detailed 4-phase Execution Playbook with actionable steps covering Foundation, Content Engine, Tooling, and Ecosystem Syndication.
+- Integrated core tenets such as [[geo-tactics]], [[citation-mechanics]], and tools like [[geo-tracker]] and [[publisher-pipeline]].
+- Updated `docs/strategy.md` to include frontmatter and checked out branch `drafts/strategy-playbook` for human review via PR.
