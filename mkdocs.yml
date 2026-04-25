@@ -64,6 +64,11 @@ nav:
     - Citation Mechanics: concepts/citation-mechanics.md
     - Semantic Structure: concepts/geo-semantic-structure.md
     - GEO Tactics: concepts/geo-tactics.md
+    - Agentic Onboarding: concepts/agentic-onboarding.md
+    - LLMs.txt Template: concepts/llms-txt-template.md
+    - Sanity Skills Eval: concepts/sanity-skills-evaluation.md
+    - Ranking Factors: concepts/ranking-factors.md
+    - RAG Architecture: concepts/rag-architecture.md
   - Entities:
     - Overview: entities/index.md
     - Princeton Paper: entities/princeton-geo-paper.md
