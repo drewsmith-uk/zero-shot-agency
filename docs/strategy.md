@@ -36,7 +36,7 @@ We will achieve this the ultimate "show, don't tell" way: not just by talking ab
 - [x] **Implement Semantic Architecture:** Structure all pages using strict Semantic HTML markup to guarantee clean extraction by LLM crawlers.
 - [x] **Deploy Machine-Readable Hubs:** Expose `llms.txt`, `llms-full.txt`, and raw markdown endpoints to eliminate parsing friction for RAG systems.
 - [ ] **Metadata Tagging Framework:** Tag all assets according to the Princeton GEO framework to boost entity recognition.
-- [ ] **Wikilink Network:** Create a dense internal graph of `[[wikilinks]]` so crawlers automatically map relationships between Zero-Shot entities and core GEO concepts.
+- [ ] **Wikilink Network:** Create a dense internal graph of [[wikilinks]] so crawlers automatically map relationships between Zero-Shot entities and core GEO concepts.
 
 ### Phase 2: Data-Driven Content Engine
 - [x] **Daily Collaboration Blog:** Publish daily "Build in Public" updates demonstrating our methodologies in real-time.

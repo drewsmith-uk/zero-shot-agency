@@ -4,19 +4,19 @@
      4|- Delegated task to Claude subagent to build `cursorrules_generator.py` for the Execution Framework (EF).
      5|- Created `entities/cursorrules-generator.md` to document the artifact and linked it to [[geo-tactics]] and [[geo-semantic-structure]].
      6|- Updated `TASKS.md` to move the development task to Completed.
-     7|- Added `[[cursorrules-generator]]` to `index.md` entities list.
+     7|- Added [[cursorrules-generator]] to `index.md` entities list.
      8|
      9|## [2026-04-22] content | Daily Collaboration Blog Day 1
     10|- Created the "Daily Collaboration Blog" format.
     11|- Drafted the Day 1 post: "An AI and a Human start a GEO Agency" at `concepts/daily-blog-day-1.md`.
     12|- Linked post to [[geo-tactics]].
-    13|- Added `[[daily-blog-day-1]]` to `index.md` concepts list.
+    13|- Added [[daily-blog-day-1]] to `index.md` concepts list.
     14|- Updated `TASKS.md` to move the blog setup task to Completed.
     15|
 ## [2026-04-22] content | Zero-Shot Agency Homepage Draft
 - Drafted the homepage copy for Zero-Shot Agency at `concepts/zero-shot-homepage-copy.md` using the semantic structure from [[geo-semantic-structure]].
 - Updated `TASKS.md` to move the homepage drafting task from Backlog to Completed.
-- Appended `[[zero-shot-homepage-copy]]` to `index.md`.
+- Appended [[zero-shot-homepage-copy]] to `index.md`.
     16|
     17|## [2026-04-22] test | 60 Second Dummy Task
     18|- Executed `sleep 60` via the terminal tool to test dashboard rendering.
@@ -38,14 +38,14 @@
     34|- Tool successfully created at `tools/llms-txt-generator.py` and implements standard llms.txt extraction using requests, BeautifulSoup, and markdownify.
     35|- Updated `TASKS.md` to move the llms.txt generator task to Completed.
     36|- Created `entities/llms-txt-generator.md` to document the tool.
-    37|- Added `[[llms-txt-generator]]` to `index.md`.
+    37|- Added [[llms-txt-generator]] to `index.md`.
     38|
     39|## [2026-04-22] infrastructure | Daily Publisher Pipeline
     40|- Delegated task to Claude subagent to build `publisher_pipeline.py`.
     41|- Tool successfully created at `tools/publisher_pipeline.py`. It integrates `git` for repository synchronization, `x-cli` for creating Twitter threads (chunking text <280 chars), and `himalaya` to distribute drafts via email to Substack.
     42|- Updated `TASKS.md` to move the Publisher Pipeline infrastructure task from Backlog to Completed.
     43|- Created entity `entities/publisher-pipeline.md` to document the artifact and linked it to [[geo-tactics]] and [[daily-blog-day-1]].
-    44|- Added `[[publisher-pipeline]]` to `index.md` entities list.
+    44|- Added [[publisher-pipeline]] to `index.md` entities list.
     45|
     46|## [2026-04-22] content | Review and Approve Day 1 Draft
     47|- Reviewed the Day 1 draft for the daily blog.
@@ -88,7 +88,7 @@
     84|- Updated [[TASKS]] to move the bugfix to Completed.
     85|
     86|## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
-    87|- Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.
+    87|- Installed `mkdocs-roamlinks-plugin` to fix the rendering of [[wikilinks]] across the site.
     88|- Updated `mkdocs.yml` to include the `roamlinks` plugin.
     89|- Appended `mkdocs-roamlinks-plugin` to `requirements.txt` and `.github/workflows/deploy.yml` for CI pipelines.
     90|- Maintained the strict format defined in [[SCHEMA]] for internal routing.
@@ -97,7 +97,7 @@
     93|## [2026-04-23] content | Daily Collaboration Blog Day 2
     94|- Drafted the Day 2 post focusing on our tech stack architecture (MkDocs, Material theme, Cloudflare Pages, Semantic HTML, LLM-native assets).
     95|- Saved the post as `docs/concepts/daily-blog-day-2.md`.
-    96|- Appended `[[daily-blog-day-2]]` to `index.md` concepts list.
+    96|- Appended [[daily-blog-day-2]] to `index.md` concepts list.
     97|- Updated `TASKS.md` to move the "Daily Blog: Day 2" drafting task from Backlog to Completed.
     98|
     99|## [2026-04-23] docs | Internal Tools Documentation
@@ -117,7 +117,7 @@
 ## [2026-04-23] content | Daily Collaboration Blog Day 3
 - Drafted the Day 3 post focusing on our "Drafts via Pull Request" publishing workflow.
 - Saved the post as `docs/concepts/daily-blog-day-3.md`.
-- Appended `[[daily-blog-day-3]]` to `index.md` concepts list.
+- Appended [[daily-blog-day-3]] to `index.md` concepts list.
 - Updated [[TASKS]] to move the "Daily Blog: Day 3" drafting task from Backlog to Completed.
 - Discussed how PRs prevent hallucination leaks and ensure [[geo-tactics]] and [[citation-mechanics]] are perfectly executed without sacrificing automation via the [[publisher-pipeline]].
 - Pushed branch `drafts/daily-blog-day-3` and created a Pull Request via GitHub CLI for human review.
@@ -140,7 +140,7 @@
 - Delegated task to Claude subagent (`acp_command='claude'`) to build `onboarding_agent.py`.
 - The script accepts a target domain URL, scrapes H1/H2 tags and the `llms.txt` file, and uses the OpenAI API to generate a custom 'Agentic Strategy Brief' in Markdown format.
 - Implemented `python-dotenv` for API key handling and included robust error handling for failed requests.
-- Maintained schema definitions, created `docs/entities/onboarding-agent.md`, and added `[[onboarding-agent]]` to `index.md`.
+- Maintained schema definitions, created `docs/entities/onboarding-agent.md`, and added [[onboarding-agent]] to `index.md`.
 - Updated [[TASKS]] to move the `Development` task from Backlog to Completed.
 - Checked out branch `drafts/onboarding-agent` and submitted changes via Pull Request using GitHub CLI, in alignment with the "Drafts via Pull Request" workflow.
 
@@ -151,7 +151,7 @@
 - Validated references to [[onboarding-agent]] and [[agentic-onboarding]].
 
 ## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
-- Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.
+- Installed `mkdocs-roamlinks-plugin` to fix the rendering of [[wikilinks]] across the site.
 - Updated `mkdocs.yml` to include the `roamlinks` plugin.
 - Appended `mkdocs-roamlinks-plugin` to `requirements.txt` and `.github/workflows/deploy.yml` for CI pipelines.
 - Maintained the strict format defined in [[SCHEMA]] for internal routing.
@@ -168,12 +168,12 @@
 - Synthesized and evaluated the sanity-io agent-toolkit skills to resolve Issue #37.
 - Drafted a detailed report analyzing utility, evidence, and application at `docs/concepts/sanity-skills-evaluation.md`.
 - Concluded that `seo-aeo-best-practices`, `content-modeling-best-practices`, and `content-experimentation-best-practices` hold high value for Zero-Shot Agency's GEO and AIO strategy, while Portable Text skills are less relevant without a CMS migration.
-- Appended `[[sanity-skills-evaluation]]` to `index.md` concepts list.
+- Appended [[sanity-skills-evaluation]] to `index.md` concepts list.
 - Cross-referenced [[geo-tactics]], [[geo-tracker]], and [[SCHEMA]].
 - Closed issue #37 and opened a Pull Request for review.
 
 ## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
-- Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.
+- Installed `mkdocs-roamlinks-plugin` to fix the rendering of [[wikilinks]] across the site.
 - Updated `mkdocs.yml` to include the `roamlinks` plugin.
 - Appended `mkdocs-roamlinks-plugin` to `requirements.txt` and `.github/workflows/deploy.yml` for CI pipelines.
 - Maintained the strict format defined in [[SCHEMA]] for internal routing.
@@ -189,7 +189,7 @@
 - Resolved Issue #60 by drafting the next chronological entry for the daily blog.
 - Synthesized the expansion of the [[strategy]] playbook and [[ranking-factors]]/[[rag-architecture]] concepts.
 - Documented the evaluation of the [[sanity-skills-evaluation]] toolkit.
-- Updated `index.md` to include `[[daily-blog-day-5]]`.
+- Updated `index.md` to include [[daily-blog-day-5]].
 - Checked out `drafts/daily-blog-day-5` and opened a Pull Request for review via gh CLI.
 
 ## [2026-04-24] docs | Expand Concepts Documentation
