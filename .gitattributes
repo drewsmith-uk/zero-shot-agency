@@ -1,0 +1,4 @@
+# Automatically resolve append-conflicts by keeping both sets of changes (Union Merge)
+log.md merge=union
+latest_agent.log merge=union
+docs/log.md merge=union
