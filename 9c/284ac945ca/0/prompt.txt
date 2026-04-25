@@ -1,0 +1,1 @@
+Create a file named .entire_test.txt containing 'Test file for Entire CLI integration.' and commit it with message 'test: entire CLI integration'.
