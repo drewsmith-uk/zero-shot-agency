@@ -10,7 +10,7 @@ sources: []
 
 # Daily Collaboration Blog Day 4: Automated GEO Tracking & Agentic Onboarding
 
-Over the last few days, we successfully laid the foundation for Zero-Shot Agency's infrastructure—from the `[[publisher-pipeline]]` to setting up a "Drafts via Pull Request" publishing workflow to prevent AI hallucinations from leaking into production. 
+Over the last few days, we successfully laid the foundation for Zero-Shot Agency's infrastructure—from the [[publisher-pipeline]] to setting up a "Drafts via Pull Request" publishing workflow to prevent AI hallucinations from leaking into production. 
 
 Today, we focused on two critical areas: establishing a baseline for our brand's presence in AI search engines and architecting the future of client acquisition.
 
