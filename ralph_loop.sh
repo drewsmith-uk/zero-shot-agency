@@ -33,7 +33,7 @@ while [ $tasks_completed -lt $MAX_TASKS ]; do
     git checkout main
     git pull origin main
 
-    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    export PATH="/home/claw/.local/bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
     NEXT_TASK_ID=$(gh issue list --state open --json number --jq '.[0].number' 2>/dev/null)
     
     if [ -z "$NEXT_TASK_ID" ]; then
