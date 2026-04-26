@@ -5,10 +5,9 @@ import subprocess
 from pathlib import Path
 import re
 from textual.app import App, ComposeResult
-from textual.containers import Horizontal, Vertical, VerticalScroll
+from textual.containers import Horizontal, Vertical
 from textual.widgets import Header, Footer, Static, Button, RichLog
 from textual.reactive import reactive
-from textual.events import Resize
 
 WIKI_DIR = Path(os.path.expanduser("~/workspace/zero-shot-agency"))
 STATE_FILE = WIKI_DIR / "run-state.txt"
@@ -29,11 +28,16 @@ def is_process_running():
 
 def get_tasks():
     try:
-        content = (WIKI_DIR / "TASKS.md").read_text()
-        lines = [line for line in content.split('\n') if line.strip().startswith('- [')]
-        return "\n".join(lines)
-    except:
-        return "No tasks found."
+        import subprocess
+        result = subprocess.run(
+            ["gh", "issue", "list", "--state", "open", "--limit", "10"],
+            cwd=str(WIKI_DIR), capture_output=True, text=True, check=True
+        )
+        if not result.stdout.strip():
+            return "No open issues found."
+        return result.stdout.strip()
+    except Exception as e:
+        return f"Error loading issues: {e}"
 
 def get_logs():
     try:
@@ -52,33 +56,26 @@ class RalphDashboard(App):
     Screen {
         layout: vertical;
     }
-    #main-scroll {
-        width: 100%;
-        height: 1fr;
-    }
     #top-row {
-        height: auto;
+        height: 45%;
         layout: horizontal;
     }
     #tasks-panel, #logs-panel {
         width: 50%;
-        height: auto;
-        min-height: 12;
+        height: 100%;
         border: solid green;
         padding: 1;
     }
     #agent-panel {
-        height: auto;
-        min-height: 12;
+        height: 40%;
         border: solid yellow;
         padding: 1;
     }
     #controls {
-        height: auto;
+        height: 15%;
         border: solid blue;
         layout: horizontal;
         align: center middle;
-        padding: 1;
     }
     Button {
         margin: 1 2;
@@ -90,59 +87,33 @@ class RalphDashboard(App):
         padding: 1 2;
         border: solid white;
     }
-
-    /* Mobile / Narrow Screen Overrides */
-    Screen.narrow #top-row {
-        layout: vertical;
-    }
-    Screen.narrow #tasks-panel, Screen.narrow #logs-panel {
-        width: 100%;
-        height: auto;
-        min-height: 10;
-    }
-    Screen.narrow #controls {
-        layout: vertical;
-        align: center middle;
-    }
-    Screen.narrow Button {
-        width: 100%;
-        margin: 1 0;
-        padding: 1 0;
-    }
-    Screen.narrow #status-indicator {
-        width: 100%;
-        margin: 1 0;
-    }
     """
 
     def compose(self) -> ComposeResult:
         yield Header()
-        with VerticalScroll(id="main-scroll"):
-            with Horizontal(id="top-row"):
-                yield Static("Loading Tasks...", id="tasks-panel")
-                yield Static("Loading Logs...", id="logs-panel")
-            yield Static("Loading Agent Output...", id="agent-panel")
-            with Horizontal(id="controls"):
-                yield Static("Loading Status...", id="status-indicator")
-                yield Button("Set RUNNING", id="btn_start", variant="success")
-                yield Button("Set PAUSED", id="btn_pause", variant="warning")
-                yield Button("▶ LAUNCH SCRIPT", id="btn_launch", variant="primary")
+        with Horizontal(id="top-row"):
+            yield Static("Loading Tasks...", id="tasks-panel")
+            yield Static("Loading Logs...", id="logs-panel")
+        yield Static("Loading Agent Output...", id="agent-panel")
+        with Horizontal(id="controls"):
+            yield Button("Set RUNNING", id="btn_start", variant="success")
+            yield Button("Set PAUSED", id="btn_pause", variant="warning")
+            yield Button("▶ LAUNCH SCRIPT", id="btn_launch", variant="primary")
+            yield Static("Loading Status...", id="status-indicator")
         yield Footer()
 
     def on_mount(self) -> None:
         self.update_content()
-        self.set_interval(0.5, self.update_content)
-
-    def on_resize(self, event: Resize) -> None:
-        if event.size.width < 75:
-            self.screen.add_class("narrow")
-        else:
-            self.screen.remove_class("narrow")
+        self.set_interval(0.5, self.update_content)  # Fast refresh for responsiveness
 
     def update_content(self) -> None:
+        # Update Tasks
         self.query_one("#tasks-panel", Static).update(f"[bold cyan]📋 Task Ledger[/bold cyan]\n\n{get_tasks()}")
+        
+        # Update Logs
         self.query_one("#logs-panel", Static).update(f"[bold green]📖 Recent Wiki Logs[/bold green]\n\n{get_logs()}")
         
+        # Update Agent Output
         try:
             if LOG_FILE.exists() and LOG_FILE.stat().st_size > 0:
                 with open(LOG_FILE, 'r', encoding='utf-8', errors='ignore') as f:
@@ -154,10 +125,13 @@ class RalphDashboard(App):
         except Exception as e:
             pass
 
+        # Update Combined Status Indicator
         state = read_state()
         is_running = is_process_running()
+        
         state_fmt = f"[black on green] {state} [/]" if state == "RUNNING" else f"[white on red] {state} [/]"
         
+        # Add intelligence to the process indicator
         try:
             log_content = ""
             if LOG_FILE.exists():
@@ -166,16 +140,14 @@ class RalphDashboard(App):
                     
             if is_running:
                 proc_fmt = "[bold lime]⚙ ACTIVE[/]"
-            elif "Ralph is going to sleep" in log_content[-200:]:
-                proc_fmt = "[bold yellow]💤 SLEEPING[/]"
-            elif "shift finished" in log_content[-200:]:
-                proc_fmt = "[bold cyan]🏁 FINISHED[/]"
+            elif "Ralph is going to sleep" in log_content[-200:] or "shift finished" in log_content[-200:]:
+                proc_fmt = "[bold cyan]⏹ STOPPED (READY TO LAUNCH)[/]"
             else:
                 proc_fmt = "[bold red]💀 DEAD / CRASHED[/]"
         except:
              proc_fmt = "[bold red]💀 DEAD[/]" if not is_running else "[bold lime]⚙ ACTIVE[/]"
         
-        self.query_one("#status-indicator", Static).update(f"State: {state_fmt} | Loop: {proc_fmt}")
+        self.query_one("#status-indicator", Static).update(f"File State: {state_fmt}  |  Loop: {proc_fmt}")
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "btn_start":
@@ -183,8 +155,11 @@ class RalphDashboard(App):
         elif event.button.id == "btn_pause":
             subprocess.run([f"{WIKI_DIR}/ralph-control.sh", "stop"])
         elif event.button.id == "btn_launch":
+            # Clear the log file so we can see the fresh run
             with open(LOG_FILE, 'w') as f:
                 f.write("System: Launching Ralph Loop...\n")
+            
+            # Launch the loop in the background, detached
             subprocess.Popen([f"{WIKI_DIR}/ralph_loop.sh"], cwd=WIKI_DIR, 
                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                            start_new_session=True)
