@@ -35,6 +35,7 @@ plugins:
   - blog:
       blog_dir: blog
       post_dir: blog/posts
+  - social
 
 hooks:
   - docs/tools/blog_hook.py
@@ -53,6 +54,7 @@ markdown_extensions:
   - md_in_html
   - def_list
   - attr_list
+  - meta
 
 nav:
   - Home: index.md
