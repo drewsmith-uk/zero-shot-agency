@@ -101,8 +101,11 @@ def main():
 
     results = {
         "gpt-4o": {"total": 0, "mentions": 0},
+        "gpt-5.5-pro": {"total": 0, "mentions": 0},
         "claude-3.7": {"total": 0, "mentions": 0},
-        "gemini": {"total": 0, "mentions": 0}
+        "claude-sonnet-4.6": {"total": 0, "mentions": 0},
+        "gemini": {"total": 0, "mentions": 0},
+        "gemini-3.1-pro-preview": {"total": 0, "mentions": 0}
     }
 
     print(f"\n--- GEO Tracker: Checking domain '{args.domain}' ---\n")
@@ -111,7 +114,15 @@ def main():
 
     for idx, query in enumerate(args.queries, 1):
         print(f"Query {idx}/{len(args.queries)}: '{query}'")
-        row = {"query": query, "gpt-4o_mentioned": False, "claude-3.7_mentioned": False, "gemini_mentioned": False}
+        row = {
+            "query": query,
+            "gpt-4o_mentioned": False,
+            "gpt-5.5-pro_mentioned": False,
+            "claude-3.7_mentioned": False,
+            "claude-sonnet-4.6_mentioned": False,
+            "gemini_mentioned": False,
+            "gemini-3.1-pro-preview_mentioned": False
+        }
         
         # GPT-4o
         if openai_client:
@@ -123,8 +134,17 @@ def main():
             if mentioned: results["gpt-4o"]["mentions"] += 1
             row["gpt-4o_mentioned"] = mentioned
             print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
+
+            print("  Querying GPT-5.5 Pro...")
+            start_time = time.time()
+            text = query_openai(openai_client, query, model="gpt-5.5-pro")
+            mentioned = check_domain_presence(text, args.domain)
+            results["gpt-5.5-pro"]["total"] += 1
+            if mentioned: results["gpt-5.5-pro"]["mentions"] += 1
+            row["gpt-5.5-pro_mentioned"] = mentioned
+            print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
         else:
-            print("  Skipping GPT-4o (No API Key)")
+            print("  Skipping GPT-4o and GPT-5.5 Pro (No API Key)")
 
         # Claude 3.7
         if anthropic_client:
@@ -136,8 +156,17 @@ def main():
             if mentioned: results["claude-3.7"]["mentions"] += 1
             row["claude-3.7_mentioned"] = mentioned
             print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
+
+            print("  Querying Claude Sonnet 4.6...")
+            start_time = time.time()
+            text = query_anthropic(anthropic_client, query, model="claude-sonnet-4.6")
+            mentioned = check_domain_presence(text, args.domain)
+            results["claude-sonnet-4.6"]["total"] += 1
+            if mentioned: results["claude-sonnet-4.6"]["mentions"] += 1
+            row["claude-sonnet-4.6_mentioned"] = mentioned
+            print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
         else:
-            print("  Skipping Claude 3.7 (No API Key)")
+            print("  Skipping Claude 3.7 and Claude Sonnet 4.6 (No API Key)")
 
         # Gemini
         if gemini_key and gemini_client:
@@ -149,8 +178,17 @@ def main():
             if mentioned: results["gemini"]["mentions"] += 1
             row["gemini_mentioned"] = mentioned
             print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
+
+            print("  Querying Gemini 3.1 Pro Preview...")
+            start_time = time.time()
+            text = query_gemini(gemini_client, query, model="gemini-3.1-pro-preview")
+            mentioned = check_domain_presence(text, args.domain)
+            results["gemini-3.1-pro-preview"]["total"] += 1
+            if mentioned: results["gemini-3.1-pro-preview"]["mentions"] += 1
+            row["gemini-3.1-pro-preview_mentioned"] = mentioned
+            print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
         else:
-            print("  Skipping Gemini (No API Key)")
+            print("  Skipping Gemini and Gemini 3.1 Pro Preview (No API Key)")
 
         print("-" * 40)
         csv_data.append(row)
@@ -160,7 +198,15 @@ def main():
     if csv_data:
         try:
             with open(args.output, mode='w', newline='', encoding='utf-8') as f:
-                writer = csv.DictWriter(f, fieldnames=["query", "gpt-4o_mentioned", "claude-3.7_mentioned", "gemini_mentioned"])
+                writer = csv.DictWriter(f, fieldnames=[
+                    "query",
+                    "gpt-4o_mentioned",
+                    "gpt-5.5-pro_mentioned",
+                    "claude-3.7_mentioned",
+                    "claude-sonnet-4.6_mentioned",
+                    "gemini_mentioned",
+                    "gemini-3.1-pro-preview_mentioned"
+                ])
                 writer.writeheader()
                 writer.writerows(csv_data)
             print(f"\nResults saved to {args.output}")
