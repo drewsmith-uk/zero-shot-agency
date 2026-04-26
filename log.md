@@ -219,3 +219,10 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+
+## [2026-04-26] security | Define 4-Layer Defense Architecture
+- Resolved Issue #83 by documenting the 4-layer defense strategy against prompt injection for inbound agents.
+- Created `docs/concepts/inbound-agent-security.md` detailing the Air-Gap JSON extraction, Human-in-the-Loop Barrier, Least Privilege isolation, and Denial of Wallet (DoW) protection.
+- Updated `mkdocs.yml` and index pages to include the new concept.
+- Integrated the defense mechanisms seamlessly with our overall [[strategy]] and [[publisher-pipeline]].
+- Checked out branch `drafts/issue-83-inbound-agent-security`, committed changes, and created a Pull Request via GitHub CLI.
