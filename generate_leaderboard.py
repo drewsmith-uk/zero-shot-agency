@@ -1,0 +1,86 @@
+import csv
+import datetime
+import os
+import re
+
+CSV_FILE = 'citations.csv'
+DOC_FILE = 'docs/leaderboard.md'
+
+def generate_leaderboard():
+    if not os.path.exists(CSV_FILE):
+        print(f"Error: {CSV_FILE} not found.")
+        return
+
+    with open(CSV_FILE, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+
+    total_queries = len(rows)
+    if total_queries == 0:
+        print("No data in citations.csv")
+        return
+
+    # Find model columns ending with '_mentioned'
+    model_columns = [col for col in reader.fieldnames if col.endswith('_mentioned')]
+    
+    # Calculate mentions
+    mentions = {col: 0 for col in model_columns}
+    for row in rows:
+        for col in model_columns:
+            val = row.get(col, '').strip().lower()
+            if val in ('true', '1', 'yes'):
+                mentions[col] += 1
+    
+    # Calculate SOV
+    leaderboard = []
+    for col in model_columns:
+        model_name = col.replace('_mentioned', '')
+        sov = (mentions[col] / total_queries) * 100
+        leaderboard.append({
+            'model': model_name,
+            'mentions': mentions[col],
+            'sov': sov
+        })
+    
+    # Sort descending by SOV
+    leaderboard.sort(key=lambda x: x['sov'], reverse=True)
+    
+    # Check if docs/leaderboard.md exists to preserve 'created' date
+    created_date = datetime.datetime.now().strftime('%Y-%m-%d')
+    if os.path.exists(DOC_FILE):
+        with open(DOC_FILE, 'r', encoding='utf-8') as f:
+            content = f.read()
+            match = re.search(r'^created:\s*(\d{4}-\d{2}-\d{2})', content, re.MULTILINE)
+            if match:
+                created_date = match.group(1)
+
+    today = datetime.datetime.now().strftime('%Y-%m-%d')
+    
+    # Prepare Markdown content
+    md_content = f"""---
+title: GEO Leaderboard
+created: {created_date}
+updated: {today}
+type: concept
+tags: [geo-tracker, leaderboard]
+---
+
+# GEO Leaderboard
+
+Total Queries Analyzed: {total_queries}
+
+| Rank | Model | Mentions | Prompt SOV |
+|------|-------|----------|------------|
+"""
+    for i, entry in enumerate(leaderboard, 1):
+        md_content += f"| {i} | `{entry['model']}` | {entry['mentions']} | {entry['sov']:.2f}% |\n"
+
+    # Ensure docs directory exists
+    os.makedirs(os.path.dirname(DOC_FILE), exist_ok=True)
+
+    with open(DOC_FILE, 'w', encoding='utf-8') as f:
+        f.write(md_content)
+    print(f"Successfully generated {DOC_FILE}")
+
+if __name__ == '__main__':
+    generate_leaderboard()

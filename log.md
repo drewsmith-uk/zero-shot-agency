@@ -219,3 +219,10 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+
+## [2026-04-26] feature | Build Automated Leaderboard Generator
+- Resolved Issue #88 by creating `generate_leaderboard.py` to ingest `citations.csv` and calculate aggregate Prompt Share of Voice (SOV) percentages for tracked entities.
+- Formatted the output into a Markdown table in `docs/leaderboard.md` using correct [[SCHEMA]] frontmatter.
+- Updated `mkdocs.yml` navigation to include [[leaderboard]].
+- Updated `index.md` to reference [[leaderboard]].
+- Closed Issue #88 via gh CLI and opened a PR for branch `feature/issue-88-leaderboard`.

@@ -18,3 +18,4 @@
 - [[citation-mechanics]]
 - [[agentic-onboarding]]
 - [[sanity-skills-evaluation]]
+- [[leaderboard]]

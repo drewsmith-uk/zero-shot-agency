@@ -62,6 +62,7 @@ nav:
   - Blog:
     - blog/index.md
   - Concepts:
+    - Leaderboard: leaderboard.md
     - Overview: concepts/index.md
     - Citation Mechanics: concepts/citation-mechanics.md
     - Semantic Structure: concepts/geo-semantic-structure.md
