@@ -219,6 +219,14 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+
+## [2026-04-26] dev | Build Universal GEO Context Generator Tool
+- Resolved Issue #86 by delegating to Claude subagent to build `geo_context_generator.py`.
+- The CLI tool successfully injects the Core 5-Point GEO Ruleset across `.cursorrules`, `.clinerules`, `claude.md`, and `AGENTS.md`.
+- Created entity documentation at `docs/entities/geo-context-generator.md`.
+- Linked the artifact to [[geo-tactics]] and [[citation-mechanics]].
+- Updated `index.md` and `mkdocs.yml` to include [[geo-context-generator]].
+- Created branch `feature/issue-86-geo-context-generator` and opened Pull Request via gh CLI.
 ## [2026-04-26] content | Daily Collaboration Blog Day 6
 - Resolved Issue #90 by drafting the day 6 blog post documenting our operations and the brutal GPT-5.5-Pro site audit.
 - Highlighted the 12-model matrix upgrade via OpenRouter and the use of `.gitattributes` to solve agent merge conflicts.
