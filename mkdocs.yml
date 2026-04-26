@@ -58,11 +58,11 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Leaderboard: leaderboard.md
   - Strategy & Playbook: strategy.md
   - Blog:
     - blog/index.md
   - Concepts:
-    - Leaderboard: leaderboard.md
     - Overview: concepts/index.md
     - Citation Mechanics: concepts/citation-mechanics.md
     - Semantic Structure: concepts/geo-semantic-structure.md
@@ -76,6 +76,7 @@ nav:
     - Overview: entities/index.md
     - Princeton Paper: entities/princeton-geo-paper.md
     - Cursorrules Gen: entities/cursorrules-generator.md
+    - Universal GEO Context Gen: entities/geo-context-generator.md
     - GEO Tracker: entities/geo-tracker.md
     - Publisher Pipeline: entities/publisher-pipeline.md
   - Tools:
