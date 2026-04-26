@@ -225,6 +225,12 @@
 - Outlined the workflow combining cron scheduling and Human-in-the-Loop (HITL) approval.
 - Updated `mkdocs.yml` and `index.md` navigation to include [[xitter-syndication]].
 
+## [2026-04-26] infrastructure | Fix Cloudflare Headers and Caching
+- Resolved Issue #85 by creating `docs/_headers` to enforce HTTP security and Edge caching on Cloudflare Pages.
+- Added strict `Content-Security-Policy`, `Strict-Transport-Security` (HSTS), and `X-Frame-Options` to mitigate vulnerabilities.
+- Overrode default Cloudflare caching to cache `/*.html` on the Edge (`max-age=3600`) and immutable assets (`/assets/*`).
+- Maintained alignment with [[geo-tactics]] and [[ranking-factors]] by ensuring fast load times and high technical SEO scores for crawler bots.
+- Opened a Pull Request on branch `feature/issue-85-cloudflare-headers` via the gh CLI.
 ## [2026-04-26] dev | Build Universal GEO Context Generator Tool
 - Resolved Issue #86 by delegating to Claude subagent to build `geo_context_generator.py`.
 - The CLI tool successfully injects the Core 5-Point GEO Ruleset across `.cursorrules`, `.clinerules`, `claude.md`, and `AGENTS.md`.
