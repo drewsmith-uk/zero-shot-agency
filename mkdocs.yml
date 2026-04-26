@@ -79,6 +79,5 @@ nav:
     - Universal GEO Context Gen: entities/geo-context-generator.md
     - GEO Tracker: entities/geo-tracker.md
     - Publisher Pipeline: entities/publisher-pipeline.md
-    - Lead Handler: entities/lead-handler.md
   - Tools:
     - Overview: tools/index.md
