@@ -8,6 +8,7 @@
 
 ## Concepts & Content
 - [[strategy]]
+- [[leaderboard]]
 - [[daily-blog-day-1]]
 - [[daily-blog-day-2]]
 - [[daily-blog-day-3]]
