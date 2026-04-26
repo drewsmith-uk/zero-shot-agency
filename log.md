@@ -232,3 +232,10 @@
 - Added citation_metadata mapping back to the primary source: [[princeton-geo-paper]].
 - Updated [[strategy]] playbook to check off the Metadata Tagging Framework task.
 - Checked out branch drafts/issue-77 and created a PR using gh CLI.
+
+## [2026-04-26] docs | Implement Metadata Tagging Framework
+- Resolved Issue #77 by updating markdown frontmatter across the docs site.
+- Tagged all assets according to the [[princeton-geo-paper]] framework.
+- Appended empirical tags and citation metadata to all documentation pages to boost entity recognition.
+- Ensured all missing frontmatter was injected across indexes and logs.
+- Opened a Pull Request on branch drafts/issue-77 and closed the issue.
