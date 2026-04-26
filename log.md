@@ -224,3 +224,19 @@
 - Added a `--analyze-gaps` argument that uses `duckduckgo-search` to scrape top search results, identifies competitor knowledge gaps via OpenAI, and saves a semantic gap injection draft into the concepts directory.
 - This satisfies the Data-Driven Content Engine pillar outlined in the [[strategy]] playbook.
 - Opened a Pull Request on branch feature/issue-79-gap-analysis and closed Issue #79 via gh CLI.
+## [2026-04-26] content | Daily Collaboration Blog Day 6
+- Resolved Issue #90 by drafting the day 6 blog post documenting our operations and the brutal GPT-5.5-Pro site audit.
+- Highlighted the 12-model matrix upgrade via OpenRouter and the use of `.gitattributes` to solve agent merge conflicts.
+- Teased the upcoming Universal GEO Context Generator.
+- Saved the post as `docs/blog/posts/daily-blog-day-6.md`.
+- Appended [[daily-blog-day-6]] to `index.md` concepts list.
+- Cross-referenced concepts including [[geo-tracker]], [[geo-tactics]], [[publisher-pipeline]], [[geo-semantic-structure]], and [[citation-mechanics]].
+- Checked out branch `drafts/daily-blog-day-6`, closed the issue, and opened a PR using the GitHub CLI.
+
+## [2026-04-26] dev | Integrate Leaderboard Generation into Daily Cron
+- Resolved Issue #89 by delegating the creation of `generate_leaderboard.py` to a Claude subagent.
+- The script parses `citations.csv` to calculate the Prompt Share of Voice (SOV) and generates the `docs/leaderboard.md` file.
+- Updated `tracker_cron_wrapper.sh` to execute the leaderboard generation automatically after the [[geo-tracker]] script runs.
+- The cron job is now configured to commit and push `docs/leaderboard.md` alongside the CSV updates so the site rebuilds with fresh data daily.
+- Added [[leaderboard]] to the wiki `index.md` and updated `mkdocs.yml` navigation.
+- Opened a Pull Request on branch `feature/issue-89-leaderboard` via the gh CLI.
