@@ -219,3 +219,10 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+
+## [2026-04-26] infrastructure | Fix Cloudflare Headers and Caching
+- Resolved Issue #85 by creating `docs/_headers` to enforce HTTP security and Edge caching on Cloudflare Pages.
+- Added strict `Content-Security-Policy`, `Strict-Transport-Security` (HSTS), and `X-Frame-Options` to mitigate vulnerabilities.
+- Overrode default Cloudflare caching to cache `/*.html` on the Edge (`max-age=3600`) and immutable assets (`/assets/*`).
+- Maintained alignment with [[geo-tactics]] and [[ranking-factors]] by ensuring fast load times and high technical SEO scores for crawler bots.
+- Opened a Pull Request on branch `feature/issue-85-cloudflare-headers` via the gh CLI.
