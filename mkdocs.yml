@@ -72,7 +72,6 @@ nav:
     - Sanity Skills Eval: concepts/sanity-skills-evaluation.md
     - Ranking Factors: concepts/ranking-factors.md
     - RAG Architecture: concepts/rag-architecture.md
-    - Inbound Agent Security: concepts/inbound-agent-security.md
   - Entities:
     - Overview: entities/index.md
     - Princeton Paper: entities/princeton-geo-paper.md

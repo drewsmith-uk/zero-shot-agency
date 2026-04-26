@@ -21,4 +21,3 @@
 - [[citation-mechanics]]
 - [[agentic-onboarding]]
 - [[sanity-skills-evaluation]]
-- [[inbound-agent-security]]
