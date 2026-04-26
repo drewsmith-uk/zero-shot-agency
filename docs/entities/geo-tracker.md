@@ -1,7 +1,7 @@
 ---
 title: GEO Ranking Tracker
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: entity
 tags: [code, tool, chatgpt, claude, gemini]
 sources: []
@@ -13,8 +13,11 @@ The GEO Ranking Tracker (`geo-tracker.py`) is a baseline script developed to eva
 
 ## Supported Targets
 - **GPT-4o** (OpenAI)
+- **GPT-5.5 Pro** (OpenRouter)
 - **Claude 3.7 Sonnet** (Anthropic)
-- **Gemini 1.5 Pro** (Google)
+- **Claude Sonnet 4.6** (OpenRouter)
+- **Gemini 1.5 Pro** / **Gemini 2.5 Flash** (Google)
+- **Gemini 3.1 Pro Preview** (OpenRouter)
 
 ## Features
 - Executes test queries against multiple API endpoints.
