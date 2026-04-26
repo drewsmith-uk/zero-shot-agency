@@ -224,6 +224,14 @@
 - Added a `--analyze-gaps` argument that uses `duckduckgo-search` to scrape top search results, identifies competitor knowledge gaps via OpenAI, and saves a semantic gap injection draft into the concepts directory.
 - This satisfies the Data-Driven Content Engine pillar outlined in the [[strategy]] playbook.
 - Opened a Pull Request on branch feature/issue-79-gap-analysis and closed Issue #79 via gh CLI.
+
+## [2026-04-26] dev | Build Universal GEO Context Generator Tool
+- Resolved Issue #86 by delegating to Claude subagent to build `geo_context_generator.py`.
+- The CLI tool successfully injects the Core 5-Point GEO Ruleset across `.cursorrules`, `.clinerules`, `claude.md`, and `AGENTS.md`.
+- Created entity documentation at `docs/entities/geo-context-generator.md`.
+- Linked the artifact to [[geo-tactics]] and [[citation-mechanics]].
+- Updated `index.md` and `mkdocs.yml` to include [[geo-context-generator]].
+- Created branch `feature/issue-86-geo-context-generator` and opened Pull Request via gh CLI.
 ## [2026-04-26] content | Daily Collaboration Blog Day 6
 - Resolved Issue #90 by drafting the day 6 blog post documenting our operations and the brutal GPT-5.5-Pro site audit.
 - Highlighted the 12-model matrix upgrade via OpenRouter and the use of `.gitattributes` to solve agent merge conflicts.
