@@ -10,57 +10,26 @@ except ImportError:
     print("Please install openai: pip install openai")
     sys.exit(1)
 
-try:
-    from anthropic import Anthropic
-except ImportError:
-    print("Please install anthropic: pip install anthropic")
-    sys.exit(1)
-
-try:
-    from google import genai
-except ImportError:
-    print("Please install google-genai: pip install google-genai")
-    sys.exit(1)
-
-def query_openai(client, query, model="gpt-4o"):
-    try:
-        response = client.chat.completions.create(
-            model=model,
-            messages=[{"role": "user", "content": query}],
-            temperature=0.0
-        )
-        return response.choices[0].message.content
-    except Exception as e:
-        print(f"  [OpenAI Error] {e}")
-        return ""
-
-def query_anthropic(client, query, model="claude-3-7-sonnet-20250219"):
-    try:
-        response = client.messages.create(
-            model=model,
-            max_tokens=1024,
-            messages=[{"role": "user", "content": query}],
-            temperature=0.0
-        )
-        return response.content[0].text
-    except Exception as e:
-        print(f"  [Anthropic Error] {e}")
-        return ""
-
-def query_gemini(client, query, model="gemini-2.5-flash"):
-    try:
-        response = client.models.generate_content(
-            model=model,
-            contents=query,
-            config={"temperature": 0.0}
-        )
-        return response.text
-    except Exception as e:
-        print(f"  [Gemini Error] {e}")
-        return ""
+# The 12-Model Matrix (April 2026)
+MODELS = {
+    "openai_best": "openai/gpt-5.5-pro",
+    "openai_mid": "openai/gpt-5.4-pro",
+    "openai_fast": "openai/gpt-5.4-mini",
+    
+    "anthropic_best": "anthropic/claude-opus-4.7",
+    "anthropic_mid": "anthropic/claude-sonnet-4.6",
+    "anthropic_fast": "anthropic/claude-haiku-4.5",
+    
+    "google_best": "google/gemini-3.1-pro-preview",
+    "google_mid": "google/gemini-3-flash-preview",
+    "google_fast": "google/gemini-3.1-flash-lite-preview",
+    
+    "xai_best": "x-ai/grok-4.20",
+    "xai_mid": "x-ai/grok-4",
+    "xai_fast": "x-ai/grok-4.1-fast"
+}
 
 def check_domain_presence(text, domain):
-    # Simple case-insensitive check
     if not text:
         return False
     return domain.lower() in text.lower()
@@ -78,32 +47,19 @@ def main():
     
     args = parser.parse_args()
 
-    # Verify API Keys
-    openai_key = os.environ.get("OPENAI_API_KEY")
-    anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
-    gemini_key = os.environ.get("GEMINI_API_KEY")
+    openrouter_key = os.environ.get("OPENROUTER_API_KEY")
 
-    if not openai_key:
-        print("Warning: OPENAI_API_KEY environment variable not set. GPT-4o queries will fail.")
-    if not anthropic_key:
-        print("Warning: ANTHROPIC_API_KEY environment variable not set. Claude queries will fail.")
-    if not gemini_key:
-        print("Warning: GEMINI_API_KEY environment variable not set. Gemini queries will fail.")
+    if not openrouter_key:
+        print("Error: OPENROUTER_API_KEY environment variable not set. All queries will fail.")
+        sys.exit(1)
 
-    # Initialize clients
-    openai_client = OpenAI(api_key=openai_key) if openai_key else None
-    anthropic_client = Anthropic(api_key=anthropic_key) if anthropic_key else None
-    
-    if gemini_key:
-        gemini_client = genai.Client(api_key=gemini_key)
-    else:
-        gemini_client = None
+    # Initialize OpenRouter client
+    client = OpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key=openrouter_key,
+    )
 
-    results = {
-        "gpt-4o": {"total": 0, "mentions": 0},
-        "claude-3.7": {"total": 0, "mentions": 0},
-        "gemini": {"total": 0, "mentions": 0}
-    }
+    results = {key: {"total": 0, "mentions": 0} for key in MODELS.keys()}
 
     print(f"\n--- GEO Tracker: Checking domain '{args.domain}' ---\n")
 
@@ -111,56 +67,43 @@ def main():
 
     for idx, query in enumerate(args.queries, 1):
         print(f"Query {idx}/{len(args.queries)}: '{query}'")
-        row = {"query": query, "gpt-4o_mentioned": False, "claude-3.7_mentioned": False, "gemini_mentioned": False}
         
-        # GPT-4o
-        if openai_client:
-            print("  Querying GPT-4o...")
-            start_time = time.time()
-            text = query_openai(openai_client, query)
-            mentioned = check_domain_presence(text, args.domain)
-            results["gpt-4o"]["total"] += 1
-            if mentioned: results["gpt-4o"]["mentions"] += 1
-            row["gpt-4o_mentioned"] = mentioned
-            print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
-        else:
-            print("  Skipping GPT-4o (No API Key)")
+        row = {"query": query}
+        for key in MODELS.keys():
+            row[f"{key}_mentioned"] = False
 
-        # Claude 3.7
-        if anthropic_client:
-            print("  Querying Claude 3.7...")
+        for key, model_id in MODELS.items():
+            print(f"  Querying {key} ({model_id})...")
             start_time = time.time()
-            text = query_anthropic(anthropic_client, query)
-            mentioned = check_domain_presence(text, args.domain)
-            results["claude-3.7"]["total"] += 1
-            if mentioned: results["claude-3.7"]["mentions"] += 1
-            row["claude-3.7_mentioned"] = mentioned
-            print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
-        else:
-            print("  Skipping Claude 3.7 (No API Key)")
-
-        # Gemini
-        if gemini_key and gemini_client:
-            print("  Querying Gemini...")
-            start_time = time.time()
-            text = query_gemini(gemini_client, query)
-            mentioned = check_domain_presence(text, args.domain)
-            results["gemini"]["total"] += 1
-            if mentioned: results["gemini"]["mentions"] += 1
-            row["gemini_mentioned"] = mentioned
-            print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
-        else:
-            print("  Skipping Gemini (No API Key)")
+            try:
+                response = client.chat.completions.create(
+                    model=model_id,
+                    messages=[{"role": "user", "content": query}],
+                    temperature=0.0
+                )
+                text = response.choices[0].message.content
+                mentioned = check_domain_presence(text, args.domain)
+                
+                results[key]["total"] += 1
+                if mentioned: 
+                    results[key]["mentions"] += 1
+                row[f"{key}_mentioned"] = mentioned
+                
+                print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
+            except Exception as e:
+                print(f"  [{key} Error] {e}")
+            
+            time.sleep(1.5) # Rate limit protection
 
         print("-" * 40)
         csv_data.append(row)
-        time.sleep(1)  # Brief pause between queries to avoid rate limits
 
     # Save to CSV
     if csv_data:
         try:
             with open(args.output, mode='w', newline='', encoding='utf-8') as f:
-                writer = csv.DictWriter(f, fieldnames=["query", "gpt-4o_mentioned", "claude-3.7_mentioned", "gemini_mentioned"])
+                fieldnames = ["query"] + [f"{key}_mentioned" for key in MODELS.keys()]
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
                 writer.writeheader()
                 writer.writerows(csv_data)
             print(f"\nResults saved to {args.output}")
@@ -175,11 +118,11 @@ def main():
     for engine, stats in results.items():
         total = stats["total"]
         if total == 0:
-            print(f"{engine.upper():<12}: N/A (Skipped)")
+            print(f"{engine:<15}: N/A (Failed/Skipped)")
         else:
             mentions = stats["mentions"]
             percentage = (mentions / total) * 100
-            print(f"{engine.upper():<12}: {mentions}/{total} mentions ({percentage:.1f}% Share of Voice)")
+            print(f"{engine:<15}: {mentions}/{total} mentions ({percentage:.1f}% Share of Voice)")
     print("==========================\n")
 
 if __name__ == "__main__":
