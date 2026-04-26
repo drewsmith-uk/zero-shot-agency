@@ -5,4 +5,4 @@ python-dotenv
 openai
 requests
 beautifulsoup4
-duckduckgo-search
+mkdocs-awesome-pages-plugin
