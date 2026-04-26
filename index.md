@@ -20,5 +20,4 @@
 - [[geo-tactics]]
 - [[citation-mechanics]]
 - [[agentic-onboarding]]
-- [[xitter-syndication]]
 - [[sanity-skills-evaluation]]
