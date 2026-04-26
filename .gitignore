@@ -2,7 +2,6 @@ site/
 venv/
 __pycache__/
 .env
-__pycache__/
 .claude/
 .entire/
 .cache/
@@ -10,3 +9,4 @@ latest_agent.log
 ef_geo_audit.md
 audit_site.py
 *-audit.md
+run-state.txt
