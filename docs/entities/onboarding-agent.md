@@ -1,10 +1,14 @@
 ---
 title: Onboarding Agent
 created: 2026-04-23
-updated: 2026-04-23
+updated: 2026-04-26
 type: entity
 tags: [tool, architecture]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Onboarding Agent

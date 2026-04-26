@@ -1,10 +1,14 @@
 ---
 title: Sanity Toolkit Skills Evaluation
 created: 2026-04-24
-updated: 2026-04-24
+updated: 2026-04-26
 type: concept
 tags: [architecture, strategy]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Sanity Toolkit Skills Evaluation

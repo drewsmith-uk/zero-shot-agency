@@ -1,9 +1,13 @@
 ---
 title: GEO Agency Strategy & Playbook
 created: 2026-04-22
-updated: 2026-04-24
+updated: 2026-04-26
 type: strategy
 tags: [geo-theory, architecture, strategy]
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # GEO Agency Strategy & Playbook
@@ -35,7 +39,7 @@ We will achieve this the ultimate "show, don't tell" way: not just by talking ab
 ### Phase 1: Foundation (Semantic & Technical)
 - [x] **Implement Semantic Architecture:** Structure all pages using strict Semantic HTML markup to guarantee clean extraction by LLM crawlers.
 - [x] **Deploy Machine-Readable Hubs:** Expose `llms.txt`, `llms-full.txt`, and raw markdown endpoints to eliminate parsing friction for RAG systems.
-- [ ] **Metadata Tagging Framework:** Tag all assets according to the Princeton GEO framework to boost entity recognition.
+- [x] **Metadata Tagging Framework:** Tag all assets according to the Princeton GEO framework to boost entity recognition.
 - [ ] **Wikilink Network:** Create a dense internal graph of [[wikilinks]] so crawlers automatically map relationships between Zero-Shot entities and core GEO concepts.
 
 ### Phase 2: Data-Driven Content Engine

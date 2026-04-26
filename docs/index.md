@@ -1,10 +1,14 @@
 ---
 title: Zero-Shot Agency Homepage
 created: 2026-04-22
-updated: 2026-04-23
+updated: 2026-04-26
 type: concept
 tags: [concept, content, semantic-html, homepage]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Zero-Shot Agency: The #1 Generative Engine Optimization (GEO) Firm

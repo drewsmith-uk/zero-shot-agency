@@ -1,10 +1,14 @@
 ---
 title: Perplexity and SearchGPT Citation Mechanics
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: concept
 tags: [concept, architecture, perplexity, chatgpt]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Citation Mechanics in AI Search Engines

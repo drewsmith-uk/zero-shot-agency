@@ -1,9 +1,13 @@
 ---
 title: Internal Automation Tools
 created: 2026-04-23
-updated: 2026-04-23
+updated: 2026-04-26
 type: summary
 tags: [tool, artifact, architecture]
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Internal Automation Tools

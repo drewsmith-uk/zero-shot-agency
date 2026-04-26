@@ -219,3 +219,16 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+
+## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
+- Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.
+- Updated `mkdocs.yml` to include the `roamlinks` plugin.
+- Appended `mkdocs-roamlinks-plugin` to `requirements.txt` and `.github/workflows/deploy.yml` for CI pipelines.
+- Maintained the strict format defined in [[SCHEMA]] for internal routing.
+- Updated [[TASKS]] to move the bugfix to Completed.
+## [2026-04-26] docs | Implement Metadata Tagging Framework
+- Resolved Issue #77 by updating the YAML frontmatter across all wiki pages in the docs directory.
+- Injected the [[geo-tactics]] list including authoritative-tone, fluency, and statistics into the geo_tactics array.
+- Added citation_metadata mapping back to the primary source: [[princeton-geo-paper]].
+- Updated [[strategy]] playbook to check off the Metadata Tagging Framework task.
+- Checked out branch drafts/issue-77 and created a PR using gh CLI.

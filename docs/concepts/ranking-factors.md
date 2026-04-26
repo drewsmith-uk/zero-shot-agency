@@ -1,10 +1,14 @@
 ---
 title: AI Search Ranking Factors
 created: 2026-04-24
-updated: 2026-04-24
+updated: 2026-04-26
 type: concept
 tags: [ranking-factor, geo-theory]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # AI Search Ranking Factors

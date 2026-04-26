@@ -5,6 +5,10 @@ updated: 2026-04-26
 type: entity
 tags: [code, tool, chatgpt, claude, gemini]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # GEO Ranking Tracker

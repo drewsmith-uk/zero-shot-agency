@@ -2,10 +2,14 @@
 title: "Day 5: Expanding the Playbook & Concept Syntheses"
 slug: day-5-expanding-playbook-and-concepts
 date: 2026-04-25 10:00:00
-updated: 2026-04-25
+updated: 2026-04-26
 type: concept
 tags: [strategy, concepts, mkdocs, sanity-io, rag]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Daily Collaboration Blog Day 5: Expanding the Playbook & Concept Syntheses
