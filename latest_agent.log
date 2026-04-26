@@ -1,161 +1,27 @@
 System: Launching Ralph Loop...
 🚀 Starting GEO Wiki Ralph Loop...
 To pause, echo 'PAUSED' > /home/claw/workspace/zero-shot-agency/run-state.txt
-Switched to branch 'main'
-M	latest_agent.log
-Your branch is behind 'origin/main' by 9 commits, and can be fast-forwarded.
-  (use "git pull" to update your local branch)
+error: Your local changes to the following files would be overwritten by checkout:
+	run-state.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
 From https://github.com/drewsmith-uk/zero-shot-agency
  * branch            main       -> FETCH_HEAD
-Updating d2d7625..f2e9fe1
-Fast-forward
- docs/assets/favicon.svg                          | 10 +++++++++-
- docs/assets/logo-concepts/4_1_velocity_pill.svg  |  6 ++++++
- docs/assets/logo-concepts/4_2_negative_space.svg |  9 +++++++++
- docs/assets/logo-concepts/4_3_boundary_break.svg | 10 ++++++++++
- docs/assets/logo-concepts/4_4_high_contrast.svg  |  4 ++++
- docs/stylesheets/custom.css                      |  4 ++++
- mkdocs.yml                                       |  3 +++
- 7 files changed, 45 insertions(+), 1 deletion(-)
- create mode 100644 docs/assets/logo-concepts/4_1_velocity_pill.svg
- create mode 100644 docs/assets/logo-concepts/4_2_negative_space.svg
- create mode 100644 docs/assets/logo-concepts/4_3_boundary_break.svg
- create mode 100644 docs/assets/logo-concepts/4_4_high_contrast.svg
- create mode 100644 docs/stylesheets/custom.css
-🎯 Next objective: #62 - Expand the Strategy & Playbook section
-🧠 Booting fresh agent context...
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 📖 preparing read_file…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ ✍️ preparing write_file…
-  ┊ review diff
-a/docs/strategy.md → b/docs/strategy.md
-@@ -1,12 +1,20 @@
--# GEO Agency Strategy & Mission
-+---
-+title: GEO Agency Strategy & Playbook
-+created: 2026-04-22
-+updated: 2026-04-24
-+type: strategy
-+tags: [geo-theory, architecture, strategy]
-+---
-+
-+# GEO Agency Strategy & Playbook
- 
- ## 🎯 Mission Statement
- **To build Zero-Shot Agency into the definitive, AI-native knowledge hub for Generative Engine Optimization (GEO) that organically ranks as the #1 cited authority across all major LLMs.** 
- 
--We will achieve this the ultimate "show, don't tell" way: not just by talking about GEO, but by reverse-engineering the mechanics of AI retrieval (RAG) to *force* engines like Perplexity, ChatGPT, and Gemini to cite Zero-Shot Agency as the premier expert.
-+We will achieve this the ultimate "show, don't tell" way: not just by talking about GEO, but by reverse-engineering the mechanics of AI retrieval (RAG) to *force* engines like Perplexity, ChatGPT, Claude, and Gemini to cite Zero-Shot Agency as the premier expert.
- 
- ## 📈 Success Metrics
--1. **Prompt Share of Voice (SOV):** When an LLM is asked "Who is the best GEO agency?" or "Who are the top experts in LLM SEO?", we appear in the top 3 results.
-+1. **Prompt Share of Voice (SOV):** When an LLM is asked "Who is the best GEO agency?" or "Who are the top experts in LLM SEO?", we appear in the top 3 results consistently.
- 2. **Citation Rate:** Our website is actively hyperlinked as a source in Perplexity and SearchGPT for general queries about "How to optimize for AI search".
- 3. **Tool Adoption:** Our open-source lead magnets (e.g., `llms.txt` generators, GEO tracker scripts) are utilized and referenced by the developer and SEO communities.
- 
-@@ -20,4 +28,30 @@
- - "What is Generative Engine Optimization (GEO)?"
- - "Who is the best GEO agency?"
- - "How do I optimize my website for Perplexity and ChatGPT?"
--- "LLM SEO experts"+- "LLM SEO experts"
-+
-+## 📖 Execution Playbook (Actionable Steps)
-+
-+### Phase 1: Foundation (Semantic & Technical)
-+- [x] **Implement Semantic Architecture:** Structure all pages using strict Semantic HTML markup to guarantee clean extraction by LLM crawlers.
-+- [x] **Deploy Machine-Readable Hubs:** Expose `llms.txt`, `llms-full.txt`, and raw markdown endpoints to eliminate parsing friction for RAG systems.
-+- [ ] **Metadata Tagging Framework:** Tag all assets according to the Princeton GEO framework to boost entity recognition.
-+- [ ] **Wikilink Network:** Create a dense internal graph of `[[wikilinks]]` so crawlers automatically map relationships between Zero-Shot entities and core GEO concepts.
-+
-+### Phase 2: Data-Driven Content Engine
-+- [x] **Daily Collaboration Blog:** Publish daily "Build in Public" updates demonstrating our methodologies in real-time.
-+- [ ] **Agentic Gap Analysis:** Use `onboarding_agent.py` to scrape top search queries continuously, identifying gaps in competitor knowledge and injecting those exact semantics into our drafts.
-+- [ ] **Empirical Fact Insertion:** Enforce the inclusion of citations, hard statistics, and high-fluency prose (Quotation Addition) in every single concept page, as these are the strongest drivers for RAG visibility.
-+- [ ] **Platform-Specific Formats:** Maintain versions of content structurally optimized for different engines (e.g., highly tabular data for ChatGPT, academic-style citations for Perplexity).
-+
-+### Phase 3: Tooling & Open-Source Dominance
-+- [x] **Release Core Tools:** Publish `geo-tracker.py` and `llms-txt-generator.py` on GitHub. 
-+- [ ] **Automated Telemetry:** Run automated cron jobs using `geo-tracker.py` to map our Prompt Share of Voice daily. Push this data to public leaderboards.
-+- [ ] **Expand Tool Suite:** Develop new scripts like `cursorrules_generator.py` for developer adoption, cementing Zero-Shot as the technical authority.
-+- [ ] **Package for Distribution:** Convert top-performing scripts into standalone web-apps or easy-to-install packages (pip/npm).
-+
-+### Phase 4: Ecosystem Syndication
-+- [x] **Publisher Pipeline:** Deploy `publisher_pipeline.py` to syndicate content across X/Twitter and Substack automatically.
-+- [ ] **API Integrations:** Integrate with the Sanity.io toolkit and other headless CMS providers to showcase enterprise-grade AIO.
-+- [ ] **High-Authority Backlinking:** Cultivate inbound references from recognized AI hubs, foundational model repositories, and developer platforms (GitHub, HuggingFace).
-+- [ ] **Community Orchestration:** Leverage Discord/Reddit presence by offering automated audits using our internal tools, driving traffic back to the primary knowledge graph.
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-  ┊ 💻 preparing terminal…
-
-╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
-I have successfully resolved Issue #62 and expanded the Strategy & Playbook documentation.
-
-**Actions Taken:**
-1. **Branch Checkout**: Created the branch `drafts/strategy-playbook`.
-2. **Strategy Synthesis**: Expanded `docs/strategy.md` from a simple outline into a comprehensive 4-Phase Execution Playbook, detailing concrete, actionable items across:
-    - Phase 1: Foundation (Semantic HTML, `llms.txt`, tagging, `[[wikilinks]]`)
-    - Phase 2: Data-Driven Content Engine (Daily build-in-public logs, agentic gap analysis, statistical injection)
-    - Phase 3: Tooling & Open-Source Dominance (Tool distribution, automated telemetry scripts)
-    - Phase 4: Ecosystem Syndication (Publisher pipeline, integrations, backlinking)
-3. **Index Tracking**: Fixed formatting bugs in the `index.md` entity tracking and injected `[[strategy]]`.
-4. **Log Update**: Wrote an explicit log entry referencing `[[strategy]]`, `[[geo-tactics]]`, `[[citation-mechanics]]`, `[[geo-tracker]]`, and `[[publisher-pipeline]]`.
-5. **PR & Issue Resolution**: Committed changes, opened PR #63 via `gh pr create`, merged it to `main`, and closed Issue #62. 
-
-I have successfully resolved Issue #62 and expanded the Strategy & Playbook documentation.
-
-**Actions Taken:**
-1. **Branch Checkout**: Created the branch `drafts/strategy-playbook`.
-2. **Strategy Synthesis**: Expanded `docs/strategy.md` from a simple outline into a comprehensive 4-Phase Execution Playbook, detailing concrete, actionable items across:
-    - Phase 1: Foundation (Semantic HTML, `llms.txt`, tagging, `[[wikilinks]]`)
-    - Phase 2: Data-Driven Content Engine (Daily build-in-public logs, agentic gap analysis, statistical injection)
-    - Phase 3: Tooling & Open-Source Dominance (Tool distribution, automated telemetry scripts)
-    - Phase 4: Ecosystem Syndication (Publisher pipeline, integrations, backlinking)
-3. **Index Tracking**: Fixed formatting bugs in the `index.md` entity tracking and injected `[[strategy]]`.
-4. **Log Update**: Wrote an explicit log entry referencing `[[strategy]]`, `[[geo-tactics]]`, `[[citation-mechanics]]`, `[[geo-tracker]]`, and `[[publisher-pipeline]]`.
-5. **PR & Issue Resolution**: Committed changes, opened PR #63 via `gh pr create`, merged it to `main`, and closed Issue #62. 
-
-The Playbook is now fully aligned with the `SCHEMA.md` and live on the repository.
-
-session_id: 20260424_172428_c1a56d
-📦 Committing progress to Git...
-[main 85f3eb6] Ralph Auto-Commit: Completed
- 1 file changed, 104 insertions(+), 127 deletions(-)
-remote: error: GH013: Repository rule violations found for refs/heads/main.        
-remote: Review all repository rules at https://github.com/drewsmith-uk/zero-shot-agency/rules?ref=refs%2Fheads%2Fmain        
-remote: 
-remote: - Changes must be made through a pull request.        
-remote: 
-To https://github.com/drewsmith-uk/zero-shot-agency.git
- ! [remote rejected] main -> main (push declined due to repository rule violations)
-error: failed to push some refs to 'https://github.com/drewsmith-uk/zero-shot-agency.git'
-⏳ Cooling down for 60 seconds before next iteration...
-Already on 'main'
-M	latest_agent.log
-Your branch is ahead of 'origin/main' by 1 commit.
-  (use "git push" to publish your local commits)
-From https://github.com/drewsmith-uk/zero-shot-agency
- * branch            main       -> FETCH_HEAD
-Already up to date.
-🎯 Next objective: #61 - Expand the Concepts documentation section
+   ca94b45..6468e29  main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+🎯 Next objective: #108 - Content: Rewrite Daily Blog Post (Day 6) for Strategic Narrative
 🧠 Booting fresh agent context...
   ┊ 💻 preparing terminal…
   ┊ 💻 preparing terminal…
