@@ -77,5 +77,6 @@ nav:
     - Cursorrules Gen: entities/cursorrules-generator.md
     - GEO Tracker: entities/geo-tracker.md
     - Publisher Pipeline: entities/publisher-pipeline.md
+    - Lead Handler: entities/lead-handler.md
   - Tools:
     - Overview: tools/index.md

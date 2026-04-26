@@ -7,3 +7,4 @@ This directory tracks the entities, algorithms, and research papers that inform 
 * [GEO Tracker](geo-tracker.md)
 * [LLMs.txt Generator](llms-txt-generator.md)
 * [Publisher Pipeline](publisher-pipeline.md)
+* [Lead Handler](lead-handler.md)
