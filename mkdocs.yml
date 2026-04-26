@@ -77,5 +77,7 @@ nav:
     - Cursorrules Gen: entities/cursorrules-generator.md
     - GEO Tracker: entities/geo-tracker.md
     - Publisher Pipeline: entities/publisher-pipeline.md
+    - LLMs.txt Generator: entities/llms-txt-generator.md
+    - Onboarding Agent: entities/onboarding-agent.md
   - Tools:
     - Overview: tools/index.md

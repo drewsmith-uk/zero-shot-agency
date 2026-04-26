@@ -27,3 +27,8 @@ The GEO Ranking Tracker (`geo-tracker.py`) is a baseline script developed to eva
 ## Related Concepts
 - Implements tracking for strategies defined in [[geo-tactics]].
 - Evaluates metrics relevant to [[citation-mechanics]].
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]
+- [[zero-shot-homepage-copy]]

@@ -219,3 +219,8 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+## [2026-04-26] content | Build Wikilink Network
+- Resolved Issue #78 by creating a dense internal graph of [[wikilinks]] across all concept and entity pages.
+- Appended a `Related Concepts & Entities` section to all files in `docs/concepts/` and `docs/entities/`, mapping relationships between core GEO concepts.
+- Updated `mkdocs.yml` navigation to include orphaned entities ([[llms-txt-generator]] and [[onboarding-agent]]).
+- Checked out branch `feature/issue-78-wikilinks` and opened a Pull Request for review via the gh CLI.

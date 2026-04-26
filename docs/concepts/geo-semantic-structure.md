@@ -55,3 +55,10 @@ The content should be wrapped in strict, boilerplate-free HTML5 semantic tags to
 **Example:** `<h2>Frequently Asked Questions about GEO</h2>`
 - **Purpose:** Directly map to the "Query Intent Expansion" phase of RAG pipelines.
 - **Tactic:** Each FAQ should be an `<h3>` question followed immediately by a concise 1-2 sentence paragraph answer.
+
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]
+- [[llms-txt-generator]]
+- [[ranking-factors]]

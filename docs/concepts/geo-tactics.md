@@ -1,7 +1,7 @@
 ---
 title: GEO Tactics
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: concept
 tags: [geo-theory, strategy]
 sources: [raw/papers/princeton-geo-paper.md]
@@ -30,3 +30,8 @@ Based on the original Princeton GEO paper ([[princeton-geo-paper]]), several fou
 
 ## Summary of Efficacy
 According to GEO-bench evaluations, applying these strategies can boost visibility by up to **40%** in generative engine responses. However, effectiveness varies significantly across domains, indicating that domain-specific optimization is required rather than a one-size-fits-all approach. For example, technical terms might work well in scientific queries, whereas easy-to-understand language may dominate consumer queries.
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[princeton-geo-paper]]
+- [[ranking-factors]]
