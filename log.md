@@ -219,3 +219,10 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+
+## [2026-04-26] content | Build 'Work With Us' Contact Page
+- Resolved Issue #80 by creating a 'Work With Us' contact page at `docs/contact.md`.
+- Updated `mkdocs.yml` to include the contact page in the navigation.
+- Updated `README.md` to display the agency email addresses and a call-to-action for inbound leads.
+- Added [[contact]] to `index.md` under Entities & Tools.
+- Closed Issue #80 and created a Pull Request from branch `drafts/contact-page`.

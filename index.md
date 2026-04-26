@@ -5,6 +5,7 @@
 - [[cursorrules-generator]]
 - [[llms-txt-generator]]
 - [[publisher-pipeline]]
+- [[contact]]
 
 ## Concepts & Content
 - [[strategy]]
