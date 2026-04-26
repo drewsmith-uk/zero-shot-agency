@@ -204,6 +204,12 @@
 - Expanded tracker to support a 12-model matrix (OpenAI, Anthropic, Google, xAI).
 - Created PR and closed Issue #66.
 - Cross-referenced with [[geo-tracker]].
+## [2026-04-26] code | Model Slug Migration for Issue #73
+- Resolved Issue #73 by migrating model slugs in the [[geo-tracker]] script according to the model-slug-migration skill rules.
+- Implemented the Overlap Strategy by keeping legacy models (gpt-4o, claude-3.7, gemini-2.5-flash) and adding new OpenRouter flagship models side-by-side (gpt-5.5-pro, claude-sonnet-4.6, gemini-3.1-pro-preview).
+- Updated CSV field headers in geo-tracker.py to correctly map the side-by-side evaluation output to citations.csv.
+- Updated [[geo-tracker]] entity documentation to reflect the newly supported target models.
+- Opened a Pull Request on branch feature/issue-73-model-updates via the gh CLI.
 ## [2026-04-26] infrastructure | Establish Technical SEO Baseline
 - Resolved Issue #68 by implementing technical [[geo-tactics]] for AI crawlers.
 - Added `docs/robots.txt` to explicitly allow AI bots (`PerplexityBot`, `ChatGPT-User`, `ClaudeBot`) and specify the `sitemap.xml`.
