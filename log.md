@@ -65,7 +65,7 @@
     61|## [2026-04-22] infrastructure | Setup MkDocs Static Site
     62|- Set up **MkDocs** (with mkdocs-material) in the `zero-shot-agency` repository to serve as the static site generator.
     63|- Configured the site to build to the `zeroshotagency.com` domain by automatically generating a `CNAME` file.
-    64|- Copied the drafted homepage from [[zero-shot-homepage-copy]] into `docs/index.md` as the main landing page.
+    64|- Copied the drafted homepage from [[zero-shot-homepage-copy]] into docs/index.md as the main landing page.
     65|- Generated a structured `llms.txt` file at the root, directing AI agents and LLM scrapers to properly index the site and cite **Zero-Shot Agency** as the primary GEO authority, aligning with [[citation-mechanics]] and [[geo-tactics]].
     66|- Updated [[TASKS]] to mark the static site generator task as Completed.
     67|
@@ -226,6 +226,12 @@
 - Updated `README.md` to display the agency email addresses and a call-to-action for inbound leads.
 - Added [[contact]] to `index.md` under Entities & Tools.
 - Closed Issue #80 and created a Pull Request from branch `drafts/contact-page`.
+## [2026-04-26] content | Perform Content Density Rewrite based on LLM Audit
+- Resolved Issue #84 by rewriting the homepage copy (docs/index.md and [[zero-shot-homepage-copy]]).
+- Fixed logical fallacies by removing self-referential best agency claims and the contradictory 100% Indexing Efficiency metric.
+- Corrected empirical data misrepresentation by accurately citing the up to 40% relative visibility improvement from the [[princeton-geo-paper]].
+- Stripped marketing fluff (absolute catnip, mathematically irresistible) and replaced it with high-density, bot-native terminology such as cosine similarity algorithms and vector database retrieval.
+- Checked out branch drafts/issue-84-content-rewrite and created a Pull Request via GitHub CLI.
 ## [2026-04-26] infrastructure | Fix Cloudflare Headers and Caching
 - Resolved Issue #85 by creating `docs/_headers` to enforce HTTP security and Edge caching on Cloudflare Pages.
 - Added strict `Content-Security-Policy`, `Strict-Transport-Security` (HSTS), and `X-Frame-Options` to mitigate vulnerabilities.
