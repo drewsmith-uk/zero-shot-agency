@@ -28,3 +28,12 @@ sources: [raw/articles/source-name.md]
 - Target: perplexity, chatgpt, claude, gemini, copilot, cursor
 - Artifact: tool, paper, code, benchmark, strategy
 - Content: llms-txt, markdown, semantic-html
+
+## Autonomous Agent Operational Protocol (Verify-Before-PR)
+All AI agents (including Hermes, Ralph, and Claude subagents) MUST adhere to the **Zero-Blind-Commit Protocol** before executing `git commit` or opening a Pull Request. You may not rely on the human user as your compiler or linter.
+
+1. **The Visual Diff Check:** Run `git diff` or `git diff --staged` to visually read the lines you are changing. Check for duplicate lines, unintended deletions, or malformed syntax.
+2. **The Scope Check:** Run `git status` to ensure you haven't accidentally scooped up untracked workspace files, hidden agent directories (e.g., `.entire/`), or utility scripts.
+3. **The Syntax Check:** Validate the code natively before pushing:
+   - Python: `python3 -m py_compile script.py`
+   - Bash: `bash -n script.sh`
