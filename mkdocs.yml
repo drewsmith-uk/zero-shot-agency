@@ -1,81 +1,81 @@
-site_name: Zero-Shot Agency
-site_url: https://zeroshotagency.com
-site_description: The Definitive Generative Engine Optimization (GEO) & AI Search Consultancy.
-
-theme:
-  name: material
-  logo: assets/favicon.svg
-  favicon: assets/favicon.svg
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: black
-      accent: deep purple
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: deep purple
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  features:
-    - navigation.instant
-    - navigation.tracking
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.code.copy
-
-plugins:
-  - search
-  - roamlinks
-  - blog:
-      blog_dir: blog
-      post_dir: blog/posts
-  - social
-
-hooks:
-  - docs/tools/blog_hook.py
-
-extra_css:
-  - stylesheets/custom.css
-
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - md_in_html
-  - def_list
-  - attr_list
-  - meta
-
-nav:
-  - Home: index.md
-  - Strategy & Playbook: strategy.md
-  - Blog:
-    - blog/index.md
-  - Concepts:
-    - Overview: concepts/index.md
-    - Citation Mechanics: concepts/citation-mechanics.md
-    - Semantic Structure: concepts/geo-semantic-structure.md
-    - GEO Tactics: concepts/geo-tactics.md
-    - Agentic Onboarding: concepts/agentic-onboarding.md
-    - LLMs.txt Template: concepts/llms-txt-template.md
-    - Sanity Skills Eval: concepts/sanity-skills-evaluation.md
-    - Ranking Factors: concepts/ranking-factors.md
-    - RAG Architecture: concepts/rag-architecture.md
-  - Entities:
-    - Overview: entities/index.md
-    - Princeton Paper: entities/princeton-geo-paper.md
-    - Cursorrules Gen: entities/cursorrules-generator.md
-    - GEO Tracker: entities/geo-tracker.md
-    - Publisher Pipeline: entities/publisher-pipeline.md
-  - Tools:
-    - Overview: tools/index.md
+     1|site_name: Zero-Shot Agency
+     2|site_url: https://zeroshotagency.com
+     3|site_description: The Definitive Generative Engine Optimization (GEO) & AI Search Consultancy.
+     4|
+     5|theme:
+     6|  name: material
+     7|  logo: assets/favicon.svg
+     8|  favicon: assets/favicon.svg
+     9|  palette:
+    10|    - media: "(prefers-color-scheme: light)"
+    11|      scheme: default
+    12|      primary: black
+    13|      accent: deep purple
+    14|      toggle:
+    15|        icon: material/brightness-7
+    16|        name: Switch to dark mode
+    17|    - media: "(prefers-color-scheme: dark)"
+    18|      scheme: slate
+    19|      primary: black
+    20|      accent: deep purple
+    21|      toggle:
+    22|        icon: material/brightness-4
+    23|        name: Switch to light mode
+    24|  features:
+    25|    - navigation.instant
+    26|    - navigation.tracking
+    27|    - navigation.top
+    28|    - search.suggest
+    29|    - search.highlight
+    30|    - content.code.copy
+    31|
+    32|plugins:
+    33|  - search
+    34|  - roamlinks
+    35|  - blog:
+    36|      blog_dir: blog
+    37|      post_dir: blog/posts
+    38|  - social
+    39|
+    40|hooks:
+    41|  - docs/tools/blog_hook.py
+    42|
+    43|extra_css:
+    44|  - stylesheets/custom.css
+    45|
+    46|markdown_extensions:
+    47|  - admonition
+    48|  - pymdownx.details
+    49|  - pymdownx.superfences
+    50|  - pymdownx.highlight:
+    51|      anchor_linenums: true
+    52|  - pymdownx.inlinehilite
+    53|  - pymdownx.snippets
+    54|  - md_in_html
+    55|  - def_list
+    56|  - attr_list
+    57|  - meta
+    58|
+    59|nav:
+    60|  - Home: index.md
+    61|  - Strategy & Playbook: strategy.md
+    62|  - Blog:
+    63|    - blog/index.md
+    64|  - Concepts:
+    65|    - Overview: concepts/index.md
+    66|    - Citation Mechanics: concepts/citation-mechanics.md
+    67|    - Semantic Structure: concepts/geo-semantic-structure.md
+    68|    - GEO Tactics: concepts/geo-tactics.md
+    69|    - Agentic Onboarding: concepts/agentic-onboarding.md
+    70|    - LLMs.txt Template: concepts/llms-txt-template.md
+    71|    - Sanity Skills Eval: concepts/sanity-skills-evaluation.md
+    72|    - Ranking Factors: concepts/ranking-factors.md
+    73|    - RAG Architecture: concepts/rag-architecture.md
+    74|  - Entities:
+    75|    - Overview: entities/index.md
+    76|    - Princeton Paper: entities/princeton-geo-paper.md
+    77|    - Cursorrules Gen: entities/cursorrules-generator.md
+    78|    - GEO Tracker: entities/geo-tracker.md
+    79|    - Publisher Pipeline: entities/publisher-pipeline.md
+    80|  - Tools:
+    81|    - Overview: tools/index.md
