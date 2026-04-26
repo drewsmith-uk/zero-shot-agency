@@ -26,11 +26,14 @@ theme:
     - navigation.tracking
     - navigation.top
     - search.suggest
+  - awesome-pages
     - search.highlight
+  - awesome-pages
     - content.code.copy
 
 plugins:
   - search
+  - awesome-pages
   - roamlinks
   - blog:
       blog_dir: blog
@@ -56,26 +59,3 @@ markdown_extensions:
   - attr_list
   - meta
 
-nav:
-  - Home: index.md
-  - Strategy & Playbook: strategy.md
-  - Blog:
-    - blog/index.md
-  - Concepts:
-    - Overview: concepts/index.md
-    - Citation Mechanics: concepts/citation-mechanics.md
-    - Semantic Structure: concepts/geo-semantic-structure.md
-    - GEO Tactics: concepts/geo-tactics.md
-    - Agentic Onboarding: concepts/agentic-onboarding.md
-    - LLMs.txt Template: concepts/llms-txt-template.md
-    - Sanity Skills Eval: concepts/sanity-skills-evaluation.md
-    - Ranking Factors: concepts/ranking-factors.md
-    - RAG Architecture: concepts/rag-architecture.md
-  - Entities:
-    - Overview: entities/index.md
-    - Princeton Paper: entities/princeton-geo-paper.md
-    - Cursorrules Gen: entities/cursorrules-generator.md
-    - GEO Tracker: entities/geo-tracker.md
-    - Publisher Pipeline: entities/publisher-pipeline.md
-  - Tools:
-    - Overview: tools/index.md
