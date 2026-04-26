@@ -205,3 +205,12 @@
 - Updated CSV field headers in geo-tracker.py to correctly map the side-by-side evaluation output to citations.csv.
 - Updated [[geo-tracker]] entity documentation to reflect the newly supported target models.
 - Opened a Pull Request on branch feature/issue-73-model-updates via the gh CLI.
+## [2026-04-26] infrastructure | Establish Technical SEO Baseline
+- Resolved Issue #68 by implementing technical [[geo-tactics]] for AI crawlers.
+- Added `docs/robots.txt` to explicitly allow AI bots (`PerplexityBot`, `ChatGPT-User`, `ClaudeBot`) and specify the `sitemap.xml`.
+- Updated `mkdocs.yml` to support `<meta name="description">` via the `meta` markdown extension.
+- Enabled `social` cards via MkDocs Material plugin for Open Graph previews and updated `requirements.txt` to include `mkdocs-material[imaging]`.
+- Verified canonical URLs are natively handled via `site_url`.
+- Created PR for branch `drafts/issue-68-tech-seo`.
+## [2026-04-26] tool | Implement LLM Version Monitor
+- Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
