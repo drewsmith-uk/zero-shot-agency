@@ -219,3 +219,8 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+## [2026-04-26] concept | Xitter Syndication & Cron Scheduling
+- Resolved Issue #82 by documenting the architecture for automated daily blog post syndication to X/Twitter.
+- Created `docs/concepts/xitter-syndication.md` detailing the integration with the [[xitter]] CLI skill.
+- Outlined the workflow combining cron scheduling and Human-in-the-Loop (HITL) approval.
+- Updated `mkdocs.yml` and `index.md` navigation to include [[xitter-syndication]].
