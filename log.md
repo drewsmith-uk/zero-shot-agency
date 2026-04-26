@@ -198,3 +198,5 @@
 - Updated `mkdocs.yml` navigation to include all orphaned concept files (Agentic Onboarding, LLMs.txt Template, Sanity Skills Eval, Ranking Factors, RAG Architecture).
 - Updated `docs/concepts/index.md` to reflect the complete list.
 - Closed Issue #61 and checked out `drafts/expand-concepts` for PR submission.
+## [2026-04-26] tool | Implement LLM Version Monitor
+- Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
