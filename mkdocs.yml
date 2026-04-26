@@ -58,6 +58,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Leaderboard: leaderboard.md
   - Strategy & Playbook: strategy.md
   - Blog:
     - blog/index.md
