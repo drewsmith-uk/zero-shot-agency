@@ -1,3 +1,15 @@
+---
+title: Core Concepts
+created: 2026-04-26
+updated: 2026-04-26
+type: summary
+tags: []
+sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
+---
 # Core Concepts
 
 Welcome to the Zero-Shot Agency concepts wiki. This section contains our raw playbooks, daily logs, and theoretical frameworks for Generative Engine Optimization.
