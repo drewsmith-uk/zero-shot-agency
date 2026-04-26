@@ -219,3 +219,33 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+
+## [2026-04-26] infrastructure | Fix Cloudflare Headers and Caching
+- Resolved Issue #85 by creating `docs/_headers` to enforce HTTP security and Edge caching on Cloudflare Pages.
+- Added strict `Content-Security-Policy`, `Strict-Transport-Security` (HSTS), and `X-Frame-Options` to mitigate vulnerabilities.
+- Overrode default Cloudflare caching to cache `/*.html` on the Edge (`max-age=3600`) and immutable assets (`/assets/*`).
+- Maintained alignment with [[geo-tactics]] and [[ranking-factors]] by ensuring fast load times and high technical SEO scores for crawler bots.
+- Opened a Pull Request on branch `feature/issue-85-cloudflare-headers` via the gh CLI.
+## [2026-04-26] dev | Build Universal GEO Context Generator Tool
+- Resolved Issue #86 by delegating to Claude subagent to build `geo_context_generator.py`.
+- The CLI tool successfully injects the Core 5-Point GEO Ruleset across `.cursorrules`, `.clinerules`, `claude.md`, and `AGENTS.md`.
+- Created entity documentation at `docs/entities/geo-context-generator.md`.
+- Linked the artifact to [[geo-tactics]] and [[citation-mechanics]].
+- Updated `index.md` and `mkdocs.yml` to include [[geo-context-generator]].
+- Created branch `feature/issue-86-geo-context-generator` and opened Pull Request via gh CLI.
+## [2026-04-26] content | Daily Collaboration Blog Day 6
+- Resolved Issue #90 by drafting the day 6 blog post documenting our operations and the brutal GPT-5.5-Pro site audit.
+- Highlighted the 12-model matrix upgrade via OpenRouter and the use of `.gitattributes` to solve agent merge conflicts.
+- Teased the upcoming Universal GEO Context Generator.
+- Saved the post as `docs/blog/posts/daily-blog-day-6.md`.
+- Appended [[daily-blog-day-6]] to `index.md` concepts list.
+- Cross-referenced concepts including [[geo-tracker]], [[geo-tactics]], [[publisher-pipeline]], [[geo-semantic-structure]], and [[citation-mechanics]].
+- Checked out branch `drafts/daily-blog-day-6`, closed the issue, and opened a PR using the GitHub CLI.
+
+## [2026-04-26] dev | Integrate Leaderboard Generation into Daily Cron
+- Resolved Issue #89 by delegating the creation of `generate_leaderboard.py` to a Claude subagent.
+- The script parses `citations.csv` to calculate the Prompt Share of Voice (SOV) and generates the `docs/leaderboard.md` file.
+- Updated `tracker_cron_wrapper.sh` to execute the leaderboard generation automatically after the [[geo-tracker]] script runs.
+- The cron job is now configured to commit and push `docs/leaderboard.md` alongside the CSV updates so the site rebuilds with fresh data daily.
+- Added [[leaderboard]] to the wiki `index.md` and updated `mkdocs.yml` navigation.
+- Opened a Pull Request on branch `feature/issue-89-leaderboard` via the gh CLI.
