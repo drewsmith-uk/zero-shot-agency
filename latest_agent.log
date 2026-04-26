@@ -203,3 +203,93 @@ The task is complete and awaiting your review on the open Pull Request.
 
 session_id: 20260424_172842_2f4a09
 📦 Committing progress to Git...
+🚀 Starting GEO Wiki Ralph Loop...
+To pause, echo 'PAUSED' > /home/claw/workspace/zero-shot-agency/run-state.txt
+Already on 'main'
+M	latest_agent.log
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+From https://github.com/drewsmith-uk/zero-shot-agency
+ * branch            main       -> FETCH_HEAD
+Updating 7cbf1da..5b319a0
+Fast-forward
+ SCHEMA.md                           |  2 +-
+ docs/blog/posts/daily-blog-day-4.md |  2 +-
+ docs/blog/posts/daily-blog-day-5.md | 16 ++++++++--------
+ docs/strategy.md                    |  2 +-
+ log.md                              | 26 +++++++++++++-------------
+ ralph_loop.sh                       |  2 +-
+ 6 files changed, 25 insertions(+), 25 deletions(-)
+🎯 Next objective: #68 - Establish Technical SEO & Discovery Baseline
+🧠 Booting fresh agent context...
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ ✍️ preparing write_file…
+  ┊ review diff
+a/docs/robots.txt → b/docs/robots.txt
+@@ -0,0 +1,13 @@
++User-agent: *
++Allow: /
++
++User-agent: PerplexityBot
++Allow: /
++
++User-agent: ChatGPT-User
++Allow: /
++
++User-agent: ClaudeBot
++Allow: /
++
++Sitemap: https://zeroshotagency.com/sitemap.xml
+  ┊ 🔧 preparing patch…
+  ┊ review diff
+a//home/claw/workspace/zero-shot-agency/mkdocs.yml → b//home/claw/workspace/zero-shot-agency/mkdocs.yml
+@@ -35,6 +35,7 @@
+   - blog:
+       blog_dir: blog
+       post_dir: blog/posts
++  - social
+ 
+ hooks:
+   - docs/tools/blog_hook.py
+  ┊ 🔧 preparing patch…
+  ┊ review diff
+a//home/claw/workspace/zero-shot-agency/mkdocs.yml → b//home/claw/workspace/zero-shot-agency/mkdocs.yml
+@@ -54,6 +54,7 @@
+   - md_in_html
+   - def_list
+   - attr_list
++  - meta
+ 
+ nav:
+   - Home: index.md
+  ┊ 💻 preparing terminal…
+  ┊ 🔧 preparing patch…
+  ┊ review diff
+a//home/claw/workspace/zero-shot-agency/requirements.txt → b//home/claw/workspace/zero-shot-agency/requirements.txt
+@@ -1,5 +1,5 @@
+ mkdocs>=1.5.0
+-mkdocs-material>=9.5.0
++mkdocs-material[imaging]>=9.5.0
+ mkdocs-roamlinks-plugin>=0.3.0
+ python-dotenv
+ openai
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+I have resolved the Technical SEO and Discovery Baseline tasks defined in Issue #68. 
+
+Here is what was accomplished:
+1. **Robots.txt & Sitemap:** Created `docs/robots.txt` explicitly allowing AI crawlers (`PerplexityBot`, `ChatGPT-User`, `ClaudeBot`) and standardizing traditional ones, along with pointing directly to the MkDocs generated `sitemap.xml`.
+2. **Metadata & Open Graph:** Added the `- meta` markdown extension to `mkdocs.yml` to support `<meta name="description">` via frontmatter, and enabled MkDocs Material's built-in `social` plugin for Twitter/LinkedIn link previews. 
+3. **Dependencies:** Patched `requirements.txt` to require `mkdocs-material[imaging]` to fully support generating those Open Graph image cards. 
+4. **Canonical URLs:** Validated that canonical tags are already configured dynamically because `site_url: https://zeroshotagency.com` is present in `mkdocs.yml`.
+5. **Git Operations:** Branched out to `drafts/issue-68-tech-seo`, committed the configurations, logged the changes to `log.md` utilizing the cross-referenced [[geo-tactics]] wikilink, opened a Pull Request (#72), and successfully closed Issue #68. 
+
+📦 Committing progress to Git...
