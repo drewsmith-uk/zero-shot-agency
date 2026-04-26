@@ -199,6 +199,11 @@
 - Updated `docs/concepts/index.md` to reflect the complete list.
 - Closed Issue #61 and checked out `drafts/expand-concepts` for PR submission.
 
+## [2026-04-26] dev | Expand GEO Tracker Matrix
+- Delegated task to Claude subagent to refactor `geo-tracker.py` to use OpenRouter.
+- Expanded tracker to support a 12-model matrix (OpenAI, Anthropic, Google, xAI).
+- Created PR and closed Issue #66.
+- Cross-referenced with [[geo-tracker]].
 ## [2026-04-26] code | Model Slug Migration for Issue #73
 - Resolved Issue #73 by migrating model slugs in the [[geo-tracker]] script according to the model-slug-migration skill rules.
 - Implemented the Overlap Strategy by keeping legacy models (gpt-4o, claude-3.7, gemini-2.5-flash) and adding new OpenRouter flagship models side-by-side (gpt-5.5-pro, claude-sonnet-4.6, gemini-3.1-pro-preview).
