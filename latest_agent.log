@@ -251,13 +251,28 @@ Here is the breakdown of the execution:
 4. **Wiki Updates:** Appended the [[leaderboard]] wikilink under the Concepts & Content section in `index.md`.
 5. **Changelog:** Updated `log.md` with cross-referenced wikilinks outlining the execution steps and new additions.
 📦 Committing progress to Git...
-⏳ Cooling down for 60 seconds before next iteration...
-Already on 'main'
+🚀 Starting GEO Wiki Ralph Loop...
+To pause, echo 'PAUSED' > /home/claw/workspace/zero-shot-agency/run-state.txt
+Switched to branch 'main'
 M	latest_agent.log
 Your branch is up to date with 'origin/main'.
 From https://github.com/drewsmith-uk/zero-shot-agency
  * branch            main       -> FETCH_HEAD
 Already up to date.
+🎯 Next objective: #66 - Expand GEO Tracker to 12-Model Matrix (4 Providers x 3 Tiers)
+🧠 Booting fresh agent context...
+/home/claw/workspace/zero-shot-agency/ralph_loop.sh: line 50: hermes: command not found
+📦 Committing progress to Git...
+🚀 Starting GEO Wiki Ralph Loop...
+To pause, echo 'PAUSED' > /home/claw/workspace/zero-shot-agency/run-state.txt
+Switched to branch 'main'
+M	interactive_dashboard.py
+M	latest_agent.log
+Your branch is up to date with 'origin/main'.
+From https://github.com/drewsmith-uk/zero-shot-agency
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+🎯 Next objective: #85 - Security: Fix Cloudflare Headers and Caching
 🎯 Next objective: #80 - Feature: Build 'Work With Us' Contact Page and Update README
 🧠 Booting fresh agent context...
 /home/claw/workspace/zero-shot-agency/ralph_loop.sh: line 50: hermes: command not found
@@ -266,6 +281,74 @@ Already up to date.
 .git/hooks/pre-push: 5: entire: not found
 Everything up-to-date
 ⏳ Cooling down for 60 seconds before next iteration...
+Already on 'main'
+M	interactive_dashboard.py
+M	latest_agent.log
+Your branch is up to date with 'origin/main'.
+From https://github.com/drewsmith-uk/zero-shot-agency
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+🎯 Next objective: #85 - Security: Fix Cloudflare Headers and Caching
+🎯 Next objective: #80 - Feature: Build 'Work With Us' Contact Page and Update README
+🧠 Booting fresh agent context...
+/home/claw/workspace/zero-shot-agency/ralph_loop.sh: line 50: hermes: command not found
+📦 Committing progress to Git...
+.git/hooks/commit-msg: 4: entire: not found
+.git/hooks/pre-push: 5: entire: not found
+Everything up-to-date
+⏳ Cooling down for 60 seconds before next iteration...
+Already on 'main'
+M	interactive_dashboard.py
+M	latest_agent.log
+Your branch is up to date with 'origin/main'.
+From https://github.com/drewsmith-uk/zero-shot-agency
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+🎯 Next objective: #85 - Security: Fix Cloudflare Headers and Caching
+🎯 Next objective: #80 - Feature: Build 'Work With Us' Contact Page and Update README
+🧠 Booting fresh agent context...
+/home/claw/workspace/zero-shot-agency/ralph_loop.sh: line 50: hermes: command not found
+📦 Committing progress to Git...
+.git/hooks/commit-msg: 4: entire: not found
+.git/hooks/pre-push: 5: entire: not found
+Everything up-to-date
+⏳ Cooling down for 60 seconds before next iteration...
+Already on 'main'
+M	interactive_dashboard.py
+M	latest_agent.log
+Your branch is up to date with 'origin/main'.
+From https://github.com/drewsmith-uk/zero-shot-agency
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+🎯 Next objective: #85 - Security: Fix Cloudflare Headers and Caching
+🧠 Booting fresh agent context...
+/home/claw/workspace/zero-shot-agency/ralph_loop.sh: line 50: hermes: command not found
+📦 Committing progress to Git...
+.git/hooks/commit-msg: 4: entire: not found
+.git/hooks/pre-push: 5: entire: not found
+Everything up-to-date
+⏳ Cooling down for 60 seconds before next iteration...
+Already on 'main'
+M	interactive_dashboard.py
+M	latest_agent.log
+Your branch is up to date with 'origin/main'.
+From https://github.com/drewsmith-uk/zero-shot-agency
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+🎯 Next objective: #85 - Security: Fix Cloudflare Headers and Caching
+🧠 Booting fresh agent context...
+/home/claw/workspace/zero-shot-agency/ralph_loop.sh: line 50: hermes: command not found
+📦 Committing progress to Git...
+.git/hooks/commit-msg: 4: entire: not found
+.git/hooks/pre-push: 5: entire: not found
+Everything up-to-date
+🏁 Ralph Loop shift finished. Completed 5 tasks.
+🚀 Starting GEO Wiki Ralph Loop...
+To pause, echo 'PAUSED' > /home/claw/workspace/zero-shot-agency/run-state.txt
+Already on 'main'
+M	interactive_dashboard.py
+M	latest_agent.log
+M	ralph_loop.sh
 🚀 Starting GEO Wiki Ralph Loop...
 To pause, echo 'PAUSED' > /home/claw/workspace/zero-shot-agency/run-state.txt
 Already on 'main'
@@ -274,6 +357,77 @@ Your branch is up to date with 'origin/main'.
 From https://github.com/drewsmith-uk/zero-shot-agency
  * branch            main       -> FETCH_HEAD
 Already up to date.
+🎯 Next objective: #85 - Security: Fix Cloudflare Headers and Caching
+🧠 Booting fresh agent context...
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 📚 preparing skill_view…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ ✍️ preparing write_file…
+  ┊ review diff
+a/docs/_headers → b/docs/_headers
+@@ -1 +1,15 @@
+-hello
++/*
++  X-Frame-Options: SAMEORIGIN
++  X-Content-Type-Options: nosniff
++  Referrer-Policy: strict-origin-when-cross-origin
++  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
++  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com;
++
++/*.html
++  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
++
++/assets/*
++  Cache-Control: public, max-age=31536000, immutable
++
++/stylesheets/*
++  Cache-Control: public, max-age=31536000, immutable
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 🐍 preparing execute_code…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+I have successfully completed the tasks required to resolve GitHub Issue #85.
+
+Here is the status of the requested actions:
+
+1. Created docs/_headers to configure custom HTTP headers for Cloudflare Pages.
+2. Added the requested security headers: Content-Security-Policy (CSP), Strict-Transport-Security (HSTS), and X-Frame-Options.
+3. Overrode the default Cloudflare Edge caching rules to apply Cache-Control max-age for static HTML and immutable assets.
+4. Created a new branch 'feature/issue-85-cloudflare-headers' and successfully committed these changes.
+5. Pushed the new branch to the repository and opened Pull Request #96 via the gh CLI.
+6. Closed GitHub Issue #85 using the gh CLI.
+7. Updated log.md with a new entry cross-referencing [[geo-tactics]] and [[ranking-factors]] in standard format without backticks.
+
+I have successfully completed the tasks required to resolve GitHub Issue #85.
+
+Here is the status of the requested actions:
+
+1. Created docs/_headers to configure custom HTTP headers for Cloudflare Pages.
+2. Added the requested security headers: Content-Security-Policy (CSP), Strict-Transport-Security (HSTS), and X-Frame-Options.
+3. Overrode the default Cloudflare Edge caching rules to apply Cache-Control max-age for static HTML and immutable assets.
+4. Created a new branch 'feature/issue-85-cloudflare-headers' and successfully committed these changes.
+5. Pushed the new branch to the repository and opened Pull Request #96 via the gh CLI.
+6. Closed GitHub Issue #85 using the gh CLI.
+7. Updated log.md with a new entry cross-referencing [[geo-tactics]] and [[ranking-factors]] in standard format without backticks.
+
+The task is completed and safely deployed inside the Ralph Loop architecture.
+
+session_id: 20260426_163011_031e0e
+📦 Committing progress to Git...
 ✅ No open GitHub Issues found. Ralph is going to sleep.
 🏁 Ralph Loop shift finished. Completed 0 tasks.
 🚀 Starting GEO Wiki Ralph Loop...
