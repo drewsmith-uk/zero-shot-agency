@@ -16,7 +16,7 @@
 - [[daily-blog-day-4]]
 - [[daily-blog-day-5]]
 - [[daily-blog-day-6]]
-- [[day-7]]
+- [[daily-blog-day-7]]
 - [[zero-shot-homepage-copy]]
 - [[geo-tactics]]
 - [[citation-mechanics]]
