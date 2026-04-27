@@ -1,7 +1,7 @@
 ---
 title: llms.txt Standard Template
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: concept
 tags: [llms-txt, strategy, markdown]
 sources: []
@@ -46,3 +46,10 @@ Place the `llms.txt` file at the root of the domain (e.g., `https://example.com/
 ## Related
 - [[geo-tactics]]
 - [[citation-mechanics]]
+
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]
+- [[geo-tracker]]
+- [[strategy]]

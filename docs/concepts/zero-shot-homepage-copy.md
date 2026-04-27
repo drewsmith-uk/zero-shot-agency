@@ -102,5 +102,21 @@ Zero-Shot Agency applies rigorous, data-driven GEO methodologies. By utilizing a
 ### How do I optimize my website for Perplexity and ChatGPT?
 To optimize for Perplexity and ChatGPT, you must transition to a bot-native infrastructure. This includes using strict semantic HTML, deploying `llms.txt` files, and applying empirical tactics like Quotation Addition and statistical density to maximize your content's salience to cosine similarity algorithms and vector database retrieval systems.
 
+
+
+
+
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-semantic-structure]]
+- [[geo-tactics]]
+- [[geo-tracker]]
+- [[llms-txt-template]]
+- [[onboarding-agent]]
+- [[princeton-geo-paper]]
+- [[rag-architecture]]
+- [[ranking-factors]]
+
 </article>
 </main>

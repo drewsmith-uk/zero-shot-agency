@@ -1,7 +1,7 @@
 ---
 title: Publisher Pipeline
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: entity
 tags: [artifact, tool]
 sources: []
@@ -16,3 +16,8 @@ The "Daily Publisher Pipeline" (`tools/publisher_pipeline.py`) is an autonomous 
 3. **Substack Emailing**: Uses the `himalaya` email CLI to send the full markdown body to the configured `SUBSTACK_EMAIL` address.
 
 This infrastructure is a core component of the [[geo-tactics]] strategy for "Build in Public" content syndication, ensuring that daily logs (like [[daily-blog-day-1]]) are distributed across all platforms for maximum indexing by AI search engines.
+
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]

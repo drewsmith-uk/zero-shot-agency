@@ -1,7 +1,7 @@
 ---
 title: GEO Agency Strategy & Playbook
 created: 2026-04-22
-updated: 2026-04-24
+updated: 2026-04-26
 type: strategy
 tags: [geo-theory, architecture, strategy]
 ---
@@ -55,3 +55,20 @@ We will achieve this the ultimate "show, don't tell" way: not just by talking ab
 - [ ] **API Integrations:** Integrate with the Sanity.io toolkit and other headless CMS providers to showcase enterprise-grade AIO.
 - [ ] **High-Authority Backlinking:** Cultivate inbound references from recognized AI hubs, foundational model repositories, and developer platforms (GitHub, HuggingFace).
 - [ ] **Community Orchestration:** Leverage Discord/Reddit presence by offering automated audits using our internal tools, driving traffic back to the primary knowledge graph.
+
+
+## Related Concepts & Entities
+- [[agentic-onboarding]]
+- [[citation-mechanics]]
+- [[cursorrules-generator]]
+- [[geo-semantic-structure]]
+- [[geo-tactics]]
+- [[geo-tracker]]
+- [[llms-txt-generator]]
+- [[llms-txt-template]]
+- [[onboarding-agent]]
+- [[princeton-geo-paper]]
+- [[publisher-pipeline]]
+- [[rag-architecture]]
+- [[ranking-factors]]
+- [[zero-shot-homepage-copy]]

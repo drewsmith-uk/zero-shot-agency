@@ -1,7 +1,7 @@
 ---
 title: Perplexity and SearchGPT Citation Mechanics
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: concept
 tags: [concept, architecture, perplexity, chatgpt]
 sources: []
@@ -46,3 +46,9 @@ To maximize the chance of being cited as a top source:
 2. **Semantic Structure:** Ensure the page is easily parsed by web scrapers. Use `<main>`, `<article>`, `<time>`, and clear header hierarchies (`<h1>`, `<h2>`).
 3. **Information Uniqueness:** Provide statistics, original quotes, or unique data points not present on competitor sites. 
 4. **Pre-Summarized Answers:** Include standalone summary paragraphs that perfectly answer the core intent of the page. This "pre-chews" the information for the LLM.
+
+## Related Concepts & Entities
+- [[geo-semantic-structure]]
+- [[llms-txt-generator]]
+- [[rag-architecture]]
+- [[ranking-factors]]

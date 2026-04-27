@@ -1,7 +1,7 @@
 ---
 title: LLMs.txt Generator Tool
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: entity
 tags: [tool, llms-txt]
 sources: []
@@ -19,3 +19,9 @@ Distributing open-source scripts like this tool directly helps other developers 
 ## Related
 - [[geo-tactics]]
 - [[index]]
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]
+- [[llms-txt-template]]
+- [[zero-shot-homepage-copy]]

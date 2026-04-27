@@ -1,7 +1,7 @@
 ---
 title: Cursorrules Generator
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: entity
 tags: [artifact, tool, cursor, architecture]
 sources: []
@@ -18,3 +18,8 @@ The `.cursorrules` Generator is a proof-of-concept Python CLI tool that automate
 
 ## Links
 - Path: `cursorrules_generator.py`
+
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]

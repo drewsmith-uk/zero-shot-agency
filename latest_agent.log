@@ -332,6 +332,47 @@ To https://github.com/drewsmith-uk/zero-shot-agency.git
  * [new branch]      drafts/xitter-syndication -> drafts/xitter-syndication
 Everything up-to-date
 ⏳ Cooling down for 60 seconds before next iteration...
+M	docs/concepts/agentic-onboarding.md
+M	docs/concepts/citation-mechanics.md
+M	docs/concepts/geo-semantic-structure.md
+M	docs/concepts/geo-tactics.md
+M	docs/concepts/llms-txt-template.md
+M	docs/concepts/rag-architecture.md
+M	docs/concepts/ranking-factors.md
+M	docs/concepts/sanity-skills-evaluation.md
+M	docs/concepts/zero-shot-homepage-copy.md
+M	docs/entities/cursorrules-generator.md
+M	docs/entities/geo-tracker.md
+M	docs/entities/llms-txt-generator.md
+M	docs/entities/onboarding-agent.md
+M	docs/entities/princeton-geo-paper.md
+M	docs/entities/publisher-pipeline.md
+M	docs/strategy.md
+M	latest_agent.log
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+From https://github.com/drewsmith-uk/zero-shot-agency
+ * branch            main       -> FETCH_HEAD
+   a888dba..ca94b45  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+	latest_agent.log
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 337b516..ca94b45
+🎯 Next objective: #78 - Phase 1: Build Wikilink Network across concept pages
+🧠 Booting fresh agent context...
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
 Already on 'main'
 M	interactive_dashboard.py
 M	latest_agent.log
