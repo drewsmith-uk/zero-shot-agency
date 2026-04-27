@@ -1,91 +1,101 @@
 import csv
-import os
 import datetime
+import os
+import re
 
-def generate_leaderboard(csv_path="citations.csv", output_path="docs/leaderboard.md"):
-    if not os.path.exists(csv_path):
-        print(f"Error: Could not find {csv_path}. Please ensure citations.csv exists.")
+CSV_FILE = 'citations.csv'
+DOC_FILE = 'docs/leaderboard.md'
+
+def generate_leaderboard():
+    if not os.path.exists(CSV_FILE):
+        print(f"Error: {CSV_FILE} not found.")
         return
 
-    # Create docs dir if it doesn't exist
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(CSV_FILE, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
 
-    counts = {}
-    total_queries = 0
-    models = []
-
-    try:
-        with open(csv_path, 'r', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            # Find model columns
-            if not reader.fieldnames:
-                print("Error: citations.csv is empty or missing headers.")
-                return
-            
-            for field in reader.fieldnames:
-                if field.endswith('_mentioned'):
-                    model_name = field.replace('_mentioned', '')
-                    models.append(model_name)
-                    counts[model_name] = 0
-            
-            for row in reader:
-                total_queries += 1
-                for model in models:
-                    field_name = f"{model}_mentioned"
-                    val = row.get(field_name, "").strip().lower()
-                    if val == "true":
-                        counts[model] += 1
-                        
-    except Exception as e:
-        print(f"Error reading {csv_path}: {e}")
-        return
-
+    total_queries = len(rows)
     if total_queries == 0:
-        print("Warning: No queries found in citations.csv.")
-        total_queries = 1  # Avoid division by zero, though stats will be 0
+        print("No data in citations.csv")
+        return
 
-    # Calculate SOV and sort by SOV descending
-    results = []
-    for model in models:
-        mentions = counts[model]
-        sov = (mentions / total_queries) * 100 if total_queries > 0 else 0
-        results.append((model, mentions, sov))
+    # Find model columns ending with '_mentioned'
+    model_columns = [col for col in reader.fieldnames if col.endswith('_mentioned')]
     
-    results.sort(key=lambda x: x[2], reverse=True)
+    # Calculate mentions
+    mentions = {col: 0 for col in model_columns}
+    for row in rows:
+        for col in model_columns:
+            val = row.get(col, '').strip().lower()
+            if val in ('true', '1', 'yes'):
+                mentions[col] += 1
+    
+    # Calculate SOV
+    leaderboard = []
+    for col in model_columns:
+        model_name = col.replace('_mentioned', '')
+        sov = (mentions[col] / total_queries) * 100
+        leaderboard.append({
+            'model': model_name,
+            'mentions': mentions[col],
+            'sov': sov
+        })
+    
+    # Sort descending by SOV
+    leaderboard.sort(key=lambda x: x['sov'], reverse=True)
+    
+    # Check if docs/leaderboard.md exists to preserve 'created' date
+    created_date = datetime.datetime.now().strftime('%Y-%m-%d')
+    if os.path.exists(DOC_FILE):
+        with open(DOC_FILE, 'r', encoding='utf-8') as f:
+            content = f.read()
+            match = re.search(r'^created:\s*(\d{4}-\d{2}-\d{2})', content, re.MULTILINE)
+            if match:
+                created_date = match.group(1)
 
-    now = datetime.datetime.now()
-    date_str = now.strftime("%Y-%m-%d")
-    timestamp_str = now.strftime("%Y-%m-%d %H:%M:%S")
+    today = datetime.datetime.now().strftime('%Y-%m-%d')
+    
+    # Prepare Markdown content
+    md_content = f"""---
+title: GEO Leaderboard
+created: {created_date}
+updated: {today}
+type: concept
+tags: [geo-theory, architecture, strategy]
+---
 
-    # Generate Markdown
-    md_lines = []
-    md_lines.append("---")
-    md_lines.append("title: GEO Leaderboard")
-    md_lines.append(f"created: {date_str}")
-    md_lines.append("type: concept")
-    md_lines.append("tags: [geo-tracker, leaderboard]")
-    md_lines.append("---\n")
-    
-    md_lines.append("# Prompt Share of Voice Leaderboard\n")
-    md_lines.append("This leaderboard tracks the Prompt Share of Voice (SOV) for various AI models based on generative engine optimization results. The SOV percentage represents how often a model was mentioned across all tracked queries.\n")
-    
-    md_lines.append(f"**Total Queries Evaluated:** {total_queries}\n")
-    
-    md_lines.append("| Rank | Model | Mentions | Prompt SOV |")
-    md_lines.append("|------|-------|----------|------------|")
-    
-    for idx, (model, mentions, sov) in enumerate(results, 1):
-        md_lines.append(f"| {idx} | {model} | {mentions} | {sov:.1f}% |")
-        
-    md_lines.append("\n---")
-    md_lines.append(f"*Last Updated: {timestamp_str}*")
+# Generative Engine Optimization (GEO) Leaderboard
 
-    try:
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write("\n".join(md_lines) + "\n")
-        print(f"Successfully generated {output_path}")
-    except Exception as e:
-        print(f"Error writing to {output_path}: {e}")
+Welcome to the public GEO Leaderboard for **Zero-Shot Agency**. This page tracks our daily "Prompt Share of Voice" across flagship AI models. 
 
-if __name__ == "__main__":
+## Prompt Share of Voice Matrix
+
+The data below represents automated daily queries executed by our [[geo-tracker]]. It measures whether Zero-Shot Agency is actively cited as an authority for core domain queries.
+
+Total Queries Analyzed: {total_queries}
+
+| Rank | Model | Mentions | Prompt SOV |
+|------|-------|----------|------------|
+"""
+    for i, entry in enumerate(leaderboard, 1):
+        md_content += f"| {i} | `{entry['model']}` | {entry['mentions']} | {entry['sov']:.2f}% |\n"
+
+    md_content += """
+
+*(Data automatically generated by our tracked runs and pushed via the [[publisher-pipeline]])*
+
+## Strategic Impact
+
+By exposing this telemetry publicly, we validate our [[geo-tactics]] and [[citation-mechanics]] in real-time. This is the foundation of our "Build in Public" [[strategy]].
+"""
+
+    # Ensure docs directory exists
+    os.makedirs(os.path.dirname(DOC_FILE), exist_ok=True)
+
+    with open(DOC_FILE, 'w', encoding='utf-8') as f:
+        f.write(md_content)
+    print(f"Successfully generated {DOC_FILE}")
+
+if __name__ == '__main__':
     generate_leaderboard()
