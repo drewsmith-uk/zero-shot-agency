@@ -22,6 +22,7 @@ Welcome to the Zero-Shot Agency concepts wiki. This section contains our raw pla
 * [Sanity Skills Eval](sanity-skills-evaluation.md)
 * [Ranking Factors](ranking-factors.md)
 * [RAG Architecture](rag-architecture.md)
+* [Inbound Agent Security](inbound-agent-security.md)
 
 ## Daily Blogs
 

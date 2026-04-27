@@ -219,6 +219,13 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+## [2026-04-26] dev | Develop Lead Handler
+- Delegated task to Claude subagent (`acp_command='claude'`) to build `docs/tools/lead_handler.py`.
+- Implemented an Air-Gap JSON extraction layer to sanitize emails against prompt injection using the `himalaya` CLI skill.
+- Created `docs/entities/lead-handler.md` to document the tool.
+- Added [[lead-handler]] to `docs/entities/index.md` and `index.md`.
+- Updated `mkdocs.yml` navigation to include the [[lead-handler]] entity.
+- Resolved Issue #81 by committing changes to `feature/issue-81-lead-handler`, closing the issue via `gh CLI`, and opening a Pull Request.
 
 ## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
 - Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.
@@ -239,6 +246,12 @@
 - Appended empirical tags and citation metadata to all documentation pages to boost entity recognition.
 - Ensured all missing frontmatter was injected across indexes and logs.
 - Opened a Pull Request on branch drafts/issue-77 and closed the issue.
+## [2026-04-26] security | Define 4-Layer Defense Architecture
+- Resolved Issue #83 by documenting the 4-layer defense strategy against prompt injection for inbound agents.
+- Created `docs/concepts/inbound-agent-security.md` detailing the Air-Gap JSON extraction, Human-in-the-Loop Barrier, Least Privilege isolation, and Denial of Wallet (DoW) protection.
+- Updated `mkdocs.yml` and index pages to include the new concept.
+- Integrated the defense mechanisms seamlessly with our overall [[strategy]] and [[publisher-pipeline]].
+- Checked out branch `drafts/issue-83-inbound-agent-security`, committed changes, and created a Pull Request via GitHub CLI.
 ## [2026-04-26] content | Perform Content Density Rewrite based on LLM Audit
 - Resolved Issue #84 by rewriting the homepage copy (docs/index.md and [[zero-shot-homepage-copy]]).
 - Fixed logical fallacies by removing self-referential best agency claims and the contradictory 100% Indexing Efficiency metric.
