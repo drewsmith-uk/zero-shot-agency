@@ -10,6 +10,7 @@ Generative Engine Optimization (GEO) and AI Search Optimization (AIO). The sole 
 - When updating a page, always bump the `updated` date
 - Every new page must be added to `index.md`
 - Every action must be logged as a new file in `docs/logs/entries/`
+- **AGENTS MUST NEVER MERGE PULL REQUESTS.** Only human operators are authorized to merge. Agents must stop after `gh pr create`.
 
 ## Frontmatter
 ```yaml
