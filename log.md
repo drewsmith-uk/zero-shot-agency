@@ -224,6 +224,11 @@
 - Appended a `Related Concepts & Entities` section to all files in `docs/concepts/` and `docs/entities/`, mapping relationships between core GEO concepts.
 - Updated `mkdocs.yml` navigation to include orphaned entities ([[llms-txt-generator]] and [[onboarding-agent]]).
 - Checked out branch `feature/issue-78-wikilinks` and opened a Pull Request for review via the gh CLI.
+## [2026-04-26] concept | Xitter Syndication & Cron Scheduling
+- Resolved Issue #82 by documenting the architecture for automated daily blog post syndication to X/Twitter.
+- Created `docs/concepts/xitter-syndication.md` detailing the integration with the [[xitter]] CLI skill.
+- Outlined the workflow combining cron scheduling and Human-in-the-Loop (HITL) approval.
+- Updated `mkdocs.yml` and `index.md` navigation to include [[xitter-syndication]].
 ## [2026-04-26] dev | Develop Lead Handler
 - Delegated task to Claude subagent (`acp_command='claude'`) to build `docs/tools/lead_handler.py`.
 - Implemented an Air-Gap JSON extraction layer to sanitize emails against prompt injection using the `himalaya` CLI skill.
