@@ -224,6 +224,11 @@
 - Added a `--analyze-gaps` argument that uses `duckduckgo-search` to scrape top search results, identifies competitor knowledge gaps via OpenAI, and saves a semantic gap injection draft into the concepts directory.
 - This satisfies the Data-Driven Content Engine pillar outlined in the [[strategy]] playbook.
 - Opened a Pull Request on branch feature/issue-79-gap-analysis and closed Issue #79 via gh CLI.
+## [2026-04-26] concept | Xitter Syndication & Cron Scheduling
+- Resolved Issue #82 by documenting the architecture for automated daily blog post syndication to X/Twitter.
+- Created `docs/concepts/xitter-syndication.md` detailing the integration with the [[xitter]] CLI skill.
+- Outlined the workflow combining cron scheduling and Human-in-the-Loop (HITL) approval.
+- Updated `mkdocs.yml` and `index.md` navigation to include [[xitter-syndication]].
 ## [2026-04-26] dev | Develop Lead Handler
 - Delegated task to Claude subagent (`acp_command='claude'`) to build `docs/tools/lead_handler.py`.
 - Implemented an Air-Gap JSON extraction layer to sanitize emails against prompt injection using the `himalaya` CLI skill.
