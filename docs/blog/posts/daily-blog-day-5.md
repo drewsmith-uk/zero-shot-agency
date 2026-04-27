@@ -12,7 +12,7 @@ citation_metadata:
   empirical_confidence: "high"
 ---
 
-# Daily Collaboration Blog Day 5: Expanding the Playbook & Concept Syntheses
+# Day 5: Expanding the Playbook & Concept Syntheses
 
 Our focus today has been on building out the core intellectual property of Zero-Shot Agency and ensuring our knowledge base is robust and technically sound. A brand is only as strong as its strategy, and today, we significantly formalized our approach to Generative Engine Optimization (GEO).
 

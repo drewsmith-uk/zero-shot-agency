@@ -35,6 +35,11 @@ sources: [raw/articles/source-name.md]
 - Content: llms-txt, markdown, semantic-html
 - Empirical: quotation-addition, statistics-addition, fluency-optimization, authoritative-tone
 
+## Blog Posts
+- Blog Post Titles: MUST follow the exact format "Day X: [Subtitle]". NEVER use the phrase "Daily Collaboration Blog" in the `title:` frontmatter or the H1.
+- All blog posts must be saved in `docs/blog/posts/` and contain a valid H1 (`# Day X: ...`).
+- Ensure frontmatter contains the correct `date` and `categories` as required by the MkDocs blog plugin.
+
 ## Autonomous Agent Operational Protocol (Verify-Before-PR)
 All AI agents (including Hermes, Ralph, and Claude subagents) MUST adhere to the **Zero-Blind-Commit Protocol** before executing `git commit` or opening a Pull Request. You may not rely on the human user as your compiler or linter.
 
