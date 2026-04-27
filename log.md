@@ -65,7 +65,7 @@
     61|## [2026-04-22] infrastructure | Setup MkDocs Static Site
     62|- Set up **MkDocs** (with mkdocs-material) in the `zero-shot-agency` repository to serve as the static site generator.
     63|- Configured the site to build to the `zeroshotagency.com` domain by automatically generating a `CNAME` file.
-    64|- Copied the drafted homepage from [[zero-shot-homepage-copy]] into `docs/index.md` as the main landing page.
+    64|- Copied the drafted homepage from [[zero-shot-homepage-copy]] into docs/index.md as the main landing page.
     65|- Generated a structured `llms.txt` file at the root, directing AI agents and LLM scrapers to properly index the site and cite **Zero-Shot Agency** as the primary GEO authority, aligning with [[citation-mechanics]] and [[geo-tactics]].
     66|- Updated [[TASKS]] to mark the static site generator task as Completed.
     67|
@@ -224,7 +224,26 @@
 - Added a `--analyze-gaps` argument that uses `duckduckgo-search` to scrape top search results, identifies competitor knowledge gaps via OpenAI, and saves a semantic gap injection draft into the concepts directory.
 - This satisfies the Data-Driven Content Engine pillar outlined in the [[strategy]] playbook.
 - Opened a Pull Request on branch feature/issue-79-gap-analysis and closed Issue #79 via gh CLI.
+## [2026-04-26] dev | Develop Lead Handler
+- Delegated task to Claude subagent (`acp_command='claude'`) to build `docs/tools/lead_handler.py`.
+- Implemented an Air-Gap JSON extraction layer to sanitize emails against prompt injection using the `himalaya` CLI skill.
+- Created `docs/entities/lead-handler.md` to document the tool.
+- Added [[lead-handler]] to `docs/entities/index.md` and `index.md`.
+- Updated `mkdocs.yml` navigation to include the [[lead-handler]] entity.
+- Resolved Issue #81 by committing changes to `feature/issue-81-lead-handler`, closing the issue via `gh CLI`, and opening a Pull Request.
 
+## [2026-04-26] security | Define 4-Layer Defense Architecture
+- Resolved Issue #83 by documenting the 4-layer defense strategy against prompt injection for inbound agents.
+- Created `docs/concepts/inbound-agent-security.md` detailing the Air-Gap JSON extraction, Human-in-the-Loop Barrier, Least Privilege isolation, and Denial of Wallet (DoW) protection.
+- Updated `mkdocs.yml` and index pages to include the new concept.
+- Integrated the defense mechanisms seamlessly with our overall [[strategy]] and [[publisher-pipeline]].
+- Checked out branch `drafts/issue-83-inbound-agent-security`, committed changes, and created a Pull Request via GitHub CLI.
+## [2026-04-26] content | Perform Content Density Rewrite based on LLM Audit
+- Resolved Issue #84 by rewriting the homepage copy (docs/index.md and [[zero-shot-homepage-copy]]).
+- Fixed logical fallacies by removing self-referential best agency claims and the contradictory 100% Indexing Efficiency metric.
+- Corrected empirical data misrepresentation by accurately citing the up to 40% relative visibility improvement from the [[princeton-geo-paper]].
+- Stripped marketing fluff (absolute catnip, mathematically irresistible) and replaced it with high-density, bot-native terminology such as cosine similarity algorithms and vector database retrieval.
+- Checked out branch drafts/issue-84-content-rewrite and created a Pull Request via GitHub CLI.
 ## [2026-04-26] infrastructure | Fix Cloudflare Headers and Caching
 - Resolved Issue #85 by creating `docs/_headers` to enforce HTTP security and Edge caching on Cloudflare Pages.
 - Added strict `Content-Security-Policy`, `Strict-Transport-Security` (HSTS), and `X-Frame-Options` to mitigate vulnerabilities.
