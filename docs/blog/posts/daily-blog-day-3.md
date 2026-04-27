@@ -9,10 +9,10 @@ sources: []
 geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
 citation_metadata:
   primary_source: "princeton-geo-paper"
-  empirical_confidence: "high"
+title: "Day 3: Developer-Grade Publishing & Preventing Hallucination Leaks"
 ---
 
-# Day 3: The "Drafts via PR" Workflow
+# Day 3: Developer-Grade Publishing & Preventing Hallucination Leaks
 
 When building a fully autonomous, AI-driven media pipeline, there is a constant tension between **velocity** and **quality control**. 
 
