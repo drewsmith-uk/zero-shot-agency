@@ -1,10 +1,14 @@
 ---
 title: Princeton GEO Paper
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: entity
 tags: [paper, geo-theory]
 sources: [raw/papers/princeton-geo-paper.md]
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Princeton GEO Paper
@@ -24,3 +28,8 @@ The Princeton GEO paper is the foundational academic work that formalizes the co
 ## Relationships
 - Introduces the core [[geo-tactics]] used to rank in LLM context windows.
 - Defines the benchmark used to evaluate [[perplexity]] and other target engines.
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]
+- [[ranking-factors]]

@@ -1,10 +1,14 @@
 ---
 title: Agentic Client Onboarding
 created: 2026-04-23
-updated: 2026-04-23
+updated: 2026-04-26
 type: concept
 tags: [architecture, strategy, onboarding-agent]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Agentic Client Onboarding System
@@ -37,3 +41,13 @@ The "Agentic Client Onboarding" system is the foundational lead-capture and conv
 ### 4. Lead Capture & Delivery
 - **Delivery:** The generated Markdown brief is either displayed live in the client's browser session or emailed directly to them.
 - **Conversion:** By delivering an immediate, high-value technical audit tailored to the new AI search paradigm, we establish absolute authority, prompting the client to engage our agency for implementation.
+
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]
+- [[llms-txt-generator]]
+- [[llms-txt-template]]
+- [[onboarding-agent]]
+- [[ranking-factors]]
+- [[zero-shot-homepage-copy]]

@@ -5,6 +5,10 @@ updated: 2026-04-26
 type: entity
 tags: [code, tool, chatgpt, claude, gemini]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # GEO Ranking Tracker
@@ -27,3 +31,8 @@ The GEO Ranking Tracker (`geo-tracker.py`) is a baseline script developed to eva
 ## Related Concepts
 - Implements tracking for strategies defined in [[geo-tactics]].
 - Evaluates metrics relevant to [[citation-mechanics]].
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]
+- [[zero-shot-homepage-copy]]

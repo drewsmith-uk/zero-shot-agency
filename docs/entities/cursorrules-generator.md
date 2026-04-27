@@ -1,10 +1,14 @@
 ---
 title: Cursorrules Generator
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: entity
 tags: [artifact, tool, cursor, architecture]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Cursorrules Generator
@@ -18,3 +22,8 @@ The `.cursorrules` Generator is a proof-of-concept Python CLI tool that automate
 
 ## Links
 - Path: `cursorrules_generator.py`
+
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]

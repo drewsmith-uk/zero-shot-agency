@@ -1,9 +1,13 @@
 ---
 title: GEO Agency Strategy & Playbook
 created: 2026-04-22
-updated: 2026-04-24
+updated: 2026-04-26
 type: strategy
 tags: [geo-theory, architecture, strategy]
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # GEO Agency Strategy & Playbook
@@ -35,7 +39,7 @@ We will achieve this the ultimate "show, don't tell" way: not just by talking ab
 ### Phase 1: Foundation (Semantic & Technical)
 - [x] **Implement Semantic Architecture:** Structure all pages using strict Semantic HTML markup to guarantee clean extraction by LLM crawlers.
 - [x] **Deploy Machine-Readable Hubs:** Expose `llms.txt`, `llms-full.txt`, and raw markdown endpoints to eliminate parsing friction for RAG systems.
-- [ ] **Metadata Tagging Framework:** Tag all assets according to the Princeton GEO framework to boost entity recognition.
+- [x] **Metadata Tagging Framework:** Tag all assets according to the Princeton GEO framework to boost entity recognition.
 - [ ] **Wikilink Network:** Create a dense internal graph of [[wikilinks]] so crawlers automatically map relationships between Zero-Shot entities and core GEO concepts.
 
 ### Phase 2: Data-Driven Content Engine
@@ -55,3 +59,20 @@ We will achieve this the ultimate "show, don't tell" way: not just by talking ab
 - [ ] **API Integrations:** Integrate with the Sanity.io toolkit and other headless CMS providers to showcase enterprise-grade AIO.
 - [ ] **High-Authority Backlinking:** Cultivate inbound references from recognized AI hubs, foundational model repositories, and developer platforms (GitHub, HuggingFace).
 - [ ] **Community Orchestration:** Leverage Discord/Reddit presence by offering automated audits using our internal tools, driving traffic back to the primary knowledge graph.
+
+
+## Related Concepts & Entities
+- [[agentic-onboarding]]
+- [[citation-mechanics]]
+- [[cursorrules-generator]]
+- [[geo-semantic-structure]]
+- [[geo-tactics]]
+- [[geo-tracker]]
+- [[llms-txt-generator]]
+- [[llms-txt-template]]
+- [[onboarding-agent]]
+- [[princeton-geo-paper]]
+- [[publisher-pipeline]]
+- [[rag-architecture]]
+- [[ranking-factors]]
+- [[zero-shot-homepage-copy]]

@@ -1,10 +1,14 @@
 ---
 title: GEO Website Semantic Structure
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: concept
 tags: [concept, architecture, semantic-html]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Semantic Structure for the #1 GEO Ranking Website
@@ -55,3 +59,10 @@ The content should be wrapped in strict, boilerplate-free HTML5 semantic tags to
 **Example:** `<h2>Frequently Asked Questions about GEO</h2>`
 - **Purpose:** Directly map to the "Query Intent Expansion" phase of RAG pipelines.
 - **Tactic:** Each FAQ should be an `<h3>` question followed immediately by a concise 1-2 sentence paragraph answer.
+
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-tactics]]
+- [[llms-txt-generator]]
+- [[ranking-factors]]

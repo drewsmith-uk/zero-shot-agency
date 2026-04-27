@@ -1,10 +1,14 @@
 ---
 title: AI Search Ranking Factors
 created: 2026-04-24
-updated: 2026-04-24
+updated: 2026-04-26
 type: concept
 tags: [ranking-factor, geo-theory]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # AI Search Ranking Factors
@@ -30,3 +34,14 @@ In Generative Engine Optimization (GEO), understanding how Large Language Models
 
 ## Conclusion
 To dominate AI search, content creators must transition from optimizing for human-readable "flow" to optimizing for machine-readable "fact density." Implementing these ranking factors ensures a high Prompt Share of Voice (SOV) across major engines.
+
+
+## Related Concepts & Entities
+- [[agentic-onboarding]]
+- [[citation-mechanics]]
+- [[geo-semantic-structure]]
+- [[geo-tactics]]
+- [[llms-txt-template]]
+- [[princeton-geo-paper]]
+- [[rag-architecture]]
+- [[zero-shot-homepage-copy]]
