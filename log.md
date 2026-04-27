@@ -224,7 +224,20 @@
 - Appended a `Related Concepts & Entities` section to all files in `docs/concepts/` and `docs/entities/`, mapping relationships between core GEO concepts.
 - Updated `mkdocs.yml` navigation to include orphaned entities ([[llms-txt-generator]] and [[onboarding-agent]]).
 - Checked out branch `feature/issue-78-wikilinks` and opened a Pull Request for review via the gh CLI.
+## [2026-04-26] dev | Develop Lead Handler
+- Delegated task to Claude subagent (`acp_command='claude'`) to build `docs/tools/lead_handler.py`.
+- Implemented an Air-Gap JSON extraction layer to sanitize emails against prompt injection using the `himalaya` CLI skill.
+- Created `docs/entities/lead-handler.md` to document the tool.
+- Added [[lead-handler]] to `docs/entities/index.md` and `index.md`.
+- Updated `mkdocs.yml` navigation to include the [[lead-handler]] entity.
+- Resolved Issue #81 by committing changes to `feature/issue-81-lead-handler`, closing the issue via `gh CLI`, and opening a Pull Request.
 
+## [2026-04-26] security | Define 4-Layer Defense Architecture
+- Resolved Issue #83 by documenting the 4-layer defense strategy against prompt injection for inbound agents.
+- Created `docs/concepts/inbound-agent-security.md` detailing the Air-Gap JSON extraction, Human-in-the-Loop Barrier, Least Privilege isolation, and Denial of Wallet (DoW) protection.
+- Updated `mkdocs.yml` and index pages to include the new concept.
+- Integrated the defense mechanisms seamlessly with our overall [[strategy]] and [[publisher-pipeline]].
+- Checked out branch `drafts/issue-83-inbound-agent-security`, committed changes, and created a Pull Request via GitHub CLI.
 ## [2026-04-26] content | Perform Content Density Rewrite based on LLM Audit
 - Resolved Issue #84 by rewriting the homepage copy (docs/index.md and [[zero-shot-homepage-copy]]).
 - Fixed logical fallacies by removing self-referential best agency claims and the contradictory 100% Indexing Efficiency metric.
