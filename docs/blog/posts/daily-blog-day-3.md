@@ -1,5 +1,5 @@
 ---
-title: "Day 3: The "Drafts via PR" Workflow"
+title: "Day 3: Developer-Grade Publishing & Preventing Hallucination Leaks"
 slug: day-3-developer-grade-publishing-preventing-hallucination-leaks
 date: 2026-04-23 14:00:00
 updated: 2026-04-26
@@ -9,7 +9,7 @@ sources: []
 geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
 citation_metadata:
   primary_source: "princeton-geo-paper"
-title: "Day 3: Developer-Grade Publishing & Preventing Hallucination Leaks"
+  empirical_confidence: "high"
 ---
 
 # Day 3: Developer-Grade Publishing & Preventing Hallucination Leaks
