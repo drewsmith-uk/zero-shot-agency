@@ -10,7 +10,9 @@ Generative Engine Optimization (GEO) and AI Search Optimization (AIO). The sole 
 - When updating a page, always bump the `updated` date
 - Every new page must be added to `index.md`
 - Every action must be logged as a new file in `docs/logs/entries/`
+## GitHub CLI and Pull Requests
 - **AGENTS MUST NEVER MERGE PULL REQUESTS.** Only human operators are authorized to merge. Agents must stop after `gh pr create`.
+- **Pull Request Bodies:** When using `gh pr create` with multiline bodies, NEVER use inline `--body "text\ntext"`. Bash does not parse `\n` in double quotes correctly. ALWAYS use a heredoc or `--body-file` to preserve real newlines. (e.g., `gh pr create --body-file pr_body.txt`)
 
 ## Frontmatter
 ```yaml
