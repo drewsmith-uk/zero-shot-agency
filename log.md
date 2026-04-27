@@ -242,6 +242,25 @@
 - Updated `mkdocs.yml` navigation to include the [[lead-handler]] entity.
 - Resolved Issue #81 by committing changes to `feature/issue-81-lead-handler`, closing the issue via `gh CLI`, and opening a Pull Request.
 
+## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
+- Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.
+- Updated `mkdocs.yml` to include the `roamlinks` plugin.
+- Appended `mkdocs-roamlinks-plugin` to `requirements.txt` and `.github/workflows/deploy.yml` for CI pipelines.
+- Maintained the strict format defined in [[SCHEMA]] for internal routing.
+- Updated [[TASKS]] to move the bugfix to Completed.
+## [2026-04-26] docs | Implement Metadata Tagging Framework
+- Resolved Issue #77 by updating the YAML frontmatter across all wiki pages in the docs directory.
+- Injected the [[geo-tactics]] list including authoritative-tone, fluency, and statistics into the geo_tactics array.
+- Added citation_metadata mapping back to the primary source: [[princeton-geo-paper]].
+- Updated [[strategy]] playbook to check off the Metadata Tagging Framework task.
+- Checked out branch drafts/issue-77 and created a PR using gh CLI.
+
+## [2026-04-26] docs | Implement Metadata Tagging Framework
+- Resolved Issue #77 by updating markdown frontmatter across the docs site.
+- Tagged all assets according to the [[princeton-geo-paper]] framework.
+- Appended empirical tags and citation metadata to all documentation pages to boost entity recognition.
+- Ensured all missing frontmatter was injected across indexes and logs.
+- Opened a Pull Request on branch drafts/issue-77 and closed the issue.
 ## [2026-04-26] security | Define 4-Layer Defense Architecture
 - Resolved Issue #83 by documenting the 4-layer defense strategy against prompt injection for inbound agents.
 - Created `docs/concepts/inbound-agent-security.md` detailing the Air-Gap JSON extraction, Human-in-the-Loop Barrier, Least Privilege isolation, and Denial of Wallet (DoW) protection.

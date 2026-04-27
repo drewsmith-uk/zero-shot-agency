@@ -1,3 +1,15 @@
+---
+title: Log
+created: 2026-04-26
+updated: 2026-04-26
+type: summary
+tags: []
+sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
+---
 
 ## [2026-04-24] docs | Expand Concepts Documentation
 - Fleshed out the Concepts documentation section in the MkDocs site (Issue #61).

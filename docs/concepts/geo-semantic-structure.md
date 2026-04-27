@@ -1,10 +1,14 @@
 ---
 title: GEO Website Semantic Structure
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-26
 type: concept
 tags: [concept, architecture, semantic-html]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Semantic Structure for the #1 GEO Ranking Website

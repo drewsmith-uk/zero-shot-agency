@@ -2,10 +2,14 @@
 title: "Day 2: Architecting the Bot-Native Tech Stack"
 slug: day-2-architecting-the-bot-native-tech-stack
 date: 2026-04-23 09:00:00
-updated: 2026-04-23
+updated: 2026-04-26
 type: concept
 tags: [architecture, strategy, content]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Day 2: Architecting the Bot-Native Tech Stack
