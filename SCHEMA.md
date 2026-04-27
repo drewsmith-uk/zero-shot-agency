@@ -37,6 +37,7 @@ sources: [raw/articles/source-name.md]
 
 ## Blog Posts
 - Blog Post Titles: MUST follow the exact format "Day X: [Subtitle]". NEVER use the phrase "Daily Collaboration Blog" in the `title:` frontmatter or the H1.
+- Blog Post Filenames: MUST strictly follow the `daily-blog-day-X.md` convention (e.g., `daily-blog-day-7.md`). Do not use `day-X.md`.
 - All blog posts must be saved in `docs/blog/posts/` and contain a valid H1 (`# Day X: ...`).
 - Ensure frontmatter contains the correct `date` and `categories` as required by the MkDocs blog plugin.
 
