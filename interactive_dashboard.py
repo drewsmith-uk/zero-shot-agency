@@ -41,11 +41,27 @@ def get_tasks():
 
 def get_logs():
     try:
-        content = (WIKI_DIR / "log.md").read_text()
-        lines = [line for line in content.split('\n') if line.strip().startswith('##') or line.strip().startswith('-')]
-        return "\n".join(lines[-15:])
-    except:
-        return "No logs found."
+        entries_dir = WIKI_DIR / "docs" / "logs" / "entries"
+        if not entries_dir.exists():
+            return "No logs found."
+        
+        # Grab the 3 most recently created log files
+        files = sorted(entries_dir.glob("*.md"), reverse=True)[:3]
+        if not files:
+            return "No logs found."
+            
+        logs = []
+        for f in files:
+            # Add the filename as a mini-header
+            header = f"[bold cyan]{f.stem}[/bold cyan]"
+            logs.append(f"{header}
+{f.read_text().strip()}")
+            
+        return "
+
+".join(logs)
+    except Exception as e:
+        return f"Error loading logs: {e}"
 
 def clean_ansi(text):
     ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')

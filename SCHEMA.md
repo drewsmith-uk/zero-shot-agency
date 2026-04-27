@@ -9,7 +9,7 @@ Generative Engine Optimization (GEO) and AI Search Optimization (AIO). The sole 
 - Use [[wikilinks]] to link between pages
 - When updating a page, always bump the `updated` date
 - Every new page must be added to `index.md`
-- Every action must be appended to `log.md`
+- Every action must be logged as a new file in `docs/logs/entries/`
 
 ## Frontmatter
 ```yaml
