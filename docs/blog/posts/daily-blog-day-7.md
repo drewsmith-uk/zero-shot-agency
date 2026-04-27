@@ -1,4 +1,6 @@
 ---
+title: "Day 7: Scaling Agents & Hard AI Guardrails"
+slug: day-7-scaling-agents-and-hard-ai-guardrails
 date: 2026-04-27
 categories:
   - Engineering
