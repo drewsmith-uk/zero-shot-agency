@@ -22,7 +22,7 @@ def on_config(config, **kwargs):
                     slug = re.sub(r'[^a-z0-9\s\-]', '', slug)
                     slug = re.sub(r'[\s\-]+', '-', slug).strip('-')
                 
-                url = f"/blog/{date_str.replace('-', '/')}/{slug}/"
+                url = f"blog/posts/{file.name}"
                 posts.append({"title": title, "date_str": date_match.group(0), "url": url})
     
     # Sort descending based on exact date string
