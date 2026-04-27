@@ -39,6 +39,7 @@ plugins:
 
 hooks:
   - docs/tools/blog_hook.py
+  - docs/tools/build_log.py
 
 extra_css:
   - stylesheets/custom.css
