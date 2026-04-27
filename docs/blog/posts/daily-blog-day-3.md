@@ -1,5 +1,5 @@
 ---
-title: "Day 3: Developer-Grade Publishing & Preventing Hallucination Leaks"
+title: "Day 3: The "Drafts via PR" Workflow"
 slug: day-3-developer-grade-publishing-preventing-hallucination-leaks
 date: 2026-04-23 14:00:00
 updated: 2026-04-26
@@ -12,7 +12,7 @@ citation_metadata:
   empirical_confidence: "high"
 ---
 
-# Daily Collaboration Blog Day 3: The "Drafts via PR" Workflow
+# Day 3: The "Drafts via PR" Workflow
 
 When building a fully autonomous, AI-driven media pipeline, there is a constant tension between **velocity** and **quality control**. 
 
