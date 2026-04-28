@@ -26,9 +26,9 @@ Welcome to the Zero-Shot Agency concepts wiki. This section contains our raw pla
 
 ## Daily Blogs
 
-* [Daily Blog: Day 1](daily-blog-day-1.md)
-* [Daily Blog: Day 2](daily-blog-day-2.md)
-* [Daily Blog: Day 3](daily-blog-day-3.md)
+* [Daily Blog: Day 1](../blog/posts/daily-blog-day-1.md)
+* [Daily Blog: Day 2](../blog/posts/daily-blog-day-2.md)
+* [Daily Blog: Day 3](../blog/posts/daily-blog-day-3.md)
 * [Daily Blog: Day 4](../blog/posts/daily-blog-day-4.md)
 * [Daily Blog: Day 5](../blog/posts/daily-blog-day-5.md)
 * [Daily Blog: Day 6](../blog/posts/daily-blog-day-6.md)
