@@ -20,7 +20,7 @@ For decades, traditional SEO relied heavily on keyword density. If you wanted to
 
 However, LLMs utilizing [[rag-architecture]] (Retrieval-Augmented Generation) do not parse content like traditional web crawlers. They rely on semantic embeddings and similarity metrics. When researchers tested classic SEO techniques against LLM search visibility, the results were stark.
 
-According to the Princeton GEO paper's empirical data (Tables 6/7), traditional **"Keyword Stuffing" actually performs worse than doing nothing at all.** Over-optimizing with exact match keywords degrades the semantic quality of the text, causing the embedding similarity score to drop and leading the AI to ignore the source entirely.
+According to the [[princeton-geo-paper]]'s empirical data ([Tables 6/7](https://arxiv.org/pdf/2311.09735.pdf)), traditional **"Keyword Stuffing" actually performs worse than doing nothing at all.** Over-optimizing with exact match keywords degrades the semantic quality of the text, causing the embedding similarity score to drop and leading the AI to ignore the source entirely.
 
 ## The New Ranking Factors: Statistics and Quotations
 
