@@ -572,3 +572,196 @@ From https://github.com/drewsmith-uk/zero-shot-agency
 Already up to date.
 ✅ No open GitHub Issues found. Ralph is going to sleep.
 🏁 Ralph Loop shift finished. Completed 0 tasks.
+🚀 Starting GEO Wiki Ralph Loop...
+To pause, echo 'PAUSED' > /home/claw/workspace/zero-shot-agency/run-state.txt
+Already on 'main'
+M	latest_agent.log
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+From https://github.com/drewsmith-uk/zero-shot-agency
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+✅ No open GitHub Issues found. Ralph is going to sleep.
+🏁 Ralph Loop shift finished. Completed 0 tasks.
+🚀 Starting GEO Wiki Ralph Loop...
+To pause, echo 'PAUSED' > /home/claw/workspace/zero-shot-agency/run-state.txt
+Already on 'main'
+M	latest_agent.log
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+From https://github.com/drewsmith-uk/zero-shot-agency
+ * branch            main       -> FETCH_HEAD
+   97eff1a..0925beb  main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+🎯 Next objective: #126 - Content: Draft Daily Blog Post (Day 8)
+🧠 Booting fresh agent context...
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ ✍️ preparing write_file…
+  ┊ review diff
+a/docs/blog/posts/daily-blog-day-8.md → b/docs/blog/posts/daily-blog-day-8.md
+@@ -0,0 +1,41 @@
++---
++title: "Day 8: AI Search Ranking Factors vs Traditional SEO"
++slug: day-8-ai-search-ranking-factors-vs-traditional-seo
++date: 2026-04-28
++categories:
++  - GEO
++  - SEO
++  - AI Research
++---
++
++# Day 8: AI Search Ranking Factors vs Traditional SEO
++
++As the search landscape pivots from traditional ten blue links toward synthesized AI answers (via Perplexity, SearchGPT, and Claude), our optimization strategies must completely evolve. Traditional SEO tactics are not just becoming less effective—in some cases, they are actively harmful.
++
++Today, we dive into the empirical data from the foundational Princeton GEO (Generative Engine Optimization) paper to understand exactly why AI Search Ranking Factors diverge so heavily from traditional SEO.
++
++## The Death of Keyword Stuffing
++
++For decades, traditional SEO relied heavily on keyword density. If you wanted to rank for a term, you made sure the exact phrase appeared in your H1, URL, meta description, and throughout the body copy.
++
++However, LLMs utilizing Retrieval-Augmented Generation (RAG) do not parse content like traditional web crawlers. They rely on semantic embeddings and similarity metrics. When researchers tested classic SEO techniques against LLM search visibility, the results were stark.
++
++According to the Princeton GEO paper's empirical data (Tables 6/7), traditional **"Keyword Stuffing" actually performs worse than doing nothing at all.** Over-optimizing with exact match keywords degrades the semantic quality of the text, causing the embedding similarity score to drop and leading the AI to ignore the source entirely.
++
++## The New Ranking Factors: Statistics and Quotations
++
++If keywords don't work, what does? To boost our **Prompt Share of Voice (SOV)**, we need to feed the AI what it naturally prefers: dense, authoritative facts that are easy to extract and synthesize.
++
++The Princeton data revealed two massive winners in the GEO space:
++
++### 1. Statistics Addition
++LLMs are mathematically driven to favor factual density. By injecting hard numbers, percentages, and empirical data points into your content, you dramatically increase the likelihood of the AI selecting your source to answer a user's query. The Princeton paper showed that **Statistics Addition boosts visibility by up to 40%**.
++
++### 2. Quotation Addition
++High-fluency prose paired with authoritative quotes acts as a strong signal to the AI that the text is credible and primary source material. Injecting direct quotes from subject matter experts (or primary papers) forces the RAG system to recognize the content's depth, leading to higher citation rates.
++
++## Adapting the Zero-Shot Agency Playbook
++
++Armed with this data, we are permanently abandoning all legacy keyword density checks. Our playbook for the Zero-Shot Agency now strictly enforces the inclusion of robust statistics and direct quotations in every piece of content we produce.
++
++Our goal isn't to trick a crawler; our goal is to be the most mathematically irresistible source of factual truth for the LLM. 
+  ┊ 🔧 preparing patch…
+  ┊ 🔧 preparing patch…
+  ┊ review diff
+a/index.md → b/index.md
+@@ -17,6 +17,7 @@
+ - [[daily-blog-day-5]]
+ - [[daily-blog-day-6]]
+ - [[daily-blog-day-7]]
++- [[daily-blog-day-8]]
+ - [[zero-shot-homepage-copy]]
+ - [[geo-tactics]]
+ - [[citation-mechanics]]
+  ┊ review diff
+a/docs/concepts/index.md → b/docs/concepts/index.md
+@@ -29,3 +29,8 @@
+ * [Daily Blog: Day 1](daily-blog-day-1.md)
+ * [Daily Blog: Day 2](daily-blog-day-2.md)
+ * [Daily Blog: Day 3](daily-blog-day-3.md)
++* [Daily Blog: Day 4](../blog/posts/daily-blog-day-4.md)
++* [Daily Blog: Day 5](../blog/posts/daily-blog-day-5.md)
++* [Daily Blog: Day 6](../blog/posts/daily-blog-day-6.md)
++* [Daily Blog: Day 7](../blog/posts/daily-blog-day-7.md)
++* [Daily Blog: Day 8](../blog/posts/daily-blog-day-8.md)
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ ✍️ preparing write_file…
+  ┊ review diff
+a/docs/logs/entries/2026-04-28-issue-126.md → b/docs/logs/entries/2026-04-28-issue-126.md
+@@ -0,0 +1,34 @@
++---
++title: "Log: Issue 126 - Draft Daily Blog Post (Day 8)"
++date: 2026-04-28
++type: log
++tags: [agent-log, blog, seo, geo]
++---
++
++# Log: Resolving Issue 126
++
++**Date:** 2026-04-28
++**Agent:** Ralph / Hermes
++**Task:** Draft the Day 8 blog post about AI Search Ranking Factors vs Traditional SEO.
++
++## Actions Taken
++1. **Context Initialization:** Read through the current `strategy.md`, `SCHEMA.md`, and `index.md` files to understand the project architecture, tagging rules, and directory structures. Also checked the original GitHub Issue #126.
++2. **Branch Creation:** Checked out a new Git branch `drafts/daily-blog-day-8`.
++3. **Drafted Blog Post:** 
++   - Created the file `docs/blog/posts/daily-blog-day-8.md` using the precise frontmatter specified in our `SCHEMA.md` conventions (e.g. valid H1: `# Day 8: ...`).
++   - Sourced empirical data directly from the [[princeton-geo-paper]] context. Included statistics indicating that traditional SEO methods such as Keyword Stuffing harm similarity metrics, whereas Statistics Addition and Quotation Addition can boost Prompt Share of Voice by up to 40%.
++4. **Updated Concepts & Indexes:**
++   - Modified the root `index.md` to include a wikilink to `[[daily-blog-day-8]]`.
++   - Updated `docs/concepts/index.md` to append the new blog post to the "Daily Blogs" list.
++5. **Committed and Pushed:**
++   - Adhered to the Zero-Blind-Commit protocol and checked changes with `git diff`.
++   - Committed with the proper Author attribution for Ralph.
++   - Pushed the new branch to the remote origin.
++6. **Issue and Pull Request Management:**
++   - Used the `gh CLI` to explicitly close the target issue (#126).
++   - Executed `gh pr create --fill` to automatically generate the Pull Request on GitHub. As per our rules, the PR remains open and will be manually reviewed/merged by a human operator.
++
++## Related Files
++- [[daily-blog-day-8]]
++- [[princeton-geo-paper]]
++- [[geo-tactics]]
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+The task to resolve Issue #126 has been successfully completed. 
+
+Here is a summary of the actions taken:
+1. **Context Initialization**: Read `strategy.md`, `SCHEMA.md`, and index files to align with the Zero-Shot Agency's structure, GEO tactics, and PR protocols.
+2. **Branch Management**: Created and switched to a new branch (`drafts/daily-blog-day-8`).
+3. **Blog Post Drafting**: Authored the Day 8 blog post at `docs/blog/posts/daily-blog-day-8.md` under the required frontmatter formats. The content synthesizes empirical data from the Princeton GEO paper, explaining how traditional keyword stuffing degrades AI similarity algorithms while "Statistics Addition" and "Quotation Addition" increase Prompt Share of Voice. 
+4. **Index Updates**: Updated `index.md` and `docs/concepts/index.md` with wikilinks referencing `[[daily-blog-day-8]]`.
+5. **Issue & PR Pipeline**: 
+    - Closed the original GitHub Issue using `gh issue close 126`.
+    - Opened Pull Request **#127** securely using `gh pr create --fill`, adhering to the rule of no agent auto-merges.
+6. **Logging**: Authored the activity log at `docs/logs/entries/2026-04-28-issue-126.md` complete with [[wikilink]] cross-references, committed, and pushed it to the PR branch.
+
+The task to resolve Issue #126 has been successfully completed. 
+
+Here is a summary of the actions taken:
+1. **Context Initialization**: Read `strategy.md`, `SCHEMA.md`, and index files to align with the Zero-Shot Agency's structure, GEO tactics, and PR protocols.
+2. **Branch Management**: Created and switched to a new branch (`drafts/daily-blog-day-8`).
+3. **Blog Post Drafting**: Authored the Day 8 blog post at `docs/blog/posts/daily-blog-day-8.md` under the required frontmatter formats. The content synthesizes empirical data from the Princeton GEO paper, explaining how traditional keyword stuffing degrades AI similarity algorithms while "Statistics Addition" and "Quotation Addition" increase Prompt Share of Voice. 
+4. **Index Updates**: Updated `index.md` and `docs/concepts/index.md` with wikilinks referencing `[[daily-blog-day-8]]`.
+5. **Issue & PR Pipeline**: 
+    - Closed the original GitHub Issue using `gh issue close 126`.
+    - Opened Pull Request **#127** securely using `gh pr create --fill`, adhering to the rule of no agent auto-merges.
+6. **Logging**: Authored the activity log at `docs/logs/entries/2026-04-28-issue-126.md` complete with [[wikilink]] cross-references, committed, and pushed it to the PR branch.
+
+The Ralph Loop execution for this issue is complete.
+
+session_id: 20260428_175011_0dcfaf
+📦 Committing progress to Git...
