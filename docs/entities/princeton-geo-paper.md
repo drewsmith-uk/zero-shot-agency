@@ -16,6 +16,7 @@ citation_metadata:
 **Full Title:** GEO: Generative Engine Optimization
 **Authors:** Pranjal Aggarwal, Vishvak Murahari, Tanmay Rajpurohit, Ashwin Kalyan, Karthik Narasimhan, Ameet Deshpande
 **Published:** November 2023 (arXiv)
+**Link:** [arXiv:2311.09735 [cs.IR]](https://arxiv.org/abs/2311.09735)
 
 The Princeton GEO paper is the foundational academic work that formalizes the concept of **Generative Engine Optimization (GEO)**. As generative engines (like Perplexity and SearchGPT) shift search from traditional ranked lists to synthesized, LLM-generated answers, the paper defines how content creators can adapt.
 
