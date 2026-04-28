@@ -47,14 +47,14 @@ while [ $tasks_completed -lt $MAX_TASKS ]; do
     
     # 3. Boot fresh agent instance
     echo "🧠 Booting fresh agent context..."
-    hermes chat --yolo -Q -q "You are the GEO Wiki Orchestrator running inside a Ralph Loop. \nORIENT YOURSELF: Read $WIKI_DIR/strategy.md, $WIKI_DIR/SCHEMA.md, index.md, and log.md.\nYOUR TASK: Resolve GitHub Issue #$NEXT_TASK_ID ($NEXT_TASK_URL).\nRULES:\n1. If the task requires deep coding/development, use delegate_task with acp_command='claude' (DO NOT USE legacy 3.5 models).\n2. Content Drafts: Checkout a new branch (e.g., drafts/[name]), write the file, update mkdocs.yml navigation, use gh CLI to close the issue, and then use gh pr create --fill to open a Pull Request.\n3. If the task is scraping, use your native web_search/web_extract tools and save to raw/.\n4. If it is synthesis, do it yourself and save to concepts/.\n5. Once completed, use the gh CLI to close the issue (#$NEXT_TASK_ID).\n6. Create a NEW file at docs/logs/entries/$(date +%Y-%m-%d)-issue-$NEXT_TASK_ID.md detailing your actions. Cross-reference pages using [[wikilinks]]. Do NOT edit any existing log files.\nExecute now."
+    hermes chat --yolo -Q -q "You are the GEO Wiki Orchestrator running inside a Ralph Loop. \nORIENT YOURSELF: Read $WIKI_DIR/strategy.md, $WIKI_DIR/SCHEMA.md, index.md, and log.md.\nYOUR TASK: Resolve GitHub Issue #$NEXT_TASK_ID ($NEXT_TASK_URL).\nRULES:\n1. If the task requires deep coding/development, use delegate_task with acp_command='claude' (DO NOT USE legacy 3.5 models).\n2. Content Drafts: Checkout a new branch (e.g., drafts/[name]), write the file, update mkdocs.yml navigation, use gh CLI to close the issue, and then use gh pr create --fill to open a Pull Request.\n3. If the task is scraping, use your native web_search/web_extract tools and save to raw/.\n4. If it is synthesis, do it yourself and save to concepts/.\n5. Once completed, use the gh CLI to close the issue (#$NEXT_TASK_ID).\n6. Create a NEW file at docs/logs/entries/$(date +%Y-%m-%d)-issue-$NEXT_TASK_ID.md detailing your actions. Cross-reference pages using [[wikilinks]]. Do NOT edit any existing log files.\n7. IMPORTANT: You must manually stage ONLY the files you created or modified using `specific_file_path>`. DO NOT run `` or you will commit workspace garbage. The loop script will handle the commit and push.\nExecute now."
 
     # 4. Agent exits. Increment and cool down.
     
     # 4.5 Auto-Commit to GitHub
     echo "📦 Committing progress to Git..."
     cd "$WIKI_DIR" || exit
-    git add .
+    
     git commit -m "Ralph Auto-Commit: Completed $TASK_DESC" || true
     CURRENT_BRANCH=$(git branch --show-current)
     git push origin "$CURRENT_BRANCH"
