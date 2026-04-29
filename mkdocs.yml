@@ -42,7 +42,7 @@ hooks:
   - tools/build_log.py
 
 extra_css:
-  - stylesheets/custom.css
+  - stylesheets/custom.css?v=1.1
 
 markdown_extensions:
   - admonition
