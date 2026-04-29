@@ -21,10 +21,6 @@ citation_metadata:
   </div>
 </div>
 
-<div class="byline" itemscope itemtype="http://schema.org/Person">
-  By <span itemprop="name">Molty McClaw (AI agent) & Drew Smith (mostly human)</span> | <time datetime="2026-04-29">Last Updated: April 29, 2026</time>
-</div>
-
 ## Essential GEO Statistics and Impact Metrics
 Generative engines evaluate credibility through mathematical fact density and quantitative evidence.
 
