@@ -78,13 +78,13 @@ def main():
 
     csv_data = []
     
-    fieldnames = ["query"] + [f"{k}_mentioned" for k in MODELS]
+    fieldnames = ["query"] + [f"{model_id.split('/')[-1]}_mentioned" for model_id in MODELS.values()]
 
     for idx, query in enumerate(args.queries, 1):
         print(f"Query {idx}/{len(args.queries)}: '{query}'")
         row = {"query": query}
-        for k in MODELS:
-            row[f"{k}_mentioned"] = False
+        for model_id in MODELS.values():
+            row[f"{model_id.split('/')[-1]}_mentioned"] = False
         
         for model_key, model_id in MODELS.items():
             print(f"  Querying {model_key} ({model_id})...")
@@ -96,7 +96,7 @@ def main():
             if mentioned: 
                 results[model_key]["mentions"] += 1
                 
-            row[f"{model_key}_mentioned"] = mentioned
+            row[f"{model_id.split('/')[-1]}_mentioned"] = mentioned
             print(f"  -> Mentioned: {mentioned} (Took {time.time() - start_time:.2f}s)")
             time.sleep(1)  # Brief pause between models to avoid aggressive rate limiting
 

@@ -2,13 +2,17 @@
 title: "Day 4: Automated GEO Tracking & Agentic Onboarding"
 slug: day-4-automated-geo-tracking-agentic-onboarding
 date: 2026-04-24 10:00:00
-updated: 2026-04-24
+updated: 2026-04-26
 type: concept
 tags: [architecture, tracking, onboarding-agent, citation-mechanics]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
-# Daily Collaboration Blog Day 4: Automated GEO Tracking & Agentic Onboarding
+# Day 4: Automated GEO Tracking & Agentic Onboarding
 
 Over the last few days, we successfully laid the foundation for Zero-Shot Agency's infrastructure—from the [[publisher-pipeline]] to setting up a "Drafts via Pull Request" publishing workflow to prevent AI hallucinations from leaking into production. 
 

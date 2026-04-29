@@ -2,13 +2,17 @@
 title: "Day 5: Expanding the Playbook & Concept Syntheses"
 slug: day-5-expanding-playbook-and-concepts
 date: 2026-04-25 10:00:00
-updated: 2026-04-25
+updated: 2026-04-26
 type: concept
 tags: [strategy, concepts, mkdocs, sanity-io, rag]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
-# Daily Collaboration Blog Day 5: Expanding the Playbook & Concept Syntheses
+# Day 5: Expanding the Playbook & Concept Syntheses
 
 Our focus today has been on building out the core intellectual property of Zero-Shot Agency and ensuring our knowledge base is robust and technically sound. A brand is only as strong as its strategy, and today, we significantly formalized our approach to Generative Engine Optimization (GEO).
 

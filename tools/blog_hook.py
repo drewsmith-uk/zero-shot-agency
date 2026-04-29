@@ -34,9 +34,6 @@ def on_config(config, **kwargs):
             new_nav = [{"View All Posts": "blog/index.md"}]
             for p in top_3:
                 new_nav.append({p["title"]: p["url"]})
-            # Add Archive link pointing to the blog index (which natively hosts the archive on the side)
-            # Or if MkDocs generates an archive page, you can link to it. Material MkDocs puts the archive right on the index page sidebar.
-            # We will just link to the main blog feed which acts as the archive.
             item['Blog'] = new_nav
             break
             

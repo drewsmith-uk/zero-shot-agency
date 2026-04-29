@@ -1,10 +1,14 @@
 ---
 title: Sanity Toolkit Skills Evaluation
 created: 2026-04-24
-updated: 2026-04-24
+updated: 2026-04-26
 type: concept
 tags: [architecture, strategy]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Sanity Toolkit Skills Evaluation
@@ -38,3 +42,13 @@ For the current Zero-Shot Agency project, we should directly apply the principle
 3. **Experimentation Framework**: We can adapt the hypothesis framework from `content-experimentation-best-practices` to measure the citation success rates of various structural formats (e.g., Markdown vs. Semantic HTML) within our [[geo-tracker]] tool.
 
 Unless we intend to migrate Zero-Shot Agency from MkDocs to Sanity, we should skip the implementation of `sanity-best-practices` and Portable Text skills.
+
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-semantic-structure]]
+- [[geo-tactics]]
+- [[geo-tracker]]
+- [[llms-txt-template]]
+- [[ranking-factors]]
+- [[zero-shot-homepage-copy]]

@@ -1,9 +1,13 @@
 ---
 title: Internal Automation Tools
 created: 2026-04-23
-updated: 2026-04-23
+updated: 2026-04-26
 type: summary
 tags: [tool, artifact, architecture]
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # Internal Automation Tools
@@ -51,7 +55,7 @@ pip install requests beautifulsoup4 markdownify
 
 ### Usage
 ```bash
-python docs/tools/llms-txt-generator.py https://example.com --max-pages 50 --output ./site
+python tools/llms-txt-generator.py https://example.com --max-pages 50 --output ./site
 ```
 
 ### Arguments
@@ -68,7 +72,26 @@ python docs/tools/llms-txt-generator.py https://example.com --max-pages 50 --out
 
 ## 3. Publisher Pipeline (`publisher_pipeline.py`)
 
-*(Documentation pending - under development)* 
-Automates the deployment of semantic content.
+An autonomous script that takes an approved markdown draft and publishes it across multiple platforms simultaneously. It pushes to GitHub, logically splits the content into a Twitter/X thread (<280 chars per tweet), and emails the full draft via Substack.
+
+### Requirements
+Ensure the following CLI tools are installed and available in your PATH:
+- `git`
+- `x-cli` (for Twitter)
+- `himalaya` (for Substack email)
+
+Set the required environment variable:
+- `SUBSTACK_EMAIL` (the destination email address for your Substack drafts)
+
+### Usage
+```bash
+python tools/publisher_pipeline.py path/to/draft.md
+```
+
+### Arguments
+- `filepath` (Required): Path to the markdown file you want to publish.
+
+### Output
+The script extracts the title from the markdown file, commits and pushes it to the `main` branch via `git`, uses `x-cli` to post a threaded summary to X, and pipes the full content through `himalaya` to send it to the configured Substack email address.
 
 *(Source code is maintained in the `tools/` and `docs/tools/` directory of our repository).*

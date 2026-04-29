@@ -219,6 +219,21 @@
 - Created PR for branch `drafts/issue-68-tech-seo`.
 ## [2026-04-26] tool | Implement LLM Version Monitor
 - Resolved Issue #67 by creating `llm_version_monitor.py` to dynamically fetch new models from OpenRouter. - The script detects new flagship models, updates `citations.csv` with a new column, and opens a GitHub issue automatically. - Ensures the [[geo-tracker]] and our content remain accurate by avoiding training-data hallucinations. - Checked out branch `feature/issue-67-llm-monitor` and opened a Pull Request for review via gh CLI.
+## [2026-04-26] content | Build Wikilink Network
+- Resolved Issue #78 by creating a dense internal graph of [[wikilinks]] across all concept and entity pages.
+- Appended a `Related Concepts & Entities` section to all files in `docs/concepts/` and `docs/entities/`, mapping relationships between core GEO concepts.
+- Updated `mkdocs.yml` navigation to include orphaned entities ([[llms-txt-generator]] and [[onboarding-agent]]).
+- Checked out branch `feature/issue-78-wikilinks` and opened a Pull Request for review via the gh CLI.
+## [2026-04-26] dev | Develop Agentic Gap Analysis Tool
+- Resolved Issue #79 by delegating the development task to a Claude subagent to refactor the [[onboarding-agent]] tool.
+- Added a `--analyze-gaps` argument that uses `duckduckgo-search` to scrape top search results, identifies competitor knowledge gaps via OpenAI, and saves a semantic gap injection draft into the concepts directory.
+- This satisfies the Data-Driven Content Engine pillar outlined in the [[strategy]] playbook.
+- Opened a Pull Request on branch feature/issue-79-gap-analysis and closed Issue #79 via gh CLI.
+## [2026-04-26] concept | Xitter Syndication & Cron Scheduling
+- Resolved Issue #82 by documenting the architecture for automated daily blog post syndication to X/Twitter.
+- Created `docs/concepts/xitter-syndication.md` detailing the integration with the [[xitter]] CLI skill.
+- Outlined the workflow combining cron scheduling and Human-in-the-Loop (HITL) approval.
+- Updated `mkdocs.yml` and `index.md` navigation to include [[xitter-syndication]].
 ## [2026-04-26] dev | Develop Lead Handler
 - Delegated task to Claude subagent (`acp_command='claude'`) to build `docs/tools/lead_handler.py`.
 - Implemented an Air-Gap JSON extraction layer to sanitize emails against prompt injection using the `himalaya` CLI skill.
@@ -227,6 +242,25 @@
 - Updated `mkdocs.yml` navigation to include the [[lead-handler]] entity.
 - Resolved Issue #81 by committing changes to `feature/issue-81-lead-handler`, closing the issue via `gh CLI`, and opening a Pull Request.
 
+## [2026-04-23] bugfix | Fix Wikilinks rendering in MkDocs
+- Installed `mkdocs-roamlinks-plugin` to fix the rendering of `[[wikilinks]]` across the site.
+- Updated `mkdocs.yml` to include the `roamlinks` plugin.
+- Appended `mkdocs-roamlinks-plugin` to `requirements.txt` and `.github/workflows/deploy.yml` for CI pipelines.
+- Maintained the strict format defined in [[SCHEMA]] for internal routing.
+- Updated [[TASKS]] to move the bugfix to Completed.
+## [2026-04-26] docs | Implement Metadata Tagging Framework
+- Resolved Issue #77 by updating the YAML frontmatter across all wiki pages in the docs directory.
+- Injected the [[geo-tactics]] list including authoritative-tone, fluency, and statistics into the geo_tactics array.
+- Added citation_metadata mapping back to the primary source: [[princeton-geo-paper]].
+- Updated [[strategy]] playbook to check off the Metadata Tagging Framework task.
+- Checked out branch drafts/issue-77 and created a PR using gh CLI.
+
+## [2026-04-26] docs | Implement Metadata Tagging Framework
+- Resolved Issue #77 by updating markdown frontmatter across the docs site.
+- Tagged all assets according to the [[princeton-geo-paper]] framework.
+- Appended empirical tags and citation metadata to all documentation pages to boost entity recognition.
+- Ensured all missing frontmatter was injected across indexes and logs.
+- Opened a Pull Request on branch drafts/issue-77 and closed the issue.
 ## [2026-04-26] content | Build 'Work With Us' Contact Page
 - Resolved Issue #80 by creating a 'Work With Us' contact page at `docs/contact.md`.
 - Updated `mkdocs.yml` to include the contact page in the navigation.

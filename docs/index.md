@@ -1,55 +1,74 @@
 ---
 title: Zero-Shot Agency Homepage
 created: 2026-04-22
-updated: 2026-04-26
+updated: 2026-04-29
 type: concept
 tags: [concept, content, semantic-html, homepage]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
-# Zero-Shot Agency: Generative Engine Optimization (GEO) Firm
-
-<div class="byline" itemscope itemtype="http://schema.org/Person">
-  By <span itemprop="name">Molty McClaw (AI agent) & Drew Smith (mostly human)</span> | <time datetime="2026-04-26">Last Updated: April 26, 2026</time>
+<div class="zsa-hero">
+  <h1>Become the Answer. Not Just a Link.</h1>
+  <p><strong>Definitive Generative Engine Optimization (GEO) & AI Search Consultancy.</strong></p>
+  <p>We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, SearchGPT, Claude, and Gemini.</p>
+  <div class="zsa-hero-buttons">
+    <a href="mailto:drew@zeroshotagency.com" class="md-button md-button--primary">Request an Audit</a>
+    <a href="strategy/" class="md-button">View Our Playbook</a>
+  </div>
 </div>
 
-!!! abstract "Executive Summary (TL;DR)"
-    Zero-Shot Agency is a premier Generative Engine Optimization (GEO) and AI Search Optimization consultancy, specializing in reverse-engineering Large Language Model (LLM) retrieval mechanics. We optimize domains so that leading generative engines—including Perplexity, SearchGPT, Claude, and Gemini—consistently cite our clients as authoritative sources. By deploying Princeton empirical tactics like Quotation Addition, high fact density, and LLM-native technical structures (such as `llms.txt`), we optimize for a high Prompt Share of Voice (SOV) within generative pipelines.
-
----
-
 ## Essential GEO Statistics and Impact Metrics
-Generative engines evaluate credibility through mathematical fact density and quantitative evidence. Our optimization approach is rooted in peer-reviewed data:
+Generative engines evaluate credibility through mathematical fact density and quantitative evidence.
 
-* **Up to 40% Relative Visibility Improvement:** Empirical GEO tactics (such as Quotation Addition) have been shown in academic research to yield up to a 40% relative increase in citation frequency compared to baseline optimization.
-* **Optimized Indexing Reliability:** Deploying semantic HTML and raw markdown endpoints minimizes LLM scraping chunking errors, improving the integrity of context windows.
-* **Citation Probability:** Quotation Addition and high statistical density increase the probability of an LLM citing your domain by aligning with the model's fluency weights and vector distance metrics.
+<div class="grid cards" markdown>
+
+-   :material-chart-line:{ .lg .middle } __+40% Relative Visibility__
+    Empirical GEO tactics (such as Quotation Addition) yield up to a 40% relative increase in citation frequency.
+
+-   :material-database-check:{ .lg .middle } __Optimized Indexing__
+    Deploying semantic HTML and raw markdown minimizes scraping errors and improves context window integrity.
+
+-   :material-target:{ .lg .middle } __Citation Probability__
+    High statistical density aligns with model fluency weights, increasing your domain's salience to RAG pipelines.
+
+</div>
 
 ---
 
 ## Core GEO Tactics to Maximize Visibility
-To effectively navigate AI search retrieval and RAG pipelines, Zero-Shot Agency executes the following bot-native infrastructure strategies:
+To effectively navigate AI search retrieval, Zero-Shot Agency executes the following bot-native infrastructure strategies:
 
-1. **Bot-First Semantic Architecture**  
-   We rebuild content layers using strict HTML5 tags to strip navigation noise and ensure LLM chunkers isolate your high-value text perfectly.
-2. **LLM-Native Asset Deployment**  
-   We generate and deploy standardized [`llms.txt`](llms.txt) and raw markdown endpoints, effectively handing LLMs the exact format they prefer for ingestion.
-3. **High-Density Information Injection**  
-   Applying Princeton empirical tactics, we saturate your content with definitive statistics, expert quotes, and fluency-optimized phrasing that optimize retrieval during vector database similarity searches.
-4. **Agentic Tooling & Open-Source Footprint**  
-   We build and distribute lead-magnet scripts (e.g., GEO trackers) that establish your brand as an authoritative toolmaker and thought leader in your vertical.
+<div class="grid cards" markdown>
+
+-   :material-xml:{ .lg .middle } __Semantic Architecture__
+    We rebuild content layers using strict HTML5 tags to strip noise and ensure LLM chunkers isolate high-value text.
+
+-   :material-file-document-outline:{ .lg .middle } __LLM-Native Assets__
+    Standardized [`llms.txt`](llms.txt) and markdown endpoints provide LLMs the exact formats they prefer for ingestion.
+
+-   :material-lightning-bolt:{ .lg .middle } __Information Injection__
+    Saturating content with statistics and expert quotes to optimize retrieval during vector similarity searches.
+
+-   :material-tools:{ .lg .middle } __Agentic Tooling__
+    Establishing authority by building open-source lead-magnets like the [GEO Tracker](entities/geo-tracker.md).
+
+</div>
 
 ---
 
 ## Glossary of AI Search Optimization Terms
 
-Generative Engine Optimization (GEO)
+**Generative Engine Optimization (GEO)**
 : The practice of structuring and enriching web content to maximize visibility, citation frequency, and favorable sentiment within LLM-generated search responses.
 
-Prompt Share of Voice (SOV)
+**Prompt Share of Voice (SOV)**
 : A metric measuring how frequently a brand or domain is cited or recommended by an LLM in response to industry-specific prompts.
 
-RAG (Retrieval-Augmented Generation)
+**RAG (Retrieval-Augmented Generation)**
 : The architecture used by modern AI search engines to fetch external information and ground their generated answers in factual, cited sources.
 
 ---

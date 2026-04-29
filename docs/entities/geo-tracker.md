@@ -1,29 +1,52 @@
 ---
 title: GEO Ranking Tracker
 created: 2026-04-22
-updated: 2026-04-26
+updated: 2026-04-27
 type: entity
-tags: [code, tool, chatgpt, claude, gemini]
+tags: [code, tool, chatgpt, claude, gemini, grok]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # GEO Ranking Tracker
 
-The GEO Ranking Tracker (`geo-tracker.py`) is a baseline script developed to evaluate Generative Engine Optimization (GEO) performance. It tracks Share of Voice (SoV) and visibility for a target domain across major AI models.
+The GEO Ranking Tracker (`geo-tracker.py`) is the core telemetry engine developed to evaluate Generative Engine Optimization (GEO) performance. It tracks "Prompt Share of Voice" (SOV) and brand visibility across a comprehensive 12-model matrix spanning the four major AI ecosystems.
 
-## Supported Targets
-- **GPT-4o** (OpenAI)
-- **GPT-5.5 Pro** (OpenRouter)
-- **Claude 3.7 Sonnet** (Anthropic)
-- **Claude Sonnet 4.6** (OpenRouter)
-- **Gemini 1.5 Pro** / **Gemini 2.5 Flash** (Google)
-- **Gemini 3.1 Pro Preview** (OpenRouter)
+## The 12-Model Tracker Matrix
+
+Our tracking architecture is divided into three distinct tiers to diagnose exactly which demographic our strategy is reaching: **Best** (Reasoning/Flagship), **Middle** (Workhorse/Consumer), and **Fast** (Agents/Scrapers).
+
+### OpenAI Ecosystem
+- **GPT-5.5 Pro** (Best)
+- **GPT-5.4 Pro** (Middle)
+- **GPT-5.4 Mini** (Fast)
+
+### Anthropic Ecosystem
+- **Claude Opus 4.7** (Best)
+- **Claude Sonnet 4.6** (Middle)
+- **Claude Haiku 4.5** (Fast)
+
+### Google Ecosystem
+- **Gemini 3.1 Pro Preview** (Best)
+- **Gemini 3 Flash Preview** (Middle)
+- **Gemini 3.1 Flash-Lite Preview** (Fast)
+
+### xAI Ecosystem
+- **Grok 4.20** (Best)
+- **Grok 4** (Middle)
+- **Grok 4.1 Fast** (Fast)
 
 ## Features
-- Executes test queries against multiple API endpoints.
-- Checks if the target domain is explicitly mentioned in the generated output.
-- Outputs a formatted ranking and visibility report.
+- Executes test queries against the OpenRouter API for 12 parallel flagship models.
+- Logs mentions and dynamic Prompt Share of Voice (SOV) to a central `citations.csv`.
+- Feeds data directly into our Leaderboard.
+- Fully automated via a daily `cron` job (`tracker_cron_wrapper.sh`) that commits its own data to the repository.
 
-## Related Concepts
-- Implements tracking for strategies defined in [[geo-tactics]].
-- Evaluates metrics relevant to [[citation-mechanics]].
+## Related Concepts & Entities
+- Leaderboard
+- [[citation-mechanics]]
+- [[geo-tactics]]
+- [[zero-shot-homepage-copy]]

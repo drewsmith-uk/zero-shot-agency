@@ -10,14 +10,14 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: black
-      accent: deep purple
+      accent: teal
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
-      accent: deep purple
+      accent: teal
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -38,7 +38,8 @@ plugins:
   - social
 
 hooks:
-  - docs/tools/blog_hook.py
+  - tools/blog_hook.py
+  - tools/build_log.py
 
 extra_css:
   - stylesheets/custom.css
@@ -55,10 +56,15 @@ markdown_extensions:
   - def_list
   - attr_list
   - meta
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist: 
+      custom_checkbox: true
 
 nav:
   - Home: index.md
-  - Leaderboard: leaderboard.md
+#  - Leaderboard: leaderboard.md
   - Strategy & Playbook: strategy.md
   - Blog:
     - blog/index.md

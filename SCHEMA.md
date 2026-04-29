@@ -9,7 +9,10 @@ Generative Engine Optimization (GEO) and AI Search Optimization (AIO). The sole 
 - Use [[wikilinks]] to link between pages
 - When updating a page, always bump the `updated` date
 - Every new page must be added to `index.md`
-- Every action must be appended to `log.md`
+- Every action must be logged as a new file in `docs/logs/entries/`
+## GitHub CLI and Pull Requests
+- **AGENTS MUST NEVER MERGE PULL REQUESTS.** Only human operators are authorized to merge. Agents must stop after `gh pr create`.
+- **Pull Request Bodies:** When using `gh pr create` with multiline bodies, NEVER use inline `--body "text\ntext"`. Bash does not parse `\n` in double quotes correctly. ALWAYS use a heredoc or `--body-file` to preserve real newlines. (e.g., `gh pr create --body-file pr_body.txt`)
 
 ## Frontmatter
 ```yaml
@@ -33,6 +36,11 @@ sources: [raw/articles/source-name.md]
 - Artifact: tool, paper, code, benchmark, strategy
 - Content: llms-txt, markdown, semantic-html
 - Empirical: quotation-addition, statistics-addition, fluency-optimization, authoritative-tone
+
+## Blog Posts
+- Blog Post Titles: MUST follow the exact format "Day X: [Subtitle]". NEVER use the phrase "Daily Collaboration Blog" in the `title:` frontmatter or the H1.
+- All blog posts must be saved in `docs/blog/posts/` and contain a valid H1 (`# Day X: ...`).
+- Ensure frontmatter contains the correct `date` and `categories` as required by the MkDocs blog plugin.
 
 ## Autonomous Agent Operational Protocol (Verify-Before-PR)
 All AI agents (including Hermes, Ralph, and Claude subagents) MUST adhere to the **Zero-Blind-Commit Protocol** before executing `git commit` or opening a Pull Request. You may not rely on the human user as your compiler or linter.

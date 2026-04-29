@@ -1,3 +1,15 @@
+---
+title: Core Concepts
+created: 2026-04-26
+updated: 2026-04-26
+type: summary
+tags: []
+sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
+---
 # Core Concepts
 
 Welcome to the Zero-Shot Agency concepts wiki. This section contains our raw playbooks, daily logs, and theoretical frameworks for Generative Engine Optimization.
@@ -12,8 +24,5 @@ Welcome to the Zero-Shot Agency concepts wiki. This section contains our raw pla
 * [RAG Architecture](rag-architecture.md)
 * [Inbound Agent Security](inbound-agent-security.md)
 
-## Daily Blogs
-
-* [Daily Blog: Day 1](daily-blog-day-1.md)
-* [Daily Blog: Day 2](daily-blog-day-2.md)
-* [Daily Blog: Day 3](daily-blog-day-3.md)
+## Follow the Journey
+Want to see how we apply these theories in real-time? Check out our **[Daily Blog](../blog/index.md)** to follow our "Build in Public" journey.

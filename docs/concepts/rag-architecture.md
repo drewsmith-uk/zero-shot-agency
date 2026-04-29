@@ -1,10 +1,14 @@
 ---
 title: RAG Architecture in GEO
 created: 2026-04-24
-updated: 2026-04-24
+updated: 2026-04-26
 type: concept
 tags: [architecture, geo-theory]
 sources: []
+geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritative-tone]
+citation_metadata:
+  primary_source: "princeton-geo-paper"
+  empirical_confidence: "high"
 ---
 
 # RAG Architecture in GEO
@@ -27,3 +31,10 @@ Because RAG relies on semantic similarity and chunking, traditional SEO tactics 
 * **Reduce Hallucination Risk**: State facts clearly. RAG systems penalize ambiguous text because it increases the model's perplexity (uncertainty) during generation.
 
 By aligning content structure with the ingestion requirements of RAG architectures, Zero-Shot Agency ensures maximum visibility in AI-generated answers.
+
+
+## Related Concepts & Entities
+- [[citation-mechanics]]
+- [[geo-semantic-structure]]
+- [[geo-tactics]]
+- [[zero-shot-homepage-copy]]
