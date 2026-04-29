@@ -33,6 +33,10 @@ header.md-header nav.md-header__inner .md-header__title {
     border-color: var(--md-accent-fg-color);
 }
 
-.md-typeset .zsa-hero .md-button {
-    margin: 0.5rem;
+.md-typeset .zsa-hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
 }
