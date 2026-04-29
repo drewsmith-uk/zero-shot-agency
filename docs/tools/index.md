@@ -55,7 +55,7 @@ pip install requests beautifulsoup4 markdownify
 
 ### Usage
 ```bash
-python docs/tools/llms-txt-generator.py https://example.com --max-pages 50 --output ./site
+python tools/llms-txt-generator.py https://example.com --max-pages 50 --output ./site
 ```
 
 ### Arguments
@@ -85,7 +85,7 @@ Set the required environment variable:
 
 ### Usage
 ```bash
-python docs/tools/publisher_pipeline.py path/to/draft.md
+python tools/publisher_pipeline.py path/to/draft.md
 ```
 
 ### Arguments

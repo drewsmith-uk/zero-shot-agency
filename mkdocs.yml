@@ -38,8 +38,8 @@ plugins:
   - social
 
 hooks:
-  - docs/tools/blog_hook.py
-  - docs/tools/build_log.py
+  - tools/blog_hook.py
+  - tools/build_log.py
 
 extra_css:
   - stylesheets/custom.css
