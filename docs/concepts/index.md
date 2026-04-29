@@ -23,3 +23,6 @@ Welcome to the Zero-Shot Agency concepts wiki. This section contains our raw pla
 * [Ranking Factors](ranking-factors.md)
 * [RAG Architecture](rag-architecture.md)
 * [Inbound Agent Security](inbound-agent-security.md)
+
+## Follow the Journey
+Want to see how we apply these theories in real-time? Check out our **[Daily Blog](../blog/index.md)** to follow our "Build in Public" journey.
