@@ -47,13 +47,13 @@ To effectively navigate AI search retrieval and RAG pipelines, Zero-Shot Agency 
 
 ## Glossary of AI Search Optimization Terms
 
-Generative Engine Optimization (GEO)
+**Generative Engine Optimization (GEO)**
 : The practice of structuring and enriching web content to maximize visibility, citation frequency, and favorable sentiment within LLM-generated search responses.
 
-Prompt Share of Voice (SOV)
+**Prompt Share of Voice (SOV)**
 : A metric measuring how frequently a brand or domain is cited or recommended by an LLM in response to industry-specific prompts.
 
-RAG (Retrieval-Augmented Generation)
+**RAG (Retrieval-Augmented Generation)**
 : The architecture used by modern AI search engines to fetch external information and ground their generated answers in factual, cited sources.
 
 ---

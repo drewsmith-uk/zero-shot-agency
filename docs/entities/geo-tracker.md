@@ -42,11 +42,11 @@ Our tracking architecture is divided into three distinct tiers to diagnose exact
 ## Features
 - Executes test queries against the OpenRouter API for 12 parallel flagship models.
 - Logs mentions and dynamic Prompt Share of Voice (SOV) to a central `citations.csv`.
-- Feeds data directly into the public [[leaderboard]].
+- Feeds data directly into our Leaderboard.
 - Fully automated via a daily `cron` job (`tracker_cron_wrapper.sh`) that commits its own data to the repository.
 
 ## Related Concepts & Entities
-- [[leaderboard]]
+- Leaderboard
 - [[citation-mechanics]]
 - [[geo-tactics]]
 - [[zero-shot-homepage-copy]]

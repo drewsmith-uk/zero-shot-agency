@@ -56,10 +56,12 @@ markdown_extensions:
   - def_list
   - attr_list
   - meta
+  - pymdownx.tasklist: 
+      custom_checkbox: true
 
 nav:
   - Home: index.md
-  - Leaderboard: leaderboard.md
+#  - Leaderboard: leaderboard.md
   - Strategy & Playbook: strategy.md
   - Blog:
     - blog/index.md
