@@ -2,3 +2,35 @@
 header.md-header nav.md-header__inner .md-header__title {
     margin-left: 0.25rem; 
 }
+
+/* Zero-Shot Agency Hero Banner */
+.zsa-hero {
+    background: linear-gradient(135deg, #001a1a 0%, #000000 100%);
+    padding: 3rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--md-accent-fg-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: var(--md-shadow-z2);
+}
+
+.zsa-hero h1 {
+    color: white !important;
+    margin-top: 0 !important;
+    border-bottom: none !important;
+}
+
+.zsa-hero p {
+    color: #d1d1d1;
+    max-width: 700px;
+    margin: 0 auto 1.5rem auto !important;
+}
+
+.zsa-hero .md-button--primary {
+    background-color: var(--md-accent-fg-color);
+    border-color: var(--md-accent-fg-color);
+}
+
+.zsa-hero .md-button {
+    margin: 0.5rem;
+}

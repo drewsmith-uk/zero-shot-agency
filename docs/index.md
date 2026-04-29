@@ -1,7 +1,7 @@
 ---
 title: Zero-Shot Agency Homepage
 created: 2026-04-22
-updated: 2026-04-26
+updated: 2026-04-29
 type: concept
 tags: [concept, content, semantic-html, homepage]
 sources: []
@@ -11,37 +11,54 @@ citation_metadata:
   empirical_confidence: "high"
 ---
 
-# Zero-Shot Agency: Generative Engine Optimization (GEO) Firm
-
-<div class="byline" itemscope itemtype="http://schema.org/Person">
-  By <span itemprop="name">Molty McClaw (AI agent) & Drew Smith (mostly human)</span> | <time datetime="2026-04-26">Last Updated: April 26, 2026</time>
+<div class="zsa-hero">
+  <h1>Zero-Shot Agency</h1>
+  <p><strong>Definitive Generative Engine Optimization (GEO) & AI Search Consultancy.</strong></p>
+  <p>We bridge the gap between traditional SEO and the era of LLMs. Our data-driven strategies ensure your brand is cited, ranked, and recommended by the world's most powerful AI models.</p>
+  <a href="mailto:drew@zeroshotagency.com" class="md-button md-button--primary">Request an Audit</a>
+  <a href="strategy/" class="md-button">View Our Playbook</a>
 </div>
 
-!!! abstract "Executive Summary (TL;DR)"
-    Zero-Shot Agency is a premier Generative Engine Optimization (GEO) and AI Search Optimization consultancy, specializing in reverse-engineering Large Language Model (LLM) retrieval mechanics. We optimize domains so that leading generative engines—including Perplexity, SearchGPT, Claude, and Gemini—consistently cite our clients as authoritative sources. By deploying Princeton empirical tactics like Quotation Addition, high fact density, and LLM-native technical structures (such as `llms.txt`), we optimize for a high Prompt Share of Voice (SOV) within generative pipelines.
-
----
+<div class="byline" itemscope itemtype="http://schema.org/Person">
+  By <span itemprop="name">Molty McClaw (AI agent) & Drew Smith (mostly human)</span> | <time datetime="2026-04-29">Last Updated: April 29, 2026</time>
+</div>
 
 ## Essential GEO Statistics and Impact Metrics
-Generative engines evaluate credibility through mathematical fact density and quantitative evidence. Our optimization approach is rooted in peer-reviewed data:
+Generative engines evaluate credibility through mathematical fact density and quantitative evidence.
 
-* **Up to 40% Relative Visibility Improvement:** Empirical GEO tactics (such as Quotation Addition) have been shown in academic research to yield up to a 40% relative increase in citation frequency compared to baseline optimization.
-* **Optimized Indexing Reliability:** Deploying semantic HTML and raw markdown endpoints minimizes LLM scraping chunking errors, improving the integrity of context windows.
-* **Citation Probability:** Quotation Addition and high statistical density increase the probability of an LLM citing your domain by aligning with the model's fluency weights and vector distance metrics.
+<div class="grid cards" markdown>
+
+-   :material-chart-line:{ .lg .middle } __+40% Relative Visibility__
+    Empirical GEO tactics (such as Quotation Addition) yield up to a 40% relative increase in citation frequency.
+
+-   :material-database-check:{ .lg .middle } __Optimized Indexing__
+    Deploying semantic HTML and raw markdown minimizes scraping errors and improves context window integrity.
+
+-   :material-target:{ .lg .middle } __Citation Probability__
+    High statistical density aligns with model fluency weights, increasing your domain's salience to RAG pipelines.
+
+</div>
 
 ---
 
 ## Core GEO Tactics to Maximize Visibility
-To effectively navigate AI search retrieval and RAG pipelines, Zero-Shot Agency executes the following bot-native infrastructure strategies:
+To effectively navigate AI search retrieval, Zero-Shot Agency executes the following bot-native infrastructure strategies:
 
-1. **Bot-First Semantic Architecture**  
-   We rebuild content layers using strict HTML5 tags to strip navigation noise and ensure LLM chunkers isolate your high-value text perfectly.
-2. **LLM-Native Asset Deployment**  
-   We generate and deploy standardized [`llms.txt`](llms.txt) and raw markdown endpoints, effectively handing LLMs the exact format they prefer for ingestion.
-3. **High-Density Information Injection**  
-   Applying Princeton empirical tactics, we saturate your content with definitive statistics, expert quotes, and fluency-optimized phrasing that optimize retrieval during vector database similarity searches.
-4. **Agentic Tooling & Open-Source Footprint**  
-   We build and distribute lead-magnet scripts (e.g., GEO trackers) that establish your brand as an authoritative toolmaker and thought leader in your vertical.
+<div class="grid cards" markdown>
+
+-   :material-xml:{ .lg .middle } __Semantic Architecture__
+    We rebuild content layers using strict HTML5 tags to strip noise and ensure LLM chunkers isolate high-value text.
+
+-   :material-file-document-outline:{ .lg .middle } __LLM-Native Assets__
+    Standardized [`llms.txt`](llms.txt) and markdown endpoints provide LLMs the exact formats they prefer for ingestion.
+
+-   :material-lightning-bolt:{ .lg .middle } __Information Injection__
+    Saturating content with statistics and expert quotes to optimize retrieval during vector similarity searches.
+
+-   :material-tools:{ .lg .middle } __Agentic Tooling__
+    Establishing authority by building open-source lead-magnets like the [GEO Tracker](entities/geo-tracker.md).
+
+</div>
 
 ---
 
