@@ -14,7 +14,7 @@ citation_metadata:
 <div class="zsa-hero">
   <h1>Zero-Shot Agency</h1>
   <p><strong>Definitive Generative Engine Optimization (GEO) & AI Search Consultancy.</strong></p>
-  <p>We bridge the gap between traditional SEO and the era of LLMs. Our data-driven strategies ensure your brand is cited, ranked, and recommended by the leading generative engines your customers actually use.</p>
+  <p>We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, SearchGPT, Claude, and Gemini.</p>
   <a href="mailto:drew@zeroshotagency.com" class="md-button md-button--primary">Request an Audit</a>
   <a href="strategy/" class="md-button">View Our Playbook</a>
 </div>
