@@ -261,6 +261,12 @@
 - Appended empirical tags and citation metadata to all documentation pages to boost entity recognition.
 - Ensured all missing frontmatter was injected across indexes and logs.
 - Opened a Pull Request on branch drafts/issue-77 and closed the issue.
+## [2026-04-26] content | Build 'Work With Us' Contact Page
+- Resolved Issue #80 by creating a 'Work With Us' contact page at `docs/contact.md`.
+- Updated `mkdocs.yml` to include the contact page in the navigation.
+- Updated `README.md` to display the agency email addresses and a call-to-action for inbound leads.
+- Added [[contact]] to `index.md` under Entities & Tools.
+- Closed Issue #80 and created a Pull Request from branch `drafts/contact-page`.
 ## [2026-04-26] security | Define 4-Layer Defense Architecture
 - Resolved Issue #83 by documenting the 4-layer defense strategy against prompt injection for inbound agents.
 - Created `docs/concepts/inbound-agent-security.md` detailing the Air-Gap JSON extraction, Human-in-the-Loop Barrier, Least Privilege isolation, and Denial of Wallet (DoW) protection.
