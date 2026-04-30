@@ -13,7 +13,7 @@ citation_metadata:
 
 # RAG Architecture in GEO
 
-Retrieval-Augmented Generation (RAG) is the foundational architecture powering modern AI search engines like Perplexity, ChatGPT (with browsing), and SearchGPT. For a Generative Engine Optimization (GEO) agency, reverse-engineering RAG pipelines is the key to securing citations.
+Retrieval-Augmented Generation (RAG) is the foundational architecture powering modern AI search engines like Perplexity, ChatGPT (with browsing), and ChatGPT. For a Generative Engine Optimization (GEO) agency, reverse-engineering RAG pipelines is the key to securing citations.
 
 ## How RAG Works
 

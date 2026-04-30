@@ -13,7 +13,7 @@ citation_metadata:
 
 # llms.txt Standard Template
 
-The `llms.txt` file (and its companion `llms-full.txt`) is a standard for providing LLMs and AI search engines (like Perplexity, SearchGPT, Claude, Cursor) with a clean, markdown-formatted entry point into a website's content. This is a critical artifact for Generative Engine Optimization (GEO).
+The `llms.txt` file (and its companion `llms-full.txt`) is a standard for providing LLMs and AI search engines (like Perplexity, ChatGPT, Claude, Cursor) with a clean, markdown-formatted entry point into a website's content. This is a critical artifact for Generative Engine Optimization (GEO).
 
 ## Overview
 

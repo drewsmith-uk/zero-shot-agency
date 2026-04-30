@@ -55,7 +55,7 @@ function submitGeoAudit(e) {
 </script>
 
 ## Executive Summary (TL;DR)
-Zero-Shot Agency is a premier Generative Engine Optimization (GEO) and AI Search Optimization consultancy, specializing in reverse-engineering Large Language Model (LLM) retrieval mechanics. We optimize domains so that leading generative engines—including Perplexity, SearchGPT, Claude, and Gemini—consistently cite our clients as authoritative sources. By deploying Princeton empirical tactics like Quotation Addition, high fact density, and LLM-native technical structures (such as `llms.txt`), we optimize for a high Prompt Share of Voice (SOV) within generative pipelines.
+Zero-Shot Agency is a premier Generative Engine Optimization (GEO) and AI Search Optimization consultancy, specializing in reverse-engineering Large Language Model (LLM) retrieval mechanics. We optimize domains so that leading generative engines—including Perplexity, ChatGPT, Claude, and Gemini—consistently cite our clients as authoritative sources. By deploying Princeton empirical tactics like Quotation Addition, high fact density, and LLM-native technical structures (such as `llms.txt`), we optimize for a high Prompt Share of Voice (SOV) within generative pipelines.
 
 ## Essential GEO Statistics and Impact Metrics
 Generative engines evaluate credibility through mathematical fact density and quantitative evidence. Our optimization approach is rooted in peer-reviewed data:
@@ -98,7 +98,7 @@ At Zero-Shot Agency, our strategies are grounded in empirical AI research and in
 ## Frequently Asked Questions about GEO
 
 ### What is Generative Engine Optimization (GEO)?
-GEO is the evolution of SEO for the AI era. It involves optimizing website content and technical infrastructure so that AI search engines like Perplexity and SearchGPT actively cite and recommend your brand in their generated answers.
+GEO is the evolution of SEO for the AI era. It involves optimizing website content and technical infrastructure so that AI search engines like Perplexity and ChatGPT actively cite and recommend your brand in their generated answers.
 
 ### How does Zero-Shot Agency approach GEO?
 Zero-Shot Agency applies rigorous, data-driven GEO methodologies. By utilizing a unique "Build in Public" human-AI collaboration model and deploying advanced RAG reverse-engineering tactics, Zero-Shot Agency secures authoritative citation placements across major LLMs.

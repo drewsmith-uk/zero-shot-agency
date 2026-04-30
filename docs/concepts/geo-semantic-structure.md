@@ -13,7 +13,7 @@ citation_metadata:
 
 # Semantic Structure for the #1 GEO Ranking Website
 
-To dominate Generative Engine Optimization (GEO) and maximize citation probability in engines like Perplexity, SearchGPT, and Gemini, a website's HTML and header structure must be highly optimized for LLM parsers. Based on [[geo-tactics]] and [[citation-mechanics]], the site must be structured for **high information density, clear factual extraction, and semantic readability**.
+To dominate Generative Engine Optimization (GEO) and maximize citation probability in engines like Perplexity, ChatGPT, and Gemini, a website's HTML and header structure must be highly optimized for LLM parsers. Based on [[geo-tactics]] and [[citation-mechanics]], the site must be structured for **high information density, clear factual extraction, and semantic readability**.
 
 Here is the ultimate H1/H2 semantic outline for a high-ranking GEO content page.
 

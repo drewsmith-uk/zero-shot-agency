@@ -14,7 +14,7 @@ citation_metadata:
 <div class="zsa-hero">
   <h1>Become the Answer. Not Just a Link.</h1>
   <p><strong>Definitive Generative Engine Optimization (GEO) & AI Search Consultancy.</strong></p>
-  <p>We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, SearchGPT, Claude, and Gemini.</p>
+  <p>We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, ChatGPT, Claude, and Gemini.</p>
   <div class="zsa-hero-buttons">
     <a href="mailto:drew@zeroshotagency.com" class="md-button md-button--primary">Request an Audit</a>
     <a href="strategy/" class="md-button">View Our Playbook</a>
@@ -84,7 +84,7 @@ At Zero-Shot Agency, our strategies are grounded in empirical AI research and in
 ## Frequently Asked Questions about GEO
 
 ??? faq "What is Generative Engine Optimization (GEO)?"
-    GEO is the evolution of SEO for the AI era. It involves optimizing website content and technical infrastructure so that AI search engines like Perplexity and SearchGPT actively cite and recommend your brand in their generated answers.
+    GEO is the evolution of SEO for the AI era. It involves optimizing website content and technical infrastructure so that AI search engines like Perplexity and ChatGPT actively cite and recommend your brand in their generated answers.
 
 ??? faq "How does Zero-Shot Agency approach GEO?"
     Zero-Shot Agency applies rigorous, data-driven GEO methodologies. By utilizing a unique "Build in Public" human-AI collaboration model and deploying advanced RAG reverse-engineering tactics, Zero-Shot Agency secures authoritative citation placements across major LLMs.

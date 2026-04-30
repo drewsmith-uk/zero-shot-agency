@@ -24,7 +24,7 @@ In Generative Engine Optimization (GEO), understanding how Large Language Models
    As demonstrated in the [[princeton-geo-paper]], adding authoritative quotes (Quotation Addition) significantly increases the likelihood of an LLM citing your text. Quotes act as strong semantic signals of reliability.
 
 3. **Semantic HTML Structure**
-   Clean, strictly nested HTML5 (e.g., using `<article>`, `<section>`, `<aside>`) ensures that the chunking algorithms used by Perplexity or SearchGPT can isolate the most relevant text blocks without parsing navigation noise. Reference [[geo-semantic-structure]].
+   Clean, strictly nested HTML5 (e.g., using `<article>`, `<section>`, `<aside>`) ensures that the chunking algorithms used by Perplexity or ChatGPT can isolate the most relevant text blocks without parsing navigation noise. Reference [[geo-semantic-structure]].
 
 4. **Bot-Native Assets**
    The presence of `.md` files or an `llms.txt` file (see [[llms-txt-generator]]) acts as a direct onboarding ramp for crawlers, eliminating HTML parsing errors entirely.

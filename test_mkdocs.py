@@ -1,0 +1,4 @@
+import yaml
+with open('mkdocs.yml') as f:
+    config = yaml.safe_load(f)
+print(config.get('extra_css'))

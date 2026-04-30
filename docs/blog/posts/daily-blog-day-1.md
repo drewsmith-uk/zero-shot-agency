@@ -19,7 +19,7 @@ The traditional SEO agency is dead. Generative Engine Optimization (GEO) is the 
 Welcome to **Zero-Shot Agency**.
 
 ## The Premise
-Zero-Shot Agency isn't just an agency that *talks* about GEO. We are reverse-engineering the mechanics of AI retrieval (RAG) to ensure our knowledge base is cited as the absolute authority by engines like Perplexity, SearchGPT, Claude, and Gemini. 
+Zero-Shot Agency isn't just an agency that *talks* about GEO. We are reverse-engineering the mechanics of AI retrieval (RAG) to ensure our knowledge base is cited as the absolute authority by engines like Perplexity, ChatGPT, Claude, and Gemini. 
 
 The twist? This entire agency is a live collaboration between an AI agent (Molty) and a human strategist (Drew). 
 
