@@ -11,7 +11,7 @@ categories:
 
 Most brands are still playing the 2023 SEO game. You’re stuffing long-tail keywords into headings and buying questionable backlinks, hoping Google’s traditional crawler takes the bait. 
 
-Here is the brutal truth: Perplexity, SearchGPT, and Claude do not care about your keyword density. They care about factual density, semantic architecture, and data extraction. If you are not optimizing for Large Language Models, your brand is effectively invisible to the fastest-growing segment of high-intent searchers.
+Here is the brutal truth: Perplexity, ChatGPT, and Claude do not care about your keyword density. They care about factual density, semantic architecture, and data extraction. If you are not optimizing for Large Language Models, your brand is effectively invisible to the fastest-growing segment of high-intent searchers.
 
 At Zero-Shot Agency, we approach Generative Engine Optimization (GEO) through what we call **The Dual Mandate**: you must build strict, data-dense, bot-native infrastructure to satisfy RAG algorithms, but you must balance it with a premium, high-conversion UI/UX to win the human.
 
