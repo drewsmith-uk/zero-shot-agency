@@ -1,5 +1,8 @@
 ---
-title: Zero-Shot Agency Homepage
+title: Zero-Shot Agency
+hide:
+  - navigation
+  - toc
 created: 2026-04-22
 updated: 2026-04-29
 type: concept
@@ -11,57 +14,71 @@ citation_metadata:
   empirical_confidence: "high"
 ---
 
-<div class="zsa-hero">
-  <h1>Become the Answer. Not Just a Link.</h1>
-  <p><strong>Engineering your brand's visibility for the AI-first web.</strong></p>
-  <p>We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, ChatGPT, Claude, and Gemini.</p>
-  <div class="zsa-hero-buttons">
-    <a href="mailto:drew@zeroshotagency.com" class="md-button md-button--primary">Request an Audit</a>
-    <a href="strategy/" class="md-button">View Our Playbook</a>
+<div class="zsa-hero-grid">
+  <div class="zsa-panel zsa-hero-copy">
+    <div class="zsa-kicker">Zero-Shot Agency</div>
+    <h1>Become the Answer. <br><span class="zsa-hero-accent">Not Just a Link.</span></h1>
+    <p style="font-size: 1.1rem; margin-bottom: 1rem; font-weight: 500;">Engineering your brand's visibility for the AI-first web.</p>
+    <p>We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, ChatGPT, Claude, and Gemini.</p>
+    
+    <div class="zsa-hero-actions">
+      <a href="mailto:drew@zeroshotagency.com" class="md-button md-button--primary">Request an Audit</a>
+      <a href="strategy/" class="md-button">View Our Playbook</a>
+      <p class="zsa-micro-note">No automated SEO reports or sales calls. Just an empirical diagnostic of your AI visibility.</p>
+    </div>
   </div>
-  <span class="zsa-hero-microcopy">No automated SEO reports or sales calls. Just an empirical diagnostic of your AI visibility.</span>
+  
+  <div class="zsa-panel zsa-hero-stats">
+    <div class="zsa-stat-block">
+      <div class="zsa-micro">Empirical Yield</div>
+      <div class="zsa-stat-value">+40% Visibility</div>
+      <p>Via Quotation Addition</p>
+    </div>
+    <div class="zsa-stat-block">
+      <div class="zsa-micro">Infrastructure</div>
+      <div class="zsa-stat-value">Optimized Indexing</div>
+      <p>Semantic HTML & Raw Markdown</p>
+    </div>
+    <div class="zsa-stat-block">
+      <div class="zsa-micro">Retrieval</div>
+      <div class="zsa-stat-value">Citation Probability</div>
+      <p>High statistical density</p>
+    </div>
+  </div>
 </div>
 
-## Essential GEO Statistics and Impact Metrics
-Generative engines evaluate credibility through mathematical fact density and quantitative evidence.
-
+<h2 class="zsa-section-title">Core GEO Tactics to Maximize Visibility</h2>
 <div class="grid cards" markdown>
 
--   :material-chart-line:{ .lg .middle } __+40% Relative Visibility__
-    Empirical GEO tactics (such as Quotation Addition) yield up to a 40% relative increase in citation frequency.
-
--   :material-database-check:{ .lg .middle } __Optimized Indexing__
-    Deploying semantic HTML and raw markdown minimizes scraping errors and improves context window integrity.
-
--   :material-target:{ .lg .middle } __Citation Probability__
-    High statistical density aligns with model fluency weights, increasing your domain's salience to RAG pipelines.
-
-</div>
-
----
-
-## Core GEO Tactics to Maximize Visibility
-To effectively navigate AI search retrieval, Zero-Shot Agency executes the following bot-native infrastructure strategies:
-
-<div class="grid cards" markdown>
-
--   :material-xml:{ .lg .middle } __Semantic Architecture__
+-   <div class="zsa-micro">01 // Structure</div>
+    **Semantic Architecture**
     We rebuild content layers using strict HTML5 tags to strip noise and ensure LLM chunkers isolate high-value text.
 
--   :material-file-document-outline:{ .lg .middle } __LLM-Native Assets__
+-   <div class="zsa-micro">02 // Formats</div>
+    **LLM-Native Assets**
     Standardized [`llms.txt`](llms.txt) and markdown endpoints provide LLMs the exact formats they prefer for ingestion.
 
--   :material-lightning-bolt:{ .lg .middle } __Information Injection__
+-   <div class="zsa-micro">03 // Density</div>
+    **Information Injection**
     Saturating content with statistics and expert quotes to optimize retrieval during vector similarity searches.
 
--   :material-tools:{ .lg .middle } __Agentic Tooling__
+-   <div class="zsa-micro">04 // Authority</div>
+    **Agentic Tooling**
     Establishing authority by building open-source lead-magnets like the [GEO Tracker](entities/geo-tracker.md).
 
 </div>
 
----
+<div class="zsa-hero-grid" style="grid-template-columns: 1fr; margin-top: 4rem;">
+  <div class="zsa-panel" style="background: var(--md-code-bg-color);">
+    <div class="zsa-kicker">Expert Consensus</div>
+    <blockquote style="margin: 0;">
+      "The transition from traditional search to generative AI search requires a fundamental shift in how content is structured. High information density, authoritative quotations, and bot-native formats are no longer optional—they are the prerequisite for visibility in RAG pipelines."
+      <cite>— Zero-Shot Agency Manifesto on AI Retrieval</cite>
+    </blockquote>
+  </div>
+</div>
 
-## Glossary of AI Search Optimization Terms
+<h2 class="zsa-section-title" style="margin-top: 4rem;">Glossary of AI Search Optimization Terms</h2>
 
 **Generative Engine Optimization (GEO)**
 : The practice of structuring and enriching web content to maximize visibility, citation frequency, and favorable sentiment within LLM-generated search responses.
@@ -71,14 +88,6 @@ To effectively navigate AI search retrieval, Zero-Shot Agency executes the follo
 
 **RAG (Retrieval-Augmented Generation)**
 : The architecture used by modern AI search engines to fetch external information and ground their generated answers in factual, cited sources.
-
----
-
-## Expert Consensus and Primary Sources
-At Zero-Shot Agency, our strategies are grounded in empirical AI research and industry consensus.
-
-> "The transition from traditional search to generative AI search requires a fundamental shift in how content is structured. High information density, authoritative quotations, and bot-native formats are no longer optional—they are the prerequisite for visibility in RAG pipelines."  
-> — *Zero-Shot Agency Manifesto on AI Retrieval*
 
 ---
 

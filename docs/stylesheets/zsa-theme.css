@@ -44,20 +44,44 @@
 
 /* 
   2. WORKSPACE GRID BACKGROUND 
-  Applied to the main container body 
+  Applied globally so it repeats down the entire page.
 */
 body {
+    background-color: var(--md-default-bg-color);
     background-image: linear-gradient(var(--zsa-grid-line) 1px, transparent 1px),
                       linear-gradient(90deg, var(--zsa-grid-line) 1px, transparent 1px);
     background-size: var(--zsa-grid-size) var(--zsa-grid-size);
     background-position: -1px -1px;
+    background-attachment: fixed; /* Keep grid fixed so it spans the whole scroll */
 }
 
-/* Ensure inner content wrappers have solid background so text stays legible */
-.md-main__inner, .md-sidebar {
+/* Ensure inner content wrappers are transparent so the grid shows through,
+   but keep sidebars solid to prevent text collision. */
+.md-main__inner {
+    background-color: transparent;
+    box-shadow: none;
+}
+.md-sidebar {
     background-color: var(--md-default-bg-color);
     box-shadow: 0 0 0 1px var(--md-typeset-table-color);
 }
+/* The actual text content area needs a solid background so reading isn't jarring */
+.md-content {
+    background-color: transparent; /* Keep transparent for landing pages */
+}
+/* For normal docs, ensure reading pane has background, but landing pages (hidden toc/nav) are transparent */
+.md-main__inner > .md-content > article {
+    background-color: var(--md-default-bg-color);
+    border: 1px solid var(--md-typeset-table-color);
+    padding: 2rem;
+}
+/* Hide borders on the homepage where we removed nav and toc */
+.md-main__inner[data-md-component="main"] > .md-content[data-md-component="content"] > article:only-child {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
 
 /* 
   3. COMPONENT TWEAKS (Brutalist Geometry) 
@@ -73,97 +97,123 @@ header.md-header nav.md-header__inner .md-header__title {
     box-shadow: none;
 }
 
+/* Buttons: Tech Blue and Sharp */
+.md-typeset .md-button--primary {
+    background-color: var(--md-accent-fg-color) !important; /* Material sometimes forces overrides here */
+    color: var(--md-default-bg-color) !important;
+    border-color: var(--md-accent-fg-color) !important;
+    font-family: var(--md-text-font-family);
+    font-weight: 600;
+}
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+    background-color: transparent !important;
+    color: var(--md-accent-fg-color) !important;
+}
+
 /* Feature grid cards (Brutalist paneling) */
 .md-typeset .grid.cards > ul > li {
     background-color: var(--md-code-bg-color);
     border: 1px solid var(--md-typeset-table-color);
     transition: background-color 0.2s ease;
+    border-radius: 0;
 }
-
 [data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li:hover { background-color: #ffffff; }
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover { background-color: #1c2128; }
 
+
 /* 
-  4. ZERO-SHOT AGENCY HERO BANNER 
-  Refactored from gradients to flat technical panels
+  4. ZERO-SHOT AGENCY HOMEPAGE GRID
+  Replicating the sketch layout exactly within MkDocs
 */
-.md-typeset .zsa-hero {
-    padding: 4rem 2rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    background-color: var(--md-code-bg-color);
+.zsa-hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1px;
+    background: var(--md-typeset-table-color);
     border: 1px solid var(--md-typeset-table-color);
+    margin-bottom: 4rem;
 }
 
-.md-typeset .zsa-hero h1 {
-    margin-top: 0;
-    border-bottom: none;
-    color: var(--md-default-fg-color);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
+.zsa-panel {
+    background: var(--md-default-bg-color);
+    padding: 3rem;
+}
+.zsa-panel.zsa-hero-copy {
+    padding-right: 4rem;
+}
+
+.md-typeset .zsa-hero-grid h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.1;
     letter-spacing: -0.04em;
+    margin: 0 0 1rem;
+    color: var(--md-default-fg-color);
+    border-bottom: none;
 }
 
-.md-typeset .zsa-hero p:nth-of-type(1) {
-    color: var(--md-default-fg-color);
-    font-size: 1.25em;
+.zsa-hero-accent {
+    color: var(--md-accent-fg-color);
     font-weight: 500;
-    max-width: 800px;
-    margin: 0 auto 1.5rem auto;
 }
 
-.md-typeset .zsa-hero p:nth-of-type(2) {
+.zsa-kicker {
+    font-family: "Geist Mono", var(--md-code-font-family);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--md-accent-fg-color);
+    margin-bottom: 1.5rem;
+}
+
+.zsa-micro {
+    font-family: "Geist Mono", var(--md-code-font-family);
+    font-size: 0.8rem;
     color: var(--md-default-fg-color--light);
-    font-size: 1em;
-    max-width: 700px;
-    margin: 0 auto 2.5rem auto;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.md-typeset .zsa-hero .md-button {
-    letter-spacing: 0.02em;
-    transition: all 0.2s ease-in-out;
-    border-radius: 0;
-    font-family: var(--md-text-font-family);
-    font-weight: 600;
+.zsa-stat-block {
+    margin-bottom: 2rem;
+}
+.zsa-stat-block p {
+    margin: 0.5rem 0 0 !important;
+    font-size: 0.85rem;
+    color: var(--md-default-fg-color--light);
 }
 
-.md-typeset .zsa-hero .md-button--primary {
-    background-color: var(--md-default-fg-color);
-    color: var(--md-default-bg-color);
-    border-color: var(--md-default-fg-color);
-}
-
-.md-typeset .zsa-hero .md-button--primary:hover,
-.md-typeset .zsa-hero .md-button--primary:focus {
-    background-color: transparent;
+.zsa-stat-value {
+    font-family: "Geist Mono", var(--md-code-font-family);
+    font-size: 1.5rem;
     color: var(--md-default-fg-color);
 }
 
-.md-typeset .zsa-hero .md-button:not(.md-button--primary) {
-    background-color: transparent;
-    color: var(--md-default-fg-color);
-    border-color: var(--md-typeset-table-color);
-}
-
-.md-typeset .zsa-hero .md-button:not(.md-button--primary):hover,
-.md-typeset .zsa-hero .md-button:not(.md-button--primary):focus {
-    border-color: var(--md-default-fg-color);
-    background-color: rgba(128,128,128,0.05);
-}
-
-.md-typeset .zsa-hero-buttons {
+.zsa-hero-actions {
+    margin-top: 2.5rem;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
     flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
 }
 
-.md-typeset .zsa-hero-microcopy {
-    display: block;
-    margin-top: 1rem;
-    font-size: 0.85em;
+.zsa-micro-note {
+    font-size: 0.8rem;
     color: var(--md-default-fg-color--light);
-    letter-spacing: 0.01em;
-    opacity: 0.8;
+    max-width: 250px;
+    margin: 0 !important;
+}
+
+.zsa-section-title {
+    font-family: "Geist Mono", var(--md-code-font-family);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: none !important;
+}
+
+@media (max-width: 800px) {
+    .zsa-hero-grid { grid-template-columns: 1fr; }
+    .zsa-panel { padding: 2rem; }
 }
