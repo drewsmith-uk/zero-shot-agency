@@ -9,10 +9,19 @@ header.md-header nav.md-header__inner .md-header__title {
     border-radius: 0.5rem;
     border: 1px solid var(--md-default-fg-color--lightest);
     border-top: 3px solid var(--md-accent-fg-color);
-    background-color: var(--md-default-bg-color);
     margin-bottom: 2rem;
     text-align: center;
     box-shadow: var(--md-shadow-z1);
+}
+
+/* Light Mode Hero Background */
+[data-md-color-scheme="default"] .md-typeset .zsa-hero {
+    background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
+}
+
+/* Dark Mode Hero Background */
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero {
+    background: linear-gradient(135deg, #001a1a 0%, #000000 100%);
 }
 
 .md-typeset .zsa-hero h1 {
