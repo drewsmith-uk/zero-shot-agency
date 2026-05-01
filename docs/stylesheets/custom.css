@@ -3,28 +3,22 @@ header.md-header nav.md-header__inner .md-header__title {
     margin-left: 0.25rem; 
 }
 
-/* Zero-Shot Agency Hero Banner (Holistic Structural Design) */
+/* Zero-Shot Agency Hero Banner */
 .md-typeset .zsa-hero {
-    padding: 4rem 1rem; /* Scaled up for a sweeping, airy feel */
+    padding: 4rem 1rem;
     border-radius: 0.5rem;
     margin-bottom: 3rem;
     text-align: center;
-    /* Removed hard borders and box-shadow to blend seamlessly into the page structure */
 }
 
-/* Light Mode Hero Background */
 [data-md-color-scheme="default"] .md-typeset .zsa-hero {
-    /* Fades from mint into the exact native page background color instead of hardcoded white */
     background: linear-gradient(135deg, #ccfbf1 0%, var(--md-default-bg-color) 100%);
 }
 
-/* Dark Mode Hero Background */
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero {
-    /* Fades from deep teal into the exact native slate background instead of hardcoded black */
     background: linear-gradient(135deg, #003d3d 0%, var(--md-default-bg-color) 100%);
 }
 
-/* Typography Hierarchy */
 .md-typeset .zsa-hero h1 {
     margin-top: 0;
     border-bottom: none;
@@ -34,24 +28,21 @@ header.md-header nav.md-header__inner .md-header__title {
     margin-bottom: 0.5em;
 }
 
-/* Sub-headline / Lead (Targets the first paragraph: "Engineering your brand's visibility...") */
 .md-typeset .zsa-hero p:nth-of-type(1) {
     color: var(--md-default-fg-color);
-    font-size: 1.25em; /* Scaled up to bridge the visual gap */
+    font-size: 1.25em;
     font-weight: 500;
     max-width: 800px;
     margin: 0 auto 1.5rem auto;
 }
 
-/* Secondary Body Copy (Targets the second paragraph: "We bridge the gap...") */
 .md-typeset .zsa-hero p:nth-of-type(2) {
-    color: var(--md-default-fg-color--light); /* Native secondary text color */
+    color: var(--md-default-fg-color--light);
     font-size: 1em;
     max-width: 700px;
     margin: 0 auto 2.5rem auto;
 }
 
-/* Unified Hero Buttons */
 .md-typeset .zsa-hero .md-button--primary {
     background-color: var(--md-accent-fg-color);
     color: var(--md-accent-bg-color);
