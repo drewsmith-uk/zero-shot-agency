@@ -78,7 +78,10 @@ body {
     background-color: transparent;
     box-shadow: none;
 }
-.md-sidebar, .md-sidebar__scrollwrap {
+.md-sidebar {
+    background-color: transparent;
+}
+.md-sidebar__scrollwrap {
     background-color: var(--md-default-bg-color);
     box-shadow: 0 0 0 1px var(--md-typeset-table-color);
 }
