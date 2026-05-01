@@ -16,12 +16,12 @@ header.md-header nav.md-header__inner .md-header__title {
 
 /* Light Mode Hero Background */
 [data-md-color-scheme="default"] .md-typeset .zsa-hero {
-    background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #ccfbf1 0%, #ffffff 100%);
 }
 
 /* Dark Mode Hero Background */
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero {
-    background: linear-gradient(135deg, #001a1a 0%, #000000 100%);
+    background: linear-gradient(135deg, #003d3d 0%, #000000 100%);
 }
 
 .md-typeset .zsa-hero h1 {
