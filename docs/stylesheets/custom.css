@@ -39,9 +39,14 @@ header.md-header nav.md-header__inner .md-header__title {
 }
 
 /* Force high contrast text in dark mode for the hero */
-[data-md-color-scheme="slate"] .md-typeset .zsa-hero h1,
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero h1 {
+    color: var(--md-primary-bg-color);
+    opacity: 0.9;
+}
+
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero p {
     color: var(--md-primary-bg-color);
+    opacity: 0.7;
 }
 
 /* Fix clashing button colors in the hero */
@@ -51,9 +56,20 @@ header.md-header nav.md-header__inner .md-header__title {
     border-color: var(--md-accent-fg-color);
 }
 
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero .md-button--primary:hover,
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero .md-button--primary:focus {
+    filter: brightness(1.15);
+}
+
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero .md-button:not(.md-button--primary) {
     color: var(--md-primary-bg-color);
     border-color: var(--md-primary-bg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero .md-button:not(.md-button--primary):hover,
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero .md-button:not(.md-button--primary):focus {
+    background-color: var(--md-primary-bg-color);
+    color: var(--md-default-bg-color);
 }
 
 .md-typeset .zsa-hero-buttons {
