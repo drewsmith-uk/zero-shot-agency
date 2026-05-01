@@ -40,11 +40,13 @@ header.md-header nav.md-header__inner .md-header__title {
 
 /* Force high contrast text in dark mode for the hero */
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero h1 {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--md-primary-bg-color);
+    opacity: 0.9;
 }
 
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--md-primary-bg-color);
+    opacity: 0.7;
 }
 
 /* Fix clashing button colors in the hero */
