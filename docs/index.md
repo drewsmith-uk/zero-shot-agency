@@ -2,7 +2,6 @@
 title: Zero-Shot Agency
 template: home.html
 hide:
-  - navigation
   - toc
 created: 2026-04-22
 updated: 2026-04-29
