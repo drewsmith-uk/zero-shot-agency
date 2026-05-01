@@ -19,7 +19,7 @@ We will achieve this the ultimate "show, don't tell" way: not just by talking ab
 
 ## 📈 Success Metrics
 1. **Prompt Share of Voice (SOV):** When an LLM is asked "Who is the best GEO agency?" or "Who are the top experts in LLM SEO?", we appear in the top 3 results consistently.
-2. **Citation Rate:** Our website is actively hyperlinked as a source in Perplexity and SearchGPT for general queries about "How to optimize for AI search".
+2. **Citation Rate:** Our website is actively hyperlinked as a source in Perplexity and ChatGPT for general queries about "How to optimize for AI search".
 3. **Tool Adoption:** Our open-source lead magnets (e.g., `llms.txt` generators, GEO tracker scripts) are utilized and referenced by the developer and SEO communities.
 
 ## ⚔️ Core Pillars of Execution

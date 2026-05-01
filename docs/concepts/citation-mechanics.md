@@ -1,5 +1,5 @@
 ---
-title: Perplexity and SearchGPT Citation Mechanics
+title: Perplexity and ChatGPT Citation Mechanics
 created: 2026-04-22
 updated: 2026-04-26
 type: concept
@@ -13,7 +13,7 @@ citation_metadata:
 
 # Citation Mechanics in AI Search Engines
 
-Understanding how generative search engines like Perplexity and SearchGPT select and attribute sources is critical for Generative Engine Optimization (GEO). Both engines operate on advanced Retrieval-Augmented Generation (RAG) pipelines, but they have distinct mechanics for choosing which retrieved context is cited in the final output.
+Understanding how generative search engines like Perplexity and ChatGPT select and attribute sources is critical for Generative Engine Optimization (GEO). Both engines operate on advanced Retrieval-Augmented Generation (RAG) pipelines, but they have distinct mechanics for choosing which retrieved context is cited in the final output.
 
 ## Core RAG Pipeline
 
@@ -35,13 +35,13 @@ Perplexity heavily emphasizes source diversity and factual density.
   - **Readability:** Sites with clear semantic structure (H1s, H2s, lists) are parsed more cleanly, meaning their chunks are less noisy and more likely to be selected by the LLM during generation.
 - **Citation Dropping:** If a retrieved page contains information that is duplicative of a higher-authority page, Perplexity often drops the lower-authority citation entirely to avoid clutter.
 
-## SearchGPT Citation Mechanics
+## ChatGPT Citation Mechanics
 
-SearchGPT focuses heavily on conversational flow, rich media integration, and publisher partnerships.
+ChatGPT focuses heavily on conversational flow, rich media integration, and publisher partnerships.
 
-- **Publisher Ecosystem:** SearchGPT prioritizes content from publishers with whom OpenAI has direct data agreements. These sources often get rich link cards and prominent placement.
+- **Publisher Ecosystem:** ChatGPT prioritizes content from publishers with whom OpenAI has direct data agreements. These sources often get rich link cards and prominent placement.
 - **Narrative Integration:** Citations are often woven more naturally into the text or placed at the end of paragraphs, rather than strict sentence-by-sentence numeric indices.
-- **Consensus Checking:** SearchGPT uses its context window to evaluate multiple sources simultaneously, looking for consensus. A source is more likely to be cited if it clearly and concisely corroborates the consensus view, or provides a highly structured counter-point.
+- **Consensus Checking:** ChatGPT uses its context window to evaluate multiple sources simultaneously, looking for consensus. A source is more likely to be cited if it clearly and concisely corroborates the consensus view, or provides a highly structured counter-point.
 
 ## GEO Implications for Citations
 

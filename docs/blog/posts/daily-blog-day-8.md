@@ -10,7 +10,7 @@ categories:
 
 # Day 8: AI Search Ranking Factors vs Traditional SEO
 
-As the search landscape pivots from traditional ten blue links toward synthesized AI answers (via Perplexity, SearchGPT, and Claude), our optimization strategies must completely evolve. Traditional SEO tactics are not just becoming less effective—in some cases, they are actively harmful.
+As the search landscape pivots from traditional ten blue links toward synthesized AI answers (via Perplexity, ChatGPT, and Claude), our optimization strategies must completely evolve. Traditional SEO tactics are not just becoming less effective—in some cases, they are actively harmful.
 
 Today, we dive into the empirical data from the foundational [[princeton-geo-paper]] (Generative Engine Optimization) to understand exactly why AI [[ranking-factors]] diverge so heavily from traditional SEO.
 

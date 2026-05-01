@@ -13,7 +13,7 @@ citation_metadata:
 
 # Generative Engine Optimization Tactics
 
-Generative Engine Optimization (GEO) involves structural and stylistic modifications to website content designed to maximize visibility and citation probability in AI-powered generative search engines (like Perplexity, SearchGPT, and Gemini). 
+Generative Engine Optimization (GEO) involves structural and stylistic modifications to website content designed to maximize visibility and citation probability in AI-powered generative search engines (like Perplexity, ChatGPT, and Gemini). 
 
 Based on the original Princeton GEO paper ([[princeton-geo-paper]]), several foundational tactics have been empirically tested for their impact on content visibility:
 

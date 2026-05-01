@@ -18,7 +18,7 @@ Yesterday, we defined the mission for **Zero-Shot Agency**. Today, we built the 
 
 ## The Strategy: Bot-Native Infrastructure
 
-LLMs and AI search engines like Perplexity or SearchGPT don't care about flashy JavaScript animations or complex React states. They care about structured data, semantic clarity, and high-density information. 
+LLMs and AI search engines like Perplexity or ChatGPT don't care about flashy JavaScript animations or complex React states. They care about structured data, semantic clarity, and high-density information. 
 
 To cater to these digital consumers, we made several core strategic decisions today:
 
