@@ -39,9 +39,12 @@ header.md-header nav.md-header__inner .md-header__title {
 }
 
 /* Force high contrast text in dark mode for the hero */
-[data-md-color-scheme="slate"] .md-typeset .zsa-hero h1,
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero h1 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero p {
-    color: var(--md-primary-bg-color);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Fix clashing button colors in the hero */
