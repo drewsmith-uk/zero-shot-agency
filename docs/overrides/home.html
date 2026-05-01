@@ -31,5 +31,6 @@
   </div>
   {% endif %}
 
-  {{ super() }}
+  {# Render the remaining markdown content directly, bypassing the default template to kill the auto-h1 #}
+  {{ page.content }}
 {% endblock %}
