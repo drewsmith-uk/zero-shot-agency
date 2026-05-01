@@ -87,11 +87,12 @@ body {
 }
 
 /* 
-  Fix: Make the overall page article fully transparent.
-  Only specific blocks (cards, quotes, etc) get the solid panel background.
-  This allows the grid to be visible *between* the sections on every page.
+  Fix: Make the overall page article fully transparent on the homepage.
+  By targeting instances where the sidebars are hidden, we ensure the grid
+  flows between sections without double-borders.
 */
-.md-main__inner > .md-content > article {
+.md-sidebar[hidden] ~ .md-content > .md-content__inner,
+.md-main__inner > .md-content > article:only-child {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -124,14 +125,29 @@ header.md-header nav.md-header__inner .md-header__title {
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover { background-color: #1c2128; }
 
 /* Feature Card Typography Targeting */
+.md-typeset .grid.cards > ul {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+@media screen and (min-width: 1000px) {
+    .md-typeset .grid.cards > ul {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
 .md-typeset .grid.cards > ul > li > p {
     margin: 0;
+    font-size: 0.95rem;
+    color: var(--md-default-fg-color--light);
+}
+/* Ensure the kicker isn't bolded */
+.md-typeset .grid.cards .zsa-micro {
+    font-weight: 400 !important;
+    color: var(--md-default-fg-color--light) !important;
 }
 /* The second bold tag inside the card is the main heading */
 .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
     display: block;
     font-size: 1.15rem;
-    color: var(--md-default-fg-color);
+    color: var(--md-default-fg-color) !important;
     margin: 0.5rem 0;
     font-weight: 600;
 }
