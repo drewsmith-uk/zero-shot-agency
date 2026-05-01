@@ -45,8 +45,8 @@ extra_css:
   - stylesheets/zsa-theme.css
 
 markdown_extensions:
+  - attr_list
   - admonition
-  - md_in_html
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight:
