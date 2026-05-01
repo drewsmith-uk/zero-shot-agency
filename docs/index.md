@@ -1,5 +1,6 @@
 ---
 title: Zero-Shot Agency
+template: home.html
 hide:
   - navigation
   - toc
@@ -12,73 +13,59 @@ geo_tactics: [cite-sources, quotation-addition, statistics, fluency, authoritati
 citation_metadata:
   primary_source: "princeton-geo-paper"
   empirical_confidence: "high"
+hero:
+  kicker: "Zero-Shot Agency"
+  title: "Become the Answer. <br><span class=\"zsa-hero-accent\">Not Just a Link.</span>"
+  subtitle: "Engineering your brand's visibility for the AI-first web."
+  description: "We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, ChatGPT, Claude, and Gemini."
+  note: "No automated SEO reports or sales calls. Just an empirical diagnostic of your AI visibility."
+  actions:
+    - text: "Request an Audit"
+      link: "mailto:drew@zeroshotagency.com"
+      primary: true
+    - text: "View Our Playbook"
+      link: "strategy/"
+  stats:
+    - label: "Empirical Yield"
+      value: "+40% Visibility"
+      sub: "Via Quotation Addition"
+    - label: "Infrastructure"
+      value: "Optimized Indexing"
+      sub: "Semantic HTML & Raw Markdown"
+    - label: "Retrieval"
+      value: "Citation Probability"
+      sub: "High statistical density"
 ---
 
-<div class="zsa-hero-grid">
-  <div class="zsa-panel zsa-hero-copy">
-    <div class="zsa-kicker">Zero-Shot Agency</div>
-    <h1>Become the Answer. <br><span class="zsa-hero-accent">Not Just a Link.</span></h1>
-    <p style="font-size: 1.1rem; margin-bottom: 1rem; font-weight: 500;">Engineering your brand's visibility for the AI-first web.</p>
-    <p>We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, ChatGPT, Claude, and Gemini.</p>
-    
-    <div class="zsa-hero-actions">
-      <a href="mailto:drew@zeroshotagency.com" class="md-button md-button--primary">Request an Audit</a>
-      <a href="strategy/" class="md-button">View Our Playbook</a>
-      <p class="zsa-micro-note">No automated SEO reports or sales calls. Just an empirical diagnostic of your AI visibility.</p>
-    </div>
-  </div>
-  
-  <div class="zsa-panel zsa-hero-stats">
-    <div class="zsa-stat-block">
-      <div class="zsa-micro">Empirical Yield</div>
-      <div class="zsa-stat-value">+40% Visibility</div>
-      <p>Via Quotation Addition</p>
-    </div>
-    <div class="zsa-stat-block">
-      <div class="zsa-micro">Infrastructure</div>
-      <div class="zsa-stat-value">Optimized Indexing</div>
-      <p>Semantic HTML & Raw Markdown</p>
-    </div>
-    <div class="zsa-stat-block">
-      <div class="zsa-micro">Retrieval</div>
-      <div class="zsa-stat-value">Citation Probability</div>
-      <p>High statistical density</p>
-    </div>
-  </div>
-</div>
+## Core GEO Tactics to Maximize Visibility {: .zsa-section-title }
 
-<h2 class="zsa-section-title">Core GEO Tactics to Maximize Visibility</h2>
 <div class="grid cards" markdown>
 
--   <div class="zsa-micro">01 // Structure</div>
+-   **01 // Structure**
     **Semantic Architecture**
     We rebuild content layers using strict HTML5 tags to strip noise and ensure LLM chunkers isolate high-value text.
 
--   <div class="zsa-micro">02 // Formats</div>
+-   **02 // Formats**
     **LLM-Native Assets**
     Standardized [`llms.txt`](llms.txt) and markdown endpoints provide LLMs the exact formats they prefer for ingestion.
 
--   <div class="zsa-micro">03 // Density</div>
+-   **03 // Density**
     **Information Injection**
     Saturating content with statistics and expert quotes to optimize retrieval during vector similarity searches.
 
--   <div class="zsa-micro">04 // Authority</div>
+-   **04 // Authority**
     **Agentic Tooling**
     Establishing authority by building open-source lead-magnets like the [GEO Tracker](entities/geo-tracker.md).
 
 </div>
 
-<div class="zsa-hero-grid" style="grid-template-columns: 1fr; margin-top: 4rem;">
-  <div class="zsa-panel" style="background: var(--md-code-bg-color);">
-    <div class="zsa-kicker">Expert Consensus</div>
-    <blockquote style="margin: 0;">
-      "The transition from traditional search to generative AI search requires a fundamental shift in how content is structured. High information density, authoritative quotations, and bot-native formats are no longer optional—they are the prerequisite for visibility in RAG pipelines."
-      <cite>— Zero-Shot Agency Manifesto on AI Retrieval</cite>
-    </blockquote>
-  </div>
-</div>
+> **Expert Consensus**
+> 
+> "The transition from traditional search to generative AI search requires a fundamental shift in how content is structured. High information density, authoritative quotations, and bot-native formats are no longer optional—they are the prerequisite for visibility in RAG pipelines."  
+> — *Zero-Shot Agency Manifesto on AI Retrieval*
+{: .zsa-panel .zsa-hero-grid style="margin-top: 4rem; background: var(--md-code-bg-color);" }
 
-<h2 class="zsa-section-title" style="margin-top: 4rem;">Glossary of AI Search Optimization Terms</h2>
+## Glossary of AI Search Optimization Terms {: .zsa-section-title style="margin-top: 4rem;" }
 
 **Generative Engine Optimization (GEO)**
 : The practice of structuring and enriching web content to maximize visibility, citation frequency, and favorable sentiment within LLM-generated search responses.

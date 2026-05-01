@@ -4,6 +4,7 @@ site_description: The Definitive Generative Engine Optimization (GEO) & AI Searc
 
 theme:
   name: material
+  custom_dir: docs/overrides
   logo: assets/favicon.svg
   favicon: assets/favicon.svg
   palette:
