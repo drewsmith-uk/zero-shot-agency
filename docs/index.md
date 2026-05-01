@@ -19,6 +19,7 @@ citation_metadata:
     <a href="mailto:drew@zeroshotagency.com" class="md-button md-button--primary">Request an Audit</a>
     <a href="strategy/" class="md-button">View Our Playbook</a>
   </div>
+  <span class="zsa-hero-microcopy">No automated SEO reports or sales calls. Just an empirical diagnostic of your AI visibility.</span>
 </div>
 
 ## Essential GEO Statistics and Impact Metrics

@@ -26,6 +26,7 @@ header.md-header nav.md-header__inner .md-header__title {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 0.5em;
+    letter-spacing: -0.02em;
 }
 
 .md-typeset .zsa-hero p:nth-of-type(1) {
@@ -41,6 +42,11 @@ header.md-header nav.md-header__inner .md-header__title {
     font-size: 1em;
     max-width: 700px;
     margin: 0 auto 2.5rem auto;
+}
+
+.md-typeset .zsa-hero .md-button {
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease-in-out;
 }
 
 .md-typeset .zsa-hero .md-button--primary {
@@ -72,4 +78,13 @@ header.md-header nav.md-header__inner .md-header__title {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.md-typeset .zsa-hero-microcopy {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.85em;
+    color: var(--md-default-fg-color--light);
+    letter-spacing: 0.01em;
+    opacity: 0.8;
 }
