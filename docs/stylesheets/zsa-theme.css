@@ -91,11 +91,11 @@ body {
   By targeting instances where the sidebars are hidden, we ensure the grid
   flows between sections without double-borders.
 */
-.md-sidebar[hidden] ~ .md-content > .md-content__inner,
-.md-main__inner > .md-content > article:only-child {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+html body[data-md-color-scheme] .md-sidebar[hidden] ~ .md-content > .md-content__inner,
+html body[data-md-color-scheme] .md-main__inner > .md-content > article:only-child {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
     padding: 0;
 }
 
@@ -125,12 +125,12 @@ header.md-header nav.md-header__inner .md-header__title {
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover { background-color: #1c2128; }
 
 /* Feature Card Typography Targeting */
-.md-typeset .grid.cards > ul {
+html body .md-typeset .grid.cards > ul {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 @media screen and (min-width: 1000px) {
-    .md-typeset .grid.cards > ul {
-        grid-template-columns: repeat(4, 1fr) !important;
+    html body .md-typeset .grid.cards > ul {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 .md-typeset .grid.cards > ul > li > p {
@@ -139,15 +139,15 @@ header.md-header nav.md-header__inner .md-header__title {
     color: var(--md-default-fg-color--light);
 }
 /* Ensure the kicker isn't bolded */
-.md-typeset .grid.cards .zsa-micro {
-    font-weight: 400 !important;
-    color: var(--md-default-fg-color--light) !important;
+html body .md-typeset .grid.cards > ul > li > p > strong.zsa-micro {
+    font-weight: 400;
+    color: var(--md-default-fg-color--light);
 }
 /* The second bold tag inside the card is the main heading */
-.md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
+html body .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
     display: block;
     font-size: 1.15rem;
-    color: var(--md-default-fg-color) !important;
+    color: var(--md-default-fg-color);
     margin: 0.5rem 0;
     font-weight: 600;
 }
@@ -273,8 +273,8 @@ header.md-header nav.md-header__inner .md-header__title {
 .zsa-stat-block {
     margin-bottom: 2rem;
 }
-.zsa-stat-block p {
-    margin: 0.5rem 0 0 !important;
+html .md-typeset .zsa-stat-block p {
+    margin: 0.5rem 0 0;
     font-size: 0.85rem;
     color: var(--md-default-fg-color--light);
 }
@@ -323,19 +323,19 @@ header.md-header nav.md-header__inner .md-header__title {
     background-color: rgba(128,128,128,0.05);
 }
 
-.zsa-micro-note {
+html .md-typeset .zsa-micro-note {
     font-size: 0.8rem;
     color: var(--md-default-fg-color--light);
     max-width: 250px;
-    margin: 0 !important;
+    margin: 0;
 }
 
-.zsa-section-title {
+html .md-typeset .zsa-section-title {
     font-family: var(--md-code-font-family);
     font-size: 1.25rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    border-bottom: none !important;
+    border-bottom: none;
     color: var(--md-default-fg-color);
 }
 
