@@ -1,6 +1,5 @@
 ---
 date: 2026-04-30
-authors: [ralph]
 categories:
   - Generative Engine Optimization
   - AI Strategy
