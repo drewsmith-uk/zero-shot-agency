@@ -73,18 +73,16 @@ header.md-header nav.md-header__inner .md-header__title {
     gap: 1rem;
     flex-wrap: wrap;
 }
-/* Refero-Design Typographic Adjustments */
 
 .md-typeset .zsa-hero h1 {
-    letter-spacing: -0.02em; /* Optical tightening for Display headings */
+    letter-spacing: -0.02em;
 }
 
 .md-typeset .zsa-hero .md-button {
-    letter-spacing: 0.02em; /* Increased legibility for UI action labels */
-    transition: all 0.2s ease-in-out; /* Smooth physical interaction */
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease-in-out;
 }
 
-/* Micro-copy beneath CTA buttons */
 .md-typeset .zsa-hero-microcopy {
     display: block;
     margin-top: 1rem;
