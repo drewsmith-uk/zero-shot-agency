@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZSA: Technical Brutalism Sketch (Real Content)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Terminal / IDE Palette */
+      --bg: #0d1117;          /* Deep GitHub/Terminal dark */
+      --paper: #161b22;       /* Elevated dark */
+      --ink: #c9d1d9;         /* Primary text */
+      --muted: #8b949e;       /* Secondary text */
+      --line: #30363d;        /* Borders */
+      --accent: #58a6ff;      /* Tech blue accent */
+      --accent-ink: #ffffff;
+      --font-sans: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: "Geist Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      /* Subtle grid background to imply "workspace" */
+      background-image: linear-gradient(var(--line) 1px, transparent 1px),
+                        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: -1px -1px;
+    }
+
+    /* Fading grid at the top */
+    .grid-fade {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 80vh;
+      background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      width: min(1000px, calc(100vw - 4rem));
+      margin: 0 auto;
+      padding-top: 4rem;
+      padding-bottom: 8rem;
+    }
+
+    /* Core typography */
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0 0 1rem;
+      color: #ffffff;
+    }
+    
+    h2 {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: #ffffff;
+      margin: 4rem 0 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-accent {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .kicker {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .micro {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Structural Grid System */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-bottom: 4rem;
+    }
+
+    .panel {
+      background: var(--bg);
+      padding: 3rem;
+    }
+
+    .panel.hero-copy {
+      padding-right: 4rem;
+    }
+
+    .stat-block {
+      margin-bottom: 2rem;
+    }
+    .stat-value {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      color: #ffffff;
+    }
+
+    /* Content Grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-bottom: 4rem;
+    }
+
+    /* 4-col for Core GEO Tactics */
+    .content-grid.four-col {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 800px) {
+      .content-grid.four-col { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .card {
+      background: var(--paper);
+      padding: 2rem;
+      transition: background-color 0.2s ease;
+    }
+    
+    .card:hover {
+      background: #1c2128;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin: 0 0 0.5rem 0;
+      color: #ffffff;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* Buttons */
+    .hero-actions {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--ink);
+      color: var(--bg);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.8rem 1.5rem;
+      border: 1px solid var(--ink);
+      cursor: pointer;
+      text-decoration: none !important;
+      transition: all 0.2s;
+    }
+
+    .cta:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .cta.secondary {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--line);
+    }
+    
+    .cta.secondary:hover {
+      border-color: var(--ink);
+      background: rgba(255,255,255,0.05);
+      color: #ffffff;
+    }
+    
+    .micro-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      max-width: 250px;
+      margin: 0;
+    }
+
+    /* Dictionary / Glossary Block */
+    .glossary {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 2rem;
+    }
+    
+    .glossary-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .glossary-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .glossary-term {
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+    .glossary-def {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    /* Quote Block */
+    blockquote {
+      margin: 0 0 4rem 0;
+      padding: 2rem 3rem;
+      border-left: 4px solid var(--accent);
+      background: var(--paper);
+      font-size: 1.25rem;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: normal;
+      font-family: var(--font-mono);
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .content-grid { grid-template-columns: 1fr; }
+      .panel { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-fade"></div>
+  
+  <main class="shell">
+    <div class="hero-grid">
+      <div class="panel hero-copy">
+        <div class="kicker">Zero-Shot Agency</div>
+        <h1>Become the Answer. <br><span class="hero-accent">Not Just a Link.</span></h1>
+        <p style="font-size: 1.1rem; color: #fff; margin-bottom: 1rem;">Engineering your brand's visibility for the AI-first web.</p>
+        <p>We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, ChatGPT, Claude, and Gemini.</p>
+        
+        <div class="hero-actions">
+          <a class="cta" href="mailto:drew@zeroshotagency.com">Request an Audit</a>
+          <a class="cta secondary" href="#">View Our Playbook</a>
+          <p class="micro-note">No automated SEO reports or sales calls. Just an empirical diagnostic of your AI visibility.</p>
+        </div>
+      </div>
+      
+      <div class="panel hero-stats">
+        <div class="stat-block">
+          <div class="micro">Empirical Yield</div>
+          <div class="stat-value">+40% Visibility</div>
+          <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted);">Via Quotation Addition</p>
+        </div>
+        <div class="stat-block">
+          <div class="micro">Infrastructure</div>
+          <div class="stat-value">Optimized Indexing</div>
+          <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted);">Semantic HTML & Raw Markdown</p>
+        </div>
+        <div class="stat-block">
+          <div class="micro">Retrieval</div>
+          <div class="stat-value">Citation Probability</div>
+          <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted);">High statistical density</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Core GEO Tactics to Maximize Visibility</h2>
+    <div class="content-grid four-col">
+      <div class="card">
+        <div class="micro">01 // Structure</div>
+        <h3>Semantic Architecture</h3>
+        <p>We rebuild content layers using strict HTML5 tags to strip noise and ensure LLM chunkers isolate high-value text.</p>
+      </div>
+      <div class="card">
+        <div class="micro">02 // Formats</div>
+        <h3>LLM-Native Assets</h3>
+        <p>Standardized <code>llms.txt</code> and markdown endpoints provide LLMs the exact formats they prefer for ingestion.</p>
+      </div>
+      <div class="card">
+        <div class="micro">03 // Density</div>
+        <h3>Information Injection</h3>
+        <p>Saturating content with statistics and expert quotes to optimize retrieval during vector similarity searches.</p>
+      </div>
+      <div class="card">
+        <div class="micro">04 // Authority</div>
+        <h3>Agentic Tooling</h3>
+        <p>Establishing authority by building open-source lead-magnets like the GEO Tracker.</p>
+      </div>
+    </div>
+
+    <div class="hero-grid" style="grid-template-columns: 1fr;">
+      <div class="panel">
+        <div class="kicker">Expert Consensus</div>
+        <blockquote>
+          "The transition from traditional search to generative AI search requires a fundamental shift in how content is structured. High information density, authoritative quotations, and bot-native formats are no longer optional—they are the prerequisite for visibility in RAG pipelines."
+          <cite>— Zero-Shot Agency Manifesto on AI Retrieval</cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <h2>Glossary of AI Search Optimization</h2>
+    <div class="glossary">
+      <div class="glossary-item">
+        <div class="glossary-term">Generative Engine Optimization (GEO)</div>
+        <p class="glossary-def">The practice of structuring and enriching web content to maximize visibility, citation frequency, and favorable sentiment within LLM-generated search responses.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">Prompt Share of Voice (SOV)</div>
+        <p class="glossary-def">A metric measuring how frequently a brand or domain is cited or recommended by an LLM in response to industry-specific prompts.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">RAG (Retrieval-Augmented Generation)</div>
+        <p class="glossary-def">The architecture used by modern AI search engines to fetch external information and ground their generated answers in factual, cited sources.</p>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

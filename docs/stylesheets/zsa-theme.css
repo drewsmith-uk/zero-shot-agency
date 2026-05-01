@@ -1,0 +1,169 @@
+/* 
+===========================================================================
+  ZSA TECHNICAL BRUTALISM THEME
+  Implementation of the DESIGN.md token spec.
+  Overrides native mkdocs-material variables with a terminal/IDE aesthetic.
+===========================================================================
+*/
+
+/* 
+  1. BASE THEME VARIABLES & GRID
+  Enforcing zero radius and terminal backgrounds globally.
+*/
+:root {
+    /* Global structural overrides */
+    --md-border-radius: 0px;
+    --zsa-grid-size: 40px;
+}
+
+/* Light Mode Override (IDE Light) */
+[data-md-color-scheme="default"] {
+    --md-default-bg-color: #f6f8fa;
+    --md-default-fg-color: #111827;
+    --md-default-fg-color--light: #6b7280;
+    --md-code-bg-color: #ffffff;
+    --md-typeset-table-color: #d1d5db; /* used for structural borders */
+    --md-accent-fg-color: #2563eb;
+    
+    /* IDE workspace grid */
+    --zsa-grid-line: #d1d5db;
+}
+
+/* Dark Mode Override (GitHub Dark / IDE Dark) */
+[data-md-color-scheme="slate"] {
+    --md-default-bg-color: #0d1117;
+    --md-default-fg-color: #c9d1d9;
+    --md-default-fg-color--light: #8b949e;
+    --md-code-bg-color: #161b22;
+    --md-typeset-table-color: #30363d; /* used for structural borders */
+    --md-accent-fg-color: #58a6ff;
+    
+    /* IDE workspace grid */
+    --zsa-grid-line: #30363d;
+}
+
+/* 
+  2. WORKSPACE GRID BACKGROUND 
+  Applied to the main container body 
+*/
+body {
+    background-image: linear-gradient(var(--zsa-grid-line) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--zsa-grid-line) 1px, transparent 1px);
+    background-size: var(--zsa-grid-size) var(--zsa-grid-size);
+    background-position: -1px -1px;
+}
+
+/* Ensure inner content wrappers have solid background so text stays legible */
+.md-main__inner, .md-sidebar {
+    background-color: var(--md-default-bg-color);
+    box-shadow: 0 0 0 1px var(--md-typeset-table-color);
+}
+
+/* 
+  3. COMPONENT TWEAKS (Brutalist Geometry) 
+*/
+/* Bring the site title closer to the logo without altering the logo's symmetrical hit area */
+header.md-header nav.md-header__inner .md-header__title {
+    margin-left: 0.25rem; 
+}
+
+/* Make headers and navigation borders sharp and technical */
+.md-header {
+    border-bottom: 1px solid var(--md-typeset-table-color);
+    box-shadow: none;
+}
+
+/* Feature grid cards (Brutalist paneling) */
+.md-typeset .grid.cards > ul > li {
+    background-color: var(--md-code-bg-color);
+    border: 1px solid var(--md-typeset-table-color);
+    transition: background-color 0.2s ease;
+}
+
+[data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li:hover { background-color: #ffffff; }
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover { background-color: #1c2128; }
+
+/* 
+  4. ZERO-SHOT AGENCY HERO BANNER 
+  Refactored from gradients to flat technical panels
+*/
+.md-typeset .zsa-hero {
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    background-color: var(--md-code-bg-color);
+    border: 1px solid var(--md-typeset-table-color);
+}
+
+.md-typeset .zsa-hero h1 {
+    margin-top: 0;
+    border-bottom: none;
+    color: var(--md-default-fg-color);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.04em;
+}
+
+.md-typeset .zsa-hero p:nth-of-type(1) {
+    color: var(--md-default-fg-color);
+    font-size: 1.25em;
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.md-typeset .zsa-hero p:nth-of-type(2) {
+    color: var(--md-default-fg-color--light);
+    font-size: 1em;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.md-typeset .zsa-hero .md-button {
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0;
+    font-family: var(--md-text-font-family);
+    font-weight: 600;
+}
+
+.md-typeset .zsa-hero .md-button--primary {
+    background-color: var(--md-default-fg-color);
+    color: var(--md-default-bg-color);
+    border-color: var(--md-default-fg-color);
+}
+
+.md-typeset .zsa-hero .md-button--primary:hover,
+.md-typeset .zsa-hero .md-button--primary:focus {
+    background-color: transparent;
+    color: var(--md-default-fg-color);
+}
+
+.md-typeset .zsa-hero .md-button:not(.md-button--primary) {
+    background-color: transparent;
+    color: var(--md-default-fg-color);
+    border-color: var(--md-typeset-table-color);
+}
+
+.md-typeset .zsa-hero .md-button:not(.md-button--primary):hover,
+.md-typeset .zsa-hero .md-button:not(.md-button--primary):focus {
+    border-color: var(--md-default-fg-color);
+    background-color: rgba(128,128,128,0.05);
+}
+
+.md-typeset .zsa-hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.md-typeset .zsa-hero-microcopy {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.85em;
+    color: var(--md-default-fg-color--light);
+    letter-spacing: 0.01em;
+    opacity: 0.8;
+}
