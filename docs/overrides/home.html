@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+
+{% block content %}
+  {% if page.meta.hero %}
+  <div class="zsa-hero-grid">
+    <div class="zsa-panel zsa-hero-copy">
+      <div class="zsa-kicker">{{ page.meta.hero.kicker }}</div>
+      <h1>{{ page.meta.hero.title }}</h1>
+      <p class="zsa-hero-subtitle">{{ page.meta.hero.subtitle }}</p>
+      
+      {# We use the |safe filter here because the description contains markdown bold tags that we want rendered if we pass them in YAML, but ideally we just use pure HTML tags in the template, or markdown parsing filter if available. Actually, since we're writing this for LLMs, we will keep the YAML clean and use a bit of HTML for bold in the string, or just let it render as text if safe doesn't parse markdown. Let's assume the string contains some HTML bold tags. #}
+      <p>{{ page.meta.hero.description | safe }}</p>
+      
+      <div class="zsa-hero-actions">
+        {% for action in page.meta.hero.actions %}
+        <a href="{{ action.link }}" class="md-button {% if action.primary %}md-button--primary{% endif %}">{{ action.text }}</a>
+        {% endfor %}
+        <p class="zsa-micro-note">{{ page.meta.hero.note }}</p>
+      </div>
+    </div>
+    
+    <div class="zsa-panel zsa-hero-stats">
+      {% for stat in page.meta.hero.stats %}
+      <div class="zsa-stat-block">
+        <div class="zsa-micro">{{ stat.label }}</div>
+        <div class="zsa-stat-value">{{ stat.value }}</div>
+        <p>{{ stat.sub }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {{ super() }}
+{% endblock %}

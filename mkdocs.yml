@@ -4,6 +4,7 @@ site_description: The Definitive Generative Engine Optimization (GEO) & AI Searc
 
 theme:
   name: material
+  custom_dir: docs/overrides
   logo: assets/favicon.svg
   favicon: assets/favicon.svg
   palette:
@@ -42,10 +43,9 @@ hooks:
   - tools/build_log.py
 
 extra_css:
-  - stylesheets/zsa-theme.css
+  - stylesheets/custom.css
 
 markdown_extensions:
-  - attr_list
   - admonition
   - pymdownx.details
   - pymdownx.superfences
