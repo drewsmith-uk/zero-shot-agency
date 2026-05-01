@@ -43,7 +43,7 @@ hooks:
   - tools/build_log.py
 
 extra_css:
-  - stylesheets/custom.css
+  - stylesheets/zsa-theme.css?v=2
 
 markdown_extensions:
   - admonition
