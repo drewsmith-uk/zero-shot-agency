@@ -4,6 +4,7 @@ template: home.html
 hide:
   - navigation
   - toc
+  - title
 created: 2026-04-22
 updated: 2026-04-29
 type: concept
@@ -41,20 +42,20 @@ hero:
 
 <div class="grid cards" markdown>
 
--   **01 // Structure**
-    **Semantic Architecture**
+-   **01 // Structure**{: .zsa-micro }  
+    **Semantic Architecture**  
     We rebuild content layers using strict HTML5 tags to strip noise and ensure LLM chunkers isolate high-value text.
 
--   **02 // Formats**
-    **LLM-Native Assets**
+-   **02 // Formats**{: .zsa-micro }  
+    **LLM-Native Assets**  
     Standardized [`llms.txt`](llms.txt) and markdown endpoints provide LLMs the exact formats they prefer for ingestion.
 
--   **03 // Density**
-    **Information Injection**
+-   **03 // Density**{: .zsa-micro }  
+    **Information Injection**  
     Saturating content with statistics and expert quotes to optimize retrieval during vector similarity searches.
 
--   **04 // Authority**
-    **Agentic Tooling**
+-   **04 // Authority**{: .zsa-micro }  
+    **Agentic Tooling**  
     Establishing authority by building open-source lead-magnets like the [GEO Tracker](entities/geo-tracker.md).
 
 </div>
@@ -63,7 +64,6 @@ hero:
 > 
 > "The transition from traditional search to generative AI search requires a fundamental shift in how content is structured. High information density, authoritative quotations, and bot-native formats are no longer optional—they are the prerequisite for visibility in RAG pipelines."  
 > — *Zero-Shot Agency Manifesto on AI Retrieval*
-{: .zsa-panel .zsa-hero-grid style="margin-top: 4rem; background: var(--md-code-bg-color);" }
 
 ## Glossary of AI Search Optimization Terms {: .zsa-section-title style="margin-top: 4rem;" }
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap');
+
 /* 
 ===========================================================================
   ZSA TECHNICAL BRUTALISM THEME
@@ -8,7 +10,7 @@
 
 /* 
   1. BASE THEME VARIABLES & GRID
-  Enforcing zero radius and terminal backgrounds globally.
+  Enforcing zero radius, terminal backgrounds, and Geist fonts globally.
 */
 :root {
     /* Global structural overrides */
@@ -16,6 +18,10 @@
     --zsa-grid-size: 40px;
     --md-grid-max-width: 1000px;
     --md-grid-cards-columns: 4;
+    
+    /* Typography */
+    --md-text-font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+    --md-code-font-family: "Geist Mono", monospace;
 }
 
 /* Light Mode Override (IDE Light) */
@@ -27,6 +33,11 @@
     --md-typeset-table-color: #d1d5db; /* used for structural borders */
     --md-accent-fg-color: #2563eb;
     
+    /* Strict Typeset Colors (preventing grey tints) */
+    --md-typeset-color: var(--md-default-fg-color);
+    --md-typeset-a-color: var(--md-accent-fg-color);
+    --md-typeset-heading-color: var(--md-default-fg-color);
+
     /* IDE workspace grid */
     --zsa-grid-line: #d1d5db;
 }
@@ -40,6 +51,11 @@
     --md-typeset-table-color: #30363d; /* used for structural borders */
     --md-accent-fg-color: #58a6ff;
     
+    /* Strict Typeset Colors (preventing grey tints) */
+    --md-typeset-color: var(--md-default-fg-color);
+    --md-typeset-a-color: var(--md-accent-fg-color);
+    --md-typeset-heading-color: var(--md-default-fg-color);
+
     /* IDE workspace grid */
     --zsa-grid-line: #30363d;
 }
@@ -69,20 +85,18 @@ body {
 .md-content {
     background-color: transparent; 
 }
-/* For normal docs, ensure reading pane has background. Landing pages handle their own panel backgrounds. */
-.md-main__inner > .md-content > article:not(:only-child),
-.md-main__inner:not([hidden]) > .md-content > article {
-    background-color: var(--md-code-bg-color);
-    border: 1px solid var(--md-typeset-table-color);
-    padding: 2rem;
-}
-/* Explicit override for landing pages (which hide nav/toc) */
-.md-main__inner[data-md-component="main"] > .md-content[data-md-component="content"] > article:only-child {
-    background-color: transparent;
-    border: none;
+
+/* 
+  Fix: Make the overall page article fully transparent.
+  Only specific blocks (cards, quotes, etc) get the solid panel background.
+  This allows the grid to be visible *between* the sections on every page.
+*/
+.md-main__inner > .md-content > article {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     padding: 0;
 }
-
 
 /* 
   3. COMPONENT TWEAKS (Brutalist Geometry) 
@@ -104,12 +118,17 @@ header.md-header nav.md-header__inner .md-header__title {
     border: 1px solid var(--md-typeset-table-color);
     transition: background-color 0.2s ease;
     border-radius: 0;
+    padding: 2rem;
 }
 [data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li:hover { background-color: #ffffff; }
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover { background-color: #1c2128; }
 
 /* Feature Card Typography Targeting */
-.md-typeset .grid.cards > ul > li > strong {
+.md-typeset .grid.cards > ul > li > p {
+    margin: 0;
+}
+/* The second bold tag inside the card is the main heading */
+.md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
     display: block;
     font-size: 1.15rem;
     color: var(--md-default-fg-color);
@@ -119,7 +138,7 @@ header.md-header nav.md-header__inner .md-header__title {
 
 /* Blockquote styling (Expert Consensus) */
 .md-typeset blockquote {
-    margin: 0 0 4rem 0;
+    margin: 4rem 0;
     padding: 2rem 3rem;
     border-left: 4px solid var(--md-accent-fg-color);
     background: var(--md-code-bg-color);
@@ -129,6 +148,15 @@ header.md-header nav.md-header__inner .md-header__title {
     border-right: 1px solid var(--md-typeset-table-color);
     border-top: 1px solid var(--md-typeset-table-color);
     border-bottom: 1px solid var(--md-typeset-table-color);
+}
+.md-typeset blockquote p:first-child strong {
+    font-family: var(--md-code-font-family);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--md-accent-fg-color);
+    display: block;
+    margin-bottom: 1.5rem;
 }
 .md-typeset blockquote cite {
     display: block;
@@ -179,7 +207,7 @@ header.md-header nav.md-header__inner .md-header__title {
 }
 
 .zsa-panel {
-    background: var(--md-default-bg-color);
+    background: var(--md-code-bg-color);
     padding: 3rem;
 }
 .zsa-panel.zsa-hero-copy {
@@ -213,6 +241,7 @@ header.md-header nav.md-header__inner .md-header__title {
     letter-spacing: 0.1em;
     color: var(--md-accent-fg-color);
     margin-bottom: 1.5rem;
+    display: block;
 }
 
 .zsa-micro {
@@ -222,7 +251,7 @@ header.md-header nav.md-header__inner .md-header__title {
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    display: block;
+    display: inline-block;
 }
 
 .zsa-stat-block {
@@ -258,7 +287,7 @@ header.md-header nav.md-header__inner .md-header__title {
 
 .md-typeset .zsa-hero-actions .md-button--primary {
     background-color: var(--md-default-fg-color);
-    color: var(--md-default-bg-color);
+    color: var(--md-code-bg-color);
     border-color: var(--md-default-fg-color);
 }
 .md-typeset .zsa-hero-actions .md-button--primary:hover,

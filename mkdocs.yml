@@ -7,9 +7,6 @@ theme:
   custom_dir: docs/overrides
   logo: assets/favicon.svg
   favicon: assets/favicon.svg
-  font:
-    text: Geist
-    code: Geist Mono
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -46,7 +43,7 @@ hooks:
   - tools/build_log.py
 
 extra_css:
-  - stylesheets/zsa-theme.css?v=2
+  - stylesheets/zsa-theme.css?v=3
 
 markdown_extensions:
   - admonition
