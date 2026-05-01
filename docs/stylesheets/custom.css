@@ -41,19 +41,19 @@ header.md-header nav.md-header__inner .md-header__title {
 /* Force high contrast text in dark mode for the hero */
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero h1,
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero p {
-    color: #ffffff;
+    color: var(--md-primary-bg-color);
 }
 
 /* Fix clashing button colors in the hero */
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero .md-button--primary {
-    background-color: #0d9488; /* Premium teal */
-    color: #ffffff;
-    border-color: #0d9488;
+    background-color: var(--md-accent-fg-color);
+    color: var(--md-primary-bg-color);
+    border-color: var(--md-accent-fg-color);
 }
 
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero .md-button:not(.md-button--primary) {
-    color: #ffffff;
-    border-color: #ffffff;
+    color: var(--md-primary-bg-color);
+    border-color: var(--md-primary-bg-color);
 }
 
 .md-typeset .zsa-hero-buttons {
