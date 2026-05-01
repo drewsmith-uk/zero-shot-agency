@@ -91,8 +91,8 @@ body {
   By targeting instances where the sidebars are hidden, we ensure the grid
   flows between sections without double-borders.
 */
-html body[data-md-color-scheme] .md-sidebar[hidden] ~ .md-content > .md-content__inner,
-html body[data-md-color-scheme] .md-main__inner > .md-content > article:only-child {
+html body [data-md-color-scheme] .md-sidebar[hidden] ~ .md-content > .md-content__inner,
+html body [data-md-color-scheme] .md-content > article:only-child {
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -114,37 +114,37 @@ header.md-header nav.md-header__inner .md-header__title {
 }
 
 /* Feature grid cards (Brutalist paneling) */
-.md-typeset .grid.cards > ul > li {
+html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li {
     background-color: var(--md-code-bg-color);
     border: 1px solid var(--md-typeset-table-color);
     transition: background-color 0.2s ease;
     border-radius: 0;
     padding: 2rem;
 }
-[data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li:hover { background-color: #ffffff; }
-[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover { background-color: #1c2128; }
+[data-md-color-scheme="default"] html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li:hover { background-color: #ffffff; }
+[data-md-color-scheme="slate"] html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li:hover { background-color: #1c2128; }
 
 /* Feature Card Typography Targeting */
-html body .md-typeset .grid.cards > ul {
+html body [data-md-color-scheme] .md-typeset .grid.cards > ul {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 @media screen and (min-width: 1000px) {
-    html body .md-typeset .grid.cards > ul {
+    html body [data-md-color-scheme] .md-typeset .grid.cards > ul {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-.md-typeset .grid.cards > ul > li > p {
+html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p {
     margin: 0;
     font-size: 0.95rem;
     color: var(--md-default-fg-color--light);
 }
 /* Ensure the kicker isn't bolded */
-html body .md-typeset .grid.cards > ul > li > p > strong.zsa-micro {
+html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong.zsa-micro {
     font-weight: 400;
     color: var(--md-default-fg-color--light);
 }
 /* The second bold tag inside the card is the main heading */
-html body .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
+html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
     display: block;
     font-size: 1.15rem;
     color: var(--md-default-fg-color);
@@ -273,7 +273,7 @@ html body .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
 .zsa-stat-block {
     margin-bottom: 2rem;
 }
-html .md-typeset .zsa-stat-block p {
+.md-typeset .zsa-stat-block p {
     margin: 0.5rem 0 0;
     font-size: 0.85rem;
     color: var(--md-default-fg-color--light);
@@ -323,14 +323,14 @@ html .md-typeset .zsa-stat-block p {
     background-color: rgba(128,128,128,0.05);
 }
 
-html .md-typeset .zsa-micro-note {
+.md-typeset .zsa-micro-note {
     font-size: 0.8rem;
     color: var(--md-default-fg-color--light);
     max-width: 250px;
     margin: 0;
 }
 
-html .md-typeset .zsa-section-title {
+.md-typeset .zsa-section-title {
     font-family: var(--md-code-font-family);
     font-size: 1.25rem;
     text-transform: uppercase;
