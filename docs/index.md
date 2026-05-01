@@ -51,20 +51,20 @@ citation_metadata:
 <div class="grid cards" markdown>
 
 -   <div class="zsa-micro">01 // Structure</div>
-    **Semantic Architecture**
-    We rebuild content layers using strict HTML5 tags to strip noise and ensure LLM chunkers isolate high-value text.
+    <p><strong>Semantic Architecture</strong><br>
+    We rebuild content layers using strict HTML5 tags to strip noise and ensure LLM chunkers isolate high-value text.</p>
 
 -   <div class="zsa-micro">02 // Formats</div>
-    **LLM-Native Assets**
-    Standardized [`llms.txt`](llms.txt) and markdown endpoints provide LLMs the exact formats they prefer for ingestion.
+    <p><strong>LLM-Native Assets</strong><br>
+    Standardized <a href="llms.txt">llms.txt</a> and markdown endpoints provide LLMs the exact formats they prefer for ingestion.</p>
 
 -   <div class="zsa-micro">03 // Density</div>
-    **Information Injection**
-    Saturating content with statistics and expert quotes to optimize retrieval during vector similarity searches.
+    <p><strong>Information Injection</strong><br>
+    Saturating content with statistics and expert quotes to optimize retrieval during vector similarity searches.</p>
 
 -   <div class="zsa-micro">04 // Authority</div>
-    **Agentic Tooling**
-    Establishing authority by building open-source lead-magnets like the [GEO Tracker](entities/geo-tracker.md).
+    <p><strong>Agentic Tooling</strong><br>
+    Establishing authority by building open-source lead-magnets like the <a href="entities/geo-tracker.md">GEO Tracker</a>.</p>
 
 </div>
 
