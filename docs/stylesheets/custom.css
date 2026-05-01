@@ -12,7 +12,7 @@ header.md-header nav.md-header__inner .md-header__title {
 }
 
 [data-md-color-scheme="default"] .md-typeset .zsa-hero {
-    background: linear-gradient(135deg, #ccfbf1 0%, var(--md-default-bg-color) 100%);
+    background: linear-gradient(135deg, #f1f5f9 0%, var(--md-default-bg-color) 100%);
 }
 
 [data-md-color-scheme="slate"] .md-typeset .zsa-hero {
