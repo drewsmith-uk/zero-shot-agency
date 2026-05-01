@@ -27,14 +27,33 @@ header.md-header nav.md-header__inner .md-header__title {
 .md-typeset .zsa-hero h1 {
     margin-top: 0;
     border-bottom: none;
+    color: var(--md-default-fg-color);
 }
 
 .md-typeset .zsa-hero p {
-    color: var(--md-default-fg-color--light);
+    color: var(--md-default-fg-color);
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5rem;
+}
+
+/* Force high contrast text in dark mode for the hero */
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero h1,
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero p {
+    color: #ffffff;
+}
+
+/* Fix clashing button colors in the hero */
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero .md-button--primary {
+    background-color: #0d9488; /* Premium teal */
+    color: #ffffff;
+    border-color: #0d9488;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .zsa-hero .md-button:not(.md-button--primary) {
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
 .md-typeset .zsa-hero-buttons {
