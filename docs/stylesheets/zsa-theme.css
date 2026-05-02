@@ -139,12 +139,12 @@ html body [data-md-color-scheme] .md-typeset .grid.cards > ul {
 html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p {
     margin: 0;
     font-size: 0.95rem;
-    color: var(--md-default-fg-color--light);
+    color: var(--md-default-fg-color--light) !important;
 }
 /* Ensure the kicker isn't bolded */
 html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(1) {
-    font-weight: 400;
-    color: var(--md-default-fg-color--light);
+    font-weight: 400 !important;
+    color: var(--md-default-fg-color--light) !important;
 }
 /* The second bold tag inside the card is the main heading */
 html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
@@ -181,7 +181,7 @@ html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:
     display: block;
     margin-top: 1rem;
     font-size: 0.9rem;
-    color: var(--md-default-fg-color--light);
+    color: var(--md-default-fg-color--light) !important;
     font-style: normal;
     font-family: var(--md-code-font-family);
 }
@@ -207,7 +207,7 @@ html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:
     padding-top: 0;
 }
 .md-typeset dd {
-    color: var(--md-default-fg-color--light);
+    color: var(--md-default-fg-color--light) !important;
     margin-left: 0;
     margin-bottom: 0;
 }
@@ -266,7 +266,7 @@ html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:
 .zsa-micro {
     font-family: var(--md-code-font-family);
     font-size: 0.8rem;
-    color: var(--md-default-fg-color--light);
+    color: var(--md-default-fg-color--light) !important;
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -279,7 +279,7 @@ html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:
 .md-typeset .zsa-stat-block p {
     margin: 0.5rem 0 0;
     font-size: 0.85rem;
-    color: var(--md-default-fg-color--light);
+    color: var(--md-default-fg-color--light) !important;
 }
 
 .zsa-stat-value {
@@ -328,7 +328,7 @@ html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:
 
 .md-typeset .zsa-micro-note {
     font-size: 0.8rem;
-    color: var(--md-default-fg-color--light);
+    color: var(--md-default-fg-color--light) !important;
     max-width: 250px;
     margin: 0;
 }
