@@ -3,58 +3,45 @@ title: Subagent-Driven Development (SADD) SOP
 created: 2026-05-02
 updated: 2026-05-02
 type: concept
-tags: [concept, architecture, strategy]
-geo_tactics: [authoritative-tone, fluency]
-citation_metadata:
-  primary_source: "zero-shot-agency"
-  empirical_confidence: "high"
-sources: []
+tags: [concept, strategy]
+geo_tactics: [fluency, authoritative-tone]
 ---
 
 # Subagent-Driven Development (SADD) SOP
 
-Subagent-Driven Development (SADD) is our formal methodology for scaling AI output. By spawning autonomous subagents to handle distinct tasks in isolated contexts, we accelerate engineering and creative workflows while minimizing context window pollution for the orchestrator agent.
+Subagent-Driven Development (SADD) is a methodology for parallelizing complex tasks across specialized autonomous AI agents with isolated context boundaries. This Standard Operating Procedure (SOP) formalizes how we spawn, review, and merge subagent work at Zero-Shot Agency.
 
-## Core Principles
+## 1. When to Spawn Subagents
 
-1. **Context Isolation**: Subagents operate in independent terminal sessions with zero memory of the parent conversation. They must be fed explicit, self-contained goals and context.
-2. **Parallel Execution**: Where possible, subagents should be spawned concurrently (batch mode) to tackle independent workstreams.
-3. **Orchestrator Oversight**: The parent agent acts as the orchestrator. It verifies the final output via external observation (e.g., `git status`, file reads) and never blindly trusts a subagent's self-reported success.
+Subagents should be instantiated for tasks that are:
+- **Highly Parallelizable:** Tasks with minimal shared state, such as researching different concepts simultaneously.
+- **Deeply Specialized:** Tasks requiring extensive reasoning in an isolated domain (e.g., deep code refactoring, system architecture design).
+- **Context Heavy:** Tasks that would flood the primary orchestrator's context window.
 
-## When to Spawn Subagents
+Do **NOT** use subagents for minor mechanical tasks, single file patches, or trivial tool usage. Use direct CLI tools or scripts.
 
-- **Deep Reasoning**: Complex debugging, log analysis, or algorithmic design.
-- **Creative Drafting**: Writing long-form content, blog posts, or dense documentation.
-- **Context-Heavy Isolation**: Exploring a tangential topic without poisoning the main agent's context window.
-- **Parallel Tasks**: Running multiple research queries or scraping different sites simultaneously.
+## 2. Handling Context Boundaries
 
-## Context Boundaries
+- **Strict Isolation:** Subagents have no memory of the overarching conversation. The orchestrator must provide absolute file paths, detailed error messages, and explicit constraints.
+- **Verification over Trust:** Subagents self-report their completion. The orchestrator must manually verify side-effects (e.g., checking if a file was written, reading back its contents) before proceeding.
+- **Timeboxing:** Avoid long-running subagents. If a task is durable, use the `cronjob` or `background` flags instead of `delegate_task`.
 
-Subagents cannot access the parent's memory. When delegating:
-- Provide absolute file paths.
-- Copy/paste relevant error messages or required constraints into the `context` field.
-- Explicitly state the target language, tone, and formatting requirements.
-- Specify the required output format (e.g., "Return a JSON array of findings").
+## 3. Subagent Review Processes
 
-## Review Processes
+All subagent output must undergo a strict review process by the orchestrator:
+- **The Visual Diff Check:** Run `git diff` against subagent changes. Look out for duplicate lines, unintended deletions, or malformed syntax.
+- **The Scope Check:** Run `git status` to ensure untracked files or hidden agent directories (e.g., `.entire/`) haven't been picked up.
+- **The Syntax Check:** Run native syntax validators on any code modified by the subagent (e.g., `python -m py_compile` or `bash -n`).
 
-Because subagent summaries are self-reports and potentially hallucinatory:
-1. **Verification**: The orchestrator must always verify side-effects (e.g., `git status` to see created files, `cat` to verify content, `gh` CLI to confirm PRs).
-2. **Validation**: Test code changes via native tools (`pytest`, `bash -n`, etc.) before committing.
-3. **Iteration**: If a subagent fails, the orchestrator should not simply retry with the same prompt. Provide corrected context or handle the task directly.
+## 4. Git Branch Management
 
-## Git Branch Management & Protocols
+Zero-Shot Agency enforces strict Git protocols to maintain codebase integrity.
 
-Subagents and orchestrators must strictly adhere to the [[Zero-Blind-Commit Protocol]]:
+- **No Main Commits:** Never commit directly to the `main` branch.
+- **Branching Convention:** Check out branches using the format `drafts/[name]` for content or `feature/[name]` for code (e.g., `drafts/issue-166-sadd-sop`).
+- **PRs Only:** All subagent work must be merged via Pull Requests. The orchestrator or human loop script creates the PR.
+- **Zero-Blind-Commit:** Agents must never execute `git commit` or push blindly. Stage exactly the files meant to be committed using `git add <specific_file_path>`. The Ralph loop script will handle the final commit and push.
 
-1. **No Pushing to Main**: All work must be committed to an isolated branch (e.g., `drafts/[feature-name]`).
-2. **Pull Requests Only**: Branches are merged exclusively via Pull Requests using `gh pr create --fill` or with a specified `--body-file`.
-3. **Stop at PR**: Agents MUST NEVER merge Pull Requests. Human operators merge after review.
-4. **Specific Staging**: Use `git add <specific_file_path>` to avoid staging workspace garbage. Never run `git add .` or `git add -A`.
-
-## Toolsets
-
-Subagents can be equipped with specific toolsets based on their role:
-- `['terminal', 'file']` for coding.
-- `['web', 'browser']` for research and scraping.
-- Inherit the parent's toolset by default.
+## Related Links
+- [[strategy]]
+- [[geo-tactics]]
