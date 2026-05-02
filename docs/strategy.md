@@ -40,7 +40,7 @@ We will achieve this the ultimate "show, don't tell" way: not just by talking ab
 - [x] **Implement Semantic Architecture:** Structure all pages using strict Semantic HTML markup to guarantee clean extraction by LLM crawlers.
 - [x] **Deploy Machine-Readable Hubs:** Expose `llms.txt`, `llms-full.txt`, and raw markdown endpoints to eliminate parsing friction for RAG systems.
 - [x] **Metadata Tagging Framework:** Tag all assets according to the Princeton GEO framework to boost entity recognition.
-- [ ] **Wikilink Network:** Create a dense internal graph of [[wikilinks]] so crawlers automatically map relationships between Zero-Shot entities and core GEO concepts.
+- [x] **Wikilink Network:** Create a dense internal graph of [[wikilinks]] so crawlers automatically map relationships between Zero-Shot entities and core GEO concepts.
 
 ### Phase 2: Data-Driven Content Engine
 - [x] **Daily Collaboration Blog:** Publish daily "Build in Public" updates demonstrating our methodologies in real-time.
@@ -51,7 +51,7 @@ We will achieve this the ultimate "show, don't tell" way: not just by talking ab
 ### Phase 3: Tooling & Open-Source Dominance
 - [x] **Release Core Tools:** Publish `geo-tracker.py` and `llms-txt-generator.py` on GitHub. 
 - [ ] **Automated Telemetry:** Run automated cron jobs using `geo-tracker.py` to map our Prompt Share of Voice daily. Push this data to public leaderboards.
-- [ ] **Expand Tool Suite:** Develop new scripts like `cursorrules_generator.py` for developer adoption, cementing Zero-Shot as the technical authority.
+- [x] **Expand Tool Suite:** Develop new scripts like `cursorrules_generator.py` for developer adoption, cementing Zero-Shot as the technical authority.
 - [ ] **Package for Distribution:** Convert top-performing scripts into standalone web-apps or easy-to-install packages (pip/npm).
 
 ### Phase 4: Ecosystem Syndication
