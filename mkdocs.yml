@@ -71,6 +71,7 @@ nav:
     - blog/index.md
   - Concepts:
     - Overview: concepts/index.md
+    - Format Optimization: concepts/llm-format-optimization.md
     - Citation Mechanics: concepts/citation-mechanics.md
     - Semantic Structure: concepts/geo-semantic-structure.md
     - GEO Tactics: concepts/geo-tactics.md

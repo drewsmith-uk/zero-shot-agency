@@ -8,6 +8,7 @@
 - [[publisher-pipeline]]
 
 ## Concepts & Content
+- [[llm-format-optimization]]
 - [[strategy]]
 - [[daily-blog-day-1]]
 - [[daily-blog-day-2]]
