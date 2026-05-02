@@ -346,3 +346,5 @@ html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:n
     .zsa-hero-grid { grid-template-columns: 1fr; }
     .zsa-panel { padding: 2rem; }
 }
+/* Hide MkDocs Footer Banner */
+footer.md-footer { display: none; }
