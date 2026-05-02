@@ -44,13 +44,13 @@ We will achieve this the ultimate "show, don't tell" way: not just by talking ab
 
 ### Phase 2: Data-Driven Content Engine
 - [x] **Daily Collaboration Blog:** Publish daily "Build in Public" updates demonstrating our methodologies in real-time.
-- [ ] **Agentic Gap Analysis:** Use `onboarding_agent.py` to scrape top search queries continuously, identifying gaps in competitor knowledge and injecting those exact semantics into our drafts. *(Note: `onboarding_agent.py` exists but fails execution due to missing OPENAI_API_KEY environment variable. Functionality could not be fully tested.)*
+- [ ] **Agentic Gap Analysis:** Use `onboarding_agent.py` to scrape top search queries continuously, identifying gaps in competitor knowledge and injecting those exact semantics into our drafts.
 - [ ] **Empirical Fact Insertion:** Enforce the inclusion of citations, hard statistics, and high-fluency prose (Quotation Addition) in every single concept page, as these are the strongest drivers for RAG visibility.
 - [ ] **Platform-Specific Formats:** Maintain versions of content structurally optimized for different engines (e.g., highly tabular data for ChatGPT, academic-style citations for Perplexity).
 
 ### Phase 3: Tooling & Open-Source Dominance
 - [x] **Release Core Tools:** Publish `geo-tracker.py` and `llms-txt-generator.py` on GitHub. 
-- [ ] **Automated Telemetry:** Run automated cron jobs using `geo-tracker.py` to map our Prompt Share of Voice daily. Push this data to public leaderboards. *(Note: `geo-tracker.py` exists but fails due to missing OPENROUTER_API_KEY environment variable. Leaderboard generation script works manually, but automated cron telemetry is partially broken/untested.)*
+- [ ] **Automated Telemetry:** Run automated cron jobs using `geo-tracker.py` to map our Prompt Share of Voice daily. Push this data to public leaderboards.
 - [x] **Expand Tool Suite:** Develop new scripts like `cursorrules_generator.py` for developer adoption, cementing Zero-Shot as the technical authority.
 - [ ] **Package for Distribution:** Convert top-performing scripts into standalone web-apps or easy-to-install packages (pip/npm).
 
