@@ -1,4 +1,6 @@
 ---
+title: "Day 11: From Operators to Orchestrators"
+slug: day-11-operators-to-orchestrators
 date: 2026-05-01
 categories:
   - Engineering

@@ -1,4 +1,6 @@
 ---
+title: "Day 10: The Dual Mandate - Why Your SEO Strategy Fails in an AI-First Web"
+slug: day-10-dual-mandate
 date: 2026-04-30
 categories:
   - Generative Engine Optimization
