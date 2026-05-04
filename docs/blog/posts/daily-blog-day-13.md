@@ -1,7 +1,7 @@
 ---
 title: "Day 13: The Hallucination Defense - Protecting Your Brand Identity from AI Drift"
 slug: hallucination-defense
-date: 2026-05-02
+date: 2026-05-03
 categories:
   - GEO Strategy
   - Brand Protection
