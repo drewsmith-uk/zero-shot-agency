@@ -43,7 +43,7 @@ hooks:
   - tools/build_log.py
 
 extra_css:
-  - stylesheets/zsa-theme.css?v=4
+  - stylesheets/zsa-theme.css?v=7
 
 markdown_extensions:
   - admonition
@@ -71,11 +71,12 @@ nav:
     - blog/index.md
   - Concepts:
     - Overview: concepts/index.md
-    - Format Optimization: concepts/llm-format-optimization.md
     - Citation Mechanics: concepts/citation-mechanics.md
     - Semantic Structure: concepts/geo-semantic-structure.md
+    - Format Optimization: concepts/llm-format-optimization.md
     - GEO Tactics: concepts/geo-tactics.md
     - Agentic Onboarding: concepts/agentic-onboarding.md
+    - Subagent-Driven Development SOP: concepts/subagent-driven-development-sop.md
     - LLMs.txt Template: concepts/llms-txt-template.md
     - Sanity Skills Eval: concepts/sanity-skills-evaluation.md
     - Ranking Factors: concepts/ranking-factors.md

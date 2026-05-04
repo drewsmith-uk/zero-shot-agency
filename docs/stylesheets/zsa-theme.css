@@ -94,8 +94,8 @@ body {
   By targeting instances where the sidebars are hidden, we ensure the grid
   flows between sections without double-borders.
 */
-html body [data-md-color-scheme] .md-sidebar[hidden] ~ .md-content > .md-content__inner,
-html body [data-md-color-scheme] .md-content > article:only-child {
+html body[data-md-color-scheme] .md-sidebar[hidden] ~ .md-content > .md-content__inner,
+html body[data-md-color-scheme] .md-content > article:only-child {
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -117,37 +117,37 @@ header.md-header nav.md-header__inner .md-header__title {
 }
 
 /* Feature grid cards (Brutalist paneling) */
-html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li {
+html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li {
     background-color: var(--md-code-bg-color);
     border: 1px solid var(--md-typeset-table-color);
     transition: background-color 0.2s ease;
     border-radius: 0;
     padding: 2rem;
 }
-[data-md-color-scheme="default"] html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li:hover { background-color: #ffffff; }
-[data-md-color-scheme="slate"] html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li:hover { background-color: #1c2128; }
+body[data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li:hover { background-color: #ffffff; }
+body[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover { background-color: #1c2128; }
 
 /* Feature Card Typography Targeting */
-html body [data-md-color-scheme] .md-typeset .grid.cards > ul {
+html body[data-md-color-scheme] .md-typeset .grid.cards > ul {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 @media screen and (min-width: 1000px) {
-    html body [data-md-color-scheme] .md-typeset .grid.cards > ul {
+    html body[data-md-color-scheme] .md-typeset .grid.cards > ul {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p {
+html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p {
     margin: 0;
     font-size: 0.95rem;
     color: var(--md-default-fg-color--light);
 }
 /* Ensure the kicker isn't bolded */
-html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong.zsa-micro {
+html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(1) {
     font-weight: 400;
     color: var(--md-default-fg-color--light);
 }
 /* The second bold tag inside the card is the main heading */
-html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
+html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
     display: block;
     font-size: 1.15rem;
     color: var(--md-default-fg-color);
@@ -346,3 +346,5 @@ html body [data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:
     .zsa-hero-grid { grid-template-columns: 1fr; }
     .zsa-panel { padding: 2rem; }
 }
+/* Hide MkDocs Footer Banner */
+footer.md-footer { display: none; }
