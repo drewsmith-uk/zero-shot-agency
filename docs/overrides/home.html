@@ -1,36 +1,40 @@
 {% extends "main.html" %}
 
 {% block content %}
-  {% if page.meta.hero %}
-  <div class="zsa-hero-grid">
-    <div class="zsa-panel zsa-hero-copy">
-      <div class="zsa-kicker">{{ page.meta.hero.kicker }}</div>
-      <h1>{{ page.meta.hero.title }}</h1>
-      <p class="zsa-hero-subtitle">{{ page.meta.hero.subtitle }}</p>
-      
-      {# We use the |safe filter here because the description contains markdown bold tags that we want rendered if we pass them in YAML, but ideally we just use pure HTML tags in the template, or markdown parsing filter if available. Actually, since we're writing this for LLMs, we will keep the YAML clean and use a bit of HTML for bold in the string, or just let it render as text if safe doesn't parse markdown. Let's assume the string contains some HTML bold tags. #}
-      <p>{{ page.meta.hero.description | safe }}</p>
-      
-      <div class="zsa-hero-actions">
-        {% for action in page.meta.hero.actions %}
-        <a href="{{ action.link }}" class="md-button {% if action.primary %}md-button--primary{% endif %}">{{ action.text }}</a>
-        {% endfor %}
-        <p class="zsa-micro-note">{{ page.meta.hero.note }}</p>
-      </div>
-    </div>
-    
-    <div class="zsa-panel zsa-hero-stats">
-      {% for stat in page.meta.hero.stats %}
-      <div class="zsa-stat-block">
-        <div class="zsa-micro">{{ stat.label }}</div>
-        <div class="zsa-stat-value">{{ stat.value }}</div>
-        <p>{{ stat.sub }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
+  {{ super() }}
 
-  {# Render the remaining markdown content directly, bypassing the default template to kill the auto-h1 #}
-  {{ page.content }}
+  {% if page.meta.explore_zsa %}
+  <section class="zsa-explore-module">
+    <h2 class="zsa-explore-heading">Explore ZSA</h2>
+    
+    <div class="zsa-explore-grid">
+      <!-- Recent Posts -->
+      <div class="zsa-explore-column">
+        <h3 class="zsa-column-title">Recent Transmissions</h3>
+        <ul class="zsa-post-list">
+          {% for post in page.meta.explore_zsa.recent_posts %}
+          <li>
+            <a href="{{ post.url | url }}" class="zsa-post-link">
+              <span class="zsa-post-icon">↳</span> {{ post.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Sections -->
+      <div class="zsa-explore-column">
+        <h3 class="zsa-column-title">Knowledge Base</h3>
+        <div class="zsa-card-grid">
+          {% for section in page.meta.explore_zsa.sections %}
+          <a href="{{ section.url | url }}" class="zsa-card">
+            <h4 class="zsa-card-title">{{ section.title }}</h4>
+            <p class="zsa-card-desc">{{ section.description }}</p>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
 {% endblock %}

@@ -348,3 +348,116 @@ html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:n
 }
 /* Hide MkDocs Footer Banner */
 footer.md-footer { display: none; }
+
+/* ==========================================================================
+   Homepage Explore Module (Option B)
+   ========================================================================== */
+
+.zsa-explore-module {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--md-default-fg-color--lighter);
+}
+
+.zsa-explore-heading {
+  font-family: var(--md-text-font-family);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  color: var(--md-typeset-color);
+  margin-bottom: 1.5rem;
+}
+
+.zsa-explore-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .zsa-explore-grid {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+.zsa-explore-column {
+  flex: 1;
+}
+
+.zsa-column-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.5rem;
+}
+
+/* Recent Posts List */
+.zsa-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.zsa-post-list li {
+  margin-bottom: 0.5rem;
+}
+
+.zsa-post-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  font-family: var(--md-code-font-family);
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.zsa-post-icon {
+  color: var(--md-primary-fg-color);
+  opacity: 0.7;
+}
+
+html [data-md-color-scheme="slate"] .zsa-post-link:hover,
+html body .zsa-post-link:hover {
+  color: var(--md-primary-fg-color);
+}
+
+/* Section Cards */
+.zsa-card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.zsa-card {
+  display: block;
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  background-color: var(--md-default-bg-color);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+html [data-md-color-scheme="slate"] .zsa-card:hover,
+html body .zsa-card:hover {
+  border-color: var(--md-primary-fg-color);
+  transform: translateY(-2px);
+}
+
+.zsa-card-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--md-typeset-color);
+}
+
+.zsa-card-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+}
