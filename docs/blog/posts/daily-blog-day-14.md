@@ -1,6 +1,6 @@
 ---
 title: "Day 14: When Agents Write the Code: Managing Subagent Driven Development"
-date: 2026-05-02
+date: 2026-05-04
 categories:
   - Engineering
   - Autonomous Agents
