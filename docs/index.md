@@ -75,8 +75,9 @@ hero:
     **Agentic Tooling**
     Establishing authority by building open-source lead-magnets like the [GEO Tracker](entities/geo-tracker.md).
 
-> **Expert Consensus**
-> 
+</div>
+
+
 > "The transition from traditional search to generative AI search requires a fundamental shift in how content is structured. High information density, authoritative quotations, and bot-native formats are no longer optional—they are the prerequisite for visibility in RAG pipelines."  
 > *— Zero-Shot Agency Manifesto on AI Retrieval*
 
