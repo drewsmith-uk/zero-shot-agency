@@ -35,7 +35,7 @@ hero:
   kicker: "Zero-Shot Agency"
   title: "Become the Answer. Not Just a Link."
   subtitle: "Engineering your brand's visibility for the AI-first web."
-  description: "We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum **Prompt Share of Voice (SOV)** across leading engines like Perplexity, ChatGPT, Claude, and Gemini."
+  description: "We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, ChatGPT, Claude, and Gemini."
   note: "No automated SEO reports or sales calls. Just an empirical diagnostic of your AI visibility."
   actions:
     - text: "Request an Audit"
