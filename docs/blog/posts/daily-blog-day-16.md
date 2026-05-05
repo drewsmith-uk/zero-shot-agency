@@ -1,7 +1,7 @@
 ---
 title: "Day 16: Map the Citation Supply Chain"
 slug: day-16-map-the-citation-supply-chain
-date: 2026-05-05
+date: 2026-05-06
 categories:
   - Build in Public
   - Generative Engine Optimization
