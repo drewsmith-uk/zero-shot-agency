@@ -386,6 +386,14 @@ footer.md-footer { display: none; }
   gap: 2rem;
 }
 
+@media screen and (min-width: 768px) {
+  .zsa-explore-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 4rem;
+    align-items: start;
+  }
+}
 
 .zsa-explore-column {
   /* Removed flex: 1 */
@@ -437,14 +445,8 @@ html body .zsa-post-link:hover {
 /* Section Cards - Unified with IDE aesthetic */
 .zsa-card-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-}
-
-@media screen and (min-width: 768px) {
-  .zsa-card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .zsa-card {
