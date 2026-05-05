@@ -27,10 +27,12 @@
   </div>
   {% endif %}
 
-  {{ page.content }}
+  {% set content_sections = page.content.split('<blockquote>') %}
+  {{ content_sections[0] | safe }}
 
   {% if page.meta.explore_zsa %}
-  <section class="zsa-explore-module">
+  <section class="zsa-explore-module zsa-panel">
+    <div class="zsa-kicker">Site Index</div>
     <h2 class="zsa-explore-heading">Explore ZSA</h2>
     <div class="zsa-explore-grid">
       <div class="zsa-explore-column">
@@ -58,5 +60,9 @@
       </div>
     </div>
   </section>
+  {% endif %}
+
+  {% if content_sections | length > 1 %}
+  <blockquote>{{ content_sections[1:] | join('<blockquote>') | safe }}
   {% endif %}
 {% endblock %}
