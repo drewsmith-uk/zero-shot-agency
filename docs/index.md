@@ -59,8 +59,6 @@ hero:
 
 
 
-<div class="grid cards" markdown>
-
 -   **01 // Structure**
     **Semantic Architecture**
     We rebuild content layers using strict HTML5 tags to strip noise and ensure LLM chunkers isolate high-value text.
@@ -77,7 +75,7 @@ hero:
     **Agentic Tooling**
     Establishing authority by building open-source lead-magnets like the [GEO Tracker](entities/geo-tracker.md).
 
-</div>
+{: .grid .cards }
 
 > **Expert Consensus**
 > 

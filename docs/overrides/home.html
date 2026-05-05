@@ -1,36 +1,7 @@
 {% extends "main.html" %}
 
 {% block content %}
-  {% if page.meta.hero %}
-  <div class="zsa-hero-grid">
-    <div class="zsa-panel zsa-hero-copy">
-      <div class="zsa-kicker">{{ page.meta.hero.kicker }}</div>
-      <h1>{{ page.meta.hero.title }}</h1>
-      <p class="zsa-hero-subtitle">{{ page.meta.hero.subtitle }}</p>
-      
-      <p>{{ page.meta.hero.description | safe }}</p>
-      
-      <div class="zsa-hero-actions">
-        {% for action in page.meta.hero.actions %}
-        <a href="{{ action.link }}" class="md-button {% if action.primary %}md-button--primary{% endif %}">{{ action.text }}</a>
-        {% endfor %}
-        <p class="zsa-micro-note">{{ page.meta.hero.note }}</p>
-      </div>
-    </div>
-    
-    <div class="zsa-panel zsa-hero-stats">
-      {% for stat in page.meta.hero.stats %}
-      <div class="zsa-stat-block">
-        <div class="zsa-micro">{{ stat.label }}</div>
-        <div class="zsa-stat-value">{{ stat.value }}</div>
-        <p>{{ stat.sub }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
-
-  {{ page.content }}
+  {{ super() }}
 
   {% if page.meta.explore_zsa %}
   <section class="zsa-explore-module">
