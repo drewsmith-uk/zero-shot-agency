@@ -31,28 +31,35 @@
   {{ content_sections[0] | safe }}
 
   {% if page.meta.explore_zsa %}
-  <h2 class="zsa-section-title" style="margin-top: 4rem;">Explore ZSA</h2>
-  
-  <p><strong>Recent Transmissions</strong></p>
-  <ul>
-    {% for post in page.meta.explore_zsa.recent_posts %}
-    <li><a href="{{ post.url | url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-
-  <p style="margin-top: 3rem;"><strong>Knowledge Base</strong></p>
-  <div class="grid cards">
-    <ul>
-      {% for section in page.meta.explore_zsa.sections %}
-      <li>
-        <a href="{{ section.url | url }}">
-          <strong>{{ section.title }}</strong><br>
-          <span style="font-size: 0.85em; color: var(--md-default-fg-color--light);">{{ section.description }}</span>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+  <section class="zsa-explore-module zsa-panel">
+    <div class="zsa-kicker">Site Index</div>
+    <h2 class="zsa-explore-heading">Explore ZSA</h2>
+    <div class="zsa-explore-grid">
+      <div class="zsa-explore-column">
+        <h3 class="zsa-column-title">Recent Transmissions</h3>
+        <ul class="zsa-post-list">
+          {% for post in page.meta.explore_zsa.recent_posts %}
+          <li>
+            <a href="{{ post.url | url }}" class="zsa-post-link">
+              <span class="zsa-post-icon">↳</span> {{ post.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="zsa-explore-column">
+        <h3 class="zsa-column-title">Knowledge Base</h3>
+        <div class="zsa-card-grid">
+          {% for section in page.meta.explore_zsa.sections %}
+          <a href="{{ section.url | url }}" class="zsa-card">
+            <h4 class="zsa-card-title">{{ section.title }}</h4>
+            <p class="zsa-card-desc">{{ section.description }}</p>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
   {% endif %}
 
   {% if content_sections | length > 1 %}
