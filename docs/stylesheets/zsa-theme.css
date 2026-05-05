@@ -261,7 +261,7 @@ html body[data-md-color-scheme] .md-typeset h2.zsa-section-title + ul > li > p >
 }
 
 .zsa-hero-accent {
-    color: var(--md-accent-fg-color);
+    color: var(--md-accent-fg-color) !important;
     font-weight: 500;
 }
 
@@ -361,112 +361,121 @@ html body[data-md-color-scheme] .md-typeset h2.zsa-section-title + ul > li > p >
 /* Hide MkDocs Footer Banner */
 footer.md-footer { display: none; }
 
+/* ==========================================================================
+   Homepage Explore Module (Option B)
+   ========================================================================== */
+
 .zsa-explore-module {
-    margin: 3rem 0 4rem;
-    border: 1px solid var(--md-typeset-table-color);
-    box-shadow: inset 4px 0 0 var(--md-accent-fg-color);
+  margin-top: 6rem;
+  padding-top: 0;
 }
 
 .zsa-explore-heading {
-    font-family: var(--md-code-font-family);
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--md-default-fg-color);
-    margin: 0 0 1.5rem;
-    border-bottom: none;
+  font-family: var(--md-code-font-family);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: var(--md-accent-fg-color);
+  margin-bottom: 2rem;
 }
 
 .zsa-explore-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .zsa-explore-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-    gap: 1px;
-    background: var(--md-typeset-table-color);
-    border: 1px solid var(--md-typeset-table-color);
+    grid-template-columns: 1fr 2.5fr;
+    gap: 4rem;
+    align-items: start;
+  }
 }
 
 .zsa-explore-column {
-    background: var(--md-default-bg-color);
-    padding: 1.5rem;
+  /* Removed flex: 1 */
 }
 
 .zsa-column-title {
-    font-family: var(--md-code-font-family);
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--md-accent-fg-color);
-    margin: 0 0 1rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--md-typeset-table-color);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
+/* Recent Posts List */
 .zsa-post-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.zsa-post-list li + li {
-    margin-top: 0.75rem;
+.zsa-post-list li {
+  margin-bottom: 0.75rem;
 }
 
 .zsa-post-link {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    color: var(--md-default-fg-color);
-    text-decoration: none;
-    font-family: var(--md-code-font-family);
-    font-size: 0.9rem;
-    line-height: 1.4;
-    transition: color 0.2s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  font-family: var(--md-code-font-family);
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  line-height: 1.4;
 }
 
 .zsa-post-icon {
-    color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+  opacity: 0.7;
+  margin-top: 0.1rem;
 }
 
-.zsa-post-link:hover,
-.zsa-post-link:focus {
-    color: var(--md-accent-fg-color);
+html [data-md-color-scheme="slate"] .zsa-post-link:hover,
+html body .zsa-post-link:hover {
+  color: var(--md-accent-fg-color);
 }
 
+/* Section Cards - Unified with IDE aesthetic */
 .zsa-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .zsa-card {
-    display: block;
-    padding: 1rem;
-    border: 1px solid var(--md-typeset-table-color);
-    background-color: var(--md-code-bg-color);
-    text-decoration: none;
-    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border: 1px solid var(--md-typeset-table-color);
+  background-color: var(--md-code-bg-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  height: 100%;
 }
 
-.zsa-card:hover,
-.zsa-card:focus {
-    border-color: var(--md-accent-fg-color);
-    transform: translateY(-2px);
+html [data-md-color-scheme="slate"] .zsa-card:hover,
+html body .zsa-card:hover {
+  border-color: var(--md-default-fg-color);
+  background-color: var(--md-default-bg-color);
 }
 
 .zsa-card-title {
-    margin: 0 0 0.35rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--md-default-fg-color);
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
 }
 
 .zsa-card-desc {
-    margin: 0;
-    font-size: 0.85rem;
-    color: var(--md-default-fg-color--light);
-}
-
-@media (max-width: 800px) {
-    .zsa-explore-grid { grid-template-columns: 1fr; }
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.5;
 }

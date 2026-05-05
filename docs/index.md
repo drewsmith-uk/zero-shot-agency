@@ -33,7 +33,7 @@ citation_metadata:
   empirical_confidence: "high"
 hero:
   kicker: "Zero-Shot Agency"
-  title: "Become the Answer. Not Just a Link."
+  title: "Become the Answer. <br><span class=\"zsa-hero-accent\">Not Just a Link.</span>"
   subtitle: "Engineering your brand's visibility for the AI-first web."
   description: "We bridge the gap between traditional SEO and the era of LLMs by reverse-engineering retrieval mechanics. Our data-driven strategies ensure your brand captures maximum <strong>Prompt Share of Voice (SOV)</strong> across leading engines like Perplexity, ChatGPT, Claude, and Gemini."
   note: "No automated SEO reports or sales calls. Just an empirical diagnostic of your AI visibility."
