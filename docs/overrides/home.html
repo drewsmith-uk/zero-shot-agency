@@ -41,13 +41,17 @@
   </ul>
 
   <p style="margin-top: 3rem;"><strong>Knowledge Base</strong></p>
-  <div class="zsa-card-grid">
+  <div class="grid cards">
+    <ul>
       {% for section in page.meta.explore_zsa.sections %}
-      <a href="{{ section.url | url }}" class="zsa-card">
-        <strong class="zsa-card-title">{{ section.title }}</strong>
-        <p class="zsa-card-desc">{{ section.description }}</p>
-      </a>
+      <li>
+        <a href="{{ section.url | url }}">
+          <strong>{{ section.title }}</strong><br>
+          {{ section.description }}
+        </a>
+      </li>
       {% endfor %}
+    </ul>
   </div>
   {% endif %}
 

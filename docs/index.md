@@ -57,7 +57,7 @@ hero:
 
 ## Core GEO Tactics to Maximize Visibility {: .zsa-section-title }
 
-
+<div class="grid cards" markdown>
 
 -   **01 // Structure**
     **Semantic Architecture**
