@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><title>Variant 1: Dashboard Split</title>
+
+<style>
+:root {
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #000000;
+  --md-default-fg-color--light: #555555;
+  --md-code-bg-color: #f5f5f5;
+  --md-typeset-table-color: #e0e0e0;
+  --md-accent-fg-color: #0033cc;
+  --md-code-font-family: monospace;
+  --md-text-font-family: sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-default-bg-color: #0d1117;
+    --md-default-fg-color: #c9d1d9;
+    --md-default-fg-color--light: #8b949e;
+    --md-code-bg-color: #161b22;
+    --md-typeset-table-color: #30363d;
+    --md-accent-fg-color: #58a6ff;
+  }
+}
+body {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-family: var(--md-text-font-family);
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h2.zsa-section-title {
+  font-family: var(--md-code-font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+.zsa-panel {
+  background-color: var(--md-code-bg-color);
+  border: 1px solid var(--md-typeset-table-color);
+  padding: 2rem;
+}
+a {
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--md-accent-fg-color);
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-sidebar { grid-template-columns: 300px 1fr; }
+
+/* Brutalist List */
+.zsa-brutalist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--md-typeset-table-color);
+}
+.zsa-brutalist-list li {
+  border-bottom: 1px solid var(--md-typeset-table-color);
+  padding: 1rem 0;
+}
+.zsa-brutalist-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</style>
+
+</head>
+<body>
+  <h2 class="zsa-section-title">Explore ZSA</h2>
+  <div class="grid grid-sidebar">
+    <div class="zsa-panel">
+      <h3 style="margin-top:0; font-family: var(--md-code-font-family);">Recent Transmissions</h3>
+      <ul class="zsa-brutalist-list">
+        <li><a href="#">Day 14: Automated Evaluation <span>&rarr;</span></a></li>
+        <li><a href="#">Day 13: The Orchestrator Pattern <span>&rarr;</span></a></li>
+        <li><a href="#">Day 12: Tool Use Boundaries <span>&rarr;</span></a></li>
+      </ul>
+    </div>
+    <div class="zsa-panel">
+      <h3 style="margin-top:0; font-family: var(--md-code-font-family);">Knowledge Base</h3>
+      <div class="grid grid-2">
+        <div style="border: 1px solid var(--md-typeset-table-color); padding: 1.5rem;">
+          <strong>Strategy and Playbook</strong>
+          <p style="color: var(--md-default-fg-color--light); font-size: 0.9em;">Our core methodology for AI-first visibility.</p>
+        </div>
+        <div style="border: 1px solid var(--md-typeset-table-color); padding: 1.5rem;">
+          <strong>Concepts</strong>
+          <p style="color: var(--md-default-fg-color--light); font-size: 0.9em;">Mental models and architectural patterns.</p>
+        </div>
+        <div style="border: 1px solid var(--md-typeset-table-color); padding: 1.5rem;">
+          <strong>Tools</strong>
+          <p style="color: var(--md-default-fg-color--light); font-size: 0.9em;">Open-source tools and CLIs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
