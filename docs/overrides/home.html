@@ -7,18 +7,14 @@
       <div class="zsa-kicker">{{ page.meta.hero.kicker }}</div>
       <h1>{{ page.meta.hero.title }}</h1>
       <p class="zsa-hero-subtitle">{{ page.meta.hero.subtitle }}</p>
-      
-      {# We use the |safe filter here because the description contains markdown bold tags that we want rendered if we pass them in YAML, but ideally we just use pure HTML tags in the template, or markdown parsing filter if available. Actually, since we're writing this for LLMs, we will keep the YAML clean and use a bit of HTML for bold in the string, or just let it render as text if safe doesn't parse markdown. Let's assume the string contains some HTML bold tags. #}
       <p>{{ page.meta.hero.description | safe }}</p>
-      
       <div class="zsa-hero-actions">
         {% for action in page.meta.hero.actions %}
-        <a href="{{ action.link }}" class="md-button {% if action.primary %}md-button--primary{% endif %}">{{ action.text }}</a>
+        <a href="{{ action.link | url }}" class="md-button {% if action.primary %}md-button--primary{% endif %}">{{ action.text }}</a>
         {% endfor %}
         <p class="zsa-micro-note">{{ page.meta.hero.note }}</p>
       </div>
     </div>
-    
     <div class="zsa-panel zsa-hero-stats">
       {% for stat in page.meta.hero.stats %}
       <div class="zsa-stat-block">
@@ -31,6 +27,35 @@
   </div>
   {% endif %}
 
-  {# Render the remaining markdown content directly, bypassing the default template to kill the auto-h1 #}
-  {{ page.content }}
+  {% set content_sections = page.content.split('<blockquote>') %}
+  {{ content_sections[0] | safe }}
+
+  {% if page.meta.explore_zsa %}
+  <h2 class="zsa-section-title" style="margin-top: 4rem;">Explore ZSA</h2>
+  
+  <p><strong>Recent Transmissions</strong></p>
+  <ul>
+    {% for post in page.meta.explore_zsa.recent_posts %}
+    <li><a href="{{ post.url | url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <p style="margin-top: 3rem;"><strong>Knowledge Base</strong></p>
+  <div class="grid cards">
+    <ul>
+      {% for section in page.meta.explore_zsa.sections %}
+      <li>
+        <a href="{{ section.url | url }}">
+          <strong>{{ section.title }}</strong><br>
+          {{ section.description }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if content_sections | length > 1 %}
+  <blockquote>{{ content_sections[1:] | join('<blockquote>') | safe }}
+  {% endif %}
 {% endblock %}

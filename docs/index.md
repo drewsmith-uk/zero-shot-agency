@@ -2,7 +2,26 @@
 title: Zero-Shot Agency
 template: home.html
 hide:
+  - navigation
   - toc
+explore_zsa:
+  recent_posts:
+    - title: "Day 14: Automated Evaluation"
+      url: "/blog/day-14/"
+    - title: "Day 13: The Orchestrator Pattern"
+      url: "/blog/day-13/"
+    - title: "Day 12: Tool Use Boundaries"
+      url: "/blog/day-12/"
+  sections:
+    - title: "Strategy and Playbook"
+      description: "Our core methodology for AI-first visibility."
+      url: "/strategy/"
+    - title: "Concepts"
+      description: "Mental models and architectural patterns."
+      url: "/concepts/"
+    - title: "Tools"
+      description: "Open-source tools and CLIs."
+      url: "/tools/"
 created: 2026-04-22
 updated: 2026-04-29
 type: concept
@@ -58,12 +77,11 @@ hero:
 
 </div>
 
-> **Expert Consensus**
-> 
-> "The transition from traditional search to generative AI search requires a fundamental shift in how content is structured. High information density, authoritative quotations, and bot-native formats are no longer optional—they are the prerequisite for visibility in RAG pipelines."  
-> <cite>— Zero-Shot Agency Manifesto on AI Retrieval</cite>
 
-## Glossary of AI Search Optimization Terms {: .zsa-section-title style="margin-top: 4rem;" }
+> "The transition from traditional search to generative AI search requires a fundamental shift in how content is structured. High information density, authoritative quotations, and bot-native formats are no longer optional—they are the prerequisite for visibility in RAG pipelines."  
+> *— Zero-Shot Agency Manifesto on AI Retrieval*
+
+## Glossary of AI Search Optimization Terms {: .zsa-section-title  }
 
 **Generative Engine Optimization (GEO)**
 : The practice of structuring and enriching web content to maximize visibility, citation frequency, and favorable sentiment within LLM-generated search responses.

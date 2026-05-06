@@ -129,7 +129,11 @@ body[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover { bac
 
 /* Feature Card Typography Targeting */
 html body[data-md-color-scheme] .md-typeset .grid.cards > ul {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
 }
 @media screen and (min-width: 1000px) {
     html body[data-md-color-scheme] .md-typeset .grid.cards > ul {
@@ -249,7 +253,7 @@ html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:n
 }
 
 .zsa-hero-accent {
-    color: var(--md-accent-fg-color);
+    color: var(--md-accent-fg-color) !important;
     font-weight: 500;
 }
 
@@ -348,3 +352,5 @@ html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:n
 }
 /* Hide MkDocs Footer Banner */
 footer.md-footer { display: none; }
+
+
