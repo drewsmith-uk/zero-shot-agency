@@ -140,7 +140,7 @@ html body[data-md-color-scheme] .md-typeset h2.zsa-section-title + ul {
     list-style: none;
 }
 @media screen and (min-width: 1000px) {
-    html body[data-md-color-scheme] .md-typeset .grid.cards > ul,
+    html body[data-md-color-scheme] .md-typeset h2.zsa-section-title + .grid.cards > ul,
     html body[data-md-color-scheme] .md-typeset h2.zsa-section-title + ul {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -361,88 +361,30 @@ html body[data-md-color-scheme] .md-typeset h2.zsa-section-title + ul > li > p >
 /* Hide MkDocs Footer Banner */
 footer.md-footer { display: none; }
 
-/* ==========================================================================
-   Homepage Explore Module (Option B)
-   ========================================================================== */
 
-.zsa-explore-module {
-  margin-top: 6rem;
-  padding-top: 0;
-}
-
-.zsa-explore-heading {
-  font-family: var(--md-code-font-family);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.8rem;
-  color: var(--md-accent-fg-color);
-  margin-bottom: 2rem;
-}
-
-.zsa-explore-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-  .zsa-explore-grid {
+html body[data-md-color-scheme] .md-typeset .grid.cards > ul {
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    gap: 4rem;
-    align-items: start;
-  }
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p {
+    margin: 0;
+}
+html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li a strong {
+    display: block;
+    font-size: 1.15rem;
+    color: var(--md-default-fg-color);
+    margin: 0.5rem 0;
 }
 
-.zsa-explore-column {
-  /* Removed flex: 1 */
-}
-
-.zsa-column-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--md-default-fg-color);
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Recent Posts List */
-.zsa-post-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.zsa-post-list li {
-  margin-bottom: 0.75rem;
-}
-
-.zsa-post-link {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  color: var(--md-default-fg-color);
-  text-decoration: none;
-  font-family: var(--md-code-font-family);
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
-  line-height: 1.4;
-}
-
-.zsa-post-icon {
-  color: var(--md-accent-fg-color);
-  opacity: 0.7;
-  margin-top: 0.1rem;
-}
-
-html [data-md-color-scheme="slate"] .zsa-post-link:hover,
-html body .zsa-post-link:hover {
-  color: var(--md-accent-fg-color);
-}
-
-/* Section Cards - Unified with IDE aesthetic */
 .zsa-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -452,30 +394,33 @@ html body .zsa-post-link:hover {
 .zsa-card {
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 2rem;
   border: 1px solid var(--md-typeset-table-color);
   background-color: var(--md-code-bg-color);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
   height: 100%;
 }
 
 html [data-md-color-scheme="slate"] .zsa-card:hover,
 html body .zsa-card:hover {
-  border-color: var(--md-default-fg-color);
-  background-color: var(--md-default-bg-color);
+  background-color: #ffffff;
+}
+html body[data-md-color-scheme="slate"] .zsa-card:hover {
+  background-color: #1c2128;
 }
 
 .zsa-card-title {
-  margin: 0 0 0.5rem 0;
-  font-size: 1rem;
-  font-weight: 600;
+  display: block;
+  font-size: 1.15rem;
   color: var(--md-default-fg-color);
+  margin: 0.5rem 0;
+  font-weight: bold;
 }
 
 .zsa-card-desc {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--md-default-fg-color--light);
   line-height: 1.5;
 }
