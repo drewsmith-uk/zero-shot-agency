@@ -361,18 +361,6 @@ footer.md-footer { display: none; }
     align-items: stretch;
 }
 
-.zsa-explore-grid > .zsa-panel {
-    min-height: 0;
-    height: 100%;
-}
-
-.zsa-explore-grid .zsa-panel {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    max-height: 100%;
-}
-
 .zsa-panel {
     height: 100%;
     box-sizing: border-box;
@@ -391,7 +379,7 @@ footer.md-footer { display: none; }
 }
 
 
-.feed-list { display: flex; flex-direction: column; gap: 1.25rem; flex-grow: 1; min-height: 0; overflow-y: auto; padding-right: 1rem; margin-bottom: 1.5rem; }
+.feed-list { display: flex; flex-direction: column; gap: 1.25rem; max-height: 350px; overflow-y: auto; padding-right: 1rem; }
 /* Scrollbar styling for brutalist look */
 .feed-list::-webkit-scrollbar { width: 4px; }
 .feed-list::-webkit-scrollbar-track { background: var(--md-default-bg-color); }
