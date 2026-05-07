@@ -378,7 +378,31 @@ footer.md-footer { display: none; }
     padding-bottom: 0.75rem;
 }
 
-.feed-list { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.feed-list { display: flex; flex-direction: column; gap: 1.25rem; max-height: 350px; overflow-y: auto; padding-right: 1rem; }
+/* Scrollbar styling for brutalist look */
+.feed-list::-webkit-scrollbar { width: 4px; }
+.feed-list::-webkit-scrollbar-track { background: var(--md-default-bg-color); }
+.feed-list::-webkit-scrollbar-thumb { background: var(--md-typeset-table-color); }
+.feed-list::-webkit-scrollbar-thumb:hover { background: var(--md-accent-fg-color); }
+
+.feed-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--md-typeset-table-color);
+    text-align: right;
+}
+.feed-all-link {
+    font-family: var(--md-code-font-family);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--md-accent-fg-color);
+    transition: color 0.2s ease;
+}
+.feed-all-link:hover {
+    color: var(--md-default-fg-color);
+}
+
 .feed-item { display: flex; flex-direction: column; transition: background-color 0.2s ease, color 0.2s ease; }
 .feed-item:hover .feed-title { color: var(--md-accent-fg-color); }
 .feed-date { font-family: var(--md-code-font-family); font-size: 0.75rem; color: var(--md-default-fg-color--light); margin-bottom: 0.2rem; }

@@ -37,12 +37,16 @@
       <div class="zsa-panel">
           <h3 class="panel-subtitle">Recent Transmissions</h3>
           <div class="feed-list">
-              {% for post in page.meta.explore_zsa.recent_posts %}
+              {% for post in page.meta.explore_zsa.recent_posts[:5] %}
               <a href="{{ post.url | url }}" class="feed-item">
                   <span class="feed-date">LOG // {{ post.title.split(':')[0] if ':' in post.title else 'TRANS' }}</span>
                   <span class="feed-title">{{ post.title.split(':', 1)[1].strip() if ':' in post.title else post.title }}</span>
               </a>
               {% endfor %}
+
+          </div>
+          <div class="feed-footer">
+              <a href="{{ 'blog/' | url }}" class="feed-all-link">View Full Log &rarr;</a>
           </div>
       </div>
 
