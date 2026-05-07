@@ -384,7 +384,7 @@ footer.md-footer { display: none; }
 }
 
 
-.feed-list { display: flex; flex-direction: column; gap: 1.25rem; flex-grow: 1; overflow-y: auto; padding-right: 1rem; margin-bottom: 1.5rem; }
+.feed-list { display: flex; flex-direction: column; gap: 1.25rem; flex-grow: 1; min-height: 0; overflow-y: auto; padding-right: 1rem; margin-bottom: 1.5rem; }
 /* Scrollbar styling for brutalist look */
 .feed-list::-webkit-scrollbar { width: 4px; }
 .feed-list::-webkit-scrollbar-track { background: var(--md-default-bg-color); }
