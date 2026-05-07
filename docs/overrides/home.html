@@ -33,34 +33,36 @@
   {% if page.meta.explore_zsa %}
   <h2 class="zsa-section-title" style="margin-top: 4rem;">Explore ZSA</h2>
   
-  <div class="grid cards zsa-explore-grid">
-      <div class="zsa-panel">
-          <h3 class="panel-subtitle">Recent Transmissions</h3>
-          <div class="feed-list">
-              {% for post in page.meta.explore_zsa.recent_posts[:5] %}
-              <a href="{{ post.url | url }}" class="feed-item">
-                  <span class="feed-date">LOG // {{ post.title.split(':')[0] if ':' in post.title else 'TRANS' }}</span>
-                  <span class="feed-title">{{ post.title.split(':', 1)[1].strip() if ':' in post.title else post.title }}</span>
-              </a>
-              {% endfor %}
+  <div class="grid cards zsa-explore-container">
+      <ul class="zsa-explore-grid">
+          <li class="zsa-explore-panel">
+              <h3 class="panel-subtitle">Recent Transmissions</h3>
+              <div class="feed-list">
+                  {% for post in page.meta.explore_zsa.recent_posts[:5] %}
+                  <a href="{{ post.url | url }}" class="feed-item">
+                      <span class="feed-date">LOG // {{ post.title.split(':')[0] if ':' in post.title else 'TRANS' }}</span>
+                      <span class="feed-title">{{ post.title.split(':', 1)[1].strip() if ':' in post.title else post.title }}</span>
+                  </a>
+                  {% endfor %}
 
-          </div>
-          <div class="feed-footer">
-              <a href="{{ 'blog/' | url }}" class="feed-all-link">View Full Log &rarr;</a>
-          </div>
-      </div>
+              </div>
+              <div class="feed-footer">
+                  <a href="{{ 'blog/' | url }}" class="feed-all-link">View Full Log &rarr;</a>
+              </div>
+          </li>
 
-      <div class="zsa-panel">
-          <h3 class="panel-subtitle">Knowledge Base</h3>
-          <div class="kb-grid">
-              {% for section in page.meta.explore_zsa.sections %}
-              <a href="{{ section.url | url }}" class="kb-item">
-                  <span class="kb-item-title">{{ section.title }}</span>
-                  <span class="kb-item-desc">{{ section.description }}</span>
-              </a>
-              {% endfor %}
-          </div>
-      </div>
+          <li class="zsa-explore-panel">
+              <h3 class="panel-subtitle">Knowledge Base</h3>
+              <div class="kb-grid">
+                  {% for section in page.meta.explore_zsa.sections %}
+                  <a href="{{ section.url | url }}" class="kb-item">
+                      <span class="kb-item-title">{{ section.title }}</span>
+                      <span class="kb-item-desc">{{ section.description }}</span>
+                  </a>
+                  {% endfor %}
+              </div>
+          </li>
+      </ul>
   </div>
   {% endif %}
 
