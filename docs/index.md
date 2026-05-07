@@ -6,22 +6,26 @@ hide:
   - toc
 explore_zsa:
   recent_posts:
-    - title: "Day 14: Automated Evaluation"
-      url: "/blog/day-14/"
-    - title: "Day 13: The Orchestrator Pattern"
-      url: "/blog/day-13/"
-    - title: "Day 12: Tool Use Boundaries"
-      url: "/blog/day-12/"
+    - title: "Day 17: The Citation Is Only the Handoff"
+      url: "blog/posts/daily-blog-day-17/"
+    - title: "Day 16: Map the Citation Supply Chain"
+      url: "blog/posts/daily-blog-day-16/"
+    - title: "Day 15: The Context Window Is Not a Control Plane"
+      url: "blog/posts/daily-blog-day-15/"
+    - title: "Day 14: When Agents Write the Code: Managing Subagent Driven Development"
+      url: "blog/posts/daily-blog-day-14/"
+    - title: "Day 13: The Hallucination Defense - Protecting Your Brand Identity from AI Drift"
+      url: "blog/posts/daily-blog-day-13/"
   sections:
     - title: "Strategy and Playbook"
       description: "Our core methodology for AI-first visibility."
-      url: "/strategy/"
+      url: "strategy/"
     - title: "Concepts"
       description: "Mental models and architectural patterns."
-      url: "/concepts/"
+      url: "concepts/"
     - title: "Tools"
       description: "Open-source tools and CLIs."
-      url: "/tools/"
+      url: "tools/"
 created: 2026-04-22
 updated: 2026-04-29
 type: concept

@@ -354,3 +354,84 @@ html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:n
 footer.md-footer { display: none; }
 
 
+
+
+/* Explore ZSA Enhancements */
+
+
+
+
+
+.zsa-panel {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.panel-subtitle {
+    font-family: var(--md-code-font-family);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--md-accent-fg-color);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--md-typeset-table-color);
+    padding-bottom: 0.75rem;
+}
+
+
+.feed-list { display: flex; flex-direction: column; gap: 1.25rem; flex-grow: 1; min-height: 0; overflow-y: auto; padding-right: 1rem; margin-bottom: 1.5rem; }
+/* Scrollbar styling for brutalist look */
+.feed-list::-webkit-scrollbar { width: 4px; }
+.feed-list::-webkit-scrollbar-track { background: var(--md-default-bg-color); }
+.feed-list::-webkit-scrollbar-thumb { background: var(--md-typeset-table-color); }
+.feed-list::-webkit-scrollbar-thumb:hover { background: var(--md-accent-fg-color); }
+
+.feed-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--md-typeset-table-color);
+    text-align: right;
+}
+.feed-all-link {
+    font-family: var(--md-code-font-family);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--md-accent-fg-color);
+    transition: color 0.2s ease;
+}
+.feed-all-link:hover {
+    color: var(--md-default-fg-color);
+}
+
+.feed-item { display: flex; flex-direction: column; transition: background-color 0.2s ease, color 0.2s ease; }
+.feed-item:hover .feed-title { color: var(--md-accent-fg-color); }
+.feed-date { font-family: var(--md-code-font-family); font-size: 0.75rem; color: var(--md-default-fg-color--light); margin-bottom: 0.2rem; }
+.feed-title { font-weight: 500; font-size: 0.95rem; color: var(--md-default-fg-color); transition: color 0.2s ease; }
+
+.kb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.kb-item { border: 1px solid var(--md-typeset-table-color); padding: 1.5rem; transition: transform 0.2s ease, border-color 0.2s ease; background-color: var(--md-default-bg-color); text-decoration: none; display: block; }
+.kb-item:hover { border-color: var(--md-accent-fg-color); transform: translateY(-2px); }
+.kb-item-title { font-family: var(--md-code-font-family); font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--md-default-fg-color); font-weight: 600; display: block; }
+.kb-item-desc { font-size: 0.85rem; color: var(--md-default-fg-color--light); margin: 0; display: block; }
+
+/* Explore ZSA Enhancements (Refactored to match mkdocs native UL/LI grid) */
+html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > ul {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+@media screen and (min-width: 1000px) {
+    html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Only apply the height hack when panels are side-by-side */
+    html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > ul > li.zsa-explore-panel:first-child {
+        height: 0;
+        min-height: 100%;
+    }
+}
+html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > ul > li.zsa-explore-panel {
+    display: flex;
+    flex-direction: column;
+}
+
