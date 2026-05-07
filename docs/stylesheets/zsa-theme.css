@@ -429,7 +429,6 @@ footer.md-footer { display: none; }
 
 /* Align Explore grid exterior margins and gaps with Core Tactics cards */
 html body[data-md-color-scheme] .md-typeset .zsa-explore-grid {
-    display: grid;
     gap: 1rem;
     margin: 0;
     padding: 0;
