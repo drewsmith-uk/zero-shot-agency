@@ -364,6 +364,7 @@ footer.md-footer { display: none; }
 .zsa-explore-grid .zsa-panel {
     display: flex;
     flex-direction: column;
+    min-height: 0;
 }
 
 .zsa-panel {
