@@ -423,12 +423,15 @@ html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > 
     html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > ul {
         grid-template-columns: 1fr 1fr;
     }
+    
+    /* Only apply the height hack when panels are side-by-side */
+    html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > ul > li.zsa-explore-panel:first-child {
+        height: 0;
+        min-height: 100%;
+    }
 }
 html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > ul > li.zsa-explore-panel {
     display: flex;
     flex-direction: column;
 }
-html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > ul > li.zsa-explore-panel:first-child {
-    height: 0;
-    min-height: 100%;
-}
+
