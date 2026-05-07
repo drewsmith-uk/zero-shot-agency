@@ -426,3 +426,16 @@ footer.md-footer { display: none; }
 .zsa-explore-grid .zsa-panel {
     padding: 2rem;
 }
+
+/* Align Explore grid exterior margins and gaps with Core Tactics cards */
+html body[data-md-color-scheme] .md-typeset .zsa-explore-grid {
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+@media screen and (min-width: 1000px) {
+    html body[data-md-color-scheme] .md-typeset .zsa-explore-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
