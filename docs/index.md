@@ -5,17 +5,6 @@ hide:
   - navigation
   - toc
 explore_zsa:
-  recent_posts:
-    - title: "Day 17: The Citation Is Only the Handoff"
-      url: "blog/posts/daily-blog-day-17/"
-    - title: "Day 16: Map the Citation Supply Chain"
-      url: "blog/posts/daily-blog-day-16/"
-    - title: "Day 15: The Context Window Is Not a Control Plane"
-      url: "blog/posts/daily-blog-day-15/"
-    - title: "Day 14: When Agents Write the Code: Managing Subagent Driven Development"
-      url: "blog/posts/daily-blog-day-14/"
-    - title: "Day 13: The Hallucination Defense - Protecting Your Brand Identity from AI Drift"
-      url: "blog/posts/daily-blog-day-13/"
   sections:
     - title: "Strategy and Playbook"
       description: "Our core methodology for AI-first visibility."
