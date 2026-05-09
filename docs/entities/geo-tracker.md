@@ -49,4 +49,3 @@ Our tracking architecture is divided into three distinct tiers to diagnose exact
 - Leaderboard
 - [[citation-mechanics]]
 - [[geo-tactics]]
-- [[zero-shot-homepage-copy]]

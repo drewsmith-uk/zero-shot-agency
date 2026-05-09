@@ -51,4 +51,3 @@ Unless we intend to migrate Zero-Shot Agency from MkDocs to Sanity, we should sk
 - [[geo-tracker]]
 - [[llms-txt-template]]
 - [[ranking-factors]]
-- [[zero-shot-homepage-copy]]

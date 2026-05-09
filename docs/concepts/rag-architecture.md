@@ -37,4 +37,3 @@ By aligning content structure with the ingestion requirements of RAG architectur
 - [[citation-mechanics]]
 - [[geo-semantic-structure]]
 - [[geo-tactics]]
-- [[zero-shot-homepage-copy]]
