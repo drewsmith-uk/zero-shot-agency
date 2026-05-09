@@ -232,6 +232,8 @@ html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul > li
 .zsa-panel {
     background: var(--md-code-bg-color);
     padding: 3rem;
+    height: 100%;
+    box-sizing: border-box;
 }
 .zsa-panel.zsa-hero-copy {
     padding-right: 4rem;
@@ -357,15 +359,6 @@ footer.md-footer { display: none; }
 
 
 /* Explore ZSA Enhancements */
-
-
-
-
-
-.zsa-panel {
-    height: 100%;
-    box-sizing: border-box;
-}
 
 .panel-subtitle {
     font-family: var(--md-code-font-family);
