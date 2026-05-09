@@ -136,7 +136,7 @@ html body[data-md-color-scheme] .md-typeset .grid.cards > ul {
     list-style: none;
 }
 @media screen and (min-width: 1000px) {
-    html body[data-md-color-scheme] .md-typeset .grid.cards > ul {
+    html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul {
         grid-template-columns: repeat(4, 1fr);
     }
 }
