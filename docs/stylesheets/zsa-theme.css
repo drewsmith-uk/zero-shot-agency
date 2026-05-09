@@ -140,18 +140,18 @@ html body[data-md-color-scheme] .md-typeset .grid.cards > ul {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p {
+html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul > li > p {
     margin: 0;
     font-size: 0.95rem;
     color: var(--md-default-fg-color--light);
 }
 /* Ensure the kicker isn't bolded */
-html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(1) {
+html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul > li > p > strong:nth-of-type(1) {
     font-weight: 400;
     color: var(--md-default-fg-color--light);
 }
 /* The second bold tag inside the card is the main heading */
-html body[data-md-color-scheme] .md-typeset .grid.cards > ul > li > p > strong:nth-of-type(2) {
+html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul > li > p > strong:nth-of-type(2) {
     display: block;
     font-size: 1.15rem;
     color: var(--md-default-fg-color);
