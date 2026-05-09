@@ -229,7 +229,7 @@ html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul > li
 */
 .zsa-hero-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1px;
     background: var(--md-typeset-table-color);
     border: 1px solid var(--md-typeset-table-color);
@@ -238,12 +238,12 @@ html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul > li
 
 .zsa-panel {
     background: var(--md-code-bg-color);
-    padding: 3rem;
+    padding: 2rem;
     height: 100%;
     box-sizing: border-box;
 }
 .zsa-panel.zsa-hero-copy {
-    padding-right: 4rem;
+    padding-right: 2rem;
 }
 
 .md-typeset .zsa-hero-grid h1 {
@@ -355,9 +355,10 @@ html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul > li
     color: var(--md-default-fg-color);
 }
 
-@media (max-width: 800px) {
-    .zsa-hero-grid { grid-template-columns: 1fr; }
-    .zsa-panel { padding: 2rem; }
+@media screen and (min-width: 800px) {
+    .zsa-hero-grid { grid-template-columns: 2fr 1fr; }
+    .zsa-panel { padding: 3rem; }
+    .zsa-panel.zsa-hero-copy { padding-right: 4rem; }
 }
 /* Hide MkDocs Footer Banner */
 footer.md-footer { display: none; }
