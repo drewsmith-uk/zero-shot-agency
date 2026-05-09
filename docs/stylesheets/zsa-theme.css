@@ -135,6 +135,10 @@ html body[data-md-color-scheme] .md-typeset .grid.cards > ul {
     padding: 0;
     list-style: none;
 }
+/* Force consistent section spacing to match Hero and Blockquote */
+html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards {
+    margin-bottom: 4rem;
+}
 @media screen and (min-width: 1000px) {
     html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul {
         grid-template-columns: repeat(4, 1fr);
