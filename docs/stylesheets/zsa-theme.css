@@ -307,7 +307,7 @@ html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul > li
     font-family: var(--md-code-font-family);
     font-weight: 600;
     border-radius: 0;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .md-typeset .zsa-hero-actions .md-button--primary {
