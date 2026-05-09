@@ -261,8 +261,8 @@ html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul > li
     margin-bottom: 1.5rem;
 }
 
-.zsa-hero-accent {
-    color: var(--md-accent-fg-color) !important;
+.md-typeset .zsa-hero-grid .zsa-hero-accent {
+    color: var(--md-accent-fg-color);
     font-weight: 500;
 }
 
