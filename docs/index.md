@@ -85,8 +85,6 @@ hero:
 **RAG (Retrieval-Augmented Generation)**
 : The architecture used by modern AI search engines to fetch external information and ground their generated answers in factual, cited sources.
 
----
-
 ## Frequently Asked Questions about GEO
 
 ??? faq "What is Generative Engine Optimization (GEO)?"
