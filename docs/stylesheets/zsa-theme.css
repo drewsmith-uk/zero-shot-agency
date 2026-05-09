@@ -142,6 +142,7 @@ html body[data-md-color-scheme] .md-typeset .grid.cards > ul {
 html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards {
     margin-bottom: 4rem;
 }
+/* Desktop breakpoint: 1000px and up */
 @media screen and (min-width: 1000px) {
     html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul {
         grid-template-columns: repeat(4, 1fr);
@@ -355,7 +356,8 @@ html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-core-cards > ul > li
     color: var(--md-default-fg-color);
 }
 
-@media (max-width: 800px) {
+/* Mobile breakpoint: below 800px. Tablet remains 800px–999px. */
+@media screen and (max-width: 799px) {
     .zsa-hero-grid { grid-template-columns: 1fr; }
     .zsa-panel { padding: 2rem; }
 }
@@ -419,6 +421,7 @@ footer.md-footer { display: none; }
 html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > ul {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
+/* Desktop breakpoint: 1000px and up */
 @media screen and (min-width: 1000px) {
     html body[data-md-color-scheme] .md-typeset .grid.cards.zsa-explore-container > ul {
         grid-template-columns: 1fr 1fr;
