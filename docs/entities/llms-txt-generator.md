@@ -28,4 +28,3 @@ Distributing open-source scripts like this tool directly helps other developers 
 - [[citation-mechanics]]
 - [[geo-tactics]]
 - [[llms-txt-template]]
-- [[zero-shot-homepage-copy]]

@@ -44,4 +44,3 @@ To dominate AI search, content creators must transition from optimizing for huma
 - [[llms-txt-template]]
 - [[princeton-geo-paper]]
 - [[rag-architecture]]
-- [[zero-shot-homepage-copy]]

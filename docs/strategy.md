@@ -75,4 +75,3 @@ We will achieve this the ultimate "show, don't tell" way: not just by talking ab
 - [[publisher-pipeline]]
 - [[rag-architecture]]
 - [[ranking-factors]]
-- [[zero-shot-homepage-copy]]

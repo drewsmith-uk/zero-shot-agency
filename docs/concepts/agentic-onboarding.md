@@ -50,4 +50,3 @@ The "Agentic Client Onboarding" system is the foundational lead-capture and conv
 - [[llms-txt-template]]
 - [[onboarding-agent]]
 - [[ranking-factors]]
-- [[zero-shot-homepage-copy]]
