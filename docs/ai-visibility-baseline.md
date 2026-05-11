@@ -171,7 +171,7 @@ Usually not on their own. Technical checks show whether source material is acces
 
 ### What do we need to provide?
 
-Typically: primary domain, priority offers, buyer questions, target markets, competitors, approved claims, proof assets, and any useful Search Console, analytics, CRM, sales-call, or support inputs.
+Start with your domain, priority offer, target buyers, and a few competitors or buyer questions. If you have sales notes, Search Console data, proof assets, or analytics, they can improve the baseline — but they are not required for the first call.
 
 ### What happens after the baseline?
 
