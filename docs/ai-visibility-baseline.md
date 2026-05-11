@@ -19,13 +19,13 @@ The AI Visibility Baseline is a fixed-scope diagnostic for B2B teams that need t
 - whether your technical foundation makes your evidence easy to retrieve, parse, and trust;
 - which fixes should happen first.
 
-You get a customer-ready report, a retained evidence pack, and a ranked action plan. No guaranteed rankings. No promised citations. No black-box theatre.
+You get an executive-ready report, a retained evidence pack, and a ranked action plan. You leave knowing whether to fix content, technical source quality, competitive positioning, or measurement first. No guaranteed rankings. No promised citations. No black-box theatre.
 
-[Book an AI Visibility Baseline call](contact.md)
+[Book a baseline call and find your visibility gaps](contact.md)
 
 ## Why it matters
 
-AI answers are becoming a recommendation layer between your market and your website.
+AI answers now sit between your market and your website as a recommendation layer.
 
 A buyer can ask:
 
@@ -36,9 +36,11 @@ A buyer can ask:
 
 The response may cite your site, cite a competitor, summarise stale positioning, lift a third-party listicle, or omit you completely.
 
+By the time that buyer reaches a vendor site, the shortlist may already be shaped by sources you do not own and claims you have not corrected.
+
 Traditional SEO data is still useful, but it does not answer the whole commercial question. Ranking for a keyword is not the same as being named, cited, and accurately explained inside an AI-generated answer.
 
-The baseline gives you a defensible starting point before you spend on content, tooling, technical hardening, or a broader GEO programme.
+The baseline gives you the evidence to decide what to fix first before you spend on content, tooling, technical hardening, or a broader GEO programme.
 
 ## What we measure
 
@@ -179,6 +181,6 @@ You get a ranked action plan. Follow-on work may include technical hardening, so
 
 Before you rewrite the site, buy another platform, or brief a content team, find out what AI systems can already see.
 
-The AI Visibility Baseline gives you the measurement layer first: prompts, platforms, citations, competitors, technical hygiene, retained evidence, and a ranked action plan.
+The AI Visibility Baseline gives you the measurement layer first: prompts, platforms, citations, competitors, technical hygiene, retained evidence, and a ranked action plan. You leave knowing whether content, technical source quality, competitive positioning, or measurement needs to move first.
 
-[Book an AI Visibility Baseline call](contact.md)
+[Book a baseline call and find your visibility gaps](contact.md)
