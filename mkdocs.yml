@@ -67,6 +67,7 @@ nav:
   - Home: index.md
 #  - Leaderboard: leaderboard.md
   - Strategy & Playbook: strategy.md
+  - AI Visibility Baseline: ai-visibility-baseline.md
   - Blog:
     - blog/index.md
   - Concepts:
