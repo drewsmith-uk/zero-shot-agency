@@ -25,7 +25,7 @@ You get an executive-ready report, a retained evidence pack, and a ranked action
 
 ## Why it matters
 
-AI answers now sit between your market and your website as a recommendation layer.
+AI answers now sit between your buyers and your website, shaping which vendors get noticed before anyone clicks.
 
 A buyer can ask:
 
