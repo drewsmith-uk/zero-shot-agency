@@ -34,6 +34,8 @@ When providing modifications to existing files:
 
 ## 6. Frontend & UI Engineering Workflow
 - **Design-First Workflow:** Do not write new CSS or modify HTML templates without an approved standalone HTML Design Sketch.
-- **No Arbitrary Styling:** Agents must NOT invent new spacing margins, colors, or borders. You must use the existing structural classes (e.g., `.grid.cards`, `.zsa-panel`) and MkDocs variables defined in `docs/DESIGN.md`.
+- **Design Source of Truth:** Read root `DESIGN.md` before any UI/layout work.
+- **No Arbitrary Styling:** Agents must NOT invent new spacing margins, colors, or borders. Use existing structural classes (e.g., `.grid.cards`, `.zsa-panel`) and MkDocs variables defined in root `DESIGN.md`.
+- **Markdown-Native First:** Prefer MkDocs/Markdown primitives such as `{ .grid .cards }`; do not use raw HTML in Markdown pages unless Drew explicitly approves the exception.
 - **No Inline Styles:** Never use `style="..."` attributes in templates.
 - **Visual QA:** Code that changes layout or typography must be verified via a visual sketch or human review, not just a successful `mkdocs build`.
