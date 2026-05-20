@@ -48,7 +48,7 @@ The obvious gap is usually phrased as an SEO or GEO problem: we are not cited, w
 
 The more useful gap is buyer-shaped.
 
-A buyer might ask ChatGPT which agency can help them improve AI search visibility. The answer might mention a few firms, summarize services, and cite pages that look credible enough to click. If the buyer lands on a page that says roughly the same generic thing as everyone else, the citation did not create trust. It created a new comparison tab.
+A buyer might ask an AI assistant which agency can help them improve AI search visibility. The answer might mention a few firms, summarize services, and cite pages that look credible enough to click. If the buyer lands on a page that says roughly the same generic thing as everyone else, the citation did not create trust. It created a new comparison tab.
 
 That is a buyer brief problem.
 
