@@ -1,0 +1,40 @@
+name: Validate Frontmatter
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**/*.md'
+      - 'tools/validate_frontmatter.py'
+      - 'tests/test_validate_frontmatter.py'
+      - '.github/workflows/frontmatter.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install validation dependencies
+        run: pip install pyyaml pytest
+
+      - name: Run validator tests
+        run: python -m pytest tests/test_validate_frontmatter.py -q
+
+      - name: Validate changed blog frontmatter
+        run: |
+          set -euo pipefail
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          mapfile -t files < <(git diff --name-only --diff-filter=ACMR "origin/${{ github.base_ref }}...HEAD" -- 'docs/blog/posts/*.md')
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No changed blog posts to validate."
+            exit 0
+          fi
+          python tools/validate_frontmatter.py "${files[@]}"
