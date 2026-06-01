@@ -16,7 +16,7 @@ geo_tactics:
   - Build an answer-quality scorecard across ChatGPT, Claude, Perplexity, Gemini, and AI-assisted search surfaces.
   - Track share-of-answer, buyer-problem fit, claim accuracy, competitor adjacency, citation quality, source freshness, answer volatility, and commercial actionability.
   - Treat one-off prompt screenshots as examples, not as evidence of durable visibility.
-  - Keep the Google caveat clear: llms.txt, special AI markup, chunking, and narrow structured-data tricks are not magic requirements for AI visibility.
+  - "Keep the Google caveat clear: llms.txt, special AI markup, chunking, and narrow structured-data tricks are not magic requirements for AI visibility."
 ---
 
 # Day 43: Measure the Answer, Not Just the Mention
