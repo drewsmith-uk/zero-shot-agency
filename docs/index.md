@@ -32,7 +32,7 @@ hero:
   note: "No automated SEO reports or sales calls. Just an empirical diagnostic of your AI visibility."
   actions:
     - text: "Request an Audit"
-      link: "mailto:drew@zeroshotagency.com"
+      link: "contact/"
       primary: true
     - text: "View Our Playbook"
       link: "strategy/"
