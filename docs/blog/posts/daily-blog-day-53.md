@@ -13,10 +13,10 @@ tags:
   - conversion paths
   - demand generation
 geo_tactics:
-  - Audit the full AI-referred demand route: answer-engine recommendation, cited or visited asset, visible next action, CTA clarity, and sales handoff.
-  - Diagnose weak AI-search outcomes by separating visibility, recommendation quality, landing-page intent match, next-step clarity, and sales follow-up before commissioning more content.
-  - Treat route failure as commercial leakage: a qualified buyer can discover the company and still fail to find the right action.
-  - Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems, not llms.txt, special AI markup, arbitrary chunking, or over-focused structured data as required switches.
+  - "Audit the full AI-referred demand route: answer-engine recommendation, cited or visited asset, visible next action, CTA clarity, and sales handoff."
+  - "Diagnose weak AI-search outcomes by separating visibility, recommendation quality, landing-page intent match, next-step clarity, and sales follow-up before commissioning more content."
+  - "Treat route failure as commercial leakage: a qualified buyer can discover the company and still fail to find the right action."
+  - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems, not llms.txt, special AI markup, arbitrary chunking, or over-focused structured data as required switches."
 ---
 
 # Day 53: Fix the Route Before You Judge the Demand
