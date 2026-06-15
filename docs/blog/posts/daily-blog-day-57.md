@@ -16,7 +16,7 @@ geo_tactics:
   - Measure visibility as a pattern across repeated buyer-question families, answer engines, dates, and competitor sets rather than as one screenshot or one prompt run.
   - Track answer volatility, share-of-answer, competitor movement, and citation or source drift before treating a brand as visible, absent, winning, or losing.
   - Separate noisy prompt variation from actionable evidence by sampling high-intent questions on a cadence and recording which sources, competitors, and claims recur.
-  - Keep the Google caveat clear: Google's AI features do not require llms.txt, special AI markup, arbitrary chunking, or over-focused structured data as visibility switches.
+  - "Keep the Google caveat clear: Google's AI features do not require llms.txt, special AI markup, arbitrary chunking, or over-focused structured data as visibility switches."
 ---
 
 # Day 57: Measure Volatility Before You Call It Visibility
