@@ -13,10 +13,10 @@ tags:
   - positioning
   - commercial diagnostics
 geo_tactics:
-  - Audit answer-engine descriptions for missing commercial facts: buyer fit, differentiators, proof points, use cases, comparison context, and next step.
-  - Compare actual answers against the buyer questions and decision criteria the company wants to own, then turn omissions into a prioritised content, positioning, and sales-enablement brief.
-  - Treat a brand mention without useful explanation as an incomplete visibility signal, especially when competitors are described more clearly or more credibly.
-  - Keep the Google caveat clear: Google's AI features do not require llms.txt, special AI markup, arbitrary chunking, or over-focused structured data as visibility switches.
+  - "Audit answer-engine descriptions for missing commercial facts: buyer fit, differentiators, proof points, use cases, comparison context, and next step."
+  - "Compare actual answers against the buyer questions and decision criteria the company wants to own, then turn omissions into a prioritised content, positioning, and sales-enablement brief."
+  - "Treat a brand mention without useful explanation as an incomplete visibility signal, especially when competitors are described more clearly or more credibly."
+  - "Keep the Google caveat clear: Google's AI features do not require llms.txt, special AI markup, arbitrary chunking, or over-focused structured data as visibility switches."
 ---
 
 # Day 58: Audit the Answer for What It Leaves Out
