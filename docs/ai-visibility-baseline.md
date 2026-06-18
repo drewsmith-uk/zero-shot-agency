@@ -1,6 +1,6 @@
 ---
 title: AI Visibility Baseline
-description: Measure where your brand appears in AI answers, who gets cited instead, and what to fix before investing in GEO work.
+description: Evidence-led AI visibility audit for B2B teams: measure AI-answer presence, citations, competitors, source quality, and what to fix before investing in GEO work.
 ---
 
 # AI Visibility Baseline
@@ -135,9 +135,19 @@ It is not for teams seeking guaranteed ChatGPT, Perplexity, Gemini, or Claude ci
 
 ## Methodology note
 
-The baseline is evidence-led and limitation-aware.
+The baseline is evidence-led and limitation-aware. It is designed for teams comparing AI visibility agencies, GEO audits, answer-engine optimisation work, or share-of-AI-voice tools and trying to separate observable evidence from vendor theatre.
 
 We do not infer AI visibility from rankings alone. Material findings are tied to retained answer captures, displayed sources, live URL checks, or source inspection for technical claims.
+
+Every finding is labelled by evidence type:
+
+| Evidence label | What it means |
+|---|---|
+| **Direct answer-engine evidence** | Captured output from ChatGPT, Claude, Perplexity, Gemini, or another tested answer surface, with prompt, timestamp, answer text, and visible sources where available. |
+| **Search or citation-surface proxy** | Search results, citation surfaces, source indexes, or other accessible discovery evidence. Useful, but not treated as a direct answer-engine transcript. |
+| **Site and technical evidence** | Crawl access, sitemap, metadata, schema where present, semantic structure, canonical signals, `llms.txt`, answer-ready pages, and source quality. |
+| **Competitor or reference evidence** | Observable competitor appearances, source paths, third-party listicles, directories, reviews, or publisher pages shaping the answer landscape. |
+| **Hypothesis requiring validation** | A plausible interpretation that should guide testing, not a public claim or guaranteed outcome. |
 
 AI systems vary by platform, model, interface, geography, account state, freshness, and sampling. The report labels those limitations instead of hiding them. Weak, absent, and inconclusive results stay in the evidence pack because they are often the most useful part of the diagnosis.
 
@@ -176,6 +186,21 @@ Start with your domain, priority offer, target buyers, and a few competitors or 
 ### What happens after the baseline?
 
 You get a ranked action plan. Follow-on work may include technical hardening, source-backed content, proof assets, answer-ready pages, remeasurement, monitoring, or agentic workflows to keep the evidence current.
+
+## Example baseline output
+
+A useful baseline should make uncertainty visible. A compact report usually includes:
+
+| Section | What it answers |
+|---|---|
+| Visibility snapshot | Where the brand appears, is absent, is cited, or is displaced by competitors. |
+| Competitor and source map | Which domains, publishers, marketplaces, listicles, or owned assets are shaping the answer. |
+| Evidence quality audit | Whether the site has crawlable, quotable proof for the claims it wants buyers and AI systems to trust. |
+| Technical retrievability check | Whether the source layer is accessible, structured, canonical, and machine-readable enough to support reuse. |
+| Caveat ledger | Which findings are direct observations, proxies, platform limitations, or hypotheses requiring validation. |
+| Ranked action plan | What to fix now, what to test next, and what to park until the evidence is stronger. |
+
+This is the difference between a visibility dashboard and a decision pack: the dashboard can show movement, but the baseline explains what the movement means and what to do next.
 
 ## Start with the evidence
 
