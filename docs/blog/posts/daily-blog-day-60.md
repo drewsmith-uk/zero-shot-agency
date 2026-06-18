@@ -16,7 +16,7 @@ geo_tactics:
   - Capture the buyer question, answer surface, buyer interpretation, competitor context, and next objection when a prospect arrives from ChatGPT, Claude, Perplexity, Gemini, Google AI features, or another answer-led surface.
   - Treat AI-referred demand as a feedback loop for prompt-family tracking, offer positioning, CTA design, sales follow-up, competitor comparisons, and GEO prioritisation.
   - Separate qualified demand, wrong-fit curiosity, competitor-comparison pressure, and route confusion before counting a lead as evidence that AI visibility is working.
-  - Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility.
+  - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility."
 ---
 
 # Day 60: Capture the Buyer Question Before You Count the AI Lead
