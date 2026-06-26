@@ -16,7 +16,7 @@ geo_tactics:
   - Build a recurring answer-market drift review that separates normal answer volatility from meaningful changes in category framing, competitor set, buyer objections, proof expectations, and recommended next steps.
   - Review high-value buyer questions weekly, monthly, and after major launches or market moves, with clear thresholds for when marketing, product marketing, sales, leadership, or technical SEO should act.
   - Compare ChatGPT, Claude, Perplexity, Gemini, Google AI features, and similar answer-led surfaces over time without assuming every surface updates on the same clock or deserves the same response.
-  - Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility.
+  - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility."
 ---
 
 # Day 68: Build a Cadence for Answer-Market Drift
