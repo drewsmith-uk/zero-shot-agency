@@ -15,8 +15,8 @@ tags:
 geo_tactics:
   - Publish buyer-useful comparison architecture before ChatGPT, Claude, Perplexity, Gemini, Google AI features, or similar answer-led surfaces have to infer the criteria from competitors, third parties, and thin snippets.
   - Make the public surface explicit about decision criteria, trade-offs, fit boundaries, alternative categories, proof standards, buyer questions, and next-step routes.
-  - Treat comparison pages as buyer guidance, not attack pages: show when the company is the right choice, when it is not, and what evidence should decide the shortlist.
-  - Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility.
+  - "Treat comparison pages as buyer guidance, not attack pages: show when the company is the right choice, when it is not, and what evidence should decide the shortlist."
+  - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility."
 ---
 
 # Day 70: Build the Comparison Before the Buyer Outsources It
