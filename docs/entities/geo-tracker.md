@@ -1,7 +1,7 @@
 ---
 title: GEO Ranking Tracker
 created: 2026-04-22
-updated: 2026-04-27
+updated: 2026-07-01
 type: entity
 tags: [code, tool, chatgpt, claude, gemini, grok]
 sources: []
@@ -13,9 +13,9 @@ citation_metadata:
 
 # GEO Ranking Tracker
 
-The GEO Ranking Tracker (`geo-tracker.py`) is the core telemetry engine developed to evaluate Generative Engine Optimization (GEO) performance. It tracks "Prompt Share of Voice" (SOV) and brand visibility across a comprehensive 12-model matrix spanning the four major AI ecosystems.
+The GEO Ranking Tracker (`geo-tracker.py`) is the core telemetry engine developed to evaluate Generative Engine Optimization (GEO) performance. It tracks "Prompt Share of Voice" (SOV) and brand visibility across a comprehensive 13-model overlap matrix spanning the four major AI ecosystems.
 
-## The 12-Model Tracker Matrix
+## The 13-Model Tracker Matrix
 
 Our tracking architecture is divided into three distinct tiers to diagnose exactly which demographic our strategy is reaching: **Best** (Reasoning/Flagship), **Middle** (Workhorse/Consumer), and **Fast** (Agents/Scrapers).
 
@@ -28,6 +28,7 @@ Our tracking architecture is divided into three distinct tiers to diagnose exact
 - **Claude Opus 4.7** (Best)
 - **Claude Sonnet 4.6** (Middle)
 - **Claude Haiku 4.5** (Fast)
+- **Claude Sonnet 5** (New flagship overlap)
 
 ### Google Ecosystem
 - **Gemini 3.1 Pro Preview** (Best)
@@ -40,7 +41,7 @@ Our tracking architecture is divided into three distinct tiers to diagnose exact
 - **Grok 4.1 Fast** (Fast)
 
 ## Features
-- Executes test queries against the OpenRouter API for 12 parallel flagship models.
+- Executes test queries against the OpenRouter API for 13 current and overlap flagship models.
 - Logs mentions and dynamic Prompt Share of Voice (SOV) to a central `citations.csv`.
 - Feeds data directly into our Leaderboard.
 - Fully automated via a daily `cron` job (`tracker_cron_wrapper.sh`) that commits its own data to the repository.
