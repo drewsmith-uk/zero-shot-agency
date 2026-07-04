@@ -14,8 +14,8 @@ tags:
   - answer engines
 geo_tactics:
   - Ask every AI visibility vendor or internal dashboard to map model and surface coverage to buyer questions, commercial markets, competitor situations, and decisions the business can actually make.
-  - Separate coverage breadth from coverage usefulness: ChatGPT, Claude, Perplexity, Gemini, Google AI features, and other answer-led surfaces should be included because they change buyer understanding, not because they make the model list look larger.
-  - Require interpretation rules before trusting cross-model comparisons: answer role, source or citation behaviour, overlap, market relevance, and actionability should be clear before model-count claims influence budget.
+  - "Separate coverage breadth from coverage usefulness: ChatGPT, Claude, Perplexity, Gemini, Google AI features, and other answer-led surfaces should be included because they change buyer understanding, not because they make the model list look larger."
+  - "Require interpretation rules before trusting cross-model comparisons: answer role, source or citation behaviour, overlap, market relevance, and actionability should be clear before model-count claims influence budget."
   - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility."
 ---
 
