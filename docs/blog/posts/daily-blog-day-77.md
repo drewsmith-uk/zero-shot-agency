@@ -14,7 +14,7 @@ tags:
   - answer engines
 geo_tactics:
   - Map every commercially important answer-engine gap to a named owner, a decision, a due date, a public asset or source change, and a review point before it enters the work queue.
-  - Assign owners by the kind of failure exposed: marketing for comparison language, sales for recurring objections, product for positioning boundaries, leadership for category trade-offs, and technical or content teams for public source updates.
+  - "Assign owners by the kind of failure exposed: marketing for comparison language, sales for recurring objections, product for positioning boundaries, leadership for category trade-offs, and technical or content teams for public source updates."
   - Treat ChatGPT, Claude, Perplexity, Gemini, Google AI features, and similar answer-led surfaces as management inputs only when the organisation can say who is responsible for the fix and how the result will be checked.
   - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility."
 ---
