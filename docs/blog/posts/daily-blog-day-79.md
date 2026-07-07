@@ -13,7 +13,7 @@ tags:
   - commercial priority
   - answer engines
 geo_tactics:
-  - Add priority triggers to commercially important pages: market shifts, competitor pressure, budget cycles, launches, regulatory risk, sales objections, category confusion, proof gaps, and repeated answer-engine wording that makes the problem sound optional.
+  - "Add priority triggers to commercially important pages: market shifts, competitor pressure, budget cycles, launches, regulatory risk, sales objections, category confusion, proof gaps, and repeated answer-engine wording that makes the problem sound optional."
   - Connect each trigger to a business consequence, timing reason, and decision route so answer-led summaries can explain why the buyer should act now rather than merely understand the category.
   - Review ChatGPT, Claude, Perplexity, Gemini, Google AI features, and similar answer-led surfaces for language that correctly describes the offer but drains urgency from the problem.
   - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility."
