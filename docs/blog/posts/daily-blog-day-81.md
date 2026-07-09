@@ -14,7 +14,7 @@ tags:
   - answer engines
 geo_tactics:
   - Audit the alternatives ChatGPT, Claude, Perplexity, Gemini, Google AI features, and similar answer-led surfaces add to buyer shortlists, separating known rivals from adjacent categories, substitute workflows, tools, agencies, communities, internal teams, and legacy vendors.
-  - Record why each unexpected alternative was included: shared buyer question, overlapping outcome claim, similar proof asset, pricing assumption, category wording, implementation model, audience, or third-party mention.
+  - "Record why each unexpected alternative was included: shared buyer question, overlapping outcome claim, similar proof asset, pricing assumption, category wording, implementation model, audience, or third-party mention."
   - Use the shortlist gap to clarify category language, comparison context, proof standards, sales enablement, and careful disqualification language without turning the exercise into a generic comparison-page programme.
   - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility."
 ---
