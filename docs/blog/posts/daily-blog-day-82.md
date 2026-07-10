@@ -14,8 +14,8 @@ tags:
   - commercial strategy
 geo_tactics:
   - Map answer-led surfaces to buyer moments such as discovery, comparison, risk checking, objection formation, internal memo writing, and procurement validation before blending them into one AI visibility report.
-  - Build prompt sets around real buyer jobs, not generic brand checks: what the buyer is trying to decide, which surface they are likely to use, and what commercial consequence follows from the answer.
-  - Interpret each surface by role: source exposure, shortlist formation, comparative reasoning, risk language, search-adjacent discovery, or internal explanation rather than treating every mention as the same signal.
+  - "Build prompt sets around real buyer jobs, not generic brand checks: what the buyer is trying to decide, which surface they are likely to use, and what commercial consequence follows from the answer."
+  - "Interpret each surface by role: source exposure, shortlist formation, comparative reasoning, risk language, search-adjacent discovery, or internal explanation rather than treating every mention as the same signal."
   - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility."
 ---
 
