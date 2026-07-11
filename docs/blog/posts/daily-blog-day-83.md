@@ -13,8 +13,8 @@ tags:
   - content governance
   - buyer decisions
 geo_tactics:
-  - Test every proposed GEO asset against the new buyer decision it adds: objection, comparison, timing trigger, qualification boundary, evidence need, market distinction, or next step.
-  - Treat near-neighbour drafts as a governance problem, not a writing problem: decide whether to publish, block, rework, consolidate, update an existing asset, or wait for a stronger signal.
+  - "Test every proposed GEO asset against the new buyer decision it adds: objection, comparison, timing trigger, qualification boundary, evidence need, market distinction, or next step."
+  - "Treat near-neighbour drafts as a governance problem, not a writing problem: decide whether to publish, block, rework, consolidate, update an existing asset, or wait for a stronger signal."
   - Prioritise distinct answer/retrieval jobs over article count so buyers and answer-led systems can find clearer material for category education, comparison, qualification, risk checking, and next decisions.
   - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility."
 ---
