@@ -14,7 +14,7 @@ tags:
   - commercial strategy
 geo_tactics:
   - Inspect commercially meaningful prompts for how answer-led surfaces classify the offer, which criteria they apply, which alternatives they present, and whether the pattern repeats across buyer moments.
-  - Treat category compression as a commercial failure mode: the brand may be visible while buyers inherit the wrong price anchor, procurement route, implementation expectation, success metric, and competitor set.
+  - "Treat category compression as a commercial failure mode: the brand may be visible while buyers inherit the wrong price anchor, procurement route, implementation expectation, success metric, and competitor set."
   - Repair public category language with clearer offer boundaries, examples, comparisons, proof, fit and no-fit cues, and third-party references; do not imply that any single page guarantees answer-engine inclusion.
   - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, or over-focused structured data are not required switches for Google AI visibility."
 ---
