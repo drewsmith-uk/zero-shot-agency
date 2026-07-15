@@ -14,9 +14,9 @@ tags:
   - commercial decision-making
 geo_tactics:
   - Treat every captured AI answer as a time-bound observation, not permanent market truth, before using it to support budget, positioning, sales, or competitive decisions.
-  - Record only the context needed to interpret or retest the observation: prompt wording, surface, observable model or version where available, geography or buyer context where relevant, source state, and capture date.
+  - "Record only the context needed to interpret or retest the observation: prompt wording, surface, observable model or version where available, geography or buyer context where relevant, source state, and capture date."
   - Assign each observation a review-by date or event trigger, such as a model replacement, important launch, material public-page change, repeated competitor movement, or board and budget decision.
-  - Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, and over-focused structured data are not required switches for Google AI visibility.
+  - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, and over-focused structured data are not required switches for Google AI visibility."
 ---
 
 # Day 87: Put an Expiry Date on Every AI Answer
