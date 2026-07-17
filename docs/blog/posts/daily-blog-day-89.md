@@ -13,10 +13,10 @@ tags:
   - prompt strategy
   - commercial strategy
 geo_tactics:
-  - Audit prompt portfolios as market definitions: each question encodes a buyer, category, competitor set, problem, commercial moment, and intended management decision.
+  - "Audit prompt portfolios as market definitions: each question encodes a buyer, category, competitor set, problem, commercial moment, and intended management decision."
   - Classify prompts as active, watchlist, or historical so obsolete questions can remain useful context without governing current budget, content, positioning, sales, or partnership decisions.
   - Retire prompts from active KPI reporting when the offer, ICP, category, sales qualification, competitor set, market language, or strategic priority changes materially.
-  - Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, and over-focused structured data are not required switches for Google AI visibility.
+  - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, and over-focused structured data are not required switches for Google AI visibility."
 ---
 
 # Day 89: Retire the Prompts That Measure Your Old Strategy
