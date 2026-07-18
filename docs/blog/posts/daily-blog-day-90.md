@@ -13,10 +13,10 @@ tags:
   - sales intelligence
   - commercial strategy
 geo_tactics:
-  - Use recurring lost-deal language as a revenue-grounded input for choosing which buyer questions deserve GEO investigation, rather than inventing prompt lists from internal assumptions.
-  - Separate observed sales evidence from hypotheses about answer-engine influence: a lost-deal note can reveal a buyer concern, but direct answer-surface evidence is required before claiming AI created it.
-  - Translate each repeated objection into a bounded research brief that names the commercial signal, buyer question, affected decision, answer surfaces, evidence limits, owner, and learning step.
-  - Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, and over-focused structured data are not required switches for Google AI visibility.
+  - "Use recurring lost-deal language as a revenue-grounded input for choosing which buyer questions deserve GEO investigation, rather than inventing prompt lists from internal assumptions."
+  - "Separate observed sales evidence from hypotheses about answer-engine influence: a lost-deal note can reveal a buyer concern, but direct answer-surface evidence is required before claiming AI created it."
+  - "Translate each repeated objection into a bounded research brief that names the commercial signal, buyer question, affected decision, answer surfaces, evidence limits, owner, and learning step."
+  - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, and over-focused structured data are not required switches for Google AI visibility."
 ---
 
 # Day 90: Let Lost Deals Write Your GEO Brief
