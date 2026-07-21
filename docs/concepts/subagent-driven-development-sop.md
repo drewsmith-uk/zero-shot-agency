@@ -1,7 +1,7 @@
 ---
 title: Subagent-Driven Development (SADD) SOP
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-07-21
 type: concept
 tags: [concept, strategy]
 geo_tactics: [fluency, authoritative-tone]
@@ -19,6 +19,8 @@ Subagents should be instantiated for tasks that are:
 - **Context Heavy:** Tasks that would flood the primary orchestrator's context window.
 
 Do **NOT** use subagents for minor mechanical tasks, single file patches, or trivial tool usage. Use direct CLI tools or scripts.
+
+Task authority is workflow-specific. Use the approved chat brief for direct work, `.hermes/sprints.md` for active strategic scope, and Hermes Kanban for multi-stage execution. Treat a GitHub issue as authoritative only when it has been explicitly selected and scoped; an open issue is not automatic permission to execute it.
 
 ## 2. Handling Context Boundaries
 
@@ -38,9 +40,9 @@ All subagent output must undergo a strict review process by the orchestrator:
 Zero-Shot Agency enforces strict Git protocols to maintain codebase integrity.
 
 - **No Main Commits:** Never commit directly to the `main` branch.
-- **Branching Convention:** Check out branches using the format `drafts/[name]` for content or `feature/[name]` for code (e.g., `drafts/issue-166-sadd-sop`).
-- **PRs Only:** All subagent work must be merged via Pull Requests. The orchestrator or human loop script creates the PR.
-- **Zero-Blind-Commit:** Agents must never execute `git commit` or push blindly. Stage exactly the files meant to be committed using `git add <specific_file_path>`. The Ralph loop script will handle the final commit and push.
+- **Branching Convention:** Use a scoped prefix such as `docs/[name]`, `feat/[name]`, `fix/[name]`, or `chore/[name]` that reflects the change.
+- **PRs Only:** All repository changes must be merged through Pull Requests. The orchestrator or assigned ops worker opens the PR after verifying the payload; a human operator decides whether to merge it.
+- **Zero-Blind-Commit:** Agents must never commit or push blindly. Stage exact file paths, inspect the staged diff, run relevant validators, and verify the branch and PR payload before reporting completion.
 
 ## Related Links
 - [[strategy]]

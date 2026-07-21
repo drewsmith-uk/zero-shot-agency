@@ -5,9 +5,9 @@ __pycache__/
 .claude/
 .entire/
 .cache/
+# Ignore any local remnants from the retired Ralph runtime.
 latest_agent.log
+run-state.txt
 ef_geo_audit.md
 audit_site.py
 *-audit.md
-run-state.txt
-docs/activity-log.md
