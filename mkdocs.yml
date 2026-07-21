@@ -40,7 +40,6 @@ plugins:
 
 hooks:
   - tools/blog_hook.py
-  - tools/build_log.py
 
 extra_css:
   - stylesheets/zsa-theme.css?v=12

@@ -9,7 +9,14 @@ Generative Engine Optimization (GEO) and AI Search Optimization (AIO). The sole 
 - Use [[wikilinks]] to link between pages
 - When updating a page, always bump the `updated` date
 - Every new page must be added to `index.md`
-- Every action must be logged as a new file in `docs/logs/entries/`
+- `docs/logs/entries/` is a historical archive of the retired Ralph workflow. Do not add routine task logs there unless a new entry is explicitly requested for a durable incident or experiment record.
+
+## Task Sources and Delivery Records
+- Work may originate from an approved chat brief, the active sprint in `.hermes/sprints.md`, a Hermes Kanban task, or an explicitly scoped GitHub issue.
+- GitHub issues are optional inputs and alerts, not a universal autonomous task queue. Automated monitors may open an issue for human triage, but agents must not automatically claim every open issue.
+- Pull Requests are the canonical integration and review record for repository changes. PR descriptions must identify scope, verification evidence, and any relevant task or issue.
+- Historical plans, logs, and issue descriptions provide context, not current truth. Verify them against maintained strategy, current task state, and the repository before acting.
+
 ## GitHub CLI and Pull Requests
 - **AGENTS MUST NEVER MERGE PULL REQUESTS.** Only human operators are authorized to merge. Agents must stop after `gh pr create`.
 - **Pull Request Bodies:** When using `gh pr create` with multiline bodies, NEVER use inline `--body "text\ntext"`. Bash does not parse `\n` in double quotes correctly. ALWAYS use a heredoc or `--body-file` to preserve real newlines. (e.g., `gh pr create --body-file pr_body.txt`)
@@ -43,7 +50,7 @@ sources: [raw/articles/source-name.md]
 - Ensure frontmatter contains the correct `date` and `categories` as required by the MkDocs blog plugin.
 
 ## Autonomous Agent Operational Protocol (Verify-Before-PR)
-All AI agents (including Hermes, Ralph, and Claude subagents) MUST adhere to the **Zero-Blind-Commit Protocol** before executing `git commit` or opening a Pull Request. You may not rely on the human user as your compiler or linter.
+All AI agents (including Hermes and delegated subagents) MUST adhere to the **Zero-Blind-Commit Protocol** before executing `git commit` or opening a Pull Request. You may not rely on the human user as your compiler or linter.
 
 1. **The Visual Diff Check:** Run `git diff` or `git diff --staged` to visually read the lines you are changing. Check for duplicate lines, unintended deletions, or malformed syntax.
 2. **The Scope Check:** Run `git status` to ensure you haven't accidentally scooped up untracked workspace files, hidden agent directories (e.g., `.entire/`), or utility scripts.
