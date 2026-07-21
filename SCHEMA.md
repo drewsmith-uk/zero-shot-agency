@@ -9,7 +9,7 @@ Generative Engine Optimization (GEO) and AI Search Optimization (AIO). The sole 
 - Use [[wikilinks]] to link between pages
 - When updating a page, always bump the `updated` date
 - Every new page must be added to `index.md`
-- `docs/logs/entries/` is a historical archive of the retired Ralph workflow. Do not add routine task logs there unless a new entry is explicitly requested for a durable incident or experiment record.
+- `archive/ralph-logs/` preserves the historical records of the retired Ralph workflow outside the public MkDocs site. Do not add routine task logs there unless a new entry is explicitly requested for a durable incident or experiment record.
 
 ## Task Sources and Delivery Records
 - Work may originate from an approved chat brief, the active sprint in `.hermes/sprints.md`, a Hermes Kanban task, or an explicitly scoped GitHub issue.
