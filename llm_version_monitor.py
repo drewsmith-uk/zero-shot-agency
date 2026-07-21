@@ -2,8 +2,10 @@ import urllib.request
 import json
 import re
 import csv
+import os
 import subprocess
 import sys
+import tempfile
 
 CSV_PATH = 'citations.csv'
 
@@ -72,16 +74,24 @@ def main():
             issue_body += f"- {m}\n"
         issue_body += "\nThese have been added to the `citations.csv` header. The old models will be deprecated in 30 days."
         
+        body_path = None
         try:
+            with tempfile.NamedTemporaryFile('w', encoding='utf-8', delete=False) as body_file:
+                body_file.write(issue_body)
+                body_path = body_file.name
+
             subprocess.run([
                 "gh", "issue", "create",
                 "--title", issue_title,
-                "--body", issue_body,
+                "--body-file", body_path,
                 "--label", "enhancement"
             ], check=True)
             print("Successfully created GitHub issue.")
         except subprocess.CalledProcessError as e:
             print(f"Failed to create GitHub issue: {e}")
+        finally:
+            if body_path:
+                os.unlink(body_path)
     else:
         print("No new models to add.")
 

@@ -26,6 +26,8 @@ MODELS = {
     "xai_best": "x-ai/grok-4.20",
     "xai_middle": "x-ai/grok-4",
     "xai_fast": "x-ai/grok-4.1-fast",
+
+    "anthropic_new_flagship": "anthropic/claude-sonnet-5",
 }
 
 def query_openrouter(client, query, model):
