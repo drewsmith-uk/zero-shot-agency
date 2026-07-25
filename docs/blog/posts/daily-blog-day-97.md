@@ -13,10 +13,10 @@ tags:
   - commercial strategy
   - scope design
 geo_tactics:
-  - Price GEO, research, content, and reporting automation around the exception path: missing access, ambiguous inputs, conflicting observations, sensitive data, approval authority, irreversible actions, and recovery.
+  - "Price GEO, research, content, and reporting automation around the exception path: missing access, ambiguous inputs, conflicting observations, sensitive data, approval authority, irreversible actions, and recovery."
   - Separate clean API or webhook workflows with reversible outputs from scraping, RPA, email parsing, sensitive-data handling, ambiguous evidence review, and publication or positioning decisions.
   - Define block, route, and recover rules before implementation so buyers know which exceptions can be automated, which require escalation, and who has authority to decide.
-  - Keep answer-engine evidence bounded: routine prompt capture and comparison may be automatable, but missing access, unsupported claims, conflicting observations, and publish decisions need explicit exception handling.
+  - "Keep answer-engine evidence bounded: routine prompt capture and comparison may be automatable, but missing access, unsupported claims, conflicting observations, and publish decisions need explicit exception handling."
 ---
 
 # Day 97: Price the Exceptions Before You Automate the Workflow
