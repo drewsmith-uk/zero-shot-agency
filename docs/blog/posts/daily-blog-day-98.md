@@ -14,7 +14,7 @@ tags:
   - commercial strategy
 geo_tactics:
   - Use answer-led comparisons to inspect whether providers are merely named, which reasons-to-choose are attributed, and whether those reasons are distinctive or interchangeable.
-  - Separate distribution weakness from positioning weakness: if a real difference exists but is not surfaced, clarify public explanation; if no defensible difference exists, sharpen the offer before amplifying it.
+  - "Separate distribution weakness from positioning weakness: if a real difference exists but is not surfaced, clarify public explanation; if no defensible difference exists, sharpen the offer before amplifying it."
   - Record visible trade-offs, fit boundaries, buyer situations, and exclusion criteria so comparison language does not collapse every provider into the same generic promise.
   - Treat each answer-led observation as bounded to the surface, prompt, date, and context observed; do not claim one answer proves buyer perception, platform-wide consensus, or deterministic visibility movement.
 ---
