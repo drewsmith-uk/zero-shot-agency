@@ -13,7 +13,7 @@ tags:
   - commercial strategy
   - operating model
 geo_tactics:
-  - Classify each AI visibility finding by the change surface it exposes: discovery language, public explanation, offer truth, sales objection, or technical accessibility.
+  - "Classify each AI visibility finding by the change surface it exposes: discovery language, public explanation, offer truth, sales objection, or technical accessibility."
   - Assign corrective authority to the function that controls the underlying condition, rather than assuming marketing can repair every absence, miscategorisation, obsolete offer, or blocked page.
   - Keep observations bounded by surface, prompt, date, market, access condition, and visible sources where available; do not claim an answer caused buyer behaviour or that every finding deserves action.
   - "Keep the Google caveat clear: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, and over-focused structured data are not required switches for Google AI visibility."
