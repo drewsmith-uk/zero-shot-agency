@@ -6,3 +6,4 @@ openai
 requests
 beautifulsoup4
 mkdocs-awesome-pages-plugin
+duckduckgo-search
