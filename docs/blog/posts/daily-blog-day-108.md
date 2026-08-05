@@ -15,7 +15,7 @@ tags:
 geo_tactics:
   - Preserve the exact answer language, surface, date, query, market or access condition, visible citations where available, recurrence pattern, and current public-source state before deciding whether to respond.
   - Separate what the answer said from whether the underlying statement is current, true-but-outdated, misleading by missing context, disputed or unclear, or false and unsubstantiated.
-  - Choose the smallest proportionate response: correct an owned source, publish a bounded clarification, route to communications, legal, or leadership, monitor for recurrence, or avoid amplifying an isolated claim.
+  - "Choose the smallest proportionate response: correct an owned source, publish a bounded clarification, route to communications, legal, or leadership, monitor for recurrence, or avoid amplifying an isolated claim."
   - Treat answer observations as bounded evidence; do not promise answer removal, deterministic correction, ranking movement, buyer behaviour, causality, or platform-wide consensus.
 ---
 
