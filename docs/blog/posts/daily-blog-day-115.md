@@ -13,9 +13,9 @@ tags:
   - measurement
   - commercial strategy
 geo_tactics:
-  - Hold the buyer job constant and change one commercial constraint at a time: budget posture, geography, stack, implementation capacity, risk tolerance, or timing.
-  - Record the surface, date, market or access context, exact base question, one changed constraint, resulting recommendation set, substitute route, and limitation notes before interpreting the finding.
-  - Treat recommendation sensitivity as bounded diagnostic evidence of shortlist robustness, not proof of demand, buyer behaviour, ranking movement, conversion, causality, or deterministic answer-engine control.
+  - "Hold the buyer job constant and change one commercial constraint at a time: budget posture, geography, stack, implementation capacity, risk tolerance, or timing."
+  - "Record the surface, date, market or access context, exact base question, one changed constraint, resulting recommendation set, substitute route, and limitation notes before interpreting the finding."
+  - "Treat recommendation sensitivity as bounded diagnostic evidence of shortlist robustness, not proof of demand, buyer behaviour, ranking movement, conversion, causality, or deterministic answer-engine control."
   - "Keep the Google caveat clear where relevant: Google's AI features rely on core Search ranking and quality systems; llms.txt, special AI markup, arbitrary chunking, and over-focused structured data are not required switches for Google AI visibility."
 ---
 
