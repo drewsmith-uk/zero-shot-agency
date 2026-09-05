@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <mask id="gapZ">
+      <rect width="100" height="100" fill="white"/>
+      <path d="M 25 35 L 75 35 L 25 65 L 75 65" stroke="black" stroke-width="16" fill="none" stroke-linejoin="miter"/>
+    </mask>
+  </defs>
+  <rect x="20" y="20" width="60" height="60" rx="30" stroke="white" stroke-width="8" fill="none" mask="url(#gapZ)"/>
+  <path d="M 12 35 L 88 35 L 12 65 L 88 65" stroke="white" stroke-width="8" fill="none" stroke-linejoin="miter" stroke-linecap="butt"/>
+</svg>
