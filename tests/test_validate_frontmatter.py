@@ -1,5 +1,7 @@
 from pathlib import Path
 
+import pytest
+
 from tools.validate_frontmatter import validate_markdown_file
 
 
@@ -71,3 +73,19 @@ categories:
     assert "missing required field: date" in errors
     assert "missing required field: slug" in errors
     assert "missing required field: description" in errors
+
+
+@pytest.mark.parametrize("ending", ["  ", "\t", ""])
+def test_editorial_whitespace_gate_rejects_hard_breaks_before_approval(tmp_path, ending):
+    post = write_post(
+        tmp_path,
+        'title: Test\ndate: 2026-09-26\nslug: test\ndescription: Test\n',
+    )
+    post.write_text(post.read_text(encoding="utf-8") + f"**Storyboard label**{ending}\n\nParagraph.\n", encoding="utf-8")
+
+    # Existing archive callers remain metadata-only; editorial/CI callers opt in.
+    assert validate_markdown_file(post) == []
+    errors = validate_markdown_file(post, check_whitespace=True)
+    assert bool(errors) is bool(ending)
+    if ending:
+        assert "trailing whitespace" in errors[0]
