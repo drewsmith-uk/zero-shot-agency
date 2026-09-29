@@ -57,9 +57,13 @@ def load_frontmatter(path: Path) -> tuple[dict[str, Any] | None, list[str]]:
     return parsed, []
 
 
-def validate_markdown_file(path: Path) -> list[str]:
+def validate_markdown_file(path: Path, *, check_whitespace: bool = False) -> list[str]:
     """Validate one Markdown file's frontmatter and return human-readable errors."""
     data, errors = load_frontmatter(path)
+    if check_whitespace:
+        for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+            if line.endswith((" ", "\t")):
+                errors.append(f"line {number}: trailing whitespace; use blank-line paragraphs instead of two-space hard breaks")
     if data is None:
         return errors
 
@@ -110,6 +114,11 @@ def iter_markdown_files(paths: list[Path]) -> list[Path]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Validate Markdown frontmatter schema shape.")
     parser.add_argument(
+        "--check-whitespace",
+        action="store_true",
+        help="Reject trailing spaces/tabs before editorial approval and on changed blog posts in CI.",
+    )
+    parser.add_argument(
         "paths",
         nargs="*",
         type=Path,
@@ -120,7 +129,7 @@ def main(argv: list[str] | None = None) -> int:
 
     failures: list[str] = []
     for path in iter_markdown_files(args.paths):
-        for error in validate_markdown_file(path):
+        for error in validate_markdown_file(path, check_whitespace=args.check_whitespace):
             failures.append(f"{path}: {error}")
 
     if failures:

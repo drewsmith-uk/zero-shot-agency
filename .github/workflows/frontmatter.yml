@@ -2,11 +2,6 @@ name: Validate Frontmatter
 
 on:
   pull_request:
-    paths:
-      - 'docs/**/*.md'
-      - 'tools/validate_frontmatter.py'
-      - 'tests/test_validate_frontmatter.py'
-      - '.github/workflows/frontmatter.yml'
 
 jobs:
   validate:
@@ -37,4 +32,4 @@ jobs:
             echo "No changed blog posts to validate."
             exit 0
           fi
-          python tools/validate_frontmatter.py "${files[@]}"
+          python tools/validate_frontmatter.py --check-whitespace "${files[@]}"
